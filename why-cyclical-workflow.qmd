@@ -1,0 +1,10 @@
+---
+title: ""
+description: ""
+author: "Luke W. Johnston"
+date: last-modified
+categories:
+  - 
+---
+
+Follow the tidyverse team approach to repo development, by dedicating periods of time to specific repos, and rotating between.
