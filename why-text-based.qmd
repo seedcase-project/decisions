@@ -3,6 +3,7 @@ title: "Why text/code-based tools?"
 description: "Our reasons for selecting tools that are based on code, rather than GUIs."
 author: "Luke W. Johnston"
 date: last-modified
+draft: true
 categories:
   - documentation
   - code
@@ -10,3 +11,19 @@ categories:
 ---
 
 TODO: Need to fill this in, later.
+
+"Everything as code"
+
+https://www.adaptavist.com/blog/everything-as-code-embracing-the-codified-evolution
+
+https://medium.com/ethanjb/the-beginning-of-everything-as-code-a25c4e9a75e9
+
+https://openpracticelibrary.com/practice/everything-as-code/
+
+https://thenewstack.io/automate-devops-with-an-everything-as-code-approach/
+
+https://octopus.com/blog/what-is-everything-as-code
+
+https://medium.com/geekculture/code-as-diagrams-whats-the-point-13dbe6053738
+
+https://www.cloudbolt.io/blog/3-advantages-and-challenges-of-infrastructure-as-code-iac/
