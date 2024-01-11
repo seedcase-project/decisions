@@ -13,6 +13,8 @@ categories:
   - software-architecture
 ---
 
+<!-- TODO: Update this to match style of other posts -->
+
 ## Introduction
 
 Since Seedcase is a data management system and software, it requires a

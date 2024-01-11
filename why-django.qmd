@@ -13,6 +13,8 @@ categories:
   - software-architecture
 ---
 
+<!-- TODO: Update this to match style of other posts -->
+
 ## Introduction
 
 We have evaluated several web frameworks for the Seedcase Product, and

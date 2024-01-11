@@ -9,6 +9,8 @@ categories:
   - website
 ---
 
+<!-- TODO: Update this to match style of other posts -->
+
 There are many different types of "static website generators"[^1], like
 [Jekyll](https://jekyllrb.com/) or [Hugo](https://gohugo.io/). They all
 have their pros and cons, and we ultimately have to choose one to use

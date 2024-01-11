@@ -7,6 +7,8 @@ categories:
   - communication
 ---
 
+<!-- TODO: Update this to match style of other posts -->
+
 Communication within a team is often done with email or, in more modern
 and tech environments, with Slack. While email is a great tool when
 communicating with people external to a team (or organization), there
