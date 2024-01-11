@@ -37,7 +37,7 @@ One of the most important functions of Seedcase is to handle data, and the most 
 [MySQL](www.mysql.com) was first released in 1995 and is maintained by Oracle Corp. It is an open source platform with the option to deploy either as a local server solution or cloud based. The implementation languages are C and C++, and it runs of a variety of operating systems. The system allows access through standard technologies (ADO.NET, JDBC, ODBC, and native APIs).
 
 ::: columns
-::: {.column width="50%" style="font-size: 90%"}
+::: {.column style="font-size: 90%"}
 
 #### Benefits 
 
@@ -50,7 +50,7 @@ One of the most important functions of Seedcase is to handle data, and the most 
 * There are a number of ways for MySQL to interact with Apache Parquet files.
 
 :::
-::: {.column width="50%" style="font-size: 90%"}
+::: {.column style="font-size: 90%"}
 
 #### Drawbacks
 
@@ -66,7 +66,7 @@ One of the most important functions of Seedcase is to handle data, and the most 
 [PostgreSQL](www.postgresql.org) was first released in 1989 from UC Berkeley and is maintained by the PostgreSQL Development Group. It is an open source platform with the option to deploy either as a local server solution or cloud based. The implementation language is C, and it runs of a variety of operating systems. The system allows access through standard technologies (ADO.NET, JDBC, ODBC, a native C library, and streaming APIs).
 
 ::: columns
-::: {.column width="50%" style="font-size: 90%"}
+::: {.column style="font-size: 90%"}
 
 #### Benefits 
 
@@ -81,7 +81,7 @@ One of the most important functions of Seedcase is to handle data, and the most 
 * It is possible to create columnar based tables directly in PostgreSQL.
 
 :::
-::: {.column width="50%" style="font-size: 90%"}
+::: {.column style="font-size: 90%"}
 
 #### Drawbacks
 
@@ -95,7 +95,7 @@ One of the most important functions of Seedcase is to handle data, and the most 
 First released in 2000, SQLite is slightly different to the two systems described above, as it is an embedded serverless database primarily maintained by an international team of programmers (see [About SQLite](https://www.sqlite.org/about.html)). It is an open source platform with the option to deploy either locally or in the cloud. The implementation language is C, and it is platform independent. The system allows access through standard technologies (ADO.NET, JDBC, and ODBC).
 
 ::: columns
-::: {.column width="50%" style="font-size: 90%"}
+::: {.column style="font-size: 90%"}
 
 #### Benefits 
 
@@ -106,7 +106,7 @@ First released in 2000, SQLite is slightly different to the two systems describe
 * There is always a risk that an open source community will break apart and leave a product unsupported, but the risk here looks minimal. The explicitly stated intention from the core developers of SQLite is to support the product until at least 2050.
 
 :::
-::: {.column width="50%" style="font-size: 90%"}
+::: {.column style="font-size: 90%"}
 
 #### Drawbacks
 
