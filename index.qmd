@@ -1,9 +1,13 @@
 ---
 title: Archive of Decisions Records
-title-block-banner: true
 listing:
   contents: why-*.qmd
-  type: default
+  type: grid
+  fields:
+    - title
+    - description
+    - author
+    - date
   sort: "title"
 ---
 
