@@ -1,5 +1,5 @@
 ---
-title: "Why choose Discord?"
+title: "Why Discord"
 description: "Our reasons for using Discord as our communication platform."
 author: "Luke W. Johnston"
 date: last-modified

@@ -1,5 +1,5 @@
 ---
-title: "Why choose Quarto?"
+title: "Why Quarto"
 description: "Our reasons for using Quarto to build the website and write the general documentation."
 author: "Luke W. Johnston"
 date: last-modified

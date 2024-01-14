@@ -1,5 +1,5 @@
 ---
-title: "Why Material Design for frontend styling"
+title: "Why Material Design"
 description: "We aim to utilise existing CSS or UI frameworks instead of building from scratch so Seedcase will look good with minimal effort. Since Material Design lives up to these requirements, we have chosen this framework for Seedcase."
 author: "Philip Christiansen"
 date: last-modified

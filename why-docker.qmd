@@ -1,5 +1,5 @@
 ---
-title: "Why Docker as our container software"
+title: "Why Docker"
 description: |
   While there are several container technologies, Docker is one of the
   most popular and commonly used technologies.
