@@ -1,0 +1,43 @@
+project:
+  type: seedcase-theme
+
+website:
+  title: "Seedcase Project: Decisions Archive"
+  site-url: "https://decisions.seedcase-project.org/"
+  repo-url: "https://github.com/seedcase-project/decisions"
+  page-footer:
+    center:
+      - text: "License: CC-BY 4.0"
+        href: LICENSE.md
+      - text: "Code of Conduct"
+        href: "https://github.com/seedcase-project/.github/blob/main/CODE_OF_CONDUCT.md"
+      - text: "Contributing"
+        href: "https://community.seedcase-project.org/"
+  navbar:
+    pinned: true
+    search: true
+    tools:
+      - icon: house
+        href: "https://seedcase-project.org"
+      - icon: github
+        href: "https://github.com/seedcase-project/decisions"
+  sidebar:
+    title: "Decisions"
+    pinned: true
+    style: "floating"
+    contents:
+      - text: "Welcome!"
+        href: index.qmd
+      - text: "Records"
+        contents: 
+          - auto: why-*
+
+# format:
+#   seedcase-theme-html:
+    # include-before-body:
+      # - "includes/site-counter.html"
+
+editor:
+  markdown:
+    wrap: 72
+    canonical: true
