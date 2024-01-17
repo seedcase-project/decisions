@@ -21,16 +21,6 @@ website:
         href: "https://seedcase-project.org"
       - icon: github
         href: "https://github.com/seedcase-project/decisions"
-  sidebar:
-    title: "Decisions"
-    pinned: true
-    style: "floating"
-    contents:
-      - text: "Welcome!"
-        href: index.qmd
-      - text: "Records"
-        contents: 
-          - auto: why-*
 
 # format:
 #   seedcase-theme-html:
