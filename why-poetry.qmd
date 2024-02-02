@@ -26,7 +26,7 @@ There multiple ways of creating these virtual environments and managing package 
 
 There are (unfortunately) multiple tools to manage package dependencies in Python, for example, listed at [Python Packaging User Guide](https://packaging.python.org/en/latest/tutorials/managing-dependencies/#other-tools-for-application-dependency-management) and at [Awesome Python](https://python.libhunt.com/poetry-alternatives). There are also comparison sites like [Ritza Articles](https://ritza.co/articles/gen-articles/pipenv-vs-virtualenv-vs-poetry-vs-pyenv-vs-pip/), [warp](https://www.warp.dev/blog/prose-about-poetry), and [this](https://dev.to/adamghill/python-package-manager-comparison-1g98), and [this](https://dev.to/frostming/a-review-pipenv-vs-poetry-vs-pdm-39b4) at [dev.to](https://dev.to/) that go into more detail about many of these tools.
 
-We'll only cover:
+We'll only cover these more popular tools:
 
 - [Pipenv](https://pipenv.pypa.io/en/latest/index.html)
 - [Poetry](https://python-poetry.org/)
@@ -35,19 +35,21 @@ We'll only cover:
 
 ### Pipenv
 
-[Pipenv](https://pipenv.pypa.io/en/latest/index.html) was designed to combine the functionality of `pip` and `virtualenv`.
+[Pipenv](https://pipenv.pypa.io/en/latest/index.html) was designed to combine the existing functionality of `pip` and `virtualenv`, rather than being designed and built specifically for the purpose of package management.
 
 - **Pros**:
-    - Fairly popular
+    - Is very popular and widely used
     - Has been around for a while
     - Only handles package dependencies (no other features)
 - **Cons**:
-    - The design is a bit older and not as intuitive/clear to use
-    - The documentation is a bit too verbose/technical
-    - The package caching doesn't seem to be well designed/robust, so packages could get unnecessarily re-installed
+    - Design is a bit older and not as intuitive/clear to use
+    - Documentation is a bit too verbose/technical
+    - Package caching doesn't seem to be well designed/robust, so packages could get unnecessarily re-installed
     - Only handles package dependency management, which means we need another tool to develop software (like a Python package)
 
 ### Poetry
+
+[Poetry](https://python-poetry.org/) was built and designed to address some of the short comings of pipenv and is specifically designed with package management and project development in mind.
 
 - **Pros**:
     - Popular and widely used
@@ -58,25 +60,31 @@ We'll only cover:
     - Allows for external plug-ins for further customization
     - Similar dependency management to other languages
     - Installable with `pipx`
+    - Integrates well with existing IDE/editors (PyCharm and VSCode)
 - **Cons**:
     - Installation and resolving package dependency trees (so there are no conflicts) can be a bit slow
     - Not completely PEP compliant (not yet support [PEP 621](https://peps.python.org/pep-0621/), but an Issue on it is [here](https://github.com/python-poetry/roadmap/issues/3)), though this isn't a critical problem
 
 ### Hatch
 
+[Hatch](https://hatch.pypa.io/latest/version/), like Poetry, was designed to manage package dependencies and Python projects.
+
 - **Pros**:
     - Very similar to Poetry
     - Is fully PEP-compliant
-    - Is relatively new, and may be the better option in the future
+    - Is relatively new
     - Is very opinionated
     - Good documentation
     - Now maintained under the official PyPA
+    - Because of being PEP-compliant and hosted by PyPA, may be the better option in the future
 - **Cons**:
     - Is very opinionated
     - Is relatively new, so might still be working through things
     - Not as widely used compared to the others
 
 ### PDM
+
+[PDM](https://pdm-project.org/latest/usage/dependency/), like both Poetry and Hatch, is designed for managing packages and Python projects.
 
 - **Pros**:
     - Fully PEP-compliant
@@ -94,4 +102,4 @@ We decided on Poetry because it has amazing documentation, is well-designed, and
 ### Consequences
 
 - Because Poetry isn't fully PEP compliant, we might encounter some issues
-- Doesn't have the "official" support (maintenance by PyPA) that Hatch has, so we might reconsider the decision to use Poetry at a future date
+- Doesn't have the "official" support (hosted on the GitHub PyPA organization) that Hatch has, so we might reconsider the decision to use Poetry at a future date
