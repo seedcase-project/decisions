@@ -15,7 +15,7 @@ Managing the packages we depend on (e.g. Django) in Python isn't "simply" instal
 
 The solution to this problem is by using "virtual environments" in Python. These are environments that are separate from the rest of the system and can install any packages without impacting other environments.
 
-The problem is that there multiple ways of creating these virtual environments and managing package dependencies.
+There multiple ways of creating these virtual environments and managing package dependencies, and the optional solution depends on the project.
 
 ## Decision Drivers
 
@@ -24,7 +24,7 @@ The problem is that there multiple ways of creating these virtual environments a
 
 ## Considered Options
 
-There are (unfortunately) multiple tools to manage package dependencies in Python, for example, listed [here](https://packaging.python.org/en/latest/tutorials/managing-dependencies/#other-tools-for-application-dependency-management) and [here](https://python.libhunt.com/poetry-alternatives). There are also comparison sites like [this](https://ritza.co/articles/gen-articles/pipenv-vs-virtualenv-vs-poetry-vs-pyenv-vs-pip/), [this](https://www.warp.dev/blog/prose-about-poetry), [this](https://dev.to/adamghill/python-package-manager-comparison-1g98), and [this](https://dev.to/frostming/a-review-pipenv-vs-poetry-vs-pdm-39b4) that go into more detail about many of these tools, as well as some descriptive statistics of the popularities of each [here](https://python.libhunt.com/poetry-alternatives).
+There are (unfortunately) multiple tools to manage package dependencies in Python, for example, listed at [Python Packaging User Guide](https://packaging.python.org/en/latest/tutorials/managing-dependencies/#other-tools-for-application-dependency-management) and at [Awesome Python](https://python.libhunt.com/poetry-alternatives). There are also comparison sites like [Ritza Articles](https://ritza.co/articles/gen-articles/pipenv-vs-virtualenv-vs-poetry-vs-pyenv-vs-pip/), [warp](https://www.warp.dev/blog/prose-about-poetry), and [this](https://dev.to/adamghill/python-package-manager-comparison-1g98), and [this](https://dev.to/frostming/a-review-pipenv-vs-poetry-vs-pdm-39b4) at [dev.to](https://dev.to/) that go into more detail about many of these tools.
 
 We'll only cover:
 
@@ -35,7 +35,7 @@ We'll only cover:
 
 ### Pipenv
 
-Was designed to combine the functionality of `pip` and `virtualenv`.
+[Pipenv](https://pipenv.pypa.io/en/latest/index.html) was designed to combine the functionality of `pip` and `virtualenv`.
 
 - **Pros**:
     - Fairly popular
@@ -89,9 +89,9 @@ Was designed to combine the functionality of `pip` and `virtualenv`.
 
 ## Decision Outcome
 
-We decided on Poetry because it has amazing documentation, is well designed, and is very popular and widely used.
+We decided on Poetry because it has amazing documentation, is well-designed, and is very popular and widely used.
 
 ### Consequences
 
-- Because it isn't fully PEP compliant, we might encounter some issues
-- Doesn't have the "official" support that Hatch has, so we might reconsider the decision to use Poetry at a future date
+- Because Poetry isn't fully PEP compliant, we might encounter some issues
+- Doesn't have the "official" support (maintenance by PyPA) that Hatch has, so we might reconsider the decision to use Poetry at a future date
