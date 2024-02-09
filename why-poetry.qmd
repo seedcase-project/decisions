@@ -15,7 +15,7 @@ Managing the packages we depend on (e.g. Django) in Python isn't "simply" instal
 
 The solution to this problem is by using "virtual environments" in Python. These are environments that are separate from the rest of the system and can install any packages without impacting other environments.
 
-There multiple ways of creating these virtual environments and managing package dependencies, and the optional solution depends on the project.
+There are multiple ways of creating these virtual environments and managing package dependencies, and the optional solution depends on the project.
 
 ## Decision Drivers
 
