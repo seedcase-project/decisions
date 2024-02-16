@@ -1,5 +1,5 @@
 ---
-title: "Why use Fly.io to host a demo of Seedcase"
+title: "Why Fly.io"
 description: |
   Showcasing a demo of Seedcase software helps make things more tangible. This
   post describes our reasons for using Fly.io as a deployment host for showcasing our demo.
@@ -50,23 +50,23 @@ We have considered five different cloud providers: [Azure](https://azure.microso
 | GitHub Authentication                                        | No              | Yes                                  | Yes                      | Yes                    | Yes                         |
 | GitHub Actions Integration                                   | Very good       | Sort of (deploy webhook)             | Yes                      | Yes                    | Very good                   |
 | Managed Postgres                                             | Yes             | Yes                                  | Yes                      | Yes                    | Yes (sort of)               |
-| File Storage service                                         | Yes             | Yes (FTP) 0.25$/GB                   |                          |                        | Yes ($0.15 GB)              |
-| "Native support for Django app"                              | Sort of         | Yes (Poetry support)                 | ?                        | Yes (requirements.txt) | No                          |
+| File Storage service                                         | Yes             | Yes (FTP) 0.25\$/GB                   |                          |                        | Yes (\$0.15 GB)              |
+| Native support for Django app                            | Sort of         | Yes (Poetry support)                 | ?                        | Yes (requirements.txt) | No                          |
 | Docker Image or Dockerfile support                           | Yes             | Yes                                  | Yes                      | No                     | Yes                         |
 | Docker-compose                                               | Yes             | No (but has render.yml)              | Yes (with a normal node) | No                     | No                          |
 | Logging                                                      | Very good logs  | Simple                               | Simple                   | Simple                 | Yes                         |
 | Alerts                                                        | Yes             | No                                   | ?                        | No                     | ?                           |
-| Similar to production environment (Aarhus University server) | Likely possible | Maybe if docker on university server | Likely                   | No                     | Yes if docker               |
+| Similar to production environment (Aarhus University server) | Likely possible | Maybe if Docker on university server | Likely                   | No                     | Yes if docker               |
 
 ## Decision Outcome
 
-We have decided to utilise Fly.io for our demo and testing needs. Fly.io is very cheap and the cost is not based on the number of users - only the actual usage (around 1$). It integrates with GitHub Authentication and the deployment is easy to setup with a GitHub action. This part is less user-friendly than **Render** and **Vercel**, where the deployment happens automatically. However, we would eventually adjust this "magic deployment" anyway to do tests and etc. before deploying.
+We have decided to utilise Fly.io for our demo and testing needs. Fly.io is very cheap and the cost is not based on the number of users - only the actual usage (around 1$). It integrates with GitHub and the deployment is easy to setup with a GitHub action. This part is less user-friendly than **Render** and **Vercel**, where the deployment happens automatically. However, we would eventually adjust this "magic deployment" anyway to do tests and etc. before deploying.
 
-Fly.io uses docker images, so there is no "native" support for a Django application, but `flyctl` automatically creates a Dockerfile which makes it easy anyway. 
+Fly.io uses Docker images, so there is no "native" support for a Django application, but `flyctl` automatically creates a Dockerfile which makes it easy anyway. 
 
 Fly.io automatically and relatively quickly scales up an app when needed, which makes it very cheap. Furthermore, Fly.io owns all the servers, which makes it cheap compared to other providers which are usually relying on AWS or Azure.
 
-Fly.io has a customisable metrics dashboard (every app has access to Prometheus and Grafana)
+Fly.io has a customisable metrics dashboard (every app has access to Prometheus and Grafana).
 
 The other cloud providers, where not chosen for these reasons:
 
