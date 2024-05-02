@@ -4,10 +4,7 @@ description: |
   Enforcing style of code with automatic linters and formatters is important for
   code reviews to focus on content, not style. This post covers the reasons why we
   decided on Ruff for our linting and formatting purposes.
-author: 
-  - "Richard Ding"
-  - "Luke Johnston"
-date: 2023-11-27
+date: "2023-11-27"
 categories:
   - contributing
   - culture
@@ -24,7 +21,7 @@ categories:
 
 ## Context and Problem Statement
 
-Humans are prone to error when writing, whether it is code or text. In a team setting, more people working on the same things increase the chance of more issues occuring. And writing code is not done for the computer, but for other humans to read, so readability and consistency in style become important when reviewing that code. So our problem is:
+Humans are prone to error when writing, whether it is code or text. In a team setting, more people working on the same things increase the chance of more issues occurring. And writing code is not done for the computer, but for other humans to read, so readability and consistency in style become important when reviewing that code. So our problem is:
 
 > How do we enforce a consistent style across people and code? And how do we catch simple errors that happen because of the style or format of the code?
 
@@ -38,7 +35,7 @@ Humans are prone to error when writing, whether it is code or text. In a team se
 
 The terms "linting" or "formatting" are used to describe scanning, analysing, and (potentially) fixing code for style and typographical issues. The important difference between linting and formatting is that linting only tells you about the issues while formatting will fix (many of) the issues. Some issues can't be solved from formatting alone, so both linting and formatting are often used together.
 
-There are many tools available for Python, with many websites that have detailed comparisons of them (like [this](https://realpython.com/python-code-quality/), [this](https://geekflare.com/python-linter-platforms/), or [this](https://github.com/caramelomartins/awesome-linters#python) website). Based on this list and based on quick searchs on Google, these are the tools that come up the most often:
+There are many tools available for Python, with many websites that have detailed comparisons of them (like [this](https://realpython.com/python-code-quality/), [this](https://geekflare.com/python-linter-platforms/), or [this](https://github.com/caramelomartins/awesome-linters#python) website). Based on this list and based on quick searches on Google, these are the tools that come up the most often:
 
 - [Pylint](https://github.com/pylint-dev/pylint)
 - [Flake8](https://github.com/PyCQA/flake8)
@@ -69,7 +66,7 @@ Below is a detailed description of the pros and cons based on what others have w
   - Includes many other linters
   - Often used with formatters like Black
   - Customizable
-  - Large userbase and community
+  - Large user base and community
   - Can use plugins to expand functionality
 - Cons:
   - Only lints and doesn't format

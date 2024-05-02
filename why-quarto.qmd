@@ -1,8 +1,7 @@
 ---
 title: "Why Quarto"
 description: "Our reasons for using Quarto to build the website and write the general documentation."
-author: "Luke W. Johnston"
-date: last-modified
+date: "2023-06-25"
 categories:
   - documentation
   - markdown

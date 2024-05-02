@@ -4,8 +4,7 @@ description: |
   SQL is the backbone of any database system. However there are many variants
   of SQL. This decision post contains the reasons for using PostgreSQL, which is
   a powerful and feature-full variant of SQL.
-author: Kristiane Beicher
-date: last-modified
+date: "2024-01-05"
 categories:
   - backend
   - database
@@ -121,7 +120,7 @@ First released in 2000, SQLite is slightly different to the two systems describe
 
 ## Decision Outcome
 
-We've decided to work with PostgreSQL as our backend database as it fulfills all our needs and is a very popular open source tool. MySQL would be the other obvious choice, the application does everything that Seedcase needs, but the user community for PostgreSQL seems to be a bit more active. SQLite is quite popular within the application developer community, but it doesn't have a reliable multi-user functionality, so it may be an uphill battle to get it to do the things we are hoping to do with Seedcase.
+We've decided to work with PostgreSQL as our backend database as it fulfils all our needs and is a very popular open source tool. MySQL would be the other obvious choice, the application does everything that Seedcase needs, but the user community for PostgreSQL seems to be a bit more active. SQLite is quite popular within the application developer community, but it doesn't have a reliable multi-user functionality, so it may be an uphill battle to get it to do the things we are hoping to do with Seedcase.
 
 ### Consequences
 
