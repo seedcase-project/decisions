@@ -11,63 +11,24 @@ categories:
   - software-architecture
 ---
 
-::: content-hidden
-Use other decision posts as inspiration to writing these. Leave the
-content-hidden sections in the text for future reference.
-:::
+<!-- TODO: Update this to match style of other posts -->
 
-## Context and Problem Statement
+## Introduction
 
-::: content-hidden
-State the context and some background on the issue, then write a
-statement in the form of a question for the problem.
-:::
+We have evaluated several web frameworks for the Seedcase Product, and
+have chosen [Django](https://www.djangoproject.com) as the most suitable
+option for the web framework. This document describes the reasoning
+behind this decision and outlines the key factors that influenced it.
 
-For a software project to succeed it is important to pick the right programming framework to work in from the start. A framework should provide consistency, code reuse, and easy of maintenance for a group of developers. It should provide best practice, and allow for code to be shared between different parts of the applications. The question therefore becomes:
+## Decision
 
-> Which coding framework will best suit our needs in developing Seedcase?
-
-## Decision Drivers
-
-::: content-hidden
-List some reasons for why we need to make this decision and what things
-have arisen that impact work.
-:::
+After evaluating Flask, Ruby on Rails, FastAPI, and Django, we have
+decided to use Django as the web framework for Seedcase.
 
 All considered web frameworks use Python. For our decision to use
 Python, see the page [Why Python](why-python.qmd).
 
-## Considered Options
-
-::: content-hidden
-List and describe some of the options, as well as some of the benefits
-and drawbacks for each option.
-:::
-
-### Django
-
-[Django](https://www.djangoproject.com) provides excellent support for API development through its
-built-in serialization framework and REST framework. The REST framework
-provides a lot of functionality out of the box, such as authentication,
-pagination, and filtering. Additionally, Django provides good support
-for other types of APIs, such as GraphQL.
-
-Django provides a powerful ORM that abstracts away much of the database
-logic and allows developers to work with database models in a Pythonic
-way. It provides good support for migrations, which makes it easy to
-evolve the database schema over time. Django also provides a built-in
-admin interface that allows non-technical users to manage data.
-
-Django provides good support for security through its built-in
-authentication system and its support for common security practices such
-as Cross-Site Request Forgery (CSRF) protection and password hashing. It
-also provides good support for role-based access control and
-fine-grained permissions.
-
-Django provides good support for user management through its built-in
-authentication system and its support for user profiles and social
-authentication. It also provides good support for password resets and
-account activation.
+## Alternatives Considered
 
 ### Flask
 
@@ -113,12 +74,43 @@ built-in features. It is also newer, so it is still maturing and has a
 small, though active, community, which limits the amount of available
 support and resources.
 
-## Decision Outcome
+## Factors that influenced the decision
 
-::: content-hidden
-What decision was made, use the form "We decided on CHOICE because of
-REASONS."
-:::
+Several factors influenced our decision to use Django over Flask,
+FastAPI, and Ruby on Rails as the web framework:
+
+### API Development
+
+Django provides excellent support for API development through its
+built-in serialization framework and REST framework. The REST framework
+provides a lot of functionality out of the box, such as authentication,
+pagination, and filtering. Additionally, Django provides good support
+for other types of APIs, such as GraphQL.
+
+### Data Management
+
+Django provides a powerful ORM that abstracts away much of the database
+logic and allows developers to work with database models in a Pythonic
+way. It provides good support for migrations, which makes it easy to
+evolve the database schema over time. Django also provides a built-in
+admin interface that allows non-technical users to manage data.
+
+### Security
+
+Django provides good support for security through its built-in
+authentication system and its support for common security practices such
+as Cross-Site Request Forgery (CSRF) protection and password hashing. It
+also provides good support for role-based access control and
+fine-grained permissions.
+
+### User Management
+
+Django provides good support for user management through its built-in
+authentication system and its support for user profiles and social
+authentication. It also provides good support for password resets and
+account activation.
+
+## Conclusion
 
 After evaluating Flask, FastAPI, Ruby on Rails, and Django, we have made
 the decision that Django is the better fit for Seedcase. Django has the
