@@ -1,15 +1,41 @@
 ---
 title: "Why Quarto"
 description: "Our reasons for using Quarto to build the website and write the general documentation."
-author: "Luke W. Johnston"
-date: last-modified
+date: "2023-06-25"
 categories:
   - documentation
   - markdown
   - website
 ---
+<!--TODO #40 docs: Update 'Why Quarto' with options and expand on decision -->
 
-<!-- TODO: Update this to match style of other posts -->
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and Problem Statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+A software project like Seedcase needs an easy way to communicate with
+potential users that are not prime candidates to use Github. The easiest
+way to do this is by having a website. In order to minimize the work the
+team needs to do we would like to use the files we maintain in GitHub as
+the basis for a public website. The question then becomes:
+
+> How do we manage a website with the smallest amount of overhead when
+> we consider that we are already using GitHub?
+
+## Decision Drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
 
 There are many different types of "static website generators"[^1], like
 [Jekyll](https://jekyllrb.com/) or [Hugo](https://gohugo.io/). They all
@@ -23,11 +49,23 @@ writing the documentation for Seedcase itself.
     meaning it is a simple file that is being shown by the browser as a
     webpage.
 
+## Considered Options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+<!--TODO Add the Benefit/Drawback for the other two options-->
+
+### Quarto
+
 Within the R world, a recent new tool came out called
 [Quarto](https://quarto.org/). Since its release, it has completely
 taken over as the tool to use when working with R and data science. We
-will use this tool because it aligns with our [values and philosophies](https://seedcase-project.org/about.html#principles)
-for multiple reasons.
+will use this tool because it aligns with our [values and
+philosophies](https://seedcase-project.org/about.html#principles) for
+multiple reasons.
 
 1.  It is open source.
 2.  The documentation is phenomenal and very beginner friendly.
@@ -47,5 +85,15 @@ for multiple reasons.
     the de facto standard for writing Markdown, with strong historical
     use and community support.
 
-For these reasons, we write our documentation that includes the website
-with Quarto.
+## Decision Outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+We have decided to go with Quarto as this seems to be the most
+accessible, as well as being a tool that there is already support for
+internally in the team.
+
+<!--TODO Update the decision section when the other options have been sorted-->
