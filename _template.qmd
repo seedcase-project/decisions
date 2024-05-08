@@ -1,13 +1,13 @@
 ---
 title: ""
 description: "Our reasons for ..."
-author: ""
-date: last-modified
+date: ""
 categories:
 ---
 
 ::: content-hidden
 Use other decision posts as inspiration to writing these.
+Leave the content-hidden sections in the text for future reference.
 :::
 
 ## Context and problem statement

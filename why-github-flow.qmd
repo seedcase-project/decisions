@@ -1,8 +1,7 @@
 ---
 title: "Why GitHub Flow"
 description: "Our reasons for using the GitHub Flow as our branching and development strategy."
-author: "Signe Kirk Brødbæk"
-date: last-modified
+date: "2024-02-15"
 categories:
   - decision
   - workflow
@@ -64,7 +63,7 @@ references:
       year: n.d.
     URL: https://githubflow.github.io
   - id: githubflow
-    title: GitHub flow - Follow GitHub flow to collaborateon projects.
+    title: GitHub flow - Follow GitHub flow to collaborate projects.
     author: 
       family: GitHub
     issued: 
@@ -220,4 +219,4 @@ List some potential consequences of this decision.
 
 Even though the GitHub flow is the most suitable branching strategy for the Seedcase Project right now, this choice does come with consequences. For example, working on longer-living branches (compared to trunk-based-development) could increase the risk of merge conflicts (which is easier to avoid using trunk-based-development). This strategy also comes without release tagging (as Git flow does), something we might want to implement for Seedcase Software Products later on. 
 
-However, GitHub flow eases the process of parallel, asynchronous development and is ideal for smaller teams like ours. While we deploy continuously, a relatively simples workflow like GitHub flow is the best fit for us.
+However, GitHub flow eases the process of parallel, asynchronous development and is ideal for smaller teams like ours. While we deploy continuously, a relatively simple workflow like GitHub flow is the best fit for us.
