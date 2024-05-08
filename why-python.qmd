@@ -4,57 +4,118 @@ description: |
   Python is one of the most common and widely used programming languages.
   It is used across multiple domains and industries, which means more people 
   would be familiar with using it.
-author: "Richard Ding"
 date: "2023-03-22"
-date-modified: last-modified
 categories:
   - programming
   - development
   - software-architecture
 ---
 
-<!-- TODO: Update this to match style of other posts -->
+::: content-hidden
+Use other decision posts as inspiration to writing these.
+Leave the content-hidden sections in the text for future reference.
+:::
 
-## Introduction
+## Context and Problem Statement
 
-Since Seedcase is a data management system and software, it requires a
-programming language for its development that can handle large amounts
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+One of the first things to do when deciding to write a software application is to decide on the programming language. There are several languages that can be used, among them C++, Java, Python, and R. In the context of Seedcase it is important to chose a language that can handle large amounts
 of data, provide efficient data processing capabilities, and integrate
 well with other technologies commonly used in the research area.
 
+> Which programming language should we use for developing the Seedcase application?
+
+## Decision Drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+In the context of Seedcase it is important to chose a language that can handle large amounts of data, provide efficient data processing capabilities, and integrate well with other technologies commonly used in the research area. There is also a consideration with regards to the skills already available in the core team, as we would like to minimize the amount of time that we will need to use in order to be able to program the application.
+
 ## Considered Options
 
-We considered [Python](https://www.python.org), [Java](https://www.java.com/en/), [C++](https://cplusplus.com), and [R](https://www.r-project.org).
+::: content-hidden
+List and describe some of the options, as well as some of the benefits and
+drawbacks for each option.
+:::
+
+### C++
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Item 1
+:::
+::: {.column}
+#### Drawbacks
+
+- Item 1
+:::
+:::
+
+### Java
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Item 1
+:::
+::: {.column}
+#### Drawbacks
+
+- Item 1
+:::
+:::
+
+### Python
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Item 1
+:::
+::: {.column}
+#### Drawbacks
+
+- Item 1
+:::
+:::
+
+### R
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Item 1
+:::
+::: {.column}
+#### Drawbacks
+
+- Item 1
+:::
+:::
 
 ## Decision Outcome
 
-We have decided to use Python as the main development language for the
-following reasons:
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
 
--   Is widely used in the research area, particularly in data science
-    and machine learning, and has a rich ecosystem of libraries and
-    tools for data processing and analysis.
--   It's syntax is concise and easy to read, making it ideal for rapid
-    development and prototyping.
--   Has a large community of developers who contribute to its
-    development, ensuring that it is constantly evolving and improving.
--   Has strong support for web development, with a number of popular
-    frameworks such as [Django](https://www.djangoproject.com) and [Flask](https://flask.palletsprojects.com/en/2.3.x/), making it easy to build RESTful
-    APIs for Seedcase.
--   Has excellent support for working with databases, with libraries
-    such as [SQLAlchemy](https://www.sqlalchemy.org) and Django ORM, making it easy to manage and
-    query large datasets.
--   Is a cross-platform language, making it easy to deploy the system on
-    a variety of operating systems and hardware.
 
-While Java and C++ are also capable languages for building data
-management systems, they are generally more complex and have a steeper
-learning curve than Python. R is a powerful language for data analysis
-and visualization, but it is less suitable for building large-scale web
-applications.
 
-## Conclusion
+### Consequences
 
-Python is the most suitable option for this project, as it provides a
-powerful, flexible, and easy-to-use platform for building a data
-management system. Python is also one of the most common and widely used programming languages and is used across multiple domains and industries.
+::: content-hidden
+List some potential consequences of this decision.
+:::

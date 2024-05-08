@@ -1,16 +1,14 @@
 ---
 title: "Why text/code-based tools?"
 description: "Our reasons for selecting tools that are based on code, rather than GUIs."
-author: "Luke W. Johnston"
-date: last-modified
+date: ""
 draft: true
 categories:
   - documentation
   - code
   - text
 ---
-
-TODO: Need to fill this in, later.
+<!--TODO #42 docs: Write a Why document on Text-based tools -->
 
 "Everything as code"
 
