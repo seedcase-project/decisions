@@ -8,6 +8,7 @@ categories:
   - api
   - software-architecture
 ---
+<!--TODO #41 docs: Update 'Why REST' with decision drivers, options for REST and Decision -->
 
 ::: content-hidden
 Use other decision posts as inspiration to writing these. Leave the

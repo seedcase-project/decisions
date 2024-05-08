@@ -46,45 +46,72 @@ Below is a detailed description of the pros and cons based on what others have w
 
 ### Pylint
 
-- Pros:
+::: {.columns}
+::: {.column}
+#### Benefits
+
   - Very old, well-established linter
   - Large community of users and contributors
   - Very comprehensive list of checks
   - Highly configurable
   - Is integrated into many other tools (like flake8, black, and ruff)
   - Linting feedback is extensive
-- Cons:
-  - Too much configuration needed.
-  - Slow to run.
-  - Is often not needed to use on it's own because it is integrated with other tools.
-  - Linting feedback is extensive and a bit overwhelming.
+:::
+::: {.column}
+#### Drawbacks
+
+  - Too much configuration needed
+  - Slow to run
+  - Is often not needed to use on it's own because it is integrated with other tools
+  - Linting feedback is extensive and a bit overwhelming
+:::
+:::
 
 ### Flake8
 
-- Pros:
+::: {.columns}
+::: {.column}
+#### Benefits
+
   - Extensive list of checks
   - Includes many other linters
   - Often used with formatters like Black
   - Customizable
   - Large user base and community
   - Can use plugins to expand functionality
-- Cons:
+:::
+::: {.column}
+#### Drawbacks
+
   - Only lints and doesn't format
   - Is integrated into newer tools (like Ruff), so might not need to be used on it's own
+:::
+:::
 
 ### Black
 
-- Pros:
-  - Is a code formatter, not linter.
-  - Opinionated set of rules for code formatting, so removes need to configure things.
+::: {.columns}
+::: {.column}
+#### Benefits
+
+  - Is a code formatter, not linter
+  - Opinionated set of rules for code formatting, so removes need to configure things
   - Recommend to use with a linter (often suggested to use flake8 or pylint)
-- Cons:
+:::
+::: {.column}
+#### Drawbacks
+
   - Difficult to configure customizations
   - Integrated/compatible with newer tools (like Ruff)
+:::
+:::
 
 ### Ruff
 
-- Pros:
+::: {.columns}
+::: {.column}
+#### Benefits
+
   - Very fast
   - Implements almost all of Black and flake8 features
   - Implements many other features from other code analysis and checking tools
@@ -92,9 +119,14 @@ Below is a detailed description of the pros and cons based on what others have w
   - Newer and has more modern development
   - Configuration is available and relatively straightforward to use
   - Can be implemented alongside other tools
-- Cons:
+:::
+::: {.column}
+#### Drawbacks
+
   - Is still new, so bugs and other features are still being developed
   - Does not yet have all of pylint features implemented
+:::
+:::
 
 ## Decision Outcome
 
@@ -102,5 +134,5 @@ We decided on Ruff because it is a newer tool that implements many of the other 
 
 ## Potential Consequences
 
-- We might miss out on some features from pylint (since right now we won't include pylint).
-- There may be some bugs along the way because Ruff is relatively new, though this can be minimized by relying on more stable versions of it.
+- We might miss out on some features from pylint (since right now we won't include pylint)
+- There may be some bugs along the way because Ruff is relatively new, though this can be minimized by relying on more stable versions of it

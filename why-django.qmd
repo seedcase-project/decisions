@@ -11,6 +11,8 @@ categories:
   - software-architecture
 ---
 
+<!--TODO #35 docs: Update 'Why Django' with Benefits and Drawbacks -->
+
 ::: content-hidden
 Use other decision posts as inspiration to writing these. Leave the
 content-hidden sections in the text for future reference.
@@ -23,9 +25,15 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-For a software project to succeed it is important to pick the right programming framework to work in from the start. A framework should provide consistency, code reuse, and easy of maintenance for a group of developers. It should provide best practice, and allow for code to be shared between different parts of the applications. The question therefore becomes:
+For a software project to succeed it is important to pick the right
+programming framework to work in from the start. A framework should
+provide consistency, code reuse, and easy of maintenance for a group of
+developers. It should provide best practice, and allow for code to be
+shared between different parts of the applications. The question
+therefore becomes:
 
-> Which coding framework will best suit our needs in developing Seedcase?
+> Which coding framework will best suit our needs in developing
+> Seedcase?
 
 ## Decision Drivers
 
@@ -46,11 +54,11 @@ and drawbacks for each option.
 
 ### Django
 
-[Django](https://www.djangoproject.com) provides excellent support for API development through its
-built-in serialization framework and REST framework. The REST framework
-provides a lot of functionality out of the box, such as authentication,
-pagination, and filtering. Additionally, Django provides good support
-for other types of APIs, such as GraphQL.
+[Django](https://www.djangoproject.com) provides excellent support for
+API development through its built-in serialization framework and REST
+framework. The REST framework provides a lot of functionality out of the
+box, such as authentication, pagination, and filtering. Additionally,
+Django provides good support for other types of APIs, such as GraphQL.
 
 Django provides a powerful ORM that abstracts away much of the database
 logic and allows developers to work with database models in a Pythonic

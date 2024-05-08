@@ -14,6 +14,8 @@ categories:
   - workflow
 ---
 
+<!--TODO #36 docs: Update 'Why GitHub Projects' with Benefits and Drawbacks -->
+
 ## Context and Problem Statement
 
 The larger a team is, the more important it becomes to keep track of who is doing what and how far they are with certain tasks. One way of creating such an overview is by using visualisation tools, which are designed to create overviews quickly. The question then becomes:

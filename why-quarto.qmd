@@ -7,6 +7,7 @@ categories:
   - markdown
   - website
 ---
+<!--TODO #40 docs: Update 'Why Quarto' with options and expand on decision -->
 
 ::: content-hidden
 Use other decision posts as inspiration to writing these. Leave the

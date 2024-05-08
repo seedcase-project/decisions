@@ -1,14 +1,13 @@
 ---
 title: ""
 description: "Our reasons for ..."
-author: ""
-date: last-modified
-draft: true
-# categories:
+date: ""
+categories:
 ---
-
+<!--TODO #37 docs:Write a Why document for GitHub -->
 ::: content-hidden
 Use other decision posts as inspiration to writing these.
+Leave the content-hidden sections in the text for future reference.
 :::
 
 ## Context and Problem Statement
@@ -28,8 +27,23 @@ have arisen that impact work.
 ## Considered Options
 
 ::: content-hidden
-List and describe some of the options, as well as some of the pros and
-cons for each option.
+List and describe some of the options, as well as some of the benefits and
+drawbacks for each option.
+:::
+
+### Option 1
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Item 1
+:::
+::: {.column}
+#### Drawbacks
+
+- Item 1
+:::
 :::
 
 ## Decision Outcome

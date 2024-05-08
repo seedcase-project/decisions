@@ -9,6 +9,7 @@ categories:
 - copyright
 - software-architecture
 ---
+<!--TODO #38 docs: Update 'Why MIT license with benefits and drawbacks -->
 
 ## Context and Problem Statement
 
