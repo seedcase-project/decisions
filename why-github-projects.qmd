@@ -32,21 +32,39 @@ As a team we have been struggling to keep track of who is completing which tasks
 
 There are a number of free options when it comes to visualisation and project management tools specialising in workflows ([Monday.com](https://monday.com/) and Kanban Boards like [Trello](https://trello.com) to mention a couple). Here are some pros and cons.
 
-- Pro: These are dedicated project management tools, so come with lots of features that might be needed for these tasks. 
-- Cons: 
-    - Most require us to export our GitHub Issues log and rely on using them.
-    - Will need to learn and integrate another tool/service into our workflow.
-    - We aren't a large team, so many of the features will be unused by us.
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- These are dedicated project management tools, so come with lots of features that might be needed for these tasks
+:::
+::: {.column}
+#### Drawbacks
+
+- Most require us to export our GitHub Issues log and rely on using them
+- Will need to learn and integrate another tool/service into our workflow
+- We aren't a large team, so many of the features will be unused by us
+:::
+:::
 
 ### GitHub Projects
 
 
 GitHub has a built-in "Projects" feature for project management and visualizations. It comes with [extensive documentation](https://docs.github.com/en/issues/planning-and-tracking-with-projects) and is fairly intuitive to set up. As well as a standard overview it allows for a layout with vertical "status" lanes (Board) for "todo", "in progress", and "in review", as well as Gannt-like features (Roadmap).
 
-- Pros:
-    - We already heavily use GitHub and use Issues, so it makes sense to not learn another tool/service when we can keep using GitHub.
-    - It has all the features we need at this point in time.
-- Con: GitHub isn't a dedicated project management service, so there might be some features we are missing.
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- We already heavily use GitHub and use Issues, so it makes sense to not learn another tool/service when we can keep using GitHub
+- It has all the features we need at this point in time
+:::
+::: {.column}
+#### Drawbacks
+
+- GitHub isn't a dedicated project management service, so there might be some features we are missing
+:::
+:::
 
 ## Decision Outcome
 
