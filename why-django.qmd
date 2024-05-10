@@ -77,6 +77,20 @@ authentication system and its support for user profiles and social
 authentication. It also provides good support for password resets and
 account activation.
 
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Item 1
+:::
+::: {.column}
+#### Drawbacks
+
+- Item 1
+:::
+:::
+
 ### Flask
 
 [Flask](https://flask.palletsprojects.com/en/2.3.x/) is a lightweight
@@ -90,6 +104,20 @@ Django has, such as an admin interface, an object-relational mapper
 (ORM), and a built-in authentication system. These features would need
 to be implemented manually or by using third-party libraries.
 
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Item 1
+:::
+::: {.column}
+#### Drawbacks
+
+- Item 1
+:::
+:::
+
 ### Ruby on Rails
 
 [Ruby on Rails](https://rubyonrails.org) is a popular web framework that
@@ -102,6 +130,20 @@ However, Ruby on Rails requires developers to have experience with the
 Ruby programming language, which may not be ideal for all teams and
 isn't a common language in scientific environments. Additionally, Ruby
 on Rails has a large footprint and can be slow for certain use cases.
+
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Item 1
+:::
+::: {.column}
+#### Drawbacks
+
+- Item 1
+:::
+:::
 
 ### FastAPI
 
@@ -120,6 +162,20 @@ complex web applications that require a full-stack framework with many
 built-in features. It is also newer, so it is still maturing and has a
 small, though active, community, which limits the amount of available
 support and resources.
+
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Item 1
+:::
+::: {.column}
+#### Drawbacks
+
+- Item 1
+:::
+:::
 
 ## Decision Outcome
 
