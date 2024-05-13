@@ -3,7 +3,8 @@ title: "Why Python"
 description: |
   Python is one of the most common and widely used programming languages.
   As it is used across multiple domains and industries, it is likely to be familiar to a wider audience.
-date: "2024-05-10"
+date: "2023-03-22"
+date-modified: "2024-05-10"
 categories:
   - programming
   - development
@@ -52,7 +53,7 @@ drawbacks for each option.
 
 - Well-suited for real-time and performance-critical applications.
 - Allows fine-grained control over memory and hardware resources, enabling low-level, use-case-specific optimisations.
-- Compilation to native machine code for the target platform prior to execution guarantees better runtime performance than Python and, potentially and by a smaller margin, Java.
+- Compilation to native machine code for the target platform prior to execution guarantees better runtime performance than Python and, potentially by a smaller margin, Java.
 - Static type-checking at compile time helps to catch certain types of bugs early on.
 - Mature libraries and frameworks available for web development and data analysis.
 - Active community and extensive resources.
@@ -103,7 +104,7 @@ drawbacks for each option.
 - Code is executed by a Python interpreter, making Python programs platform independent (provided the host has an interpreter installed).
 - Concise, easy-to-read, beginner-friendly syntax.
 - Easy to iterate and prototype rapidly.
-- Large ecosystem of mature libraries and frameworks for web development (e.g. [Django](https://www.djangoproject.com), [Flask](https://flask.palletsprojects.com/en/2.3.x/)), database management (e.g. [SQLAlchemy](https://www.sqlalchemy.org), Django's ORM), and data analysis.
+- Large ecosystem of mature libraries and frameworks for web development (e.g. [Django](https://www.djangoproject.com), [Flask](https://flask.palletsprojects.com/en/2.3.x/)), database management (e.g. [SQLAlchemy](https://www.sqlalchemy.org), Django's Object Relational Mapper), and data analysis.
 - Active community and extensive resources.
 - Very popular in data-intensive research and academia, some target users of Seedcase are likely to be familiar with Python.
 :::
@@ -122,7 +123,7 @@ drawbacks for each option.
 #### Benefits
 
 - Designed for statistical computing with excellent data visualisation capabilities.
-- Wide array of libraries for data analysis.
+- Wide array of packages for data analysis.
 - Active community and extensive resources.
 - Very popular in data-intensive research and academia, some target users of Seedcase are likely to be familiar with R.
 :::
