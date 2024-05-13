@@ -2,9 +2,9 @@
 title: "Why Python"
 description: |
   Python is one of the most common and widely used programming languages.
-  It is used across multiple domains and industries, which means more people 
-  would be familiar with using it.
+  As it is used across multiple domains and industries, it is likely to be familiar to a wider audience.
 date: "2023-03-22"
+date-modified: "2024-05-10"
 categories:
   - programming
   - development
@@ -51,12 +51,24 @@ drawbacks for each option.
 ::: {.column}
 #### Benefits
 
-- Item 1
+- Well-suited for real-time and performance-critical applications.
+- Allows fine-grained control over memory and hardware resources, enabling low-level, use-case-specific optimisations.
+- Compilation to native machine code for the target platform prior to execution guarantees better runtime performance than Python and, potentially by a smaller margin, Java.
+- Static type-checking at compile time helps to catch certain types of bugs early on.
+- Mature libraries and frameworks available for web development and data analysis.
+- Active community and extensive resources.
 :::
 ::: {.column}
 #### Drawbacks
 
-- Item 1
+- Compilation to native machine code makes C++ programs more platform dependent, broadly speaking, than programs in interpreted languages.
+- Use of platform-specific language features or libraries can lead to portability issues.
+- Lack of automatic garbage collection means that developers need more awareness of how memory is managed in the application.
+- Offer of database management libraries is more limited than for Java or Python.
+- Syntax is verbose and less close to natural language, making development less rapid. 
+- No inline documentation generation system out of the box.
+- Less widespread in academic and research communities.
+- Has a steep learning curve, arguably steeper than Java's.
 :::
 :::
 
@@ -66,12 +78,20 @@ drawbacks for each option.
 ::: {.column}
 #### Benefits
 
-- Item 1
+- Code is run on a Java Virtual Machine, making Java programs, generally, platform independent (provided the host has a Java Runtime Environment installed).
+- Better runtime performance than Python.
+- Static type-checking at compile time helps to catch certain types of bugs early on.
+- Comes with inline documentation generation system out of the box (Javadoc).
+- Large ecosystem of mature libraries and frameworks for web development and database management.
+- Active community and extensive resources.
 :::
 ::: {.column}
 #### Drawbacks
 
-- Item 1
+- Fewer libraries for data analysis than Python.
+- Syntax is verbose and less close to natural language, making development less rapid.
+- Less widespread in academic and research communities.
+- Has a steeper learning curve than Python, especially for people with little programming experience.
 :::
 :::
 
@@ -81,12 +101,18 @@ drawbacks for each option.
 ::: {.column}
 #### Benefits
 
-- Item 1
+- Code is executed by a Python interpreter, making Python programs platform independent (provided the host has an interpreter installed).
+- Concise, easy-to-read, beginner-friendly syntax.
+- Easy to iterate and prototype rapidly.
+- Large ecosystem of mature libraries and frameworks for web development (e.g. [Django](https://www.djangoproject.com), [Flask](https://flask.palletsprojects.com/en/2.3.x/)), database management (e.g. [SQLAlchemy](https://www.sqlalchemy.org), Django's Object Relational Mapper), and data analysis.
+- Active community and extensive resources.
+- Very popular in data-intensive research and academia, some target users of Seedcase are likely to be familiar with Python.
 :::
 ::: {.column}
 #### Drawbacks
 
-- Item 1
+- Worse runtime performance than Java or C++, partly because the interpreter does less pre-execution optimisation and instead follows the layout of the source coded sequentially during program execution.
+- Dynamic type-checking at runtime can make it more difficult to catch certain types of bugs early on.
 :::
 :::
 
@@ -96,12 +122,16 @@ drawbacks for each option.
 ::: {.column}
 #### Benefits
 
-- Item 1
+- Designed for statistical computing with excellent data visualisation capabilities.
+- Wide array of packages for data analysis.
+- Active community and extensive resources.
+- Very popular in data-intensive research and academia, some target users of Seedcase are likely to be familiar with R.
 :::
 ::: {.column}
 #### Drawbacks
 
-- Item 1
+- Less versatile and general purpose than the other languages considered.
+- While there is a web application framework for R ([Shiny](https://shiny.posit.co/)), this is intended primarily for interactive data visualisation, and offers more limited features than the frameworks for the other languages considered.
 :::
 :::
 
@@ -112,6 +142,11 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
+We have decided to use Python as the main development language for Seedcase because it is a powerful, flexible and easy-to-use platform for building a data management web application. Drawing on the skills of the core Seedcase team, Python offers the best balance of capabilities and ease of development out of the options considered. It is, moreover, a language likely to be familiar to technologically-oriented Seedcase users and prospective contributors.
+
+While Java and C++ offer more scope for context-specific performance optimisation, we are unlikely to need this level of control for Seedcase, because the number of concurrent user requests is expected to be low, resource-intensive backend tasks are expected to run without much competition, and we don't expect to do heavy-duty, real-time data analysis or image processing. Therefore, for our use case, the advantages of these languages don't justify their steeper learning curve and added complexity.
+
+We decided not to use R because, while it is a powerful language for data analysis and visualization, it is less suitable for building large-scale web applications.
 
 
 ### Consequences
@@ -119,3 +154,5 @@ REASONS."
 ::: content-hidden
 List some potential consequences of this decision.
 :::
+
+If further on we run into performance issues, we will need to look into performance improvement strategies, such as optimising our algorithms, our database queries and organisation, and how much data is loaded into program memory at once. However, these are considerations that inform everyday development decisions in any case.
