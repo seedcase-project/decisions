@@ -118,33 +118,6 @@ to be implemented manually or by using third-party libraries.
 :::
 :::
 
-### Ruby on Rails
-
-[Ruby on Rails](https://rubyonrails.org) is a popular web framework that
-provides a lot of built-in features and conventions. It has a large and
-active community and provides good support for agile development
-practices. Ruby on Rails is a good option for rapid application
-development and has good support for testing.
-
-However, Ruby on Rails requires developers to have experience with the
-Ruby programming language, which may not be ideal for all teams and
-isn't a common language in scientific environments. Additionally, Ruby
-on Rails has a large footprint and can be slow for certain use cases.
-
-
-::: {.columns}
-::: {.column}
-#### Benefits
-
-- Item 1
-:::
-::: {.column}
-#### Drawbacks
-
-- Item 1
-:::
-:::
-
 ### FastAPI
 
 [FastAPI](https://fastapi.tiangolo.com) is a modern, high-performance
