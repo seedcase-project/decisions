@@ -1,5 +1,5 @@
 ---
-title: "Why GitHub Flow"
+title: "Why GitHub flow"
 description: "Our reasons for using the GitHub Flow as our branching and development strategy."
 date: "2024-02-15"
 categories:
@@ -63,7 +63,7 @@ references:
       year: n.d.
     URL: https://githubflow.github.io
   - id: githubflow
-    title: GitHub flow - Follow GitHub flow to collaborate projects.
+    title: GitHub flow - Follow GitHub flow to collaborate on projects.
     author: 
       family: GitHub
     issued: 
