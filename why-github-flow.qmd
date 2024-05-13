@@ -1,6 +1,6 @@
 ---
 title: "Why GitHub flow"
-description: "Our reasons for using the GitHub Flow as our branching and development strategy."
+description: "Our reasons for using the GitHub flow as our branching and development strategy."
 date: "2024-02-15"
 categories:
   - decision
