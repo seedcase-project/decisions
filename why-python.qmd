@@ -22,7 +22,9 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-One of the first things to do when deciding to write a software application is to decide on the programming language. There are several languages that can be used, among them C++, Java, Python, and R. In the context of Seedcase it is important to chose a language that can handle large amounts of data, provide efficient data processing capabilities, and integrate well with other technologies commonly used in a research context.
+One of the first things to do when deciding to write a software application is to decide on the programming language. There are several languages that can be used, among them C++, Java, Python, and R. In the context of Seedcase it is important to chose a language that can handle large amounts
+of data, provide efficient data processing capabilities, and integrate
+well with other technologies commonly used in the research area.
 
 > Which programming language should we use for developing the Seedcase application?
 
@@ -33,7 +35,7 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-In the context of Seedcase it is important to choose a language that can handle large amounts of data, provide efficient data processing capabilities, and integrate well with other technologies commonly used in a research context. There is also a consideration with regard to the skills already available in the core team, as we would like to minimise the amount of time needed to program the application.
+In the context of Seedcase it is important to chose a language that can handle large amounts of data, provide efficient data processing capabilities, and integrate well with other technologies commonly used in the research area. There is also a consideration with regards to the skills already available in the core team, as we would like to minimize the amount of time that we will need to use in order to be able to program the application.
 
 ## Considered Options
 
