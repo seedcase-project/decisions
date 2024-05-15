@@ -8,7 +8,6 @@ categories:
   - website
 ---
 
-
 ::: content-hidden
 Use other decision posts as inspiration to writing these. Leave the
 content-hidden sections in the text for future reference.
@@ -21,11 +20,12 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-A software project like Seedcase needs an easy way to communicate with
-potential users that might not be familiar with using Github. The
-easiest way to do this is by having a website. In order to minimize the
-work the team needs to do, we would like to use the files we maintain in
-GitHub as the basis for a public website. The question then becomes:
+A software project like Seedcase needs an easy way to communicate and
+share knowledge for those internal and external to Seedcase (including
+users), the most common way being to put these content (like
+documentation) on a website. In order to minimize the work the team
+needs to do, we would like to use the files we maintain in GitHub as the
+basis for a public website. The question then becomes:
 
 > How do we build a website based on the files in GitHub with minimal
 > amount of overhead and that can be integrated into GitHub in some way?
@@ -56,7 +56,8 @@ needs when it comes to this decision:
     organization of websites.
 -   Good, beginner-friendly documentation on how to use the tool.
 -   Relatively easy theming and aesthetic customization.
--   Uses Markdown as the basis for writing content.
+-   Uses Markdown as the basis for writing content (see [Why
+    Markdown](why-markdown.qmd) for reasons on why).
 
 ## Considered Options
 
@@ -147,8 +148,10 @@ and fast website generator.
 ### Quarto
 
 Within the R world, a recent new tool came out called
-[Quarto](https://quarto.org/). Since its release, it has completely
-taken over as the tool to use when working with R and data science.
+[Quarto](https://quarto.org/). While new, since its release, it has
+gained enormous popularity as a language-agnostic tool for writing
+books, documentation, and websites, especially within the data science
+community.
 
 ::: columns
 ::: column
@@ -180,8 +183,8 @@ taken over as the tool to use when working with R and data science.
 -   It is a relatively new tool, so there will be some bugs and issues
     that come up along the way.
 -   Isn't as fast to build as other tools, like mdBook.
--   While not necessary for most purposes, to effectively develop
-    features in an extension requires some knowledge of
+-   While not necessary for most purposes, developing certain features
+    when making a Quarto extension requires some knowledge of
     [Lua](https://www.lua.org).
 :::
 :::
