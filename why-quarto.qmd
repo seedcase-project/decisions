@@ -22,7 +22,7 @@ statement in the form of a question for the problem.
 
 A software project like Seedcase needs an easy way to communicate and
 share knowledge for those internal and external to Seedcase (including
-users), the most common way being to put these content (like
+users and contributors), the most common way being to put these content (like
 documentation) on a website. In order to minimize the work the team
 needs to do, we would like to use the files we maintain in GitHub as the
 basis for a public website. The question then becomes:
