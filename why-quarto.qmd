@@ -8,7 +8,6 @@ categories:
   - website
 ---
 
-<!--TODO #40 docs: Update 'Why Quarto' with options and expand on decision -->
 
 ::: content-hidden
 Use other decision posts as inspiration to writing these. Leave the
@@ -100,9 +99,9 @@ documentation and includes some basic website features.
     compile correctly.
 -   There is a good amount of technical knowledge and overhead needed to
     setup and build the website, for instance, there are at least 5
-    commands to know to use the tool.
+    commands required for using the tool.
 -   Adding extensions and customizing the website requires some
-    knowledge and learning to use, nor are there many default or
+    knowledge and learning to use, and there aren't many default or
     built-in themes to choose from.
 -   Uses [CommonMark](https://commonmark.org/) as the Markdown
     specification, which isn't as powerful or feature-filled as other
@@ -114,7 +113,7 @@ documentation and includes some basic website features.
 :::
 :::
 
-### mkDocs
+### MkDocs
 
 [MkDocs](https://www.mkdocs.org/) is an established and widely used tool
 that is built with Python and installable through `pip`. It is a simple
