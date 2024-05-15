@@ -1,0 +1,278 @@
+---
+title: "Why conventional commits (with optional emojis)"
+description: "Our reasons for using conventional commits (with optional emojis following the Gitmoji convention) across the Seedcase projects."
+date: "2024-05-14"
+categories:
+---
+
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+There are many ways to write commit messages, but having a consistent
+and standardised convention to follow can ease the understanding of the
+project history, tracking of changes, and the review process. It can
+also support coherence and consistency across contributions, which is
+especially important when working in a team-based and open source
+setting.
+
+::: callout-caution
+Note that the benefits described above also arise from a clear,
+consistent workflow on commit frequency and content (see the decision
+post on why we use [atomic commits](why-atomic-commits.qmd)).
+:::
+
+Since commit message conventions are not enforced by Git itself, but
+rather by the team working on a given project, the question becomes:
+
+> Which commit message convention should we follow when we write commit
+> messages in Seedcase projects?
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+In the Seedcase projects, we emphasise the open-science philosophies of
+transparency and collaboration. Therefore, having a clear and consistent
+commit message convention is essential for maintaining these principles,
+both within the team and for external contributors.
+
+Since we follow the [GitHub flow](why-github-flow.qmd), changes are made
+on topic branches and reviewed before merging into the main branch.
+Having a clear commit message convention can help with the review
+process, as the context and purpose of the changes will be clearer for
+reviewers.
+
+In addition, some commit message conventions can automate changelogs and
+release processes, which can be beneficial for managing versioning and
+communicating changes to users and contributors.
+
+::: callout-caution
+Note that most conventions follow the same general principles with some
+differences in syntax and structure.
+
+In general, a commit message should be **concise** (brief, but
+descriptive), **relevant** (focus on *why* the change was necessary, not
+*how* it was implemented), **clear** (include specific descriptions, and
+avoid vagueness and ambiguity), and **consistent** (follow a standard
+format).
+
+Some of the general principles that most conventions follow are that a
+commit message should:
+
+-   Include a short descriptive title, potentially followed by a body
+    with more details.
+-   Use the imperative, present tense in the title and the body (e.g.,
+    "Add feature" instead of "Added feature")
+-   Use the title to summarise the changes made in the commit.
+-   Use the body to provide context and justifications for the change
+    (such as elaboration on the changes, breaking changes, reference of
+    issues, and tagging relevant people).
+:::
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+There are multiple conventions for writing commit messages, but we will
+consider three of the most popular ones: the Angular convention,
+conventional commits, and the Gitmoji convention.
+
+### The Angular convention
+
+The [Angular
+convention](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)
+includes a **header**, a **body**, and a **footer** in each commit
+message, like shown below:
+
+```         
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+
+The header includes a **type**, a **scope**, and a **subject**, the body
+includes a **longer description** of the change (including the
+motivation of why the changes was implemented and how it contrasts with
+previous implementations), and the footer includes **metadata** about
+the change (including potential breaking changes and references to
+relevant issues). In the header, the scope is optional, and both the
+body and footer are optional.
+
+This convention originated from the
+[Angular](https://github.com/angular/angular/tree/main) project, which
+is built on TypeScript. It defines specific types for commits, such as
+`feat`, `fix`, `docs`, `style`, `refactor`, `test`, and more, helping to
+categorize changes effectively. In addition, the angular convention
+encourages the use of scope, which should be the name of the npm package
+affected (which is JavaScript-specific) or anything specifying where in
+the codebase the commit change is made.
+
+::: columns
+::: column
+#### Benefits
+
+-   Provides a clear structure for commit messages.
+-   Can be used to generate changelogs (including the omission of
+    irrelevant commits, like formatting).
+:::
+
+::: column
+#### Drawbacks
+
+-   It can be too verbose for some projects.
+-   Usage more prevalent in Angular-related projects.
+-   Developed in a Typescript context
+-   No emojis which can make commit messages easier to scan and more
+    visually appealing.
+:::
+:::
+
+### Conventional commits
+
+Conventional commits are inspired by the Angular convention described
+above, but is more lightweight (how?). This convention also provides a
+structured format for commit messages, indicating the **type** of change
+(e.g., `feat`, `fix`, `doc`, and `chore`), a concise **description**,
+and optionally a **body** and/or **footer** providing a longer
+description:
+
+```         
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+In this convention, the scope must be a noun describing a section of the
+codebase.
+
+It's widely adopted due to its compatibility with semantic versioning
+and automated release processes. The conventional commits convention is
+commonly used in various software development communities, including the
+open science communities. Its structured format aligns well with the
+organized and systematic approach favoured in open-science projects.
+Additionally, its compatibility with automated release processes makes
+it appealing for managing versioning in scientific software projects.
+
+The conventional commits convention is also supported by a [VS Code
+extension](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)
+that can help with writing commit messages in the correct format.
+
+::: columns
+::: column
+#### Benefits
+
+-   Provides a clear structure for commit messages.
+-   Has an easy-to-use VS Code extension.
+-   Can be used to generate changelogs.
+-   More widespread adoption, in comparison to the Angular convention.
+:::
+
+::: column
+#### Drawbacks
+
+-   It might be too verbose for some projects (but using the VS Code
+    extension eases the process substantially).
+-   No emojis which can make commit messages easier to scan and more
+    visually appealing.
+:::
+:::
+
+### The Gitmoji convention
+
+The [Gitmoji](https://gitmoji.dev/) commit message convention
+incorporates emojis to categorise commit messages. Each commit message
+consists of an **intention**, an optional **scope**, and a **message**,
+like shown below:
+
+```         
+<intention>(<scope>): <message>
+```
+
+Examples of intentions include `:sparkles:` for new features, `:bug:`
+for bug fixes, `:recycle:` for refactoring, and `:books:` for
+documentation changes. The use of emojis can make commit messages more
+visually appealing and easier to scan, especially for those who are more
+visually oriented.
+
+::: columns
+::: column
+#### Benefits
+
+-   Provides a clear structure for commit messages.
+-   It has an easy-to-use VS Code extension.
+-   The use of emojis can make commit messages more visually appealing
+-   The use of emojis makes it easier to scan a commit and identify the
+    purpose or intention.
+-   Gitmoji is an open-source project which fits well with the open
+    science philosophy of the Seedcase projects.
+:::
+
+::: column
+#### Drawbacks
+
+-   For those not familiar with emojis or who are less visually
+    oriented, it might be harder to understand the meaning of the
+    commit.
+-   No structured format for the body or footer of the commit message to
+    provide more context.
+:::
+:::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+When deciding which commit message convention to follow in the Seedcase
+projects, the most important thing is to explicitly include a convention
+that everyone agrees on and follows. Each of the conventions described
+above includes a structured format for commit messages, which can help
+to make the history of the project more understandable and easier to
+track.
+
+We decided to use the **Conventional Commits** convention with the
+inclusion of optional emojis (with inspiration from **Gitmojis**). The
+conventional commits convention is widely adopted, has an easy-to-use
+[VS Code
+extension](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits),
+and can be used to generate SemVar changelogs. Since emojis are
+incorporated in the Conventional commits extension (following the
+Gitmoji convention), we have the option to include emojis in commit
+messages to make commit messages more visually appealing and easier to
+scan for purpose or intention.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+By using the Conventional Commits convention with optional emojis, we
+aim to make our commit messages more consistent, informative, and
+visually appealing. This will help to improve the readability of the
+commit history, facilitate the review process, and automate changelogs
+and release processes. This fits well with the open source philosophies
+we strive to follow. However, to achieve these benefits, it is important
+that everyone in the team as well as potential external contributors are
+aware of and follow this convention.
