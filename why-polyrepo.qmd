@@ -1,15 +1,14 @@
 ---
 title: "Why poly-repo"
 description: "Our reasons for structuring projects (both software and websites) in a poly-repo rather than mono-repo style."
-author: "Luke W. Johnston"
-date: last-modified
+date: "2023-12-05"
 categories:
   - repositories
   - organization
   - structure
   - management
 ---
-
+<!--TODO #39 docs: Consider whether or not to format pros/cons as Benefit/Drawback in 'Why Polyrepo' -->
 ## Context and Problem Statement
 
 The core issue and question here is: 

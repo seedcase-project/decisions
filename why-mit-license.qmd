@@ -2,7 +2,6 @@
 title: "Why an MIT License"
 description: |
   Open and permissive licensing of copyrighted content is a way to increase use of a software product, ease collaboration and re-use, and sharing intellectual ideas with others. This post contains our reasons for choosing the MIT License, which is a very permissive copyright license.
-author: "Kristiane Beicher"
 date: "2023-04-01"
 date-modified: last-modified
 categories:
@@ -10,6 +9,7 @@ categories:
 - copyright
 - software-architecture
 ---
+<!--TODO #38 docs: Update 'Why MIT license with benefits and drawbacks -->
 
 ## Context and Problem Statement
 

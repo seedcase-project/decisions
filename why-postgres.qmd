@@ -4,8 +4,7 @@ description: |
   SQL is the backbone of any database system. However there are many variants
   of SQL. This decision post contains the reasons for using PostgreSQL, which is
   a powerful and feature-full variant of SQL.
-author: Kristiane Beicher
-date: last-modified
+date: "2024-01-05"
 categories:
   - backend
   - database
@@ -37,7 +36,7 @@ One of the most important functions of Seedcase is to handle data, and the most 
 [MySQL](www.mysql.com) was first released in 1995 and is maintained by Oracle Corp. It is an open source platform with the option to deploy either as a local server solution or cloud based. The implementation languages are C and C++, and it runs of a variety of operating systems. The system allows access through standard technologies (ADO.NET, JDBC, ODBC, and native APIs).
 
 ::: columns
-::: {.column style="font-size: 90%"}
+::: {.column}
 
 #### Benefits 
 
@@ -50,7 +49,7 @@ One of the most important functions of Seedcase is to handle data, and the most 
 * There are a number of ways for MySQL to interact with Apache Parquet files.
 
 :::
-::: {.column style="font-size: 90%"}
+::: {.column}
 
 #### Drawbacks
 
@@ -66,7 +65,7 @@ One of the most important functions of Seedcase is to handle data, and the most 
 [PostgreSQL](www.postgresql.org) was first released in 1989 from UC Berkeley and is maintained by the PostgreSQL Development Group. It is an open source platform with the option to deploy either as a local server solution or cloud based. The implementation language is C, and it runs of a variety of operating systems. The system allows access through standard technologies (ADO.NET, JDBC, ODBC, a native C library, and streaming APIs).
 
 ::: columns
-::: {.column style="font-size: 90%"}
+::: {.column}
 
 #### Benefits 
 
@@ -81,7 +80,7 @@ One of the most important functions of Seedcase is to handle data, and the most 
 * It is possible to create columnar based tables directly in PostgreSQL.
 
 :::
-::: {.column style="font-size: 90%"}
+::: {.column}
 
 #### Drawbacks
 
@@ -95,7 +94,7 @@ One of the most important functions of Seedcase is to handle data, and the most 
 First released in 2000, SQLite is slightly different to the two systems described above, as it is an embedded serverless database primarily maintained by an international team of programmers (see [About SQLite](https://www.sqlite.org/about.html)). It is an open source platform with the option to deploy either locally or in the cloud. The implementation language is C, and it is platform independent. The system allows access through standard technologies (ADO.NET, JDBC, and ODBC).
 
 ::: columns
-::: {.column style="font-size: 90%"}
+::: {.column}
 
 #### Benefits 
 
@@ -106,7 +105,7 @@ First released in 2000, SQLite is slightly different to the two systems describe
 * There is always a risk that an open source community will break apart and leave a product unsupported, but the risk here looks minimal. The explicitly stated intention from the core developers of SQLite is to support the product until at least 2050.
 
 :::
-::: {.column style="font-size: 90%"}
+::: {.column}
 
 #### Drawbacks
 
@@ -121,7 +120,7 @@ First released in 2000, SQLite is slightly different to the two systems describe
 
 ## Decision Outcome
 
-We've decided to work with PostgreSQL as our backend database as it fulfills all our needs and is a very popular open source tool. MySQL would be the other obvious choice, the application does everything that Seedcase needs, but the user community for PostgreSQL seems to be a bit more active. SQLite is quite popular within the application developer community, but it doesn't have a reliable multi-user functionality, so it may be an uphill battle to get it to do the things we are hoping to do with Seedcase.
+We've decided to work with PostgreSQL as our backend database as it fulfils all our needs and is a very popular open source tool. MySQL would be the other obvious choice, the application does everything that Seedcase needs, but the user community for PostgreSQL seems to be a bit more active. SQLite is quite popular within the application developer community, but it doesn't have a reliable multi-user functionality, so it may be an uphill battle to get it to do the things we are hoping to do with Seedcase.
 
 ### Consequences
 
