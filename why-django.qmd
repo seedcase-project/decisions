@@ -1,17 +1,15 @@
 ---
 title: "Why Django"
 description: |
-  Web frameworks are designed to support building a web frontend as well
-  as the API layer. Django is a popular and widely used framework.
+  Web frameworks are designed to support building both web frontends and API layers. Django is a popular full-stack framework with solutions for most web development tasks out of the box.
 date: "2023-03-22"
+date-modified: "2024-05-16"
 categories:
   - api
   - web
   - frontend
   - software-architecture
 ---
-
-<!--TODO #35 docs: Update 'Why Django' with Benefits and Drawbacks -->
 
 ::: content-hidden
 Use other decision posts as inspiration to writing these. Leave the
@@ -25,12 +23,11 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-For a software project to succeed it is important to pick the right
-programming framework to work in from the start. A framework should
-provide consistency, code reuse, and easy of maintenance for a group of
-developers. It should provide best practice, and allow for code to be
-shared between different parts of the applications. The question
-therefore becomes:
+Web applications all have a host of common functionalities (e.g. HTTP request handling, URL routing or data source integration), which take significant time and effort to implement from scratch and maintain for each new project. Good frameworks provide mature, well-maintained components for these features out of the box as well as best-practice patterns and guidelines for structuring code consistently. They also promote code reuse and modular design both within and between applications.
+
+On the whole, frameworks make applications robust, secure and scaleable, collaborative development quicker and easier, and software maintenance less onerous, allowing the team to focus on implementing project-specific features. 
+
+The question then becomes:
 
 > Which coding framework will best suit our needs in developing
 > Seedcase?
@@ -42,8 +39,11 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-All considered web frameworks use Python. For our decision to use
-Python, see the page [Why Python](why-python.qmd).
+We are developing Seedcase in Python (see [Why Python](why-python.qmd) for more information about this decision), so we only consider frameworks for Python. Seedcase is a relatively complex web application with a frontend, an API and a data layer, so we are looking for a full-stack framework that comes with solutions for common tasks in all three of these layers. More particularly, we are looking for tools that facilitate interactive web page design, form handling, URL mapping, serialisation, REST API development and database management. As Seedcase has users with differentiated roles and privileges, a good user management system with support for authentication and authorisation mechanisms is important. Working with relational data, raw data files and image files is a central concern, so the framework should integrate well with popular databases and make it easy to access the local file system.
+
+Additionally, the framework should be mature and well documented, with an active community and extensive resources.
+
+Finally, we don't expect an above-average request throughput and are not a real-time data source to external systems, so performance is not the highest ranking factor.
 
 ## Considered Options
 
@@ -54,99 +54,80 @@ and drawbacks for each option.
 
 ### Django
 
-[Django](https://www.djangoproject.com) provides excellent support for
-API development through its built-in serialization framework and REST
-framework. The REST framework provides a lot of functionality out of the
-box, such as authentication, pagination, and filtering. Additionally,
-Django provides good support for other types of APIs, such as GraphQL.
-
-Django provides a powerful ORM that abstracts away much of the database
-logic and allows developers to work with database models in a Pythonic
-way. It provides good support for migrations, which makes it easy to
-evolve the database schema over time. Django also provides a built-in
-admin interface that allows non-technical users to manage data.
-
-Django provides good support for security through its built-in
-authentication system and its support for common security practices such
-as Cross-Site Request Forgery (CSRF) protection and password hashing. It
-also provides good support for role-based access control and
-fine-grained permissions.
-
-Django provides good support for user management through its built-in
-authentication system and its support for user profiles and social
-authentication. It also provides good support for password resets and
-account activation.
+[Django](https://www.djangoproject.com) is a full-stack framework for building server-rendered web applications following a Model-View-Template pattern.
 
 
 ::: {.columns}
 ::: {.column}
 #### Benefits
 
-- Item 1
+- Has excellent support for API development, including frameworks for REST and GraphQL architectures.
+- With the [REST framework](https://www.django-rest-framework.org/) it offers built-in solutions for all common web development tasks, such as HTTP request handling, serialisation, URL routing, pagination, filtering and internationalisation. 
+- Comes with a wide range of tools for user management, such as a customisable authentication system with support for social authentication and user profiles, and account-activation and password-reset mechanisms.
+- Promotes security best-practices through the built-in authentication system, role-based access control, fine-grained permissions, Cross-Site Request Forgery (CSRF) protection and password hashing.
+- Provides a powerful Object-Relational Mapper (ORM) that abstracts away much of the database logic and allows developers to work with database models in a Pythonic way.
+- Supports all major databases and has a migration mechanism, making it easy to evolve the database schema over time.
+- Has good file storage support, making it easier to work with raw data and image files.
+- Comes with an admin interface out of the box, allowing non-technical users to manage data.
+- Offers built-in form handling capabilities with customisable form classes and form validation logic.
+- Uses server-side rendering by default, enabling fast webpage renders. 
+- Has a template engine for creating dynamic HTML pages.
+- Makes it easy to compose Django applications and has a wide array of well-maintained packages.
+- Has excellent documentation and a large and active developer community.
 :::
 ::: {.column}
 #### Drawbacks
 
-- Item 1
+- Has a steeper learning curve because of its extensive set of features.
+- May be less performant in certain scenarios than the other frameworks considered due to the size of the core framework and its limited support for asynchronous programming.
+- More opinionated than other frameworks, with less flexibility about the choice of project structure, ORM and template engine.
+- Server-rendered websites can have slower response times, which can limit interactivity.
+- Using the built-in template engine creates a tighter coupling between backend and frontend, potentially complicating code reuse and maintenance.
 :::
 :::
 
 ### Flask
 
-[Flask](https://flask.palletsprojects.com/en/2.3.x/) is a lightweight
-web framework that is easy to use and has a low learning curve. It
-provides a lot of flexibility and does not enforce any particular
-project structure. Flask has a small footprint and is a good option for
-simple web applications or prototypes.
-
-However, Flask does not provide some of the advanced features that
-Django has, such as an admin interface, an object-relational mapper
-(ORM), and a built-in authentication system. These features would need
-to be implemented manually or by using third-party libraries.
-
+[Flask](https://flask.palletsprojects.com/en/3.0.x/) is a lightweight web framework, designed to be simple and flexible.
 
 ::: {.columns}
 ::: {.column}
 #### Benefits
 
-- Item 1
+- Has a gentler learning curve and is easy to use.
+- Provides a lot of flexibility without enforcing a particular project structure, ORM or frontend solution.
+- Has a smaller footprint, which may lead to a small performance gain.
+- Uses Jinja2 as its default template engine.
+- Good option for simple web applications or prototypes.
+- Has an active community, good resources and a fair selection of third-party extensions.
 :::
 ::: {.column}
 #### Drawbacks
 
-- Item 1
+- Provides fewer features out of the box than Django. Authentication, user management, serialisation, form handling, object-relational mapping and the admin interface would need to be implemented from scratch or added through community-maintained extensions.
+- Developers have a more active role in responding to security concerns and ensuring that security best practices are implemented appropriately.
 :::
 :::
 
 ### FastAPI
 
-[FastAPI](https://fastapi.tiangolo.com) is a modern, high-performance
-web framework for building APIs with Python. It is designed to be fast,
-and easy to use. FastAPI includes features like automatic validation of
-request bodies, async support, and built-in OpenAPI documentation. These
-features make it a popular choice for building scalable and maintainable
-APIs, especially for applications that require high performance
-real-time responses.
-
-However, it's important to consider the specific needs of the Seedcase
-Product. FastAPI may be a good choice for applications that require high
-performance real-time responses, but not as good a choice for more
-complex web applications that require a full-stack framework with many
-built-in features. It is also newer, so it is still maturing and has a
-small, though active, community, which limits the amount of available
-support and resources.
-
+[FastAPI](https://fastapi.tiangolo.com) is a modern web framework for building APIs with a focus on speed and performance. It is particularly well-suited for applications that need to handle a large volume of requests in real time. 
 
 ::: {.columns}
 ::: {.column}
 #### Benefits
 
-- Item 1
+- Easy to use and requires minimal setup.
+- Offers exceptional performance thanks to its native support for asynchronous programming.
+- Has built-in request and query parameter validation.
+- Comes with automatic OpenAPI schema generation and documentation UIs.
 :::
 ::: {.column}
 #### Drawbacks
 
-- Item 1
+- Has a narrow range of full-stack features out of the box, similar to Flask.
+- Has no built-in template engine.
+- A newer, maturing project with more limited support and resources.
 :::
 :::
 
@@ -157,8 +138,18 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-After evaluating Flask, FastAPI, Ruby on Rails, and Django, we have made
-the decision that Django is the better fit for Seedcase. Django has the
-benefits of a built-in serialization framework and REST framework for
-API development, providing a powerful ORM and good built-in support for
-security, as well as user management.
+We decided to choose Django because the requirements of Seedcase are a close match for what Django offers, so we are well-placed to take advantage of many of its core features. Django's built-in ORM, extensive user management capabilities, feature-rich REST framework and solid security principles will save us significant development time and effort and help us create a reliable and long-lived product. The native template engine is also attractive, in that it will allow us to iterate over user interfaces quickly, without the overhead of maintaining a separate frontend framework.
+
+
+While Flask and FastAPI offer more flexibility and autonomy, this is not necessarily an unambiguous positive for us, because we would need to make and justify more decisions about our choice of project structure and third-party extensions. Moreover, the more extensions we rely on, the greater the effort involved in vetting for security and managing dependency updates. As Seedcase is not a performance-critical application, the performance gain offered by FastAPI is not a particularly relevant factor.
+
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+As we will be rendering our web pages on the server side, we should keep an eye out for any user-experience issues in our interaction-heavy user flows, like the data upload or the data project application process. We may consider streamlining interactions on the client side using inline JavaScript in our Django templates.
+
+A further point to keep in mind is that the integrated, template-based architecture may create a tighter coupling between the frontend and the API layer. While we don't have a specific need to decouple the frontend more formally — as we will not have other user interfaces linked to the API and external interacting systems are well-served by dedicated API endpoints — tightly coupled components can become difficult to refactor or reuse as the application's complexity grows.
