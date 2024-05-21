@@ -1,0 +1,169 @@
+---
+title: "Why choose Semantic Versioning (SemVer) for software"
+description: "Our reasons for using SemVer for versioning the releases of our software projects."
+date: "2024-05-24"
+categories:
+- development
+- management
+- organization
+- versioning
+---
+
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+Since our core aim for the Seedcase Project is building software, we
+need some way of communicating changes made to our software whenever we
+release an update. [Software
+versioning](https://en.wikipedia.org/wiki/Software_versioning) is an
+approach to communicating changes in a software whenever a new "version"
+or update is released that is widely used throughout the software
+industry, almost for as long as software as been built. But there are
+different ways to version software, so the question is:
+
+> Which style of software versioning do we use for our software
+> projects?
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+Like any software project, we need some way to communicate with
+ourselves, with contributors, with users who are developers, and with
+our non-technical users, what version of our software is installed. This
+is necessary to deal with bug reports, identifying issues that come up,
+communicate breaking changes or if new features have been added, or if
+bugs have been fixed. This type of communication and information is
+handled through the software version as well as the changelog that is
+based on the version.
+
+Having versions also helps us in developing and deploying our software
+as we build and test things out.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+There are two major software versioning systems, one that bases the
+version on what was changed between releases (semantic versioning) and
+the other based on when the release was made (calendar versioning).
+Broadly, each style has variations, as well as sometimes some
+combination of the two. We'll compare the two most common, standardised
+systems:
+
+-   [Semantic Versioning (SemVer)](https://semver.org/)
+-   [Calendar Versioning (CalVer)](https://calver.org/)
+
+### SemVer
+
+SemVar is a versioning system that uses a three-part version number:
+`MAJOR.MINOR.PATCH`. This system is widely used in the software industry
+and is well understood by developers. For instance, with a bug fix,
+`PATCH` is incremented by 1, going from `0.0.0` to `0.0.1`. For `MINOR`,
+you increment by 1 when there is a new feature, so from `0.0.1` to
+`0.1.0`. For `MAJOR`, you increment by 1 when there is a breaking
+change, so from `0.1.0` to `1.0.0`.
+
+::: columns
+::: column
+#### Benefits
+
+-   This is the most widely used versioning system in the software
+    industry, so is very familiar to people.
+-   It is very clear what has changed between versions, so it conveys
+    information about changes well.
+-   Has a large number of tools and packages that support it, combine
+    well with it, or integrate well into development workflows around
+    it. For instance, there are tools that can automatically generate
+    changelogs based on the commit messages in a repository, that can
+    automatically increment the version number based on the changes
+    made, or that
+:::
+
+::: column
+#### Drawbacks
+
+-   It can be very difficult to determine when something is a major,
+    minor, or patch change. Sometimes it is perfectly clear, but often,
+    a change is hard to place in these three categories.
+-   It can be difficult to determine what constitutes a breaking change.
+-   More difficult (but not impossible) to automate, since it can
+    involve a large amount of human judgement.
+:::
+:::
+
+### CalVer
+
+CalVer is a system that is based on dates. Unlike SemVer, there are more
+variations available to use, for instance, `YYYY.MM` or `YY.MM`. Also
+unlike SemVer, there are more often variations that combine features of
+SemVer and CalVer, such as `YYYY.MINOR.PATCH`.
+
+::: columns
+::: column
+#### Benefits
+
+-   Very easy to use and understand, as it is based on dates. Whatever
+    date the software is released on, is the version number.
+-   Works very well for some software projects, especially those with
+    very regular releases. For instance, the most popular Linux
+    distribution, Ubuntu, uses a form of CalVer, that increment every 4
+    months.
+:::
+
+::: column
+#### Drawbacks
+
+-   It doesn't contain any information on what was changed between
+    versions.
+-   Breaking changes are not communicated in the version number.
+-   There are substantially fewer tools and packages to help automate
+    release and development workflows compared to SemVer.
+-   Doesn't work as well for some software projects, especially those
+    that are not released on a regular basis.
+:::
+:::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+We decided to use Semantic Versioning (SemVar) for versioning our
+software. While it is more difficult to implement and decide on which
+version to increment based on the changes made, because it is so widely
+used, the availability of tools that support it or exclusively depend on
+it is very large. It will ultimately make it easier for us during
+development because we can make use of those existing tools to handle
+tasks like version release and changelog generation for us.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+-   One of the biggest consequences of using SemVer is that it does take
+    a bit of effort to implement the tools that will eventually automate
+    many of our tasks for us.
+-   There will also be some variation in how individual team members and
+    contributors label changes, since there is some level of human
+    judgement on categorising changes into the correct version number.
+    There will be some learning within the team based on this.
