@@ -1,8 +1,14 @@
 ---
 title: "Why conventional commits (with optional emojis)"
-description: "Our reasons for using conventional commits (with optional emojis following the Gitmoji convention) across the Seedcase projects."
+description: "Our reasons for using conventional commits (with optional emojis following the Gitmoji convention) across Seedcase projects."
 date: "2024-05-14"
 categories:
+- git
+- commit messages
+- communication
+- collaboration
+- teamwork
+- workflow
 ---
 
 ::: content-hidden
@@ -44,7 +50,7 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-In the Seedcase projects, we emphasise the open-science philosophies of
+In Seedcase projects, we emphasise the open-source philosophies of
 transparency and collaboration. Therefore, it is essential to have a
 clear and consistent commit message convention to maintain these
 principles, both within the team and across external contributions.
@@ -99,9 +105,9 @@ convention](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-com
 but was generalised to go beyond Typescript. It's widely adopted due to
 its compatibility with semantic versioning and automated release
 processes. Moreover, it's commonly used in various software development
-communities, including the open science communities. Its structured
+communities, including the open source communities. Its structured
 format aligns well with the organized and systematic approach favoured
-in open-science projects. Additionally, its is compatible with automated
+in open-source projects. It is also compatible with automated
 release processes which makes it appealing for managing versioning in
 software projects.
 
@@ -145,7 +151,7 @@ that eases the process of writing commit messages in the correct format.
 -   Provides a clear structure for commit messages.
 -   Has an easy-to-use VS Code extension.
 -   Can be used to generate changelogs.
--   Widespread adoption in various software development and open science
+-   Widespread adoption in various software development and open-source
     communities.
 :::
 
@@ -186,8 +192,8 @@ visually oriented.
 -   Has an easy-to-use VS Code extension.
 -   The use of emojis can make commit messages more visually appealing
     and easier to scan to identify the purpose or intention.
--   Gitmoji is an open-source project which fits well with the open
-    science philosophy of the Seedcase projects.
+-   Gitmoji is an open-source project which fits well with the open-source
+philosophy of the Seedcase Project.
 :::
 
 ::: column
@@ -208,7 +214,7 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-When deciding which commit message convention to follow in the Seedcase
+When deciding which commit message convention to follow in all Seedcase
 projects, the most important thing is to explicitly include a convention
 that everyone agrees on and follows. Both conventions described above
 include a structured format for commit messages, which can help to make
