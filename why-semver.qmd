@@ -122,7 +122,7 @@ SemVer and CalVer, such as `YYYY.MINOR.PATCH`.
     date the software is released on, is the version number.
 -   Works very well for some software projects, especially those with
     very regular releases. For instance, the most popular Linux
-    distribution, Ubuntu, uses a form of CalVer, that increment every 4
+    distribution, Ubuntu, uses a form of CalVer, that increment every 6
     months.
 :::
 
