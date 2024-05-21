@@ -216,7 +216,7 @@ the history of the project more understandable and easier to track.
 
 We decided to use the **Conventional Commits** convention with the
 inclusion of optional emojis (following the use of emojis in the
-**Gitmojis** convention). The Conventional Commits convention is widely
+**Gitmoji** convention). The Conventional Commits convention is widely
 adopted, has an easy-to-use [VS Code
 extension](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits),
 and can be used to generate SemVar changelogs. Since emojis are
