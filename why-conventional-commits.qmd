@@ -107,9 +107,9 @@ its compatibility with semantic versioning and automated release
 processes. Moreover, it's commonly used in various software development
 communities, including the open source communities. Its structured
 format aligns well with the organized and systematic approach favoured
-in open-source projects. It is also compatible with automated
-release processes which makes it appealing for managing versioning in
-software projects.
+in open-source projects. It is also compatible with automated release
+processes which makes it appealing for managing versioning in software
+projects.
 
 In this way, the Conventional Commits convention adds a both human and
 machine-readable structure to commit messages, which can help to make
@@ -192,8 +192,8 @@ visually oriented.
 -   Has an easy-to-use VS Code extension.
 -   The use of emojis can make commit messages more visually appealing
     and easier to scan to identify the purpose or intention.
--   Gitmoji is an open-source project which fits well with the open-source
-philosophy of the Seedcase Project.
+-   Gitmoji is an open-source project which fits well with the
+    open-source philosophy of the Seedcase Project.
 :::
 
 ::: column
