@@ -1,0 +1,218 @@
+---
+title: "Conventional branches"
+description: "Our reasons for using conventional branch names."
+date: ""
+categories:
+- git
+- branches
+- communication
+- collaboration
+- teamwork
+- workflow
+---
+
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+For the Seedcase project, we aim to follow best practices and have
+explicit and clear structures for how we work together. This includes
+workflows on how we work with Git and GitHub (see the decision posts
+[Why GitHub flow](why-github-flow.qmd), [Why atomic commits and
+PRs](why-atomic-commits-and-prs.qmd), and [Why conventional
+commits](why-conventional-commits.qmd)).
+
+Since we follow the GitHub flow, we need a structure for how we name our
+branches, since branch naming is important for keeping a project
+organised and understandable. As with commits, Git imposes very few
+restrictions and it is up to the team to incorporate and follow a clear
+structure.
+
+The question is:
+
+> Which naming scheme should we follow for branch naming to ensure clear
+> and streamlined contributions?
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+In the collaborative and open-source environment of the Seedcase
+Project, we wish to streamline how we name Git branches. If everyone
+follows the same structure for naming branches, it will become easy to
+identify and understand what work has been implemented in a branch.
+
+We want to provide a naming scheme for naming branches that:
+
+1. Is simple
+
+2. Is descriptive and informative, so it's easy for reviewers to
+understand what work is being done on the branch
+
+3. Is easy to implement, for example with a VS Code extension
+
+4. Works well with the other workflow conventions we follow
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+When researching for branch naming conventions, most of the described
+best practices involve a naming scheme that follows a structure similar
+to Conventional Commits, which works very well for the Seedcase core
+team, since we follow this convention for our commit messages (see the
+[Why conventional commits](why-conventional-commits.qmd) decision post
+for why we follow this convention).
+
+In general, these naming schemes involves a prefix describing the
+**type** of branch and a short **description**.
+
+Like with Conventional Commits, the type prefix enables you to quickly
+identify the purpose of the branch. Prefixes include `feat`, `fix`,
+`docs`, and so on, following the conventional commits convention.
+
+In general, the following best practices apply for branch naming:
+
+1. Only use lower casing
+
+2. Only use alphanumeric characters (avoid punctuation, spaces,
+underscores, or other any non-alphanumeric characters than hyphen)
+
+3. Use kebab-casing, i.e., separate words by hyphens (for example
+`short-description-of-branch`)
+
+4. Concise and informative descriptions (avoid branch names longer than
+50 characters)
+
+There are, however, minor diverging conventions. The details of these
+will be fleshed out below.
+
+### Include ticket/issue number
+
+When especially larger teams work on a project, they tend to have some
+kind of project management system, with tickets or items for each
+developer to work on. The Seedcase core team uses GitHub projects (see
+the [Why GitHub projects](why-github-projects.qmd) post), which
+includes numbering of issues across repositories.
+
+This information can easily be added to a branch name like so:
+
+```         
+feat/issue-123-short-description
+```
+
+::: columns
+::: column
+#### Benefits
+
+-   Clear reference that couples the issue and branch
+:::
+
+::: column
+#### Drawbacks
+
+-   The branch name becomes longer
+
+-   Risk of using incorrect issue numbers (due to mistyping or
+    misremembering)
+
+-   Need for looking up the ticket number in the project management
+    system (GitHub for the Seedcase core team)
+
+-   If only the issue ID is included, there is no explicit context for
+    your collaborators to know what the works of the branch covers.
+    Instead, reviewers may need to find the issue in the project
+    management system to figure out the context.
+:::
+:::
+
+### Use forward slash as separator between the type prefix and description
+
+It's common practice to use a forward slash (`/` ) between the prefix and the
+description of a branch. Let's sum up the benefits and drawbacks of this
+practice:
+
+::: columns
+::: column
+#### Benefits
+
+- Adds a clear separation of the prefix and description 
+- Shows a hierarchy in the branch name which many platforms and IDEs (like VS Code) will recognise and sort branches by 
+
+:::
+
+::: column
+#### Drawbacks
+
+- Could be confused with a directory structure
+- Adds complexity to the branch name which could lead to errors and, thus, inconsistencies
+:::
+:::
+
+### Include user ID or username
+
+Some teams include the initials of the author in the branch name to keep track of each developer's work. Let's outline the benefits and drawbacks of this practice:
+
+::: columns
+::: column
+#### Benefits
+
+- Easy to track who is working on what
+- Can be useful for larger teams
+:::
+
+::: column
+#### Drawbacks
+
+- Adds complexity to the branch name
+- Could be seen as unnecessary, especially in smaller teams
+:::
+:::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+We decided to follow the following naming scheme:
+
+```
+<type>/short-description
+```
+
+This naming scheme is simple, descriptive, and informative, with a structure that mimic the Conventional Commits convention which we follow for commit messages. 
+
+We decided to not include the issue number in the branch name, as it can be seen as unnecessary and could lead to errors and inconsistencies. Instead, we encourage developers to refer to the issue in the pull request description.
+
+Since our team is small and we work closely together, we decided to not include user IDs or usernames in the branch names to keep the complexity of the branch names to a minimum.
+
+This convention is easy to implement, using the [Conventional Branch](https://marketplace.visualstudio.com/items?itemName=pshaddel.conventional-branch) extension for VS Code. This extension lets us define the wanted naming structure and can easily be used to create new branches with the correct naming convention (using the command palette in VS Code).
+
+By following this naming scheme, we ensure that all branches are named in a consistent and clear way, making it easy for reviewers to understand what work is being done on a branch. This will help streamline the contribution process and make it easier for developers to collaborate on the project.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+By not including issue number in the branch name, we need to make sure that the issue is referenced in the pull request description. This can be seen as an extra step, but it also ensures that the issue is properly linked to the branch and the work done in the branch.
+
+If our core team grows, we might consider the inclusion of user IDs or usernames in the branch names to keep track of each developer's work. But for now, we decided to omit this to keep the naming scheme as simple as possible.
+
