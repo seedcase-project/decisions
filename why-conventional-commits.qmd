@@ -9,6 +9,12 @@ categories:
 - collaboration
 - teamwork
 - workflow
+- git
+- commit messages
+- communication
+- collaboration
+- teamwork
+- workflow
 ---
 
 ::: content-hidden
