@@ -23,7 +23,7 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-For the Seedcase project, we aim to follow best practices and have
+For the Seedcase Project, we aim to follow best practices and have
 explicit and clear structures for how we work together. This includes
 workflows on how we work with Git and GitHub (see the decision posts
 [Why GitHub flow](why-github-flow.qmd), [Why atomic commits and
@@ -89,7 +89,7 @@ In general, the following best practices apply for branch naming:
 
 1.  Only use lower casing
 
-2.  Only use alphanumeric characters (avoid punctuation, spaces,
+2.  Only use alphanumeric characters (don't use punctuation, spaces,
     underscores, or other any non-alphanumeric characters than hyphen)
 
 3.  Use kebab-casing, i.e., separate words by hyphens (for example
@@ -167,8 +167,7 @@ of this practice:
 ### Include user ID or username
 
 Some teams include the initials of the author in the branch name to keep
-track of each developer's work. Let's outline the benefits and drawbacks
-of this practice:
+track of each developer's work.
 
 ::: columns
 ::: column
