@@ -238,3 +238,19 @@ If our core team grows, we might consider the inclusion of user IDs or
 usernames in the branch names to keep track of each developer's work.
 But for now, we decided to omit this to keep the naming scheme as simple
 as possible.
+
+## Resources used for this post
+
+-   [Best practices for naming Git
+    branches](https://graphite.dev/guides/git-branch-naming-conventions)
+-   [Naming conventions for Git Branches - a
+    Cheatsheet](https://medium.com/@abhay.pixolo/naming-conventions-for-git-branches-a-cheatsheet-8549feca2534)
+-   [A Simplified Convention for Naming Branches and Commits in
+    Git](https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4)
+-   [Git Branching Naming Convention: Best Practices to
+    Follow](https://phoenixnap.com/kb/git-branch-name-convention)
+-   [Best Practices for Naming Git
+    Branches](https://tilburgsciencehub.com/topics/automation/version-control/advanced-git/naming-git-branches/)
+-   [🌿 The Ultimate Guide to Naming Git Branches: Best Practices and
+    Tips
+    🔖](https://hardikchotaliya.hashnode.dev/the-ultimate-guide-to-naming-git-branches-best-practices-and-tips)
