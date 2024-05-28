@@ -16,19 +16,19 @@ categories:
 
 <!--TODO #36 docs: Update 'Why GitHub Projects' with Benefits and Drawbacks -->
 
-## Context and Problem Statement
+## Context and problem statement
 
 The larger a team is, the more important it becomes to keep track of who is doing what and how far they are with certain tasks. One way of creating such an overview is by using visualisation tools, which are designed to create overviews quickly. The question then becomes:
 
 > How do we create an overview of our current and upcoming tasks which will allow not only the person working on the task to monitor progress, but also help fellow team members to see where the project is?
 
-## Decision Drivers
+## Decision drivers
 
 As a team we have been struggling to keep track of who is completing which tasks, and how far along that work is. We have therefore agreed, that we will try to communicate this better internally within the team, not only with frequent commits and reviews, but also utilising the new project tools that GitHub have rolling out. 
 
-## Considered Options
+## Considered options
 
-### Kanban Boards like Monday.com and Trello
+### Kanban boards like Monday.com and Trello
 
 There are a number of free options when it comes to visualisation and project management tools specialising in workflows ([Monday.com](https://monday.com/) and Kanban Boards like [Trello](https://trello.com) to mention a couple). Here are some pros and cons.
 
@@ -66,7 +66,7 @@ GitHub has a built-in "Projects" feature for project management and visualizatio
 :::
 :::
 
-## Decision Outcome
+## Decision outcome
 
 We have decided to use GitHub Projects because we can easily integrate it into our workflow and we don't have to learn another tool.
 

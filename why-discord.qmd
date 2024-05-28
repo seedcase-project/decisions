@@ -10,7 +10,7 @@ categories:
 Use other decision posts as inspiration to writing these.
 :::
 
-## Context and Problem Statement
+## Context and problem statement
 
 ::: content-hidden
 State the context and some background on the issue, then write a
@@ -27,7 +27,7 @@ question here becomes:
 
 > Which tool should we use for inter-team communication?
 
-## Decision Drivers
+## Decision drivers
 
 ::: content-hidden
 List some reasons for why we need to make this decision and what things
@@ -43,7 +43,7 @@ corporate world, and the second is Discord, which is slightly more
 informal. We have not discarded emails, they are useful for some things,
 but they are very cumbersome for quick questions and water-cooler chats.
 
-## Considered Options
+## Considered options
 
 ::: content-hidden
 List and describe some of the options, as well as some of the benefits
@@ -112,7 +112,7 @@ community engagement.
 :::
 :::
 
-## Decision Outcome
+## Decision outcome
 
 ::: content-hidden
 What decision was made, use the form "We decided on CHOICE because of

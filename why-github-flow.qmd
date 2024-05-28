@@ -78,7 +78,7 @@ nocite: |
 Use other decision posts as inspiration to writing these.
 :::
 
-## Context and Problem Statement
+## Context and problem statement
 
 ::: content-hidden
 State the context and some background on the issue, then write a
@@ -93,7 +93,7 @@ The question is, therefore:
 
 > Which branching strategy is the best fit for the Seedcase Project?
 
-## Decision Drivers
+## Decision drivers
 
 ::: content-hidden
 List some reasons for why we need to make this decision and what things
@@ -112,7 +112,7 @@ For the Seedcase Project, we want to employ a branching strategy that:
 4) supports continuous delivery
 5) works well for smaller teams
 
-## Considered Options
+## Considered options
 
 ::: content-hidden
 List and describe some of the options, as well as some of the pros and
@@ -123,7 +123,7 @@ In the following sections, we evaluate commonly used branching strategies to dec
 
 Note: To keep this decision post relatively short, the strategies and their differences are outlined in a rather simple way, which might result in the loss of some nuances.
 
-### Trunk-Based Development
+### Trunk-based development
 
 In [trunk-based development](https://trunkbaseddevelopment.com), developers frequently integrate their code changes into a shared `main` branch, the **trunk**, instead of working on long-lived additional branches that will be merged into `main` less frequently [@tilburg]. This workflow focuses on making smaller, self-contained changes which helps reduce complexity, minimise conflicts, and enable faster review processes and integration [@sooni]. Naturally, this leads to a more continuous integration with frequent merges to the `main` branch.
 
@@ -147,7 +147,7 @@ Some smaller teams might even avoid branching altogether and commit directly to 
 :::
 :::
 
-### Git Flow
+### Git flow
 
 A contrast to trunk-based development is the [Git flow](https://nvie.com/posts/a-successful-git-branching-model/). Git flow is a comprehensive branching strategy with two central branches: **`main`** and **`develop`**. In this strategy, the **`main`** branch always reflect a production ready state of the codebase. In contrast, the **`develop`** branch contains the latest development changes for the next release. When the new developments are at a stable point and is ready to be released, all the changes from the `develop` branch will be merged into the `main` branch. As a result, whenever there is a new change to the `main` branch, this is a new release by definition. Each release version will be tagged [@thummala].
 
@@ -171,7 +171,7 @@ A feature branch must always be created from and merged into the `develop` branc
 :::
 :::
 
-### GitHub Flow
+### GitHub flow
 
 [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow) is a simpler branching strategy than Git flow, revolving around the **`main`** branch. The only "hard" rule in this workflow is that anything on the `main` branch is deployable [@githubflowpost]. Whenever new work needs to be done, a new branch with a descriptive name is created from the `main` branch. Like with the Git flow, types of branches include (among others) `feature` and `hotfix` branches. After a new branch has been created, changes are made on this branch with regular pushes and descriptive commit messages.
 
@@ -194,7 +194,7 @@ When the developer wants feedback, they create a pull request, which their colla
 :::
 :::
 
-## Decision Outcome
+## Decision outcome
 
 ::: content-hidden
 What decision was made, use the form "We decided on CHOICE because of

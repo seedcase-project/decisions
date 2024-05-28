@@ -59,7 +59,7 @@ needs when it comes to this decision:
 -   Uses Markdown as the basis for writing content (see [Why
     Markdown](why-markdown.qmd) for reasons on why).
 
-## Considered Options
+## Considered options
 
 ::: content-hidden
 List and describe some of the options, as well as some of the benefits

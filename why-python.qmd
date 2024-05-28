@@ -16,7 +16,7 @@ Use other decision posts as inspiration to writing these.
 Leave the content-hidden sections in the text for future reference.
 :::
 
-## Context and Problem Statement
+## Context and problem statement
 
 ::: content-hidden
 State the context and some background on the issue, then write a
@@ -29,7 +29,7 @@ well with other technologies commonly used in the research area.
 
 > Which programming language should we use for developing the Seedcase application?
 
-## Decision Drivers
+## Decision drivers
 
 ::: content-hidden
 List some reasons for why we need to make this decision and what things
@@ -38,7 +38,7 @@ have arisen that impact work.
 
 In the context of Seedcase it is important to chose a language that can handle large amounts of data, provide efficient data processing capabilities, and integrate well with other technologies commonly used in the research area. There is also a consideration with regards to the skills already available in the core team, as we would like to minimize the amount of time that we will need to use in order to be able to program the application.
 
-## Considered Options
+## Considered options
 
 ::: content-hidden
 List and describe some of the options, as well as some of the benefits and
@@ -135,7 +135,7 @@ drawbacks for each option.
 :::
 :::
 
-## Decision Outcome
+## Decision outcome
 
 ::: content-hidden
 What decision was made, use the form "We decided on CHOICE because of

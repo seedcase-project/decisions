@@ -11,7 +11,7 @@ categories:
   - deployment
 ---
 
-## Context and Problem Statement
+## Context and problem statement
 
 We need some way to test and visually see how Seedcase deploys and works "live". The best solution would be to use a cloud provider, so we can easily deploy and visualize the progress of Seedcase.
 
@@ -21,7 +21,7 @@ So our question is:
 
 > Which cloud hosting provider should we use for our demonstrating and testing purposes?
 
-## Decision Drivers
+## Decision drivers
 
 We want to decide on a cloud provider based on these features/metrics:
 
@@ -37,7 +37,7 @@ We want to decide on a cloud provider based on these features/metrics:
 - Logging and alerting: Logging and alerts would be nice features for the cloud provider, but not so relevant (and, therefore, not required) for a demo environment.
 - Similar to production environment: We want the demo environment to be similar to the production environment, but this may vary a lot based on the team/organisation using the software.
 
-## Considered Options
+## Considered options
 
 We have considered five different cloud providers: [Azure](https://azure.microsoft.com/en-us), [Render](https://render.com/), [Digital Ocean](https://www.digitalocean.com/), [Vercel](https://vercel.com/) and [Fly.io](https://fly.io/) . Below you see a "decision matrix" based on the different features.
 
@@ -57,7 +57,7 @@ We have considered five different cloud providers: [Azure](https://azure.microso
 | Alerts                                                        | Yes             | No                                   | ?                        | No                     | ?                           |
 | Similar to production environment (Aarhus University server) | Likely possible | Maybe if Docker on university server | Likely                   | No                     | Yes if docker               |
 
-## Decision Outcome
+## Decision outcome
 
 We have decided to utilise Fly.io for our demo and testing needs. Fly.io is very cheap and the cost is not based on the number of users - only the actual usage (around 1$). It integrates with GitHub and the deployment is easy to setup with a GitHub action. This part is less user-friendly than **Render** and **Vercel**, where the deployment happens automatically. However, we would eventually adjust this "magic deployment" anyway to do tests and etc. before deploying.
 
