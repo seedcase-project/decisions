@@ -9,7 +9,7 @@ categories:
   - management
 ---
 <!--TODO #39 docs: Consider whether or not to format pros/cons as Benefit/Drawback in 'Why Polyrepo' -->
-## Context and Problem Statement
+## Context and problem statement
 
 The core issue and question here is: 
 
@@ -21,7 +21,7 @@ We also will be working on other, side projects for Steno Aarhus and other poten
 
 See some discussion of the beginning of this issue [here](https://github.com/seedcase-project/seedcase-registry/pull/9).
 
-## Decision Drivers
+## Decision drivers
 
 - Tracking and managing projects: 
     - Looking over the list of issues in any given project right now can feel overwhelming because of the number of issues (the list will only grow). Trying to look through the list to find ones relevant to the component of the project you are working on can be a bit of an "analysis paralysis".
@@ -35,7 +35,7 @@ See some discussion of the beginning of this issue [here](https://github.com/see
 - Providing common repository templates, build processes, and CI/CD for Steno Aarhus (and others in the future), so we'll need to build these anyway.
 - We need to consider the workflow for the team over the long term. Some decisions make more sense in the short term, but in the long term don't make sense.
 
-## Considered Options
+## Considered options
 
 There are multiple existing posts about this exact issue of mono- vs poly-repos, which I am listing below, that helped me write up this decision.
 
@@ -153,7 +153,7 @@ In many ways, the pros and cons are the reverse with the mono-repo, but there ar
 
 In general, whether you decide on following a mono-repo or poly-repo approach, there is *always* some level of mono- or poly- structure in the codebase. It is a bit of a spectrum and no project is truly at either end. However, explicitly deciding on a hybrid approach doesn't seem like there are any benefits.
 
-## Decision Outcome
+## Decision outcome
 
 Ultimately, we decided on using a poly-repo approach because we'll need to build workflows and processes for developing multiple repositories simultaneously anyway, in addition to the easier project-level management and ability for users to install individual components as well. It also works well for our ideal team workflow of working on individual projects in rotations.
 

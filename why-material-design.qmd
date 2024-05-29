@@ -9,11 +9,11 @@ categories:
   - style
 ---
 
-## Context and Problem Statement
+## Context and problem statement
 
 The Seedcase software products' frontend should look good with minimal effort. Therefore, we aim to utilise existing CSS or UI frameworks instead of building from scratch.
 
-## Decision Drivers
+## Decision drivers
 
 The UI framework should:
 
@@ -22,7 +22,7 @@ The UI framework should:
 - Be easy to use with Django. Since we use Django and it is a Python framework, we don't want to rely on frameworks that require node/npm or too much JavaScript. Preferably, we want a CSS framework, where CSS classes can be directly added to HTML elements.
 - Have a great documentation and community.
 
-## Considered Options
+## Considered options
 
 We have considered the following:
 
@@ -101,10 +101,11 @@ We have considered the following:
 - Requires Node.js (via npm) to install
 :::
 :::
-## Decision Outcome
+
+## Decision outcome
 
 We decided on Material Design because it has great integration with existing UI/UX (like Figma), looks amazing (has the design team at Google backing it's development), is widely used, and customizable.
 
 ### Consequences
 
-- There is better Django integration with Bootstrap, so we might need to spend some time properly integrating Material Design.
+- There is better Django integration with Bootstrap, so we might need to spend some time properly integrating Material Design

@@ -11,7 +11,7 @@ categories:
 ---
 <!--TODO #38 docs: Update 'Why MIT license with benefits and drawbacks -->
 
-## Context and Problem Statement
+## Context and problem statement
 
 When developing a new piece of software it is important to consider the following question as early as possible.
 
@@ -19,11 +19,11 @@ When developing a new piece of software it is important to consider the followin
 
 In order to control this use, it is important to have considered which license type we want our software to be available under, as this will tell the rest of the development community what they can (and can't) do with it. 
 
-## Decision Drivers
+## Decision drivers
 
 Although no license means that a piece of software on GitHub will be under exclusive copyright, leaving our code without one will make it difficult for other users to (easily) (re-)use, modify, contribute, or enhance our software due to copyright reasons. Our mission isn't only to build a piece of software; we also aim to develop a creative community around Seedcase and the topics we work on. We want people to be able to freely and smoothly contribute enhancements and other improvements that can be incorporated into future releases of Seedcase. It is also our intention to make the Seedcase software available to commercial enterprises, which means that we need to carefully consider which license we adopt.
 
-## Considered Options
+## Considered options
 
 The Open Source Initiative (OSI) [approves](https://opensource.org/licenses) a specific set of licenses that determine whether a project can be called "open source". These licenses are our starting point on deciding which license to use and how permissive we want it to be, in terms of who can work on our code and how it can be used.
 
@@ -52,7 +52,7 @@ There are also some agreements that touch on the subject of loss and damages tha
 
 An alternative to a CLA is a **DCO**. The **DCO** was first employed by the Linux Foundation in 2004 and is basically a short document that confirms that the person contributing code is allowed to do so, gives permission for the project to subsequently use it, by adding a Signed-off-by line to their commit message (for an example see the [BeeWare projects DCO](https://beeware.org/contributing/how/dco/what/)).
 
-## Decision Outcome
+## Decision outcome
 
 It is in our stated [goals](https://seedcase-project.org/about) that the Seedcase software is available for commercial enterprises as well as academic/healthcare organizations and groups. Aligning with our stated [Guiding Principles](https://seedcase-project.org/about.html#principles), we will use a **permissive** license as it will be the best fit for the Seedcase project. Of the permissive license types we will go with the MIT License as it is the most permissive and easiest to understand and use.
 

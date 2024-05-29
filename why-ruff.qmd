@@ -19,19 +19,19 @@ categories:
   - workflow
 ---
 
-## Context and Problem Statement
+## Context and problem statement
 
 Humans are prone to error when writing, whether it is code or text. In a team setting, more people working on the same things increase the chance of more issues occurring. And writing code is not done for the computer, but for other humans to read, so readability and consistency in style become important when reviewing that code. So our problem is:
 
 > How do we enforce a consistent style across people and code? And how do we catch simple errors that happen because of the style or format of the code?
 
-## Decision Drivers
+## Decision drivers
 
 - We want to review content and logical of code, not code style.
 - We want an automated way of fixing simple typographical errors and issues.
 - We want an automated way of enforcing a standard style.
 
-## Considered Options
+## Considered options
 
 The terms "linting" or "formatting" are used to describe scanning, analysing, and (potentially) fixing code for style and typographical issues. The important difference between linting and formatting is that linting only tells you about the issues while formatting will fix (many of) the issues. Some issues can't be solved from formatting alone, so both linting and formatting are often used together.
 
@@ -128,11 +128,11 @@ Below is a detailed description of the pros and cons based on what others have w
 :::
 :::
 
-## Decision Outcome
+## Decision outcome
 
 We decided on Ruff because it is a newer tool that implements many of the other tools that exist. It also is designed to be mostly used "as is", without needing to customize many things. It is also seems to be design in a way that makes customizations relatively easy to set up.
 
-## Potential Consequences
+## Potential consequences
 
 - We might miss out on some features from pylint (since right now we won't include pylint)
 - There may be some bugs along the way because Ruff is relatively new, though this can be minimized by relying on more stable versions of it
