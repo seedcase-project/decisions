@@ -1,6 +1,6 @@
 ---
 title: "Why conventional commits (with optional emojis)"
-description: "Our reasons for using conventional commits (with optional emojis following the Gitmoji convention) across Seedcase projects."
+description: "Our reasons for using conventional commits (with optional emojis following the Gitmoji convention) across Seedcase codebases."
 date: "2024-05-14"
 categories:
 - git
@@ -41,7 +41,7 @@ Since commit message conventions are not enforced by Git itself, but
 rather by the team working on a given project, the question becomes:
 
 > Which commit message convention should we follow when we write commit
-> messages in Seedcase projects?
+> messages in Seedcase codebases?
 
 ## Decision drivers
 
@@ -50,7 +50,7 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-In Seedcase projects, we emphasise the open-source philosophies of
+In the Seedcase Project, we emphasise the open-source philosophies of
 transparency and collaboration. Therefore, it is essential to have a
 clear and consistent commit message convention to maintain these
 principles, both within the team and across external contributions.

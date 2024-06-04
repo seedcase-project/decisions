@@ -22,10 +22,10 @@ statement in the form of a question for the problem.
 
 A software project like Seedcase needs an easy way to communicate and
 share knowledge for those internal and external to Seedcase (including
-users and contributors), the most common way being to put these content (like
-documentation) on a website. In order to minimize the work the team
-needs to do, we would like to use the files we maintain in GitHub as the
-basis for a public website. The question then becomes:
+users and contributors), the most common way being to put these content
+(like documentation) on a website. In order to minimize the work the
+team needs to do, we would like to use the files we maintain in GitHub
+as the basis for a public website. The question then becomes:
 
 > How do we build a website based on the files in GitHub with minimal
 > amount of overhead and that can be integrated into GitHub in some way?
@@ -41,8 +41,8 @@ There are many different types of "static website generators"[^1], like
 [Jekyll](https://jekyllrb.com/) or [Hugo](https://gohugo.io/). They all
 have their pros and cons, and we ultimately have to choose one to use
 when writing content for this website and to build it, as well as when
-writing the documentation for Seedcase itself. We have the following
-needs when it comes to this decision:
+writing the documentation for Seedcase software itself. We have the
+following needs when it comes to this decision:
 
 [^1]: A static website or blog generator is a framework for building
     websites based on pure, plain HTML files (unlike building websites
