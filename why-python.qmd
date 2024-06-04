@@ -12,8 +12,8 @@ categories:
 ---
 
 ::: content-hidden
-Use other decision posts as inspiration to writing these.
-Leave the content-hidden sections in the text for future reference.
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
 :::
 
 ## Context and problem statement
@@ -23,11 +23,16 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-One of the first things to do when deciding to write a software application is to decide on the programming language. There are several languages that can be used, among them C++, Java, Python, and R. In the context of Seedcase it is important to chose a language that can handle large amounts
-of data, provide efficient data processing capabilities, and integrate
-well with other technologies commonly used in the research area.
+One of the first things to do when deciding to write a software
+application is to decide on the programming language. There are several
+languages that can be used, among them C++, Java, Python, and R. In the
+context of the Seedcase Project it is important to choose a language
+that can handle large amounts of data, provide efficient data processing
+capabilities, and integrate well with other technologies commonly used
+in the research area.
 
-> Which programming language should we use for developing the Seedcase application?
+> Which programming language should we use for developing Seedcase
+> software?
 
 ## Decision drivers
 
@@ -36,102 +41,146 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-In the context of Seedcase it is important to chose a language that can handle large amounts of data, provide efficient data processing capabilities, and integrate well with other technologies commonly used in the research area. There is also a consideration with regards to the skills already available in the core team, as we would like to minimize the amount of time that we will need to use in order to be able to program the application.
+In the context of the Seedcase Project it is important to chose a
+language that can handle large amounts of data, provide efficient data
+processing capabilities, and integrate well with other technologies
+commonly used in the research area. There is also a consideration with
+regards to the skills already available in the core team, as we would
+like to minimize the amount of time that we will need to use in order to
+be able to program the application.
 
 ## Considered options
 
 ::: content-hidden
-List and describe some of the options, as well as some of the benefits and
-drawbacks for each option.
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
 :::
 
 ### C++
 
-::: {.columns}
-::: {.column}
+::: columns
+::: column
 #### Benefits
 
-- Well-suited for real-time and performance-critical applications.
-- Allows fine-grained control over memory and hardware resources, enabling low-level, use-case-specific optimisations.
-- Compilation to native machine code for the target platform prior to execution guarantees better runtime performance than Python and, potentially by a smaller margin, Java.
-- Static type-checking at compile time helps to catch certain types of bugs early on.
-- Mature libraries and frameworks available for web development and data analysis.
-- Active community and extensive resources.
+-   Well-suited for real-time and performance-critical applications.
+-   Allows fine-grained control over memory and hardware resources,
+    enabling low-level, use-case-specific optimisations.
+-   Compilation to native machine code for the target platform prior to
+    execution guarantees better runtime performance than Python and,
+    potentially by a smaller margin, Java.
+-   Static type-checking at compile time helps to catch certain types of
+    bugs early on.
+-   Mature libraries and frameworks available for web development and
+    data analysis.
+-   Active community and extensive resources.
 :::
-::: {.column}
+
+::: column
 #### Drawbacks
 
-- Compilation to native machine code makes C++ programs more platform dependent, broadly speaking, than programs in interpreted languages.
-- Use of platform-specific language features or libraries can lead to portability issues.
-- Lack of automatic garbage collection means that developers need more awareness of how memory is managed in the application.
-- Offer of database management libraries is more limited than for Java or Python.
-- Syntax is verbose and less close to natural language, making development less rapid. 
-- No inline documentation generation system out of the box.
-- Less widespread in academic and research communities.
-- Has a steep learning curve, arguably steeper than Java's.
+-   Compilation to native machine code makes C++ programs more platform
+    dependent, broadly speaking, than programs in interpreted languages.
+-   Use of platform-specific language features or libraries can lead to
+    portability issues.
+-   Lack of automatic garbage collection means that developers need more
+    awareness of how memory is managed in the application.
+-   Offer of database management libraries is more limited than for Java
+    or Python.
+-   Syntax is verbose and less close to natural language, making
+    development less rapid.
+-   No inline documentation generation system out of the box.
+-   Less widespread in academic and research communities.
+-   Has a steep learning curve, arguably steeper than Java's.
 :::
 :::
 
 ### Java
 
-::: {.columns}
-::: {.column}
+::: columns
+::: column
 #### Benefits
 
-- Code is run on a Java Virtual Machine, making Java programs, generally, platform independent (provided the host has a Java Runtime Environment installed).
-- Better runtime performance than Python.
-- Static type-checking at compile time helps to catch certain types of bugs early on.
-- Comes with inline documentation generation system out of the box (Javadoc).
-- Large ecosystem of mature libraries and frameworks for web development and database management.
-- Active community and extensive resources.
+-   Code is run on a Java Virtual Machine, making Java programs,
+    generally, platform independent (provided the host has a Java
+    Runtime Environment installed).
+-   Better runtime performance than Python.
+-   Static type-checking at compile time helps to catch certain types of
+    bugs early on.
+-   Comes with inline documentation generation system out of the box
+    (Javadoc).
+-   Large ecosystem of mature libraries and frameworks for web
+    development and database management.
+-   Active community and extensive resources.
 :::
-::: {.column}
+
+::: column
 #### Drawbacks
 
-- Fewer libraries for data analysis than Python.
-- Syntax is verbose and less close to natural language, making development less rapid.
-- Less widespread in academic and research communities.
-- Has a steeper learning curve than Python, especially for people with little programming experience.
+-   Fewer libraries for data analysis than Python.
+-   Syntax is verbose and less close to natural language, making
+    development less rapid.
+-   Less widespread in academic and research communities.
+-   Has a steeper learning curve than Python, especially for people with
+    little programming experience.
 :::
 :::
 
 ### Python
 
-::: {.columns}
-::: {.column}
+::: columns
+::: column
 #### Benefits
 
-- Code is executed by a Python interpreter, making Python programs platform independent (provided the host has an interpreter installed).
-- Concise, easy-to-read, beginner-friendly syntax.
-- Easy to iterate and prototype rapidly.
-- Large ecosystem of mature libraries and frameworks for web development (e.g. [Django](https://www.djangoproject.com), [Flask](https://flask.palletsprojects.com/en/2.3.x/)), database management (e.g. [SQLAlchemy](https://www.sqlalchemy.org), Django's Object Relational Mapper), and data analysis.
-- Active community and extensive resources.
-- Very popular in data-intensive research and academia, some target users of Seedcase are likely to be familiar with Python.
+-   Code is executed by a Python interpreter, making Python programs
+    platform independent (provided the host has an interpreter
+    installed).
+-   Concise, easy-to-read, beginner-friendly syntax.
+-   Easy to iterate and prototype rapidly.
+-   Large ecosystem of mature libraries and frameworks for web
+    development (e.g. [Django](https://www.djangoproject.com),
+    [Flask](https://flask.palletsprojects.com/en/2.3.x/)), database
+    management (e.g. [SQLAlchemy](https://www.sqlalchemy.org), Django's
+    Object Relational Mapper), and data analysis.
+-   Active community and extensive resources.
+-   Very popular in data-intensive research and academia, some target
+    users of Seedcase are likely to be familiar with Python.
 :::
-::: {.column}
+
+::: column
 #### Drawbacks
 
-- Worse runtime performance than Java or C++, partly because the interpreter does less pre-execution optimisation and instead follows the layout of the source coded sequentially during program execution.
-- Dynamic type-checking at runtime can make it more difficult to catch certain types of bugs early on.
+-   Worse runtime performance than Java or C++, partly because the
+    interpreter does less pre-execution optimisation and instead follows
+    the layout of the source coded sequentially during program
+    execution.
+-   Dynamic type-checking at runtime can make it more difficult to catch
+    certain types of bugs early on.
 :::
 :::
 
 ### R
 
-::: {.columns}
-::: {.column}
+::: columns
+::: column
 #### Benefits
 
-- Designed for statistical computing with excellent data visualisation capabilities.
-- Wide array of packages for data analysis.
-- Active community and extensive resources.
-- Very popular in data-intensive research and academia, some target users of Seedcase are likely to be familiar with R.
+-   Designed for statistical computing with excellent data visualisation
+    capabilities.
+-   Wide array of packages for data analysis.
+-   Active community and extensive resources.
+-   Very popular in data-intensive research and academia, some target
+    users of Seedcase are likely to be familiar with R.
 :::
-::: {.column}
+
+::: column
 #### Drawbacks
 
-- Less versatile and general purpose than the other languages considered.
-- While there is a web application framework for R ([Shiny](https://shiny.posit.co/)), this is intended primarily for interactive data visualisation, and offers more limited features than the frameworks for the other languages considered.
+-   Less versatile and general purpose than the other languages
+    considered.
+-   While there is a web application framework for R
+    ([Shiny](https://shiny.posit.co/)), this is intended primarily for
+    interactive data visualisation, and offers more limited features
+    than the frameworks for the other languages considered.
 :::
 :::
 
@@ -142,12 +191,26 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-We have decided to use Python as the main development language for Seedcase because it is a powerful, flexible and easy-to-use platform for building a data management web application. Drawing on the skills of the core Seedcase team, Python offers the best balance of capabilities and ease of development out of the options considered. It is, moreover, a language likely to be familiar to technologically-oriented Seedcase users and prospective contributors.
+We have decided to use Python as the main development language for
+Seedcase software because it is a powerful, flexible and easy-to-use
+platform for building a data management web application. Drawing on the
+skills of the core Seedcase team, Python offers the best balance of
+capabilities and ease of development out of the options considered. It
+is, moreover, a language likely to be familiar to
+technologically-oriented Seedcase users and prospective contributors.
 
-While Java and C++ offer more scope for context-specific performance optimisation, we are unlikely to need this level of control for Seedcase, because the number of concurrent user requests is expected to be low, resource-intensive backend tasks are expected to run without much competition, and we don't expect to do heavy-duty, real-time data analysis or image processing. Therefore, for our use case, the advantages of these languages don't justify their steeper learning curve and added complexity.
+While Java and C++ offer more scope for context-specific performance
+optimisation, we are unlikely to need this level of control for Seedcase
+software, because the number of concurrent user requests is expected to
+be low, resource-intensive backend tasks are expected to run without
+much competition, and we don't expect to do heavy-duty, real-time data
+analysis or image processing. Therefore, for our use case, the
+advantages of these languages don't justify their steeper learning curve
+and added complexity.
 
-We decided not to use R because, while it is a powerful language for data analysis and visualization, it is less suitable for building large-scale web applications.
-
+We decided not to use R because, while it is a powerful language for
+data analysis and visualization, it is less suitable for building
+large-scale web applications.
 
 ### Consequences
 
@@ -155,4 +218,8 @@ We decided not to use R because, while it is a powerful language for data analys
 List some potential consequences of this decision.
 :::
 
-If further on we run into performance issues, we will need to look into performance improvement strategies, such as optimising our algorithms, our database queries and organisation, and how much data is loaded into program memory at once. However, these are considerations that inform everyday development decisions in any case.
+If further on we run into performance issues, we will need to look into
+performance improvement strategies, such as optimising our algorithms,
+our database queries and organisation, and how much data is loaded into
+program memory at once. However, these are considerations that inform
+everyday development decisions in any case.
