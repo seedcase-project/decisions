@@ -8,6 +8,7 @@ categories:
   - api
   - software-architecture
 ---
+
 <!--TODO #41 docs: Update 'Why REST' with decision drivers, options for REST and Decision -->
 
 ::: content-hidden
@@ -73,7 +74,6 @@ possible API tech for Seedcase.
     the requested data
 -   Is often simpler to implement and offers better caching mechanisms.
 -   Has better tooling support and is more widely adopted
-
 :::
 
 ::: column
@@ -96,7 +96,7 @@ types, making it quite flexible.
 ::: column
 #### Benefits
 
--   Based on XML 
+-   Based on XML
 -   Supports a number of messaging formats making it flexible
 :::
 
@@ -106,7 +106,8 @@ types, making it quite flexible.
 -   Complex to implement
 -   Requires additional metadata and processing overhead
     -   can result in slower performance and higher resource consumption
--   Difficult to debug and test due to its complexity and lack of visibility in the underlying communication logs
+-   Difficult to debug and test due to its complexity and lack of
+    visibility in the underlying communication logs
 :::
 :::
 
@@ -114,9 +115,10 @@ types, making it quite flexible.
 
 [GraphQL](https://graphql.org) is an increasingly popular technology for
 building web APIs. GraphQL allows for very fine-grained control over
-what data is requested and given, so it offers the most flexibility. GraphQL can be integrated with REST API, which is a
-useful feature especially when handling large and/or complex requests.
-So if needed, we could incorporate GraphQL into existing REST API.
+what data is requested and given, so it offers the most flexibility.
+GraphQL can be integrated with REST API, which is a useful feature
+especially when handling large and/or complex requests. So if needed, we
+could incorporate GraphQL into existing REST API.
 
 ::: columns
 ::: column
@@ -143,7 +145,7 @@ REASONS."
 
 We believe that the simplicity, flexibility, and scalability of REST
 make it a better choice for the client-server communication needs of
-Seedcase.
+Seedcase framework.
 
 ### Consequences
 

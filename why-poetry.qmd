@@ -8,7 +8,7 @@ categories:
 - python
 ---
 
-## Context and Problem Statement
+## Context and problem statement
 
 Managing the packages we depend on (e.g. Django) in Python isn't
 "simply" installing it on your computer. The issue with installing
@@ -27,14 +27,14 @@ There are multiple ways of creating these virtual environments and
 managing package dependencies, and the optional solution depends on the
 project.
 
-## Decision Drivers
+## Decision drivers
 
 -   Package dependency management is a critical task, so we need a tool
     for it.
 -   Ensuring we have some way of building our Python projects in a way
     that is less likely to be a "it works on my computer" issue.
 
-## Considered Options
+## Considered options
 
 There are (unfortunately) multiple tools to manage package dependencies
 in Python, for example, listed at [Python Packaging User
@@ -166,7 +166,7 @@ Poetry and Hatch, is designed for managing packages and Python projects.
 :::
 :::
 
-## Decision Outcome
+## Decision outcome
 
 We decided on Poetry because it has amazing documentation, is
 well-designed, and is very popular and widely used.

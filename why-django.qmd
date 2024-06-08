@@ -18,7 +18,7 @@ Use other decision posts as inspiration to writing these. Leave the
 content-hidden sections in the text for future reference.
 :::
 
-## Context and Problem Statement
+## Context and problem statement
 
 ::: content-hidden
 State the context and some background on the issue, then write a
@@ -35,7 +35,7 @@ therefore becomes:
 > Which coding framework will best suit our needs in developing
 > Seedcase?
 
-## Decision Drivers
+## Decision drivers
 
 ::: content-hidden
 List some reasons for why we need to make this decision and what things
@@ -45,7 +45,7 @@ have arisen that impact work.
 All considered web frameworks use Python. For our decision to use
 Python, see the page [Why Python](why-python.qmd).
 
-## Considered Options
+## Considered options
 
 ::: content-hidden
 List and describe some of the options, as well as some of the benefits
@@ -150,7 +150,7 @@ support and resources.
 :::
 :::
 
-## Decision Outcome
+## Decision outcome
 
 ::: content-hidden
 What decision was made, use the form "We decided on CHOICE because of
