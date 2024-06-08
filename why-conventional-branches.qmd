@@ -1,7 +1,7 @@
 ---
 title: "Conventional branches"
 description: "Our reasons for using conventional branch names."
-date: ""
+date: "2024-06-08"
 categories:
 - git
 - branches
