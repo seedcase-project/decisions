@@ -3,9 +3,9 @@ title: "Why Poetry"
 description: "Our reasons for using Poetry for managing Python package dependencies when building Django and Python projects."
 date: "2024-01-29"
 categories:
-- package dependencies
-- virtual environments
-- python
+- dependencies
+- development
+- workflow
 ---
 
 ## Context and problem statement

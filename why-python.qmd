@@ -6,9 +6,7 @@ description: |
 date: "2023-03-22"
 date-modified: "2024-05-10"
 categories:
-  - programming
   - development
-  - software-architecture
 ---
 
 ::: content-hidden

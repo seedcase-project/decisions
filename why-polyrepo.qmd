@@ -3,9 +3,7 @@ title: "Why poly-repo"
 description: "Our reasons for structuring projects (both software and websites) in a poly-repo rather than mono-repo style."
 date: "2023-12-05"
 categories:
-  - repositories
   - organization
-  - structure
   - management
 ---
 

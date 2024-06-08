@@ -4,6 +4,7 @@ description: "Our reasons for using Discord as our communication platform."
 date: "2023-06-25"
 categories:
   - communication
+  - collaboration
 ---
 
 ::: content-hidden

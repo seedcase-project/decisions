@@ -3,10 +3,8 @@ title: "Why GitHub flow"
 description: "Our reasons for using the GitHub flow as our branching and development strategy."
 date: "2024-02-15"
 categories:
-  - decision
   - workflow
-  - git branching
-  - team work
+  - git
 references:
   - id: sooni
     title: A guide to trunk-based development (LogRocket)

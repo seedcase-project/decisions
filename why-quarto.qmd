@@ -4,8 +4,7 @@ description: "Our reasons for using Quarto to build the website and write the ge
 date: "2023-06-25"
 categories:
   - documentation
-  - markdown
-  - website
+  - web
 ---
 
 ::: content-hidden

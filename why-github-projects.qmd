@@ -4,14 +4,9 @@ description: "As a project grows, it becomes both more important and more diffic
 date: "2023-11-23"
 categories:
   - documentation
-  - github
-  - github projects
-  - implementation
+  - collaboration
   - management
-  - standardisation
-  - team work
-  - tools
-  - workflow
+  - organization
 ---
 
 <!--TODO #36 docs: Update 'Why GitHub Projects' with Benefits and Drawbacks -->
