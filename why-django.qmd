@@ -56,11 +56,11 @@ a relatively complex web application with a front end, an API and a data
 layer, so we are looking for a full-stack framework that comes with
 solutions for common tasks in all these layers. More particularly, we
 are looking for tools that facilitate interactive web page design, form
-handling, URL mapping, serialisation, REST API development and database
+handling, URL mapping, serialisation, REST API development, and database
 management. As Seedcase software has users with differentiated roles and
 privileges, a good user management system with support for
 authentication and authorisation mechanisms is important. Working with
-relational data, raw data files and image files is a central concern, so
+relational data, raw data files, and image files is a central concern, so
 the framework should integrate well with popular databases and make it
 easy to access the local file system.
 
