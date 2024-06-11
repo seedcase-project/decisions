@@ -1,8 +1,7 @@
 ---
-title: "Why Cyclical Workflow"
+title: "Why cyclical workflow"
 description: ""
-author: "Luke W. Johnston"
-date: last-modified
+date: ""
 draft: true
 # categories:
 #  - 
@@ -10,6 +9,7 @@ draft: true
 
 Follow the tidyverse team approach to repo development, by dedicating periods of time to specific repos, and rotating between.
 
+<!--TODO #34 Write a Why doc on Cyclical Workflow-->
 
 ::: content-hidden
 Use other decision posts as inspiration to writing these.

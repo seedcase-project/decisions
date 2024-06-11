@@ -1,14 +1,15 @@
 ---
 title: "Why text/code-based tools?"
 description: "Our reasons for selecting tools that are based on code, rather than GUIs."
-author: "Luke W. Johnston"
-date: last-modified
+date: ""
 draft: true
 categories:
   - documentation
   - code
   - text
 ---
+
+<!--TODO #42 docs: Write a Why document on Text-based tools -->
 
 "Everything as code"
 
@@ -26,26 +27,25 @@ https://medium.com/geekculture/code-as-diagrams-whats-the-point-13dbe6053738
 
 https://www.cloudbolt.io/blog/3-advantages-and-challenges-of-infrastructure-as-code-iac/
 
-
 ::: content-hidden
 Use other decision posts as inspiration to writing these.
 :::
 
-## Context and Problem Statement
+## Context and problem statement
 
 ::: content-hidden
 State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-## Decision Drivers
+## Decision drivers
 
 ::: content-hidden
 List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-## Considered Options
+## Considered options
 
 ::: content-hidden
 List and describe some of the options, as well as some of the benefits and
@@ -67,7 +67,7 @@ drawbacks for each option.
 :::
 :::
 
-## Decision Outcome
+## Decision outcome
 
 ::: content-hidden
 What decision was made, use the form "We decided on CHOICE because of

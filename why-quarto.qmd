@@ -1,21 +1,48 @@
 ---
 title: "Why Quarto"
 description: "Our reasons for using Quarto to build the website and write the general documentation."
-author: "Luke W. Johnston"
-date: last-modified
+date: "2023-06-25"
 categories:
   - documentation
   - markdown
   - website
 ---
 
-<!-- TODO: Update this to match style of other posts -->
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+A software project like Seedcase needs an easy way to communicate and
+share knowledge for those internal and external to Seedcase (including
+users and contributors), the most common way being to put these content
+(like documentation) on a website. In order to minimize the work the
+team needs to do, we would like to use the files we maintain in GitHub
+as the basis for a public website. The question then becomes:
+
+> How do we build a website based on the files in GitHub with minimal
+> amount of overhead and that can be integrated into GitHub in some way?
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
 
 There are many different types of "static website generators"[^1], like
 [Jekyll](https://jekyllrb.com/) or [Hugo](https://gohugo.io/). They all
 have their pros and cons, and we ultimately have to choose one to use
 when writing content for this website and to build it, as well as when
-writing the documentation for Seedcase itself.
+writing the documentation for Seedcase software itself. We have the
+following needs when it comes to this decision:
 
 [^1]: A static website or blog generator is a framework for building
     websites based on pure, plain HTML files (unlike building websites
@@ -23,29 +50,155 @@ writing the documentation for Seedcase itself.
     meaning it is a simple file that is being shown by the browser as a
     webpage.
 
-Within the R world, a recent new tool came out called
-[Quarto](https://quarto.org/). Since its release, it has completely
-taken over as the tool to use when working with R and data science. We
-will use this tool because it aligns with our [values and philosophies](https://seedcase-project.org/about.html#principles)
-for multiple reasons.
+-   Is generally programming language agnostic (e.g. doesn't need
+    knowledge of the language to build or manage).
+-   Powerful enough to have some customizations with structure and
+    organization of websites.
+-   Good, beginner-friendly documentation on how to use the tool.
+-   Relatively easy theming and aesthetic customization.
+-   Uses Markdown as the basis for writing content (see [Why
+    Markdown](why-markdown.qmd) for reasons on why).
 
-1.  It is open source.
-2.  The documentation is phenomenal and very beginner friendly.
-3.  It is sponsored by an organization ([Posit](https://posit.co/)) with
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+Based on the needs listed above, only a few tools are capable of meeting
+these needs. Resources like [Jamstack](https://jamstack.org/generators/)
+and [Awesome Static
+Generators](https://github.com/myles/awesome-static-generators) provided
+a list of potential static site generators that we could use to build
+websites. The ones we compared are:
+
+-   [mdBook](https://rust-lang.github.io/mdBook/index.html)
+-   [MkDocs](https://www.mkdocs.org/)
+-   [Quarto](https://quarto.org/)
+
+### mdBook
+
+[mdBook](https://rust-lang.github.io/mdBook/index.html) is a fairly
+recent tool that is built with Rust and is a very lightweight and simple
+static site generator. It is mainly used for writing books and
+documentation and includes some basic website features.
+
+::: columns
+::: column
+#### Benefits
+
+-   Can build websites very quickly because it is built with Rust.
+-   Simple and clean website design.
+:::
+
+::: column
+#### Drawbacks
+
+-   While it isn't required to know Rust, it is developed with using
+    Rust in mind. For example, you can test if Rust code snippets
+    compile correctly.
+-   There is a good amount of technical knowledge and overhead needed to
+    setup and build the website, for instance, there are at least 5
+    commands required for using the tool.
+-   Adding extensions and customizing the website requires some
+    knowledge and learning to use, and there aren't many default or
+    built-in themes to choose from.
+-   Uses [CommonMark](https://commonmark.org/) as the Markdown
+    specification, which isn't as powerful or feature-filled as other
+    Markdown flavors like [Pandoc
+    Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) (which
+    builds on CommonMark).
+-   Main focus is on writing books and documentation, not general
+    websites.
+:::
+:::
+
+### MkDocs
+
+[MkDocs](https://www.mkdocs.org/) is an established and widely used tool
+that is built with Python and installable through `pip`. It is a simple
+and fast website generator.
+
+::: columns
+::: column
+#### Benefits
+
+-   Very simple and easy to use, with a lot of documentation and
+    tutorials available.
+-   Very popular tool, especially within the Python community.
+-   Beginner-friendly documentation.
+:::
+
+::: column
+#### Drawbacks
+
+-   Assumes and encourages placing content in the `docs` folder, which
+    might not be the best way to organize content for some websites.
+-   Setting up custom themes and extensions requires some work.
+-   Is based on the original Markdown specification, which is fairly
+    basic and has since evolved into more powerful and feature-rich
+    versions like [Pandoc
+    Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown).
+-   While it is generally straight forward to use, features and layouts
+    as well as extensibility and customization are limited.
+:::
+:::
+
+### Quarto
+
+Within the R world, a recent new tool came out called
+[Quarto](https://quarto.org/). While new, since its release, it has
+gained enormous popularity as a language-agnostic tool for writing
+books, documentation, and websites, especially within the data science
+community.
+
+::: columns
+::: column
+#### Benefits
+
+-   The documentation is fantastic and very friendly to beginners.
+-   It is sponsored by an organization ([Posit](https://posit.co/)) with
     an established history of supporting and contributing to open source
     projects.
-4.  The software design is extremely well developed and structured,
+-   The software design is extremely well developed and structured,
     which makes it easier to use compared to other alternatives.
-5.  It has multi-language support (like R and Python), but is itself
+-   It has multi-language support (like R and Python), but is itself
     language-agnostic.
-6.  Because it is integrated into RStudio, many data scientists and
-    researchers who use R will quickly become familiar with it.
-7.  It has support for integration with other applications, like [VS
+-   It has support for integration with other applications, like [VS
     Code](https://code.visualstudio.com/), which is also used by many
     software developers and data scientists.
-8.  It is built on top of [Pandoc Markdown](https://pandoc.org/), which
+-   It is built on top of [Pandoc Markdown](https://pandoc.org/), which
     the de facto standard for writing Markdown, with strong historical
     use and community support.
+-   It has a large number of built-in functionality and features, while
+    still being easy to use.
+-   It is very easy to customize and extend the website to fit ones
+    needs, with themes and plugins that are easy to develop and install.
+:::
 
-For these reasons, we write our documentation that includes the website
-with Quarto.
+::: column
+#### Drawbacks
+
+-   It is a relatively new tool, so there will be some bugs and issues
+    that come up along the way.
+-   Isn't as fast to build as other tools, like mdBook.
+-   While not necessary for most purposes, developing certain features
+    when making a Quarto extension requires some knowledge of
+    [Lua](https://www.lua.org).
+:::
+:::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+We have decided to go with Quarto as this seems to be the most
+accessible, as well as being a tool that there is already support for
+internally in the team. It has the most functionality when it comes to
+features, theming, and customization, while still being very easy to use
+if you have very basic knowledge of Pandoc Markdown, building websites,
+and file paths.
