@@ -1,0 +1,144 @@
+---
+title: "Why make Seedcase accessible to everyone"
+description: "We want to make the Seedcase project as accessible as possible for all potential users. This includes both the website and the applications"
+date: "11-06-2024"
+categories: 
+- accessibility
+- development
+- documentation
+- implementation
+- software
+- standardisation
+---
+
+# Why make Seedcase accessible to everyone
+
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+It is important for all websites to be accessible to everyone. This
+includes people with disabilities, people who are older, people who are
+not native speakers of the language, and people who are not familiar
+with technology. The Seedcase project is no exception. We want to make
+the Seedcase project as accessible as possible for all potential users.
+This includes both the website and the applications. The question is:
+
+> How to make Seedcase accessible to everyone?
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+As we are getting closer to having our first working prototype, we need
+to ensure that a multitude of users will be able to work with it. At
+first this was a question of ensuring that our colour scheme was
+accessible to people with colour blindness, this in turn lead us to
+consider other accessibility issues. We want to ensure that the Seedcase
+project is as inclusive as possible, and that everyone can use it. This
+is also a requirement for the Seedcase project to be successful in the
+long term.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+There are a number of ways of looking at accessibility, the most common
+are accessible content, and visual accessibility. In Seedcase we will
+work with both.
+
+### Accessible content
+
+Accessible content is content that is easy to understand and use for
+everyone. Things like accessible naming, and using a polite setting for
+the hidden text. Ensuring that the language isn't too technical or
+complex, and that pictures and potential audio/visual content is
+described in a way that is compatible with screen readers.
+
+Things to check for during development:
+
+-   is the text to complex?
+-   is the language too technical?
+-   are the images described in a way that is compatible with screen
+    readers?
+-   are the buttons and links named in a way that is easy to understand?
+-   are the interactive elements easy to navigate with a keyboard?
+-   are any landmarks or headings used to help with navigation easy to
+    follow?
+-   if we end up making videos or audio content, is there a transcript
+    available?
+
+### Visual accessibility
+
+Visual accessibility is about making sure that the website and the apps
+are easy to use for people with visual impairments. This includes things
+like ensuring that the colour scheme is accessible to people with colour
+blindness, and that the text is easy to read. It also includes things
+like ensuring that the website and the apps are easy to navigate, and
+that the buttons are easy to click on.
+
+Things to check for during development:
+
+-   is the colour scheme accessible to people with colour blindness?
+-   is the colour ration between text and background high enough
+    (minimum 4.5:1)?
+-   is the text easy to read (large enough font)?
+-   is the line length suitable (between 45 and 75 char)?
+-   are the icons easy to decipher?
+-   are the buttons easy to click on (tap-target a minimum of 44x44 px)?
+-   are the interactive states easy to see (default, focus/hover,
+    active/pressed, de-active)?
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+We decided to work on both accessible content and visual accessibility.
+Some of the points highlighted above are things we will need to keep an
+eye out for (like text complexity), others are some that we will be able
+to incorporate into our development process (like ensuring that the
+colour scheme is accessible to people with colour blindness, and that
+buttons have the correct contrast ratio).
+
+There are numerous ways to test for accessibility, and we will need to
+ensure that we have a good testing plan in place. This will at present
+be a semi-manual process, the details of which are described in the
+[Accessibility testing
+plan](!--TODO%20insert%20link%20to%20plan%20once%20written--).
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+One consequence of this decision is that we will need to spend more time
+on development, which will cost more in terms of time and money. Another
+consequence is that we will need to spend more time on testing, which
+will also cost more in terms of time and money.
+
+However, the consequences of not working on accessibility will
+potentially be that our product can't be used by a percentage of our
+potential users. This will limit the potential of the Seedcase project,
+and could potentially lead to a failure of the project. By working on
+accessibility we will ensure that the Seedcase project is as inclusive
+as possible, and that everyone can use it. This will increase the
+potential of the Seedcase project, and will make it more likely to be
+successful in the long term.
