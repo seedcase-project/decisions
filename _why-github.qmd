@@ -1,11 +1,12 @@
 ---
-title: ""
+title: "Why use Github"
 description: "Our reasons for ..."
 author: ""
 date: last-modified
 draft: true
 # categories:
 ---
+# Why use Github?
 
 ::: content-hidden
 Use other decision posts as inspiration to writing these.
