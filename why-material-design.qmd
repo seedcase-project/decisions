@@ -3,10 +3,9 @@ title: "Why Material Design"
 description: "We aim to utilise existing CSS or UI frameworks instead of building from scratch so Seedcase software products will look good with minimal effort. Since Material Design lives up to these requirements, we have chosen this framework for our software."
 date: "2023-12-15"
 categories:
-  - user interface
-  - user experience
-  - frontend framework
+  - front end
   - style
+  - web
 ---
 
 ## Context and problem statement

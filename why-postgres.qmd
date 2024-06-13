@@ -8,10 +8,6 @@ date: "2024-01-05"
 categories:
   - backend
   - database
-  - software
-  - tools
-  - technology
-  - software-architecture
 ---
 
 ## Context and problem statement

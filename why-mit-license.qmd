@@ -6,8 +6,6 @@ date: "2023-04-01"
 date-modified: last-modified
 categories:
 - licensing
-- copyright
-- software-architecture
 ---
 
 <!--TODO #38 docs: Update 'Why MIT license with benefits and drawbacks -->

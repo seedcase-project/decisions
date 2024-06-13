@@ -6,10 +6,9 @@ description: |
 date: "2022-12-14"
 categories:
   - container
-  - software
-  - tools
-  - technology
-  - software-architecture
+  - deploying
+  - installation
+  - dependencies
 ---
 
 <!-- TODO: Update this to match style of other posts -->

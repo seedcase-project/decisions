@@ -6,17 +6,10 @@ description: |
   decided on Ruff for our linting and formatting purposes.
 date: "2023-11-27"
 categories:
-  - contributing
-  - culture
+  - collaboration
   - development
-  - management
-  - markdown
-  - programming
-  - reviewing
-  - standardisation
-  - team work
-  - tools
   - workflow
+  - standardisation
 ---
 
 ## Context and problem statement

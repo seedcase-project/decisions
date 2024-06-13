@@ -5,12 +5,9 @@ description: |
   development, installation, and dependency management.
 date: "2022-12-10"
 categories:
-  - containers
+  - container
   - installation
-  - software
-  - tools
-  - technology
-  - software-architecture
+  - deploying
 ---
 
 <!-- TODO: Update this to match style of other posts -->

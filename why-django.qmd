@@ -5,10 +5,8 @@ description: |
 date: "2023-03-22"
 date-modified: "2024-05-16"
 categories:
-  - api
-  - web
-  - frontend
-  - software-architecture
+  - development
+  - framework
 ---
 
 ::: content-hidden

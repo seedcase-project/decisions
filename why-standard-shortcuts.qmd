@@ -3,16 +3,10 @@ title: "Why standardized snippets"
 description: "The larger a project is, the more important it becomes to have a joint set of standards when writing documentation.  We decided to set up shortcuts that are shared across the team, so that all documentation follows the same classification and formatting."
 date: "2023-11-23"
 categories:
-  - code snippets
   - communication
-  - culture
   - documentation
-  - markdown
-  - quarto
   - standardisation
-  - team work
-  - templates
-  - vs code
+  - collaboration
   - workflow
 ---
 
