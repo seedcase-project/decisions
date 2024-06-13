@@ -14,6 +14,8 @@ website:
       - text: "Contributing"
         href: "https://community.seedcase-project.org/"
   navbar:
+    title: false
+    logo: _extensions/seedcase-project/seedcase-theme/logos/navbar-logo-seedcase-decisions.svg
     pinned: true
     search: true
     tools:
