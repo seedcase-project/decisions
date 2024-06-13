@@ -16,7 +16,7 @@ website:
   navbar:
     title: false
     logo: _extensions/seedcase-project/seedcase-theme/logos/navbar-logo-seedcase-decisions.svg
-    logo-alt: Seedcase logo
+    logo-alt: Seedcase Decisions logo
     pinned: true
     search: true
     tools:
