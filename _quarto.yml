@@ -16,16 +16,16 @@ website:
   navbar:
     title: false
     logo: _extensions/seedcase-project/seedcase-theme/logos/navbar-logo-seedcase-decisions.svg
-    logo-alt: Seedcase Decisions logo
+    logo-alt: "Seedcase Decisions logo: Go to main page"
     pinned: true
     search: true
     tools:
       - icon: house
         href: "https://seedcase-project.org"
-        aria-label: Home page
+        aria-label: "House icon: Go to the home page of the Seedcase Project"
       - icon: github
         href: "https://github.com/seedcase-project/decisions"
-        aria-label: GitHub
+        aria-label: "GitHub icon: Go to the source code on GitHub"
 
 # format:
 #   seedcase-theme-html:
