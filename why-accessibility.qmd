@@ -44,7 +44,7 @@ to ensure that a multitude of users will be able to work with our software and i
 first this was a question of ensuring that our colour scheme was
 accessible to people with colour blindness, which in turn lead us to
 consider other accessibility issues. We want to ensure that the Seedcase
-project is as inclusive as possible, and that everyone can use it. This
+Project is as inclusive as possible, so it's accessible to as many users as possible. This
 is also a requirement for the Seedcase Project to be successful in the
 long term.
 
