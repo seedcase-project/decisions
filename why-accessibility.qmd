@@ -137,5 +137,5 @@ potential users. This will limit the potential of the Seedcase Project,
 and could potentially lead to a failure of the project. By working on
 accessibility, we aim to make the Seedcase Project is as inclusive
 as possible. This will increase the
-potential of the Seedcase project, and will make it more likely to be
+potential of the Seedcase Project, and will make it more likely to be
 successful in the long term.
