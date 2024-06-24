@@ -75,8 +75,7 @@ Things to check for during development:
     readers (i.e., do we include alt texts)?
 -   are the buttons and links named in a way that is easy to understand?
 -   are the interactive elements easy to navigate with a keyboard?
--   are any landmarks or headings used to help with navigation easy to
-    follow?
+-   are any landmarks/headings coded in a way that makes guides a screen reader in a logical way?
 -   if we end up making videos or audio content, is there a transcript
     available?
 
@@ -96,7 +95,7 @@ Things to check for during development:
     (minimum 4.5:1)?
 -   is the text easy to read (large enough font)?
 -   is the line length suitable (between 45 and 75 char)?
--   are the icons easy to decipher?
+-   are the meaning the icons convey established (like a pencil for edit, or a square for stop)?
 -   are the buttons easy to click, sizewise, with a tap-target a minimum of 44x44 px?
 -   are the interactive states easy to see (default, focus/hover,
     active/pressed, deactivated)?
@@ -118,7 +117,7 @@ There are numerous ways to test for accessibility, and we will need to
 ensure that we have a good testing plan in place. This will at present
 be a semi-manual process, the details of which are described in the
 [Accessibility testing
-plan](!--TODO%20insert%20link%20to%20plan%20once%20written--).
+plan](<!--TODO #89 insert link once page is written-->).
 
 ### Consequences
 
@@ -133,9 +132,8 @@ will also cost more in terms of time and money.
 
 However, the consequences of not working on accessibility will
 potentially be that our product can't be used by a percentage of our
-potential users. This will limit the potential of the Seedcase Project,
-and could potentially lead to a failure of the project. By working on
-accessibility, we aim to make the Seedcase Project is as inclusive
+potential users. By working on
+accessibility, we aim to make the Seedcase Project as inclusive
 as possible. This will increase the
 potential of the Seedcase Project, and will make it more likely to be
 successful in the long term.
