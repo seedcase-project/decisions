@@ -108,12 +108,11 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-We decided to work on both accessible content and visual accessibility.
-Some of the points highlighted above are things we will need to keep an
-eye out for (like text complexity), others are some that we will be able
+We decided to work on both accessible content and visual accessibility even though this will take more time to implement and that this doesn't cover all accessibility issues. However, we believe that making our websites, software products, and teaching materials as accessible as possible is crucial. This commitment aligns with our values. The focus on accessible content and visual accessibility is a great first step to make the Seedcase Project more accessible. 
+Some of the points highlighted above are things we will need to pay attention to (like text complexity), others are some that we will be able
 to incorporate into our development process (like ensuring that the
 colour scheme is accessible to people with colour blindness, and that
-buttons have the correct contrast ratio).
+buttons have an accessible contrast ratio).
 
 There are numerous ways to test for accessibility, and we will need to
 ensure that we have a good testing plan in place. This will at present
@@ -134,9 +133,9 @@ will also cost more in terms of time and money.
 
 However, the consequences of not working on accessibility will
 potentially be that our product can't be used by a percentage of our
-potential users. This will limit the potential of the Seedcase project,
+potential users. This will limit the potential of the Seedcase Project,
 and could potentially lead to a failure of the project. By working on
-accessibility we will ensure that the Seedcase project is as inclusive
-as possible, and that everyone can use it. This will increase the
+accessibility, we aim to make the Seedcase Project is as inclusive
+as possible. This will increase the
 potential of the Seedcase project, and will make it more likely to be
 successful in the long term.
