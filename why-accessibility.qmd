@@ -25,12 +25,12 @@ statement in the form of a question for the problem.
 
 It is important to us that the outputs of the Seedcase Project (including the websites, the software products, and the teaching material) are as accessible as possible. This
 includes people with disabilities, people who are older, people who are
-not native speakers of the language, and people who are not familiar
-with technology. The Seedcase project is no exception. We want to make
-the Seedcase project as accessible as possible for all potential users.
-This includes both the website and the applications. The question is:
+not native English speakers, and people who are not familiar
+with technology. The Seedcase project is no exception. We want to make all output of
+the Seedcase Project as accessible as possible for all potential users.
+This includes both the websites, the software products, and the teaching material. The question is:
 
-> How to make Seedcase accessible to everyone?
+> How do we make output from the Seedcase Project as accessible as possible?
 
 ## Decision drivers
 
