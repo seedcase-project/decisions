@@ -39,13 +39,13 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-As we are getting closer to having our first working prototype, we need
-to ensure that a multitude of users will be able to work with it. At
+We want
+to ensure that a multitude of users will be able to work with our software and interact with our documentation. At
 first this was a question of ensuring that our colour scheme was
-accessible to people with colour blindness, this in turn lead us to
+accessible to people with colour blindness, which in turn lead us to
 consider other accessibility issues. We want to ensure that the Seedcase
 project is as inclusive as possible, and that everyone can use it. This
-is also a requirement for the Seedcase project to be successful in the
+is also a requirement for the Seedcase Project to be successful in the
 long term.
 
 ## Considered options
@@ -56,7 +56,7 @@ and drawbacks for each option.
 :::
 
 There are a number of ways of looking at accessibility, the most common
-are accessible content, and visual accessibility. In Seedcase we will
+are accessible content and visual accessibility. We will
 work with both.
 
 ### Accessible content
@@ -72,7 +72,7 @@ Things to check for during development:
 -   is the text to complex?
 -   is the language too technical?
 -   are the images described in a way that is compatible with screen
-    readers?
+    readers (i.e., do we include alt texts)?
 -   are the buttons and links named in a way that is easy to understand?
 -   are the interactive elements easy to navigate with a keyboard?
 -   are any landmarks or headings used to help with navigation easy to
