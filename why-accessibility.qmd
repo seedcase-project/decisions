@@ -82,24 +82,24 @@ Things to check for during development:
 
 ### Visual accessibility
 
-Visual accessibility is about making sure that the website and the apps
+Visual accessibility is about making sure that websites and apps
 are easy to use for people with visual impairments. This includes things
 like ensuring that the colour scheme is accessible to people with colour
-blindness, and that the text is easy to read. It also includes things
-like ensuring that the website and the apps are easy to navigate, and
+blindness and that the text is easy to see. It also includes things
+like ensuring that our websites and apps are easy to navigate, and
 that the buttons are easy to click on.
 
 Things to check for during development:
 
 -   is the colour scheme accessible to people with colour blindness?
--   is the colour ration between text and background high enough
+-   is the colour ratio between text and background high enough
     (minimum 4.5:1)?
 -   is the text easy to read (large enough font)?
 -   is the line length suitable (between 45 and 75 char)?
 -   are the icons easy to decipher?
--   are the buttons easy to click on (tap-target a minimum of 44x44 px)?
+-   are the buttons easy to click, sizewise, with a tap-target a minimum of 44x44 px?
 -   are the interactive states easy to see (default, focus/hover,
-    active/pressed, de-active)?
+    active/pressed, deactivated)?
 
 ## Decision outcome
 
