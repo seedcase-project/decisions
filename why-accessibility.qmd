@@ -1,7 +1,7 @@
 ---
-title: "Why make Seedcase accessible to everyone"
-description: "We want to make the Seedcase project as accessible as possible for all potential users. This includes both the website and the applications"
-date: "11-06-2024"
+title: "Why accessible design"
+description: "We want to make the Seedcase project as accessible as possible for all potential users. This includes both the website and the applications."
+date: "2024-06-11"
 categories: 
 - accessibility
 - development
@@ -10,8 +10,6 @@ categories:
 - software
 - standardisation
 ---
-
-# Why make Seedcase accessible to everyone
 
 ::: content-hidden
 Use other decision posts as inspiration to writing these. Leave the
@@ -25,7 +23,7 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-It is important for all websites to be accessible to everyone. This
+It is important to us that the outputs of the Seedcase Project (including the websites, the software products, and the teaching material) are as accessible as possible. This
 includes people with disabilities, people who are older, people who are
 not native speakers of the language, and people who are not familiar
 with technology. The Seedcase project is no exception. We want to make
