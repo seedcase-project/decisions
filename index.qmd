@@ -1,7 +1,7 @@
 ---
 title: Archive of Decisions Records
 listing:
-  contents: why-*.qmd
+  contents: why-*/*.qmd
   categories: true
   type: grid
   fields:
