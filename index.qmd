@@ -18,5 +18,5 @@ These are structured records describing the reasons for why we choose
 certain tools, technologies, or processes for our software, our
 collaboration workflow, and our websites.
 
-All our decisions adhere to our [Guiding
-Principles](https://seedcase-project.org/about/#guiding-principles).
+All our decisions adhere to our [Values and
+principles](https://seedcase-project.org/about/principles).
