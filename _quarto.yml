@@ -5,14 +5,6 @@ website:
   title: "Seedcase Project: Decisions Archive"
   site-url: "https://decisions.seedcase-project.org/"
   repo-url: "https://github.com/seedcase-project/decisions"
-  page-footer:
-    center:
-      - text: "License: CC-BY 4.0"
-        href: LICENSE.md
-      - text: "Code of Conduct"
-        href: "https://github.com/seedcase-project/.github/blob/main/CODE_OF_CONDUCT.md"
-      - text: "Contributing"
-        href: "https://community.seedcase-project.org/"
   navbar:
     title: false
     logo: _extensions/seedcase-project/seedcase-theme/logos/navbar-logo-seedcase-decisions.svg
