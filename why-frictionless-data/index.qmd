@@ -1,7 +1,7 @@
 ---
 title: "Why Frictionless Data"
-description: "Our reasons for using the Frictionless Data standard for structuring metadata and data."
-date: "2024-07-10"
+description: "Why we choose to use the Frictionless Data standard for structuring metadata and data."
+date: "2024-07-15"
 categories:
 - framework
 - standardize
@@ -81,23 +81,44 @@ reasons given below.
     OpenDataDiscovery.
 
 The only real open metadata standard that seems to exist is the
-[Frictionless Data](https://frictionlessdata.io/) standard.
+[Frictionless Data](https://frictionlessdata.io/) standard, which
+surprisingly wasn't listed in the resources above (likely for the
+opposite reasons we didn't consider the tools they list).
 
 ### Frictionless Data
 
-[Frictionless Data](https://frictionlessdata.io/)
+[Frictionless Data](https://frictionlessdata.io/) and it's companion
+[Data Package](https://datapackage.org/) are a set of specifications for
+structuring metadata and describing a set of files that contain data.
+With Data Package, a file is created called `datapackage.json` that
+stores metadata about a collection of data files.
 
 ::::: columns
 ::: column
 #### Benefits
 
--   Item 1
+-   Documentation is extremely easy to use and follow.
+-   The overall design and architecture of the standard is easy to
+    understand and well designed.
+-   Interacts with multiple programming languages and services,
+    including Python and GitHub.
+-   Has clearly described principles and values, which make it easy to
+    understand the intent of the standard.
+-   Everything is stored in a JSON file, which makes it
+    machine-readable.
+-   The Python package provides functionality to extract the metadata of
+    data files and to create
+-   Has increasing
+    [adoption](https://frictionlessdata.io/adoption/#community-projects)
+    in many organizations and projects.
+-   Has a clear specification for fields to include in the metadata.
 :::
 
 ::: column
 #### Drawbacks
 
--   Item 1
+-   Is still relatively unknown and is not widely used (though, this is
+    a problem with all current metadata standards and tools).
 :::
 :::::
 
@@ -108,14 +129,21 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-### Consequences
-
-::: content-hidden
-List some potential consequences of this decision.
-:::
+While there are no real alternatives to Frictionless Data that fit our
+requirements, there are many strong reasons to use it as is described
+above. For instance, the principles and values align closely with ours
+and the organization who owns and is responsible for development of this
+standard, which is the Open Knowledge Foundation and is a non-profit
+organization, does work in other areas that also align with our values
+and principles.
 
 ## Resources used for this post
 
 ::: content-hidden
-List the resources used to wrtie this post
+List the resources used to write this post
 :::
+
+-   [Open Source Data Catalog tools in
+    2024](https://atlan.com/open-source-data-catalog-tools/)
+-   [List of Awesome Data Catalog
+    tools](https://github.com/opendatadiscovery/awesome-data-catalogs)
