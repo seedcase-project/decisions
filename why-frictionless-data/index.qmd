@@ -10,8 +10,8 @@ categories:
 ---
 
 ::: content-hidden
-Use other decision posts as inspiration to writing these.
-Leave the content-hidden sections in the text for future reference.
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
 :::
 
 ## Context and problem statement
@@ -21,12 +21,17 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-Since the Seedcase Project is focused on improving the structure and infrastructure around data, a critical component of that is how we structure the data and the metadata after enters into Seedcase software.
-So, following our [guiding principles](https://seedcase-project.org/about/principles) and to minimize time spent on tasks that already have solutions, we need to find any standards or frameworks that exist for how data and metadata should be structured and organized.
-So the question is:
+Since the Seedcase Project is focused on improving the structure and
+infrastructure around data, a critical component of that is how we
+structure the data and the metadata after enters into Seedcase software.
+So, following our [guiding
+principles](https://seedcase-project.org/about/principles) and to
+minimize time spent on tasks that already have solutions, we need to
+find any standards or frameworks that exist for how data and especially
+metadata should be structured and organized. So the question is:
 
-*What standard should we follow when structuring and organizing our data and metadata?*
-
+*What standard should we follow when structuring and organizing our data
+and metadata?*
 
 ## Decision drivers
 
@@ -35,29 +40,66 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-- We need a guide that will help us determine 
+-   We need a guide that will help us determine how data gets structured
+    when it enters into Seedcase software.
+-   We want an established standard to follow so that we have better
+    interoperability with other tools and systems.
+-   We want to reduce time spent on building solutions if one already
+    exists to solve the problem we have.
+-   We need something that has a Python connector or package, since we
+    use Python.
 
 ## Considered options
 
 ::: content-hidden
-List and describe some of the options, as well as some of the benefits and
-drawbacks for each option.
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
 :::
 
-### Option 1
+There are limited options in this space, especially with our
+requirements like being open source and not being commercial solutions.
+Some are listed
+[here](https://atlan.com/open-source-data-catalog-tools/) and
+[here](https://github.com/opendatadiscovery/awesome-data-catalogs). Many
+of the tools that exist are strongly focused on corporate needs and on a
+providing an extensively featured platform for sharing data and
+metadata, without a clear structure to the data or metadata itself.
+There are some "data catalog" tools, but many don't fit our
+requirements. These are some that exist but that we don't consider, with
+reasons given below.
 
-::: {.columns}
-::: {.column}
+-   [DataHub](https://datahub.io/): Is built with JavaScript and React.
+-   [CKAN](https://github.com/ckan/ckan): A data catalog tool that is
+    largely focused on a way of presenting data/metadata, without
+    consideration for how it is structured.
+-   [OpenDataDiscovery](https://opendatadiscovery.org/): Requires a
+    Docker container to run, mostly focused on commercial needs, and is
+    intended as a platform for hosting and sharing (internal) data.
+    There is a command-line interface, but there is no easy
+    documentation on how to use it, nor is it actively developed.
+-   [OpenMetadata](https://docs.open-metadata.org/v1.4.x): Similar to
+    OpenDataDiscovery.
+
+The only real open metadata standard that seems to exist is the
+[Frictionless Data](https://frictionlessdata.io/) standard.
+
+### Frictionless Data
+
+[Frictionless Data](https://frictionlessdata.io/)
+
+::::: columns
+::: column
 #### Benefits
 
-- Item 1
+-   Item 1
 :::
-::: {.column}
+
+::: column
 #### Drawbacks
 
-- Item 1
+-   Item 1
 :::
-:::
+:::::
 
 ## Decision outcome
 
