@@ -7,8 +7,6 @@ categories:
   - management
 ---
 
-<!--TODO #39 docs: Consider whether or not to format pros/cons as Benefit/Drawback in 'Why Polyrepo' -->
-
 ## Context and problem statement
 
 The core issue and question here is:
@@ -141,7 +139,9 @@ main/
     └── build
 ```
 
-**Pros:**
+::::: columns
+::: column
+#### Benefits
 
 -   It works quite well when the core software service will inevitably
     be deployed and used as a single service, for instance with Google's
@@ -157,8 +157,10 @@ main/
 -   Single codebase is enticing, since it theoretically makes it easier
     to get onboarded, manage, and track progress on a project.
 -   All code is in one location, so finding code might be easier.
+:::
 
-**Cons:**
+::: column
+#### Drawbacks
 
 -   Paradoxically, it is harder for smaller teams to manage the
     complexity of a mono-repo because of the reasons below.
@@ -186,6 +188,8 @@ main/
 -   If a bug or conflict occurs, it breaks the whole product.
 -   As a codebase grows, the complexity involved in managing a mono-repo
     can increase substantially.
+:::
+:::::
 
 ### Poly-repo
 
@@ -222,10 +226,12 @@ project3/
 └── build
 ```
 
-In many ways, the pros and cons are the reverse with the mono-repo, but
-there are also other considerations included here.
+In many ways, the benefits and drawbacks are the reverse with the
+mono-repo, but there are also other considerations included here.
 
-**Pros:**
+::::: columns
+::: column
+#### Benefits
 
 -   Testing and deployment per unit of change in code is faster.
 -   Versioning of components is easier since each component is its own
@@ -241,8 +247,10 @@ there are also other considerations included here.
 -   Using version control, managing the commit history, and working with
     pull requests can be easier, since they will be specific to the
     project.
+:::
 
-**Cons:**
+::: column
+#### Drawbacks
 
 -   Creating another project requires time and setup.
 -   Project management at a organization level is a bit more
@@ -253,6 +261,8 @@ there are also other considerations included here.
 -   When something changes in one repo, managing its impact on other
     repos might be tricky, if strict de-coupling is not managed well and
     architectural designs aren't followed or developed soon enough.
+:::
+:::::
 
 ### Hybrid
 
