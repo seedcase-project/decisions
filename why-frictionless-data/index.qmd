@@ -82,8 +82,8 @@ reasons given below.
 
 The only real open metadata standard that seems to exist is the
 [Frictionless Data](https://frictionlessdata.io/) standard, which
-surprisingly wasn't listed in the resources above (likely for the
-opposite reasons we didn't consider the tools they list).
+surprisingly wasn't listed in the resources above. This is likely for the
+opposite reasons we didn't consider the tools they list.
 
 ### Frictionless Data
 
@@ -107,7 +107,7 @@ stores metadata about a collection of data files.
 -   Everything is stored in a JSON file, which makes it
     machine-readable.
 -   The Python package provides functionality to extract the metadata of
-    data files and to create
+    data files and to validate the input data against the metadata.
 -   Has increasing
     [adoption](https://frictionlessdata.io/adoption/#community-projects)
     in many organizations and projects.
