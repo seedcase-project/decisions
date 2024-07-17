@@ -1,0 +1,148 @@
+---
+title: "Why Frictionless Data"
+description: "Why we choose to use the Frictionless Data standard for structuring metadata and data."
+date: "2024-07-15"
+categories:
+- framework
+- standardize
+- organize
+- manage
+---
+
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+Since the Seedcase Project is focused on improving the structure and
+infrastructure around data, a critical component of that is how we
+structure the data and the metadata after it enters into Seedcase software.
+So, following our [guiding
+principles](https://seedcase-project.org/about/principles) and to
+minimize time spent on tasks that already have solutions, we need to
+find any standards or frameworks that exist for how data and especially
+metadata should be structured and organized. So the question is:
+
+*What standard should we follow when structuring and organizing our data
+and metadata?*
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+-   We need a guide that will help us determine how data gets structured
+    when it enters into Seedcase software.
+-   We want an established standard to follow so that we have better
+    interoperability with other tools and systems.
+-   We want to reduce time spent on building solutions if one already
+    exists to solve the problem we have.
+-   We need something that has a Python connector or package, since we
+    use Python.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+There are limited options in this space, especially with our
+requirements like being open source and not being commercial solutions.
+Some are listed
+[here](https://atlan.com/open-source-data-catalog-tools/) and
+[here](https://github.com/opendatadiscovery/awesome-data-catalogs). Many
+of the tools that exist are strongly focused on corporate needs and on 
+providing an extensively featured platform for sharing data and
+metadata, without a clear structure to the data or metadata itself.
+There are some "data catalog" tools, but many don't fit our
+requirements. These are some that exist but that we don't consider, with
+reasons given below.
+
+-   [DataHub](https://datahub.io/): Is built with JavaScript and React.
+-   [CKAN](https://github.com/ckan/ckan): A data catalog tool that is
+    largely focused on a way of presenting data/metadata, without
+    consideration for how it is structured.
+-   [OpenDataDiscovery](https://opendatadiscovery.org/): Requires a
+    Docker container to run, mostly focused on commercial needs, and is
+    intended as a platform for hosting and sharing (internal) data.
+    There is a command-line interface, but there is no easy
+    documentation on how to use it, nor is it actively developed.
+-   [OpenMetadata](https://docs.open-metadata.org/v1.4.x): Similar to
+    OpenDataDiscovery.
+
+The only real open metadata standard that seems to exist is the
+[Frictionless Data](https://frictionlessdata.io/) standard, which
+surprisingly wasn't listed in the resources above. This is likely for the
+opposite reasons we didn't consider the tools they list.
+
+### Frictionless Data
+
+[Frictionless Data](https://frictionlessdata.io/) and its companion
+[Data Package](https://datapackage.org/) are a set of specifications for
+structuring metadata and describing a set of files that contain data.
+With Data Package, a file is created called `datapackage.json` that
+stores metadata about a collection of data files.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Documentation is extremely easy to use and follow.
+-   The overall design and architecture of the standard is easy to
+    understand and well designed.
+-   Interacts with multiple programming languages and services,
+    including Python and GitHub.
+-   Has clearly described principles and values, which make it easy to
+    understand the intent of the standard.
+-   Everything is stored in a JSON file, which makes it
+    machine-readable.
+-   The Python package provides functionality to extract the metadata of
+    data files and to validate the input data against the metadata.
+-   Has increasing
+    [adoption](https://frictionlessdata.io/adoption/#community-projects)
+    in many organizations and projects.
+-   Has a clear specification for fields to include in the metadata.
+:::
+
+::: column
+#### Drawbacks
+
+-   Is still relatively unknown and is not widely used (though, this is
+    a problem with all current metadata standards and tools).
+:::
+:::::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+While there are no real alternatives to Frictionless Data that fit our
+requirements, there are many strong reasons to use it as is described
+above. For instance, the principles and values align closely with ours
+and this standard is owned and developed by the non-profit Open 
+Knowledge Foundation, who do work in other areas that also align 
+with our values and principles.
+
+## Resources used for this post
+
+::: content-hidden
+List the resources used to write this post
+:::
+
+-   [Open Source Data Catalog tools in
+    2024](https://atlan.com/open-source-data-catalog-tools/)
+-   [List of Awesome Data Catalog
+    tools](https://github.com/opendatadiscovery/awesome-data-catalogs)
