@@ -23,7 +23,7 @@ statement in the form of a question for the problem.
 
 Since the Seedcase Project is focused on improving the structure and
 infrastructure around data, a critical component of that is how we
-structure the data and the metadata after enters into Seedcase software.
+structure the data and the metadata after it enters into Seedcase software.
 So, following our [guiding
 principles](https://seedcase-project.org/about/principles) and to
 minimize time spent on tasks that already have solutions, we need to
@@ -61,7 +61,7 @@ requirements like being open source and not being commercial solutions.
 Some are listed
 [here](https://atlan.com/open-source-data-catalog-tools/) and
 [here](https://github.com/opendatadiscovery/awesome-data-catalogs). Many
-of the tools that exist are strongly focused on corporate needs and on a
+of the tools that exist are strongly focused on corporate needs and on 
 providing an extensively featured platform for sharing data and
 metadata, without a clear structure to the data or metadata itself.
 There are some "data catalog" tools, but many don't fit our
@@ -87,7 +87,7 @@ opposite reasons we didn't consider the tools they list).
 
 ### Frictionless Data
 
-[Frictionless Data](https://frictionlessdata.io/) and it's companion
+[Frictionless Data](https://frictionlessdata.io/) and its companion
 [Data Package](https://datapackage.org/) are a set of specifications for
 structuring metadata and describing a set of files that contain data.
 With Data Package, a file is created called `datapackage.json` that
@@ -132,10 +132,9 @@ REASONS."
 While there are no real alternatives to Frictionless Data that fit our
 requirements, there are many strong reasons to use it as is described
 above. For instance, the principles and values align closely with ours
-and the organization who owns and is responsible for development of this
-standard, which is the Open Knowledge Foundation and is a non-profit
-organization, does work in other areas that also align with our values
-and principles.
+and this standard is owned and developed by the non-profit Open 
+Knowledge Foundation, who do work in other areas that also align 
+with our values and principles.
 
 ## Resources used for this post
 
