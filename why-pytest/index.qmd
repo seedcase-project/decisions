@@ -1,7 +1,7 @@
 ---
 title: "Why Pytest"
 description: |
-  Testing software is a requirement for ensuring it works as intended. 
+  Testing software is a requirement for ensuring it works as intended and because we use a test-driven development workflow.  
   This post explains why we choose to use pytest over the built-in 
   unittest framework for testing Python code.
 date: "2024-07-17"
@@ -24,13 +24,13 @@ statement in the form of a question for the problem.
 
 Testing software is a basic requirement for assessing its functionality,
 accuracy, and reliability. There are many categories of [software
-testing](https://en.wikipedia.org/wiki/Software_testing) that include
+testing](https://en.wikipedia.org/wiki/Software_testing), including
 integration testing, unit testing, or system testing. This post is
 focused on unit testing.
 
 Since one of our [development
 principles](https://design.seedcase-project.org/style/development) is to
-use a Test-Driven Development workflow, we need a testing framework when
+use a test-driven development workflow, we need a testing framework when
 building our applications. Since we are using Python and Django, we need
 a testing framework that works for both. The question then is:
 
@@ -70,8 +70,7 @@ unittest, there is really only one other alternative for unit testing:
 
 [unittest](https://docs.python.org/3/library/unittest.html) is the
 built-in framework in Python. It was inspired by JUnit (the unit testing
-framework in Java) and has a similar structure to it, for better or
-worse.
+framework in Java) and has a similar structure to it.
 
 ::::: columns
 ::: column
@@ -84,12 +83,12 @@ worse.
 ::: column
 #### Drawbacks
 
--   Requires more extra code to setup and structure tests. For instance,
+-   Requires more extra code to set up and structure tests. For instance,
     all tests need to be a `class` object and some testing needs
     `setUp()` and `tearDown()` methods.
 -   The test output is not very readable and beginner friendly.
 -   Creating tests takes more effort and time.
--   Writing tests follows more of the object-oriented programming style,
+-   Writing tests follows more of an object-oriented programming style,
     which can be harder to reason about and design tests for.
 :::
 :::::
@@ -106,11 +105,11 @@ default unittest framework.
 #### Benefits
 
 -   Integrates with [unittest style
-    tests](https://docs.pytest.org/en/7.1.x/how-to/unittest.html), so
+    tests](https://docs.pytest.org/en/7.1.x/how-to/unittest.html), so you
     don't need to refactor all existing tests.
 -   Has easier to read output of the test results.
 -   Uses a simpler syntax for writing tests, with a simple `assert`
-    statement.
+    statement, as compared to `unittest`'s assert statements, e.g., `assertEqual` and `assertTrue`.
 -   Created and developed more recently and from scratch, so is better
     designed than unittest.
 -   While it isn't the default unit testing framework in Python, it is
@@ -134,8 +133,8 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-We decided on pytest because it is more developer friendly, has easier
-to read output, and requires less code to write tests. Because it can
+We decided on using pytest because it is more developer friendly, has easier
+to read output, and requires less code to write tests (e.g., tests don't need to be within a `class` object and the shorter `assert` syntax)
 still run unittest style tests, we don't need to refactor all existing
 tests right away.
 
