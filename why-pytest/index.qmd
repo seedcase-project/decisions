@@ -1,0 +1,167 @@
+---
+title: "Why Pytest"
+description: |
+  Testing software is a requirement for ensuring it works as intended and because we use a test-driven development workflow.  
+  This post explains why we choose to use pytest over the built-in 
+  unittest framework for testing Python code.
+date: "2024-07-17"
+categories:
+- test
+- develop
+---
+
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+Testing software is a basic requirement for assessing its functionality,
+accuracy, and reliability. There are many categories of [software
+testing](https://en.wikipedia.org/wiki/Software_testing), including
+integration testing, unit testing, or system testing. This post is
+focused on unit testing.
+
+Since one of our [development
+principles](https://design.seedcase-project.org/style/development) is to
+use a test-driven development workflow, we need a testing framework when
+building our applications. Since we are using Python and Django, we need
+a testing framework that works for both. The question then is:
+
+*Which testing frameworks are available and which one should we use?*
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+-   Knowing that software works as intended requires some form of
+    testing.
+-   Developing software is easier when we can compare the expected
+    output with the actual output in a formal testing approach.
+-   Identifying bugs is easier when there are tests that check the
+    expected functionality of our code.
+-   Identifying breaking changes is also easier when there are tests.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+Django's default unit testing framework is
+[unittest](https://docs.python.org/3/library/unittest.html), which is
+also Python's built-in testing framework. Aside from the default
+unittest, there is really only one other alternative for unit testing:
+
+-   [pytest](https://docs.pytest.org/en/8.2.x/) with
+    [django-pytest](https://pytest-django.readthedocs.io/en/latest/)
+
+### unittest
+
+[unittest](https://docs.python.org/3/library/unittest.html) is the
+built-in framework in Python. It was inspired by JUnit (the unit testing
+framework in Java) and has a similar structure to it.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Comes by default with Django and Python.
+-   Documentation on the official Django website uses unittest.
+:::
+
+::: column
+#### Drawbacks
+
+-   Requires more extra code to set up and structure tests. For instance,
+    all tests need to be a `class` object and some testing needs
+    `setUp()` and `tearDown()` methods.
+-   The test output is not very readable and beginner friendly.
+-   Creating tests takes more effort and time compared to alternatives.
+-   Writing tests follows more of an object-oriented programming style,
+    which can be harder to reason about and design tests for 
+    (for multiple, highly technical reasons outside the scope of
+    this post)
+:::
+:::::
+
+### pytest
+
+[pytest](https://docs.pytest.org/en/8.2.x/), along with the [Django
+plugin](https://pytest-django.readthedocs.io/en/latest/), is a newer
+testing framework that was built to improve on the limitations of the
+default unittest framework.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Integrates with [unittest style
+    tests](https://docs.pytest.org/en/7.1.x/how-to/unittest.html), so you
+    don't need to refactor all existing tests.
+-   Has easier to read output of the test results.
+-   Uses a simpler syntax for writing tests, with a simple `assert`
+    statement, as compared to `unittest`'s assert statements, e.g., `assertEqual` and `assertTrue`.
+-   Created and developed more recently and from scratch, so is better
+    designed than unittest for Python (since unittest was modeled off of Java's framework).
+-   While it isn't the default unit testing framework in Python, it is
+    widely used.
+:::
+
+::: column
+#### Drawbacks
+
+-   Requires installing two additional packages: `pytest` and
+    `pytest-django`.
+-   Integrating pytest with other types of testing frameworks can be
+		a bit difficult and may require some configuration.
+:::
+:::::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+We decided on using pytest because it is more developer friendly, has easier
+to read output, and requires less code to write tests (e.g., tests don't need to be within a `class` object and the shorter `assert` syntax)
+still run unittest style tests, we don't need to refactor all existing
+tests right away.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+-   We will have two additional package dependencies: `pytest` and
+    `pytest-django`.
+-   We will need to learn the pytest syntax and structure for writing
+    tests.
+
+## Resources used for this post
+
+::: content-hidden
+List the resources used to wrtie this post
+:::
+
+-   [A comprehensive guide to testing in Django
+    applications](https://atharvashah.netlify.app/posts/tech/django-testing-guide/)
+-   [Top 8 Python Testing Frameworks in
+    2024](https://www.browserstack.com/guide/top-python-testing-frameworks)
+-   [Pytest vs unittest: Which is
+    better?](https://blog.jetbrains.com/pycharm/2024/03/pytest-vs-unittest/)
+-   [Pytest vs unittest: A
+    comparison](https://www.browserstack.com/guide/pytest-vs-unittest)
