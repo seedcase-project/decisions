@@ -1,0 +1,146 @@
+---
+title: "Why FigJam for retrospectives"
+description: "Our reasons for using FigJam for our retrospectives."
+date: "2024-10-25"
+categories:
+  - collaboration
+  - retrospectives
+---
+
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+As part of the design cycle for the Seedcase Project, we do all our
+developments in iteration which generally run for about three weeks. At
+the end of each iteration, we have a retrospective meeting where we
+discuss what went well, what didn't go well, and what we can improve.
+After having worked with an external consultancy, we have been using
+FigJam for our retrospectives. This has been a great tool for us to
+collaborate and share our thoughts and ideas. However, we need to make a
+decision on whether we should continue using FigJam for our
+retrospectives or if we should look for an alternative tool.
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+The decision to look at our retrospective tools was primarily driven by
+the fact that the FigJam board we use is hosted by the consultancy
+company we worked with at the end of 2023. We have been assured that we
+are more than welcome to keep using it, but it is not really a
+sustainable solution. We should have a board where we are the owners,
+and which can't suddenly disappear because someone decides that former
+clients should no longer have access to their accounts. To start with,
+we were convinced that we couldn't use the free version of FigJam, so we
+started looking for alternatives. We collected information on a variety
+of online open access tools, but more importantly, collated a list of
+requirements and features that we need for our retrospectives. Towards
+the end of this exercise, we found out that we could use the free
+version of FigJam, and that it would be easier to continue using it than
+to switch to a new tool.
+
+Having done all the work, we decide to write up our results in this
+post, so that we can refer back to it in the future, should we at some
+point need to revisit our decision. This means that the rest of this
+post won't conform to the usual decision post format, but will instead
+be a summary of our findings.
+
+## Requirements and features needed for an online retrospective session
+
+The requirements and features we identified as necessary for a good
+retrospective session can be divided up into three categories.
+
+The first is the creation of the issues (good, improvable) on virtual
+post-its, the second the organisation of these cards, and the third the
+overall functionality of the board.
+
+### Cards
+
+The following features are needed for the cards:
+
+-   They should be easy to create, edit, and delete.
+-   They should not have a maximum length (or it should be quite long).
+-   They should be movable.
+-   They should have clear ownership.
+-   They should be easy to read.
+-   They should be able to have different colours.
+
+We have not assigned a priority to these features at this point in time,
+as we expect to continue with the current solution, but should we in
+future wish to change then we will need to make a prioritised list.
+
+### Organisation of cards
+
+The following features are needed for the organisation of the cards:
+
+-   It should be easy to group cards.
+-   It should be possible to keep groups of cards visually separate.
+-   It should be possible to move groups of cards.
+-   It should be possible to add comments and actions to cards.
+    -   this should be possible to follow on screen for all
+        participants.
+    -   there should not be a maximum length for comments.
+-   It should be easy to convert cards to actions/issues.
+-   It should be easy to navigate the board and get a visual overview of
+    the cards.
+
+At present we don't see a need to be able to vote on cards, and likewise
+there is no need to archive or search for specific cards. This could
+change and should not be discarded as possible features for the future.
+
+### Board functionality
+
+The overall functionality of the board and individual sessions should
+include the following:
+
+-   It should be possible to save a retrospective session.
+    -   this includes a timer function to keep the session on track.
+-   It should be possible to archive a session, so that it is easy to
+    refer back to it.
+-   It should be possible to share the board with all participants.
+-   It should be possible to have multiple users on the board at the
+    same time.
+-   The board should be accessible to all participants at all times.
+-   The board should be hosted online, so that it is easy to access from
+    anywhere, and not dependent on a specific machine to be running.
+-   It would be nice to have a number of fun elements (stickers, emojis,
+    etc.) to make the session more engaging.
+
+We don't see a need for audio or chat functionality at present, as we
+are using discord for the meeting itself. This could change in the
+future, and should not be discarded as possible features for the future.
+
+## Considered options
+
+Before deciding on FigJam we investigated a number of other tools. There
+is a list of open source retrospective tools available at [Project
+Management
+Planet](https://www.projectmanagementplanet.com/open-source-retrospectives-tools/),
+which we used as a starting point. To see a brief overview of the tools
+we looked at, see the original issue on GitHub: [Seedcase Project Team
+Issue
+184](https://github.com/seedcase-project/team/issues/184#issuecomment-2376838975)
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
