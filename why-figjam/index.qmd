@@ -124,6 +124,11 @@ future, and should not be discarded as possible features for the future.
 
 ## Considered options
 
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
 Before deciding on FigJam we investigated a number of other tools. There
 is a list of open source retrospective tools available at [Project
 Management
@@ -133,14 +138,15 @@ we looked at, see the original issue on GitHub: [Seedcase Project Team
 Issue
 184](https://github.com/seedcase-project/team/issues/184#issuecomment-2376838975)
 
-::: content-hidden
-List and describe some of the options, as well as some of the benefits
-and drawbacks for each option.
-:::
-
 ## Decision outcome
 
-::: content-hidden
-What decision was made, use the form "We decided on CHOICE because of
-REASONS."
-:::
+We have decided to continue using FigJam for our retrospectives. The
+functionality offered in the free version of the product is more than
+enough for our needs, and we are happy with the tool. We will continue
+to use it until such time as we find that it no longer meets our needs,
+or until we find a better tool. This is mainly due to the fact that we
+are familiar with the tool, and that we have been able to move our
+existing archive of boards to our own account.
+
+::: content-hidden What decision was made, use the form "We decided on
+CHOICE because of REASONS." :::
