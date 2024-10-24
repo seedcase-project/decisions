@@ -62,5 +62,5 @@ List some potential consequences of this decision.
 ## Resources used for this post
 
 ::: content-hidden
-List the resources used to wrtie this post
+List the resources used to write this post
 :::
