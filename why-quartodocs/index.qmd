@@ -1,6 +1,6 @@
 ---
-title: ""
-description: "Our reasons for ..."
+title: "Why quartodocs"
+description: "Our reasons for using quartodocs to build Python function and class documentation from docstrings into a website."
 date: "2024-10-24"
 categories: 
 - communicate
