@@ -1,22 +1,50 @@
 ---
 title: Archive of Decisions Records
+about:
+  id: hero-heading
+  template: jolla
+  image: home.svg
+  image-title: "Making decisions"
+  image-alt: "Cartoon illustration of a man being confused and having to think about what decision to between between two arrows pointing in opposite directions."
+  image-shape: rectangle
+  image-width: 20rem
 listing:
+  id: decisions
   contents: why-*/*.qmd
   categories: true
   type: grid
   fields:
     - title
     - description
-    - author
     - date
   sort: "title"
 ---
 
-We make decision posts (also known as "Decision Records") that are
-inspired by [Architectural Decision Records](https://adr.github.io/).
-These are structured records describing the reasons for why we choose
-certain tools, technologies, or processes for our software, our
-collaboration workflow, and our websites.
+```{=html}
+<style>
+div.quarto-about-jolla {
+  margin-top: 0%
+}
+</style>
+```
 
-All our decisions adhere to our [Values and
+::: column-screen
+::: {#hero-heading}
+Decision records inspired by [Architectural Decision
+Records](https://adr.github.io/). 
+
+*Illustration by [Storyset](https://storyset.com/choice)*
+:::
+:::
+
+<hr>
+
+We write structured decision records (or "posts") describing the reasons
+for why we choose certain tools, technologies, or processes for our
+software, our collaboration workflow, and our websites. All our
+decisions adhere to our [Values and
 principles](https://seedcase-project.org/about/principles).
+
+::: {#decisions}
+:::
+
