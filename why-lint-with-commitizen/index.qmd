@@ -1,0 +1,189 @@
+---
+title: "Why lint with commitizen"
+description: "Reasons to use commitizen to lint our commit messages to follow the Conventional Commits standard."
+date: "2024-10-25"
+categories:
+- develop
+- git
+- standardise
+- workflow
+---
+
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+Taking time to build automated
+[DevOps](https://en.wikipedia.org/wiki/DevOps) processes can save lots
+of time later that would normally be manually done. For instance,
+officially and formally releasing software such as to a software archive
+like [PyPI](https://pypi.org/) is a required activity in order for
+people to be able find and use the software. In order to get on these
+archives, the software has to be bundled and uploaded. Without DevOps
+pipelines in place, this activity would need to be done manually, which
+we want to minimize. So we want to automate the release process. An
+initial first step is to decide how versions are created, which can be
+done by following the [SemVer](/why-semver/index.qmd) practice combined
+with [Conventional Commits](/why-conventional-commits/index.qmd). But in
+order to make sure this is done correctly, commit message structure
+needs to be verified to follow the Conventional Commits. So the question
+is:
+
+*What tools can we use that verify or reformat commit messages to follow
+the format needed to help automatically release our software?*
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+Some motivations are:
+
+-   While as a team we use conventional commits, we can sometimes make
+    mistakes.
+-   We can't guarantee that outside contributors will know about or
+    follow conventional commits.
+-   We currently manually fix commits to follow conventional commits in
+    the pull request before merging them in, which can be prone to human
+    error and takes time
+
+Some requirements are:
+
+-   Easy to install
+-   Can use on the command line
+-   Has GitHub Action workflows available or can be easily made
+-   Optionally, has a [pre-commit](https://pre-commit.com) hook
+    available
+-   Ideally, does not introduce too many dependencies
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+There are several options available in many programming languages, all
+called similar or the same name. Given that we work with mostly Python,
+we'll only consider Python tools:
+
+-   [commitlint](https://github.com/opensource-nepal/commitlint)
+-   [commitizen](https://github.com/commitizen-tools/commitizen)
+-   [gitlint](https://github.com/jorisroovers/gitlint)
+
+### commitlint
+
+commitlint is a tool designed to lint your commit messages according to the
+Conventional Commits standard for your pre-commit hook and GitHub Actions.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Single purpose is to lint commit messages, which makes it relatively
+    simple to use.
+:::
+
+::: column
+#### Drawbacks
+
+-   Not actively maintained.
+-   Limited documentation.
+-   Maintained by a single author.
+:::
+:::::
+
+### commitizen
+
+Commitizen is a release management tool designed for teams that follows the
+conventional commits standard and checks to ensure that standard is followed.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Maintained by an organization (commitizen-tools).
+-   Popular and widely used.
+-   Actively and regularly developed.
+-   Is part of the official
+    [supported](https://pre-commit.com/hooks.html) pre-commit hooks.
+-   Has multiple functionality that includes linting, which means we
+    could use it for other purposes.
+-   Extensive documentation.
+:::
+
+::: column
+#### Drawbacks
+
+-   Has multiple functionality that includes linting, which means we
+    will have to read through the documentation a bit more to learn how
+    to use it.
+:::
+:::::
+
+### gitlint
+
+Gitlint checks your commit messages for style. 
+
+::::: columns
+::: column
+#### Benefits
+
+-   Is designed to be used to lint Git messages, so might be a bit
+    easier to use.
+-   Fairly popular and widely used.
+-   Is part of the official
+    [supported](https://pre-commit.com/hooks.html) pre-commit hooks
+-   Well designed documentation
+:::
+
+::: column
+#### Drawbacks
+
+-   Maintained by a solo author on their personal account, which makes
+    it harder to manage contributors. Plus, author can only work on the
+    project [a few times a
+    year](https://github.com/jorisroovers/gitlint/issues/134).
+-   Requires some configuration to follow a specific standard.
+:::
+:::::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+Both gitlint and commitizen are great choices for our requirements.
+However, the fact that commitizen is under a GitHub organization with
+several visible contributors means that it is more likely to be stable
+and sustainable over the longer term than a sole author project. For
+that reason, in addition to the fact that commitizen also has other
+features that we might use in the future, **we decided on commitizen**
+to lint our commit messages.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+-   Based on what I read, it doesn't seem like it is easy to verify the
+    pull request merge commit message. So we may have to write out our
+    own GitHub Action that will retroactively revert a merged pull
+    request with an incorrect commit message and re-open the pull
+    request.
+-   Since commitizen can be used in pre-commit hooks as well as used for
+    other release management purposes, this might save us time later on
+    to use this tool for those purposes.
