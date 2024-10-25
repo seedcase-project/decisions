@@ -11,4 +11,9 @@ Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its
 [terms](https://github.com/seedcase-project/.github/blob/main/CODE_OF_CONDUCT.md).
 
-To create a new decision post, copy the `_template.qmd` file and renaming to follow the pattern `why-CHOICE.qmd`. Follow the instructions in that file and fill in the details.
+To create a new decision post:
+
+1. Create a new folder with the pattern `why-CHOICE/`
+2. Copy the `_template.qmd` file into the newly created folder
+3. Rename it `index.qmd`
+4. Open the new `index.qmd` file and follow the instructions in the file and fill in the details.
