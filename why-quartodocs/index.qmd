@@ -77,13 +77,13 @@ values and philosophies are:
 -   [quartodoc](https://machow.github.io/quartodoc/get-started/overview.html)
 
 Below are other tools used within the Python community to generate
-documentation into websites but that we don't consider because they
+documentation into websites, which we don't consider because they
 don't fit our requirements:
 
 -   [MkDocs](https://www.mkdocs.org/) and
     [Sphinx](https://www.sphinx-doc.org/en/master/): These both are the
     most commonly used tools to generate HTML documentation. These are
-    full static website generators that includes a docstring-to-HTML
+    full static website generators that include a docstring-to-HTML
     converter. We already generate our websites with Quarto, so don't
     need these.
 -   [pydoc-markdown](https://niklasrosenstein.github.io/pydoc-markdown/):
