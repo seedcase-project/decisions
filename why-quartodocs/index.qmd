@@ -1,0 +1,183 @@
+---
+title: "Why quartodocs"
+description: "Our reasons for using quartodocs to build Python function and class documentation from docstrings into a website."
+date: "2024-10-24"
+categories: 
+- communicate
+- document
+- organize
+- web
+---
+
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+Documentation is one of the most important aspects of software, and an
+easy to access and navigate documentation makes the difference between
+it being used and not being used. We build websites for nearly all our
+documents, and we'd like to be able to also build a website of Python
+function docstrings, so there is an online reference that users can
+navigate to learn more about how to use the functions. So the question
+is:
+
+*Which docstring parser and converter should we use that fits our needs,
+values, and principles?*
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+Motivations for this decision:
+
+-   Navigating the function documentation is difficult since we have to
+    go to the Python script to read it.
+-   Referencing Python functions within the existing website is not
+    possible without an tool to do it for us, which means that
+    information starts duplicating.
+
+We also have some specific needs for how this documentation is
+generated:
+
+-   Parses Markdown, since our docstrings are written in Markdown
+-   Parses Google-style formatted docstrings (which we use)
+-   Converts to static HTML files or to plain Markdown files
+-   Incorporates into existing websites (that are built with Quarto)
+-   Allows control of what docstrings get generated, e.g. not generate
+    internal functions
+-   Optionally, allows
+    [code-linking](https://quarto.org/docs/output-formats/html-code.html#code-linking)
+-   Optionally, allows theme and aesthetic customization
+-   Optionally, allows rendering diagram as code tools like Mermaid or
+    PlantUML
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+There are a wide variety of options for generating HTML files from
+Python docstrings. The ones that match our requirements as well as our
+values and philosophies are:
+
+-   [mkdocstrings](https://mkdocstrings.github.io/)
+-   [quartodoc](https://machow.github.io/quartodoc/get-started/overview.html)
+
+Below are other tools used within the Python community to generate
+documentation into websites, which we don't consider because they
+don't fit our requirements:
+
+-   [MkDocs](https://www.mkdocs.org/) and
+    [Sphinx](https://www.sphinx-doc.org/en/master/): These both are the
+    most commonly used tools to generate HTML documentation. These are
+    full static website generators that include a docstring-to-HTML
+    converter. We already generate our websites with Quarto, so don't
+    need these.
+-   [pydoc-markdown](https://niklasrosenstein.github.io/pydoc-markdown/):
+    This fits our requirements but it is not actively maintained.
+
+### mkdocstrings
+
+::::: columns
+::: column
+#### Benefits
+
+-   Well supported and very actively maintained.
+-   Comes with cross-linking
+:::
+
+::: column
+#### Drawbacks
+
+-   Will need some configuration to integrate with our existing Quarto
+    website.
+-   Doesn't use [CommonMark](https://commonmark.org/), which is the core
+    spec underneath Quarto, so some Markdown syntax we use might not
+    work and we will have to adjust based on that.
+-   Google style docstrings are still [work in
+    progress](https://mkdocstrings.github.io/python/usage/docstrings/google/#work-in-progress)
+    (as of writing this post).
+-   Requires filling in special syntax with YAML blocks for each
+    function you want to insert into the Markdown file that will go on
+    the website.
+-   Cross-linking seems to only work when generating the Markdown files
+    through MkDocs.
+-   Most of the configurations must be put into a `mkdocs.yml` file,
+    which would not easily integrate with Quarto.
+:::
+:::::
+
+### quartodoc
+
+::::: columns
+::: column
+#### Benefits
+
+-   Since it is designed specifically with Quarto in mind, it comes with
+    all the features that Quarto has, including Mermaid diagram
+    generation, using our custom Quarto theme, and code-linking.
+-   Can wrap example code in the docstrings into executable code chunks
+    that Quarto will render.
+-   Has unofficial backing from [Quarto dev
+    team](https://github.com/quarto-dev/quarto-cli/discussions/2638#discussioncomment-11007165),
+    since it is developed (independently) by one of the Quarto dev team
+    members.
+:::
+
+::: column
+#### Drawbacks
+
+-   More recently developed, so some features are still experimental.
+-   Not as actively developed and maintained, so any updates might take
+    a while.
+-   Documentation is in various states of completion, so finding
+    information might be tricky.
+:::
+:::::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+While both choices are strong candidates, we ultimately chose quartodoc
+even though it is newer and less actively developed. There were too many
+drawbacks for the mkdocstrings for it to be a good fit for us.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+-   Because it still is new, some features might be changed a lot, not
+    work as intended, or have some bugs.
+-   We may have to be contributors to this project if we encounter any
+    issues and work to fix it ourselves, which would take time away from
+    developing Seedcase products.
+
+## Resources used for this post
+
+::: content-hidden
+List the resources used to write this post
+:::
+
+-   [Discussion: Extension to autogenerate API reference docs for
+    Python](https://github.com/quarto-dev/quarto-cli/discussions/2111)
+-   [Discussion: Combining a Quarto Website with Auto-Generated
+    Documentation](https://github.com/quarto-dev/quarto-cli/discussions/4925)
