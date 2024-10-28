@@ -1,11 +1,11 @@
 ---
-title: Archive of Decisions Records
+title: Archive of Decision Records
 about:
   id: hero-heading
   template: jolla
   image: home.svg
   image-title: "Making decisions"
-  image-alt: "Cartoon illustration of a man being confused and having to think about what decision to between between two arrows pointing in opposite directions."
+  image-alt: "A cartoon illustration of a person with their arms outstretched looking uncertain, with a green arrow and black arrow pointing in opposite directions, symbolising a choice or decision.""
   image-shape: rectangle
   image-width: 20rem
 listing:
