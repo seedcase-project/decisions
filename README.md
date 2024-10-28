@@ -13,7 +13,7 @@ By contributing to this project, you agree to abide by its
 
 To create a new decision post:
 
-1. Create a new folder with the pattern `why-CHOICE/`
+1. Create a new folder with the pattern `why-CHOICE/` (all lowercase)
 2. Copy the `_template.qmd` file into the newly created folder
 3. Rename it `index.qmd`
 4. Open the new `index.qmd` file and follow the instructions in the file and fill in the details.
