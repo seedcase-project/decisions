@@ -5,7 +5,7 @@ about:
   template: jolla
   image: home.svg
   image-title: "Making decisions"
-  image-alt: "A cartoon illustration of a person with their arms outstretched looking uncertain, with a green arrow and black arrow pointing in opposite directions, symbolising a choice or decision.""
+  image-alt: "A cartoon illustration of a person with their arms outstretched looking uncertain, with a green arrow and black arrow pointing in opposite directions, symbolising a choice or decision."
   image-shape: rectangle
   image-width: 20rem
 listing:
