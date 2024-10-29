@@ -19,10 +19,10 @@ website:
         href: "https://github.com/seedcase-project/decisions"
         aria-label: "GitHub icon: Source code"
 
-# format:
-#   seedcase-theme-html:
-    # include-before-body:
-      # - "includes/site-counter.html"
+format:
+  seedcase-theme-html:
+    include-before-body:
+      - "site-counter.html"
 
 editor:
   markdown:
