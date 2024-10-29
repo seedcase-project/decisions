@@ -19,15 +19,15 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-As part of the design cycle for the Seedcase Project, we do all our
-developments in iteration which generally run for about three weeks. At
+As part of the design and development cycle for the Seedcase Project, we work
+in iterations which generally run for about three weeks. At
 the end of each iteration, we have a retrospective meeting where we
 discuss what went well, what didn't go well, and what we can improve.
 After having worked with an external consultancy, we have been using
-FigJam for our retrospectives. This has been a great tool for us to
+FigJam for our retrospectives because the consultants we worked with suggested it and used it themselves. This has been a great tool for us to
 collaborate and share our thoughts and ideas. However, we need to make a
 decision on whether we should continue using FigJam for our
-retrospectives or if we should look for an alternative tool.
+retrospectives or if we should use an alternative tool.
 
 ## Decision drivers
 
@@ -36,20 +36,19 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-The decision to look at our retrospective tools was primarily driven by
+The decision to look at our retrospective tool was primarily driven by
 the fact that the FigJam board we use is hosted by the consultancy
-company we worked with at the end of 2023. We have been assured that we
-are more than welcome to keep using it, but it is not really a
-sustainable solution. We should have a board where we are the owners,
+company we worked with at the end of 2023 to early 2024. We were assured that we
+are more than welcome to keep using it, but it means that we don't have full control over it, nor is it a
+sustainable long-term solution. We should have a board where we are the owners,
 and which can't suddenly disappear because someone decides that former
 clients should no longer have access to their accounts. To start with,
 we were convinced that we couldn't use the free version of FigJam, so we
 started looking for alternatives. We collected information on a variety
 of online open access tools, but more importantly, collated a list of
 requirements and features that we need for our retrospectives. Towards
-the end of this exercise, we found out that we could use the free
-version of FigJam, and that it would be easier to continue using it than
-to switch to a new tool.
+the end of investigating into other tools, we learned that we could use the free
+version of FigJam.
 
 Having done all the work, we decide to write up our results in this
 post, so that we can refer back to it in the future, should we at some
@@ -57,7 +56,7 @@ point need to revisit our decision. This means that the rest of this
 post won't conform to the usual decision post format, but will instead
 be a summary of our findings.
 
-## Requirements and features needed for an online retrospective session
+### Requirements
 
 The requirements and features we identified as necessary for a good
 retrospective session can be divided up into three categories.
@@ -66,7 +65,7 @@ The first is the creation of the issues (good, improvable) on virtual
 post-its, the second the organisation of these cards, and the third the
 overall functionality of the board.
 
-### Cards
+#### Cards
 
 The following features are needed for the cards:
 
@@ -81,7 +80,7 @@ We have not assigned a priority to these features at this point in time,
 as we expect to continue with the current solution, but should we in
 future wish to change then we will need to make a prioritised list.
 
-### Organisation of cards
+#### Organisation of cards
 
 The following features are needed for the organisation of the cards:
 
@@ -89,9 +88,9 @@ The following features are needed for the organisation of the cards:
 -   It should be possible to keep groups of cards visually separate.
 -   It should be possible to move groups of cards.
 -   It should be possible to add comments and actions to cards.
-    -   this should be possible to follow on screen for all
+    -   This should be possible to follow on screen for all
         participants.
-    -   there should not be a maximum length for comments.
+    -   There should not be a maximum length for comments.
 -   It should be easy to convert cards to actions/issues.
 -   It should be easy to navigate the board and get a visual overview of
     the cards.
@@ -100,13 +99,13 @@ At present we don't see a need to be able to vote on cards, and likewise
 there is no need to archive or search for specific cards. This could
 change and should not be discarded as possible features for the future.
 
-### Board functionality
+#### Board functionality
 
 The overall functionality of the board and individual sessions should
 include the following:
 
 -   It should be possible to save a retrospective session.
-    -   this includes a timer function to keep the session on track.
+    -   This could include a timer function to keep the session on track.
 -   It should be possible to archive a session, so that it is easy to
     refer back to it.
 -   It should be possible to share the board with all participants.
@@ -119,7 +118,7 @@ include the following:
     etc.) to make the session more engaging.
 
 We don't see a need for audio or chat functionality at present, as we
-are using discord for the meeting itself. This could change in the
+are using Discord for the meeting itself. This could change in the
 future, and should not be discarded as possible features for the future.
 
 ## Considered options
@@ -129,7 +128,7 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
-Before deciding on FigJam we investigated a number of other tools. There
+There
 is a list of open source retrospective tools available at [Project
 Management
 Planet](https://www.projectmanagementplanet.com/open-source-retrospectives-tools/),
@@ -148,5 +147,3 @@ or until we find a better tool. This is mainly due to the fact that we
 are familiar with the tool, and that we have been able to move our
 existing archive of boards to our own account.
 
-::: content-hidden What decision was made, use the form "We decided on
-CHOICE because of REASONS." :::
