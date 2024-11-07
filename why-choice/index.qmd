@@ -63,9 +63,9 @@ have arisen that impact work.
     develop a parallel set of classes, as we would like to avoid having
     multiple (potentially inconsistent) internal representations of the
     standard.
--   As we treat package and resource metadata separately, it would be
-    helpful if we could check these separately against the standard as
-    well.
+-   As we treat package, resource and table metadata separately, it
+    would be helpful if we could check these separately against the
+    standard as well.
 -   Another relevant factor is whether we want to allow blank values in
     our JSON metadata. On the one hand, it may be helpful for users to
     see a sort of template JSON file with the most important properties
@@ -131,9 +131,9 @@ A variety of sources is supported for both data and metadata.
     `path`s, but `frictionless-py` checks these only selectively (e.g.
     it checks the `path` of a resource, but not of a `license` or
     `contributor`).
--   Needs custom logic to be able to run checks on packages and
-    resources separately, even though the API suggests that it is
-    possible to filter for error type.
+-   Needs custom logic to be able to run checks on package, resource and
+    table metadata separately, even though the API suggests that it is
+    possible to filter for these based on error type.
 -   The system of error codes is not fine-grained enough for our use
     case. E.g., there's no separate error code for format/pattern
     violations or for required fields missing.
@@ -175,7 +175,8 @@ is highly customisable.
     to convert the JSON schema of the standard to Pydantic models
     automatically. We could then fetch and integrate updates to the
     standard by regenerating the models.
--   It would be easy to check package and resource metadata separately.
+-   It would be easy to check package, resource and table metadata
+    separately.
 -   All errors are collected in a single round of checks.
 -   Error codes are detailed and easy to extract.
 -   Pydantic is widely used, extensively tested, and has good
@@ -238,8 +239,8 @@ checking that a JSON object conforms to a JSON schema.
 
 -   Does not include optional recommendations in the textual description
     of the standard.
--   Cannot check package and resource metadata separately out of the
-    box, but this would be fairly easy to implement.
+-   Cannot check package, resource and table metadata separately out of
+    the box, but this would be fairly easy to implement.
 -   Does not provide error codes as such, but it does expose the cause
     of the error (e.g. a missing required field, a mismatched pattern,
     etc.) in a property other than the error message as well.
