@@ -49,8 +49,8 @@ convinced that we couldn't use the free version of FigJam, so we started
 looking for alternatives. We collected information on a variety of
 online open access tools, but more importantly, collated a list of
 requirements and features that we need for our retrospectives. Towards
-the end of investigating into other tools, we learned that we could use
-the free version of FigJam.
+the end of investigating into other tools, we learned that with the
+free version of FigJam, we will still have access to the features we need.
 
 ### Requirements
 
