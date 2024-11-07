@@ -49,8 +49,8 @@ convinced that we couldn't use the free version of FigJam, so we started
 looking for alternatives. We collected information on a variety of
 online open access tools, but more importantly, collated a list of
 requirements and features that we need for our retrospectives. Towards
-the end of investigating into other tools, we learned that with the
-free version of FigJam, we will still have access to the features we need.
+the end of investigating into other tools, we learned that with the free
+version of FigJam, we will still have access to the features we need.
 
 ### Requirements
 
@@ -60,6 +60,10 @@ retrospective session can be divided up into three categories.
 The first is the creation of the issues ('what was good', 'what can we
 improve') on virtual post-its, the second the organisation of these
 cards, and the third the overall functionality of the board.
+
+We have not assigned a priority to these features at this point in time,
+as we expect to continue with the current solution, but should we in
+future wish to change then we will need to make a prioritised list.
 
 #### Cards
 
@@ -71,10 +75,6 @@ The following features are needed for the cards:
 -   They should have clear ownership.
 -   They should be easy to read.
 -   They should be able to have different colours.
-
-We have not assigned a priority to these features at this point in time,
-as we expect to continue with the current solution, but should we in
-future wish to change then we will need to make a prioritised list.
 
 #### Organisation of cards
 
