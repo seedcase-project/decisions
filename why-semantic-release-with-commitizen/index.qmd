@@ -22,7 +22,7 @@ statement in the form of a question for the problem.
 Setting and updating the version of software communicates to users the
 state and changes of software. However, having to manually update the
 version as well as deciding when a given state of the software requires
-a version or not is time- and energy-consuming. So instead, we would
+a version is time- and energy-consuming. So instead, we would
 rather automate this process. So the question is:
 
 *What tool can we use that will automate versioning for us?*
@@ -90,7 +90,7 @@ Automatically updates version information for Python projects.
 #### Drawbacks
 
 -   The website is difficult to navigate, relative to Commitizen at
-    least. For instance, there isn't any tutorials or "getting started"
+    least. For instance, there aren't any tutorials or "getting started"
     guides and the colour scheme is a bit hard on the eyes.
 :::
 :::::
