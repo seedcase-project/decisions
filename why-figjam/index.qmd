@@ -84,9 +84,7 @@ The following features are needed for the organisation of the cards:
 -   It should be possible to keep groups of cards visually separate.
 -   It should be possible to move groups of cards.
 -   It should be possible to add comments and actions to cards.
-    -   This should be possible to follow on screen for all
-        participants.
-    -   There should not be a maximum length for comments.
+-   There should not be a maximum length for comments.
 -   It should be easy to convert cards to actions/issues.
 -   It should be easy to navigate the board and get a visual overview of
     the cards.
@@ -106,6 +104,8 @@ include the following:
 -   It should be possible to archive a session, so that it is easy to
     refer back to it.
 -   It should be possible to share the board with all participants.
+-   It should be possible to follow board activity on screen for all
+    participants.
 -   It should be possible to have multiple users on the board at the
     same time.
 -   The board should be accessible to all participants at all times.
@@ -196,7 +196,9 @@ You will need to move through these steps and there is no option to move
 back. It is not possible to create an account, which also means that you
 have no way of knowing who wrote which card.
 
-::: columns ::: column \#### Benefits
+::: columns
+::: column
+#### Benefits
 
 -   It is easy to create and delete cards.
 -   The cards are easy to read.
@@ -214,7 +216,8 @@ have no way of knowing who wrote which card.
     for.
 -   It is possible to share the board, and for more than one user to
     work on it, although once you've moved to the next step you can't go
-    back. :::
+    back.
+:::
 
 ::: column
 #### Drawbacks
@@ -230,6 +233,7 @@ have no way of knowing who wrote which card.
 -   The export function just creates a text file with all the cards.
 -   There are no frills or entertaining features.
 :::
+:::
 
 ### Refacto
 
@@ -238,8 +242,8 @@ version. It is slightly unclear if this corresponds to the version that
 the team behind it is promoting on their [GitHub
 site](https://github.com/davidje13/Refacto). The site requires a login
 for the first user, subsequent users can access the board using the
-customised url and password. The board has a standard layout which
-consists of three columns: 'I', glad that', 'I'm wondering about', and
+customised URL and password. The board has a standard layout which
+consists of three columns: 'I'm glad that', 'I'm wondering about', and
 'It wasn't so great that'. Below the three columns is a section for
 Action Items, which looks like the items from previous sessions will be
 available.
