@@ -1,0 +1,151 @@
+---
+title: "Why Commitizen for semantic release"
+description: "The reasons we use Commitizen for automated versioning and releasing of our software."
+date: "2024-11-08"
+categories:
+- communicate
+- organize
+---
+
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+Setting and updating the version of software communicates to users the
+state and changes of software. However, having to manually update the
+version as well as deciding when a given state of the software requires
+a version is time- and energy-consuming. So instead, we would
+rather automate this process. So the question is:
+
+*What tool can we use that will automate versioning for us?*
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+The main drivers for this decision are that:
+
+-   We don't want to manually have to update the version number in files
+    throughout our software.
+-   We don't want to manually add Git tags for the versions.
+-   We want the version to be determined based on some principles,
+    rather that just a "feeling" or potentially arbitrary decision.
+
+Our requirements for the tool are that it:
+
+-   Follows [Semantic Versioning](/why-semver/index.qmd).
+-   Relies on [Conventional
+    Commits](/why-conventional-commits/index.qmd) to determine which
+    version to set.
+-   Includes GitHub Action workflows to auto-generate releases upon
+    merging to the main branch.
+-   Updates the version number in the `pyproject.toml` file.
+-   Creates a Git tag for the release.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+There are only two options that fit our requirements:
+
+-   [Python Semantic
+    Release](https://github.com/python-semantic-release/python-semantic-release)
+-   [Commitizen](https://github.com/commitizen-tools/commitizen)
+
+While most package management systems like [Poetry](/why-poetry/index.qmd),
+which we already use, can do version updating and releasing, they don't rely on
+automation based on commit messages. For this reason, we don't consider them.
+
+### Python Semantic Release
+
+Automatically updates version information for Python projects.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Widely used with a large number of GitHub stars.
+-   Often recommended on external guides and websites (e.g. the [Python
+    Packages](https://py-pkgs.org/07-releasing-versioning.html#automatic-version-bumping)
+    book).
+-   Very actively maintained and developed.
+-   Can also generate an auto-generated changelog.
+:::
+
+::: column
+#### Drawbacks
+
+-   The website is difficult to navigate, relative to Commitizen at
+    least. For instance, there aren't any tutorials or "getting started"
+    guides and the colour scheme is a bit hard on the eyes.
+:::
+:::::
+
+### Commitizen
+
+Commitizen is a Python CLI tool to help manage releases, versioning, and
+creating and adhering to Conventional Commits.
+
+::::: columns
+::: column
+#### Benefits
+
+-   We already use it for our [commit
+    linting](/why-semantic-release/index.qmd).
+-   The documentation and website are very easy to navigate and
+    understand.
+-   Very widely used with a large number of GitHub stars.
+-   Very actively maintained and developed.
+-   Can also generate an auto-generated changelog.
+:::
+
+::: column
+#### Drawbacks
+
+-   None.
+:::
+:::::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+The choice was pretty clear that Commitizen was the best for our
+requirements and purposes. We already use it and the documentation is
+much easier to navigate and use, which is a critical factor in choosing
+between tools.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+-   Because it's a tool we already use, integrating it should be fairly
+    easy.
+
+## Resources used for this post
+
+::: content-hidden
+List the resources used to write this post
+:::
+
+-   [Libhunt: Discovering Python
+    packages](https://www.libhunt.com/l/python)
