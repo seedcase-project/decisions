@@ -7,6 +7,7 @@ date: "2024-11-08"
 categories:
 - backend
 - develop
+- check
 ---
 
 ::: content-hidden
@@ -98,7 +99,7 @@ building pipelines for transforming data.
     how these differ in behaviour.
 -   `polars` data frames are not supported.
 -   So far we've found it a bit difficult to navigate the
-    `frictionless-py` codebase.
+    `frictionless-py` codebase and documentation.
 :::
 :::::
 
@@ -154,7 +155,7 @@ expectation suites.
 -   Supports both data verification and validation, and can run these
     checks separately.
 -   Supports a wide range of data formats, although not `polars`.
--   Supports large datasets.\
+-   Supports large datasets.
 -   Can generate an expectation suite based on data.
 :::
 
