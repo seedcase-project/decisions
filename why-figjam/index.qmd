@@ -1,0 +1,307 @@
+---
+title: "Why FigJam for retrospectives"
+description: "Our reasons for using FigJam for our retrospectives."
+date: "2024-10-25"
+categories:
+  - collaboration
+  - retrospectives
+---
+
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+As part of the design and development cycle for the Seedcase Project, we
+work in iterations which generally run for about three weeks. At the end
+of each iteration, we have a retrospective meeting where we discuss what
+went well, what didn't go well, and what we can improve. After having
+worked with an external consultancy, we have been using FigJam for our
+retrospectives because the consultants we worked with suggested it and
+used it themselves. This has been a great tool for us to collaborate and
+share our thoughts and ideas. However, we need to make a decision on
+whether we should continue using FigJam for our retrospectives or if we
+should use an alternative tool.
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+The decision to look at our retrospective tool was primarily driven by
+the fact that the FigJam board we use is hosted by the consultancy
+company we worked with at the end of 2023 to early 2024. We were assured
+that we are more than welcome to keep using it, but it means that we
+don't have full control over it, nor is it a sustainable long-term
+solution. We should have a board where we are the owners, and which
+can't suddenly disappear because someone decides that former clients
+should no longer have access to their accounts. To start with, we were
+convinced that we couldn't use the free version of FigJam, so we started
+looking for alternatives. We collected information on a variety of
+online open access tools, but more importantly, collated a list of
+requirements and features that we need for our retrospectives. Towards
+the end of investigating into other tools, we learned that with the free
+version of FigJam, we will still have access to the features we need.
+
+### Requirements
+
+The requirements and features we identified as necessary for a good
+retrospective session can be divided up into three categories.
+
+The first is the creation of the issues ('what was good', 'what can we
+improve') on virtual post-its, the second the organisation of these
+cards, and the third the overall functionality of the board.
+
+We have not assigned a priority to these features at this point in time,
+as we expect to continue with the current solution, but should we in
+future wish to change then we will need to make a prioritised list.
+
+#### Cards
+
+The following features are needed for the cards:
+
+-   They should be easy to create, edit, and delete.
+-   They should not have a maximum length (or it should be quite long).
+-   They should be movable.
+-   They should have clear ownership.
+-   They should be easy to read.
+-   They should be able to have different colours.
+
+#### Organisation of cards
+
+The following features are needed for the organisation of the cards:
+
+-   It should be easy to group cards.
+-   It should be possible to keep groups of cards visually separate.
+-   It should be possible to move groups of cards.
+-   It should be possible to add comments and actions to cards.
+-   There should not be a maximum length for comments.
+-   It should be easy to convert cards to actions/issues.
+-   It should be easy to navigate the board and get a visual overview of
+    the cards.
+
+At present we don't see a need to be able to vote on cards, and likewise
+there is no need to archive or search for specific cards. This could
+change and should not be discarded as possible features for the future.
+
+#### Board functionality
+
+The overall functionality of the board and individual sessions should
+include the following:
+
+-   It should be possible to save a retrospective session.
+    -   This could include a timer function to keep the session on
+        track.
+-   It should be possible to archive a session, so that it is easy to
+    refer back to it.
+-   It should be possible to share the board with all participants.
+-   It should be possible to follow board activity on screen for all
+    participants.
+-   It should be possible to have multiple users on the board at the
+    same time.
+-   The board should be accessible to all participants at all times.
+-   The board should be hosted online, so that it is easy to access from
+    anywhere, and not dependent on a specific machine to be running.
+-   It would be nice to have a number of fun elements (stickers, emojis,
+    etc.) to make the session more engaging.
+
+We don't see a need for audio or chat functionality at present, as we
+are using Discord for the meeting itself. This could change in the
+future, and should not be discarded as possible features for the future.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+There is a list of open source retrospective tools available at [Project
+Management
+Planet](https://www.projectmanagementplanet.com/open-source-retrospectives-tools/),
+which we used as a starting point. To see a brief overview of the tools
+we looked at, see the original issue on GitHub: [Seedcase Project Team
+Issue 184](https://github.com/seedcase-project/team/issues/184). There
+are 10 tools on the list, and there is a brief description of them in
+the issue comment. We have narrowed it down to three that we will take a
+slightly closer look at, alongside FigJam.
+
+### Scrumlr
+
+Scrumlr was assessed using their [online demo](https://scrumlr.io/),
+which is easy to start with. We did read their documentation, but that
+is only concerned with the installation of the software, so not a lot of
+help to us. The online test version can be used by more than one person,
+and it has multiple templates to chose from, the one we looked at was
+the Start-Stop-Continue, which adds the Actions column automatically.
+Scrumlr allows for users to create a board either with or without an
+account.
+
+::: columns
+::: column
+#### Benefits
+
+-   Cards are easy to create, edit, and delete once you figure out that
+    clicking on a card will open it up.
+-   Cards show the author and allows for other users to add emojis to
+    them.
+-   Cards allow for a lot of text.
+-   The board allows multiple users to be on it at the same time and
+    provides a timer function.
+-   There is an Actions column and all columns can be renamed as well as
+    more columns added if needed.
+-   It is possible to export a board into various formats, and the
+    invitation link works even if all users have closed the board.
+:::
+
+::: column
+#### Drawbacks
+
+-   It is not possible to group cards in a way that allows you to read
+    all of them on the screen at the same time.
+-   Cards only show the first three lines of text.
+-   Because of the column layout it is not possible to move groups of
+    cards in a way that allows for more than one or two groups to be
+    visible at the same time.
+-   It is not possible to change the colour (they are all white).
+-   It is at present not clear how long a board is stored for, so it
+    would need to be exported after each session, making it more
+    difficult to refer back to previous sessions.
+:::
+:::
+
+```{=html}
+<!-- https://scrumlr.io/board/8b5ca88c-f97e-438d-898d-cf1c19e7aac8 
+board created on the 1st November 2024-->
+```
+
+### Retro tool
+
+We tested [Retro Tool](https://www.retrotool.app/) using their online
+version, which is easy to use, and comes with a very short set of
+documentation. The board has a standard layout which consists of four
+columns: 'It worked well', 'We could improve', 'I want to ask about',
+and for the final step 'We need to do'. The session is divided into four
+steps, 'Brainstorm', 'Group and Vote', 'Add action items', and 'Done'.
+You will need to move through these steps and there is no option to move
+back. It is not possible to create an account, which also means that you
+have no way of knowing who wrote which card.
+
+::: columns
+::: column
+#### Benefits
+
+-   It is easy to create and delete cards.
+-   The cards are easy to read.
+-   It is easy to group cards, and all cards are visible on the screen
+    at the same time.
+-   It is possible to moved groups of cards, although they can't be
+    moved between columns.
+-   It is possible to fit quite a few cards on the screen, making an
+    overview easy.
+-   It is possible to change the url to a custom format, thus making it
+    easier to share.
+-   There is an export function at the end.
+-   If using the custom url, it is possible to return to the board at a
+    later date, although it is not clear how long the board is stored
+    for.
+-   It is possible to share the board, and for more than one user to
+    work on it, although once you've moved to the next step you can't go
+    back.
+:::
+
+::: column
+#### Drawbacks
+
+-   Cards can't be edited.
+-   There is no obvious functionality to show who the author of various
+    cards is.
+-   It is not possible to move cards from one column to another.
+-   There is no timer function.
+-   The cards are not actually shown as cards (but as numbered
+    comments), so it is impossible to change the colour of them.
+-   It is not possible to add comments to cards.
+-   The export function just creates a text file with all the cards.
+-   There are no frills or entertaining features.
+:::
+:::
+
+### Refacto
+
+We tested [Refacto](https://retro.davidje13.com/) using their online
+version. It is slightly unclear if this corresponds to the version that
+the team behind it is promoting on their [GitHub
+site](https://github.com/davidje13/Refacto). The site requires a login
+for the first user, subsequent users can access the board using the
+customised URL and password. The board has a standard layout which
+consists of three columns: 'I'm glad that', 'I'm wondering about', and
+'It wasn't so great that'. Below the three columns is a section for
+Action Items, which looks like the items from previous sessions will be
+available.
+
+::: columns
+::: column
+#### Benefits
+
+-   Cards are easy to create, edit, and delete.
+-   Cards have a maximum length, but it is quite long (over 2000
+    characters).
+-   All participants can see which card is being discussed.
+:::
+
+::: column
+#### Drawbacks
+
+-   Cards can't be moved within columns and they can't be moved between
+    columns.
+-   Cards can't be grouped.
+-   Cards do not show who the author is.
+-   The colour of the cards can't be changed.
+-   It is not possible to associate comments to cards.
+-   A card is greyed out once it has being discussed.
+-   If a couple of cards contain a lot of text it becomes difficult to
+    keep an overview of the board.
+-   It would be difficult for more than one person to edit the board at
+    any given time.
+:::
+:::
+
+### FigJam
+
+::: columns
+::: column
+#### Benefits
+
+-   As the requirements and features we identified as necessary for a
+    good retrospective session are based on our current use of FigJam,
+    we have not listed them here.
+:::
+
+::: column
+#### Drawbacks
+
+-   The layout we have used so far does make it difficult to keep an
+    overview of each individual session as it grows.
+-   It is not obvious if it would be possible to export the boards in a
+    way that would make it easy to search through them at a later date.
+:::
+:::
+
+## Decision outcome
+
+We have decided to continue using FigJam for our retrospectives. The
+functionality offered in the free version of the product is more than
+enough for our needs, and we are happy with the tool. We will continue
+to use it until such time as we find that it no longer meets our needs,
+or until we find a better tool. This is mainly due to the fact that we
+are familiar with the tool, and that we have been able to move our
+existing archive of boards to our own account.
