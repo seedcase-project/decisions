@@ -2,7 +2,7 @@
 title: "Why Pandera"
 description: |
   A key functionality of Sprout is checking whether user-supplied data match the metadata that describe them.
-  This post explains why we chose to use Pandera for automating this process.
+  This post explains why we chose to use `pandera` for automating this process.
 date: "2024-11-08"
 categories:
 - backend
@@ -25,13 +25,13 @@ statement in the form of a question for the problem.
 A key functionality of Sprout is checking whether user-supplied data
 match the metadata that describe them. Metadata are stored in JSON files
 following the [Data Package](https://datapackage.org/) standard.
-Checking data against metadata has two components: verification involves
-checking whether the overall structure of the data (e.g. column number,
-column data type) is as expected, while validation involves checking
-that all individual data items meet constraints listed in the metadata
-(e.g. maximum values, specific formats). We are looking for a tool to
-automate the data verification and validation process. The question then
-is:
+Checking data against metadata has two components: verification and
+validation. Verification involves checking whether the overall structure
+of the data (e.g. column number, column data type) is as expected, while
+validation involves checking that all individual data items meet
+constraints listed in the metadata (e.g. maximum values, specific
+formats). We are looking for a tool to automate the data verification
+and validation process. The question then is:
 
 *Which data verification and validation tools are available and which
 one should we use?*
@@ -60,7 +60,7 @@ and drawbacks for each option.
 :::
 
 -   [`frictionless-py`](https://framework.frictionlessdata.io/)
--   [Pandera](https://pandera.readthedocs.io/en/stable/index.html)
+-   [`pandera`](https://pandera.readthedocs.io/en/stable/index.html)
 -   [Great
     Expectations](https://docs.greatexpectations.io/docs/core/introduction/)
 -   [Pydantic](https://docs.pydantic.dev/latest/)
@@ -105,11 +105,11 @@ building pipelines for transforming data.
 
 ### Pandera
 
-[Pandera](https://pandera.readthedocs.io/en/stable/index.html) is a
+[`pandera`](https://pandera.readthedocs.io/en/stable/index.html) is a
 flexible data validation library operating on data frames. Its
 validation mechanism is based on the concept of a schema expressing
 expectations about the data. It also has capabilities for preprocessing
-data and generating synthetic data from Pandera schemas.
+data and generating synthetic data from `pandera` schemas.
 
 ::::: columns
 ::: column
@@ -120,7 +120,7 @@ data and generating synthetic data from Pandera schemas.
 -   Supports `polars` data frames to a large extent (see on the right).
 -   Supports large datasets.
 -   Offers schema inference, although not with `polars`.
--   Pandera is widely used, extensively tested, and has good
+-   `pandera` is widely used, extensively tested, and has good
     documentation.
 :::
 
@@ -133,8 +133,8 @@ data and generating synthetic data from Pandera schemas.
     complete](https://pandera.readthedocs.io/en/stable/index.html#supported-features).
     E.g., it cannot yet extract metadata from `polars` data frames.
 -   We would need to write custom code to translate our table metadata
-    from JSON to Pandera schemas in Python. For its own schemas, Pandera
-    provides JSON conversion out of the box.
+    from JSON to `pandera` schemas in Python. For its own schemas,
+    `pandera` provides JSON conversion out of the box.
 :::
 :::::
 
@@ -210,20 +210,21 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-We decided to use Pandera because it is a great match for our use case,
-has extensive documentation, and its behaviour is easy to tailor to our
-needs. While `frictionless-py` is a direct implementation of the Data
-Package standard, it is less mature and less widely used than Pandera.
-We have found some inconsistencies in its verification/validation
-behaviour and feel that we would need to customise it using somewhat
-brittle and inelegant workarounds for it to fit into our workflow.
+We decided to use `pandera` because it is a great match for our use
+case, has extensive documentation, and its behaviour is easy to tailor
+to our needs. While `frictionless-py` is a direct implementation of the
+Data Package standard, it is less mature and less widely used than
+`pandera`. We have found some inconsistencies in its
+verification/validation behaviour and feel that we would need to
+customise it using somewhat brittle and inelegant workarounds for it to
+fit into our workflow.
 
-As for the remaining options, we decided not to go with Pydantic because its use case
-is not verifying or validating datasets. Although Great Expectations
-offers most of the functionality we need, it is a complete framework
-with many parts we don't need, is rather complex to set up, and
-integrating with it would shape our codebase more than any of the other
-tools.
+As for the remaining options, we decided not to go with Pydantic because
+its use case is not verifying or validating datasets. Although Great
+Expectations offers most of the functionality we need, it is a complete
+framework with many parts we don't need, is rather complex to set up,
+and integrating with it would shape our codebase more than any of the
+other tools.
 
 ### Consequences
 
@@ -232,9 +233,10 @@ List some potential consequences of this decision.
 :::
 
 -   We will have to write custom logic for transforming JSON metadata
-    into Pandera schemas.
+    into `pandera` schemas.
 -   We will have to find a solution for extracting metadata from data,
-    as Pandera cannot currently infer schemas from `polars` data frames.
+    as `pandera` cannot currently infer schemas from `polars` data
+    frames.
 -   If we want to add any checks or behaviours based on file-level
     properties of the data (e.g. file size, hash, encoding, etc.), these
-    will have to be implemented outside of Pandera.
+    will have to be implemented outside of `pandera`.
