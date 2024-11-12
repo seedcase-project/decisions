@@ -218,7 +218,7 @@ We have found some inconsistencies in its verification/validation
 behaviour and feel that we would need to customise it using somewhat
 brittle and inelegant workarounds for it to fit into our workflow.
 
-As for the remaining options, we rejected Pydantic because its use case
+As for the remaining options, we decided not to go with Pydantic because its use case
 is not verifying or validating datasets. Although Great Expectations
 offers most of the functionality we need, it is a complete framework
 with many parts we don't need, is rather complex to set up, and
