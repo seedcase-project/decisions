@@ -1,5 +1,5 @@
 ---
-title: "Why use Commitizen to auto-generate changelogs"
+title: "Why Commitizen for changelog generation"
 description: "Our reasons for using Commitizen to auto-generate changelogs."
 date: "2024-11-22"
 categories:
