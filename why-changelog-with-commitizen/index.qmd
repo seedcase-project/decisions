@@ -1,0 +1,222 @@
+---
+title: "Why use Commitizen to auto-generate changelogs"
+description: "Our reasons for using Commitizen to auto-generate changelogs."
+date: "2024-11-22"
+categories:
+- develop
+- git
+---
+
+::: content-hidden
+Use other decision posts as inspiration to writing these. Leave the
+content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+When developing software, it is important to keep track of changes made
+and to communicate these changes clearly to users and contributors. This
+is especially important in open source projects, such as the Seedcase
+Project; More people might be contributing to the project and using it
+in different ways. One way to communicate changes made to a project
+between releases or versions is by maintaining a **changelog**. A
+changelog is a file that contains a chronologically ordered list of
+changes for each version of a project. It typically includes the version
+number, release date, and a list of the changes made in that version.
+
+However, creating and maintaining a changelog manually can be
+time-consuming and error-prone.Fortunately, many tools can automatically
+generate changelogs based on a project's history. So the question
+becomes:
+
+*Which tool should we use to auto-generate changelogs for our projects?*
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+Motivations for this decision include:
+
+-   Having a consistent format for changelogs makes it easier for users
+    and contributors to understand and keep track of the changes between
+    versions.
+-   We do not want to create changelogs manually because it's
+    time-consuming and error-prone.
+-   Having a tool that can auto-generate changelogs based on commit
+    messages can help enforce good commit and merging practices.
+
+Requirements for the tool include:
+
+-   It should support GitHub Action workflows for auto-generating the
+    changelog
+-   It should generate changelogs following [Semantic
+    Versioning](/why-semver/index.qmd) (SemVer).
+-   It should generate changelogs using commit messages that follow the
+    [Conventional Commits](/why-conventional-commits/index.qmd)
+    specification.
+-   It should be well-documented and actively maintained.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+There are numerous tools available for automatically generating
+changelogs for Git repositories following the Conventional Commit
+specification, as seen by [this
+list](https://www.conventionalcommits.org/en/about/#tooling-for-conventional-commits)
+by Conventional Commits. We have considered the following options:
+
+-   [Commitizen](https://commitizen-tools.github.io/commitizen/)
+-   [Python Semantic
+    Release](https://python-semantic-release.readthedocs.io/en/latest/index.html)
+-   [git-cliff](https://git-cliff.org/docs/)
+
+### Commitizen
+
+[Commitizen](https://commitizen-tools.github.io/commitizen/) is a
+release management tool designed for teams. By leveraging a standardized
+commit convention (Conventional Commits by default, but this can be
+customised), it streamlines the process of version bumping and
+generating changelogs.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Has GitHub Action workflows to auto-generate the changelog.
+-   Can generate changelogs based on commit messages following the
+    SemVer and Conventional Commits specification.
+-   Is well-documented.
+-   Is actively maintained.
+-   Will be very easy to implement, since we already use it for [linting
+    our commit messages](../why-lint-with-commitizen/index.qmd) and
+    [versioning](../why-semantic-release-with-commitizen/index.qmd).
+    I.e., we don't need to introduce a new dependency and can leverage
+    the existing setup.
+-   Written in Python, which is a language we are familiar with. This
+    might ease customisation if needed.
+:::
+
+::: column
+#### Drawbacks
+
+-   Not quite as easily customisable as git-cliff, but this might not be
+    required for our use case.
+:::
+:::::
+
+### Python Semantic Release
+
+[Python Semantic
+Release](https://python-semantic-release.readthedocs.io/en/latest/index.html)
+is a Python implementation of the [Semantic
+Release](https://semantic-release.gitbook.io/semantic-release/) tool.
+
+::::::::::: columns
+::: column
+#### Benefits
+
+-   Has GitHub Action workflows to auto-generate the changelog.
+-   Can generate changelogs based on commit messages following the
+    SemVer and Conventional Commits specification.
+-   Is actively maintained.
+:::
+
+::: column
+#### Drawbacks
+
+-   Would require additional setup since we are already using Commitizen
+    for linting our commit messages and version bumps.
+-   A bit difficult to get started with: As detailed in the [Semantic
+    release
+    post](../why-semantic-release-with-commitizen/index.qmd#python-semantic-release),
+    their website doesn't include any tutorials or "getting started"
+    guides.
+:::
+
+### git-cliff
+
+[git-cliff](https://git-cliff.org/docs/) is a changelog generator that
+can generate changelogs for Git repositories that follow the
+Conventional Commits specification. It can be customised to generate
+changelogs in different formats with different filters.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Has GitHub Action workflows to auto-generate the changelog.
+-   Can generate changelogs based on commit messages following the
+    SemVer and Conventional Commits specification.
+-   Is well-documented.
+-   Is actively maintained.
+-   Can generate changelogs in different formats.
+-   Allows for filtering commits based on different criteria.
+:::
+
+::: column
+#### Drawbacks
+
+-   Would require additional setup since we are already using Commitizen
+    for linting our commit messages and version bumps.
+-   For version bumps, it's not as straightforward as Commitizen to
+    e.g., add the updated version to `pyproject.toml` (if we decided to
+    use this for changelog generation we might as well use it for
+    version bumps to keep things simple).
+:::
+:::::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+Both Commitizen and git-cliff are good options for auto-creating
+changelogs for our projects, since they both meet our requirements.
+However, we have decided to use Commitizen because we are already using
+it for linting our commit messages and version bumps. This way we avoid
+introducing a new dependency and can leverage the existing setup.
+Implementing this tool will be as easy as setting a configuration
+variable to `true`.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+-   To keep the changelog clean and organised, our administrators must
+    follow our [merging
+    strategy](https://team.seedcase-project.org/how-we-work/admin#merging-topic-branches)
+    and ensure that most changes are squashed into a single commit
+    before merging into the `main` branch. Importantly, the merge commit
+    message should follow the Conventional Commits specification.
+-   In cases where we don't use squashing, we must ensure that the
+    commit messages follow the Conventional Commits specification.
+
+## Resources used for this post
+
+::: content-hidden
+List the resources used to write this post
+:::
+
+-   [Commitizen](https://commitizen-tools.github.io/commitizen/)
+-   [Python Semantic
+    Release](https://python-semantic-release.readthedocs.io/en/latest/index.html)
+-   [git-cliff](https://git-cliff.org/docs/)
+-   [Conventional
+    Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+:::::::::::
