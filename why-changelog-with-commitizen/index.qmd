@@ -30,7 +30,7 @@ changes for each version of a project. It typically includes the version
 number, release date, and a list of the changes made in that version.
 
 However, creating and maintaining a changelog manually can be
-time-consuming and error-prone.Fortunately, many tools can automatically
+time-consuming and error-prone. Fortunately, many tools can automatically
 generate changelogs based on a project's history. So the question
 becomes:
 
@@ -100,8 +100,8 @@ generating changelogs.
 -   Is well-documented.
 -   Is actively maintained.
 -   Will be very easy to implement, since we already use it for [linting
-    our commit messages](../why-lint-with-commitizen/index.qmd) and
-    [versioning](../why-semantic-release-with-commitizen/index.qmd).
+    our commit messages](/why-lint-with-commitizen/index.qmd) and
+    [versioning](/why-semantic-release-with-commitizen/index.qmd).
     I.e., we don't need to introduce a new dependency and can leverage
     the existing setup.
 -   Written in Python, which is a language we are familiar with. This
@@ -123,7 +123,7 @@ Release](https://python-semantic-release.readthedocs.io/en/latest/index.html)
 is a Python implementation of the [Semantic
 Release](https://semantic-release.gitbook.io/semantic-release/) tool.
 
-::::::::::: columns
+::::: columns
 ::: column
 #### Benefits
 
@@ -144,6 +144,7 @@ Release](https://semantic-release.gitbook.io/semantic-release/) tool.
     their website doesn't include any tutorials or "getting started"
     guides.
 :::
+:::::
 
 ### git-cliff
 
@@ -219,4 +220,3 @@ List the resources used to write this post
 -   [git-cliff](https://git-cliff.org/docs/)
 -   [Conventional
     Commits](https://www.conventionalcommits.org/en/v1.0.0/)
-:::::::::::
