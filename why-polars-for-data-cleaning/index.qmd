@@ -1,6 +1,6 @@
 ---
 title: "Why use Polars for data cleaning?"
-description: "Key to all data storage is good data quality. This is often overlooked as it can be labour intensive, but it is essential for good data analysis. This post explains why we chose to use Polars for data cleaning."
+description: "The key to useful and meaningful data is data that is good quality and tidy. Getting data to be tidy and higher quality is an often undervalued and underestimated activity, at the same time being very labour intensive. But it is essential to have higher quality and tidier data to have better quality results from the analysis. This post explains why we chose to use Polars for data cleaning and processing tasks."
 date: "2024-12-04"
 categories:
 - data cleaning
@@ -21,20 +21,19 @@ statement in the form of a question for the problem.
 
 When working with data analysis, data is rarely ready to be used 'as
 is'. There will always be things that are either very wrong (like text
-in what should be a number field), or slightly wrong (like a single
-missing value, or an outlier, which may or may not be a data entry
-error). In Sprout we are not worried about the single missing values or
-the outliers, but we are concerned with the data that contradicts the
-definition of the resource (eg. TBC in a date field). There are a lot of
+in what should be a number field), slightly wrong (like a single
+missing or incorrect value), or an outlier potentially due to an error in data entry. 
+Since we don't have domain knowledge to know about missing values or
+the definition or meaning of an outlier. But there are some basic things we can
+check and fix, such as whether the data contradicts any constraints in the
+definition of the data resource (eg. a number in a date field). There are a lot of
 tools that can be used to both analyse a data set, and to clean it,
 either as part of the analysis, or as part of the initial check before
-the data is transformed and stored. The checking of the data prior to
-inclusion into Sprout is done within Sprout itself, this work will
-result in a list of errors which the user will need to handle before
-they can load the data into Sprout.
+the data is transformed and stored. So, our question is:
 
-> Which tool should we use for cleaning and processing data before
-> loading it into Sprout?
+*Which tool should we use for cleaning and processing data in our software 
+and what tool should we recommend users to use when cleaning and processing
+needs to happen outside of our software?*
 
 ## Decision drivers
 
@@ -43,11 +42,13 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
+- Can be installed and used in Python.
+- Is designed and built to be fast for processing data.
+- Has minimal dependencies, so can be installed quickly.
+- Is flexible to reading different data storage formats (e.g. SQL databases, Parquet, CSV).
+- Can write to different storage formats (as with above).
 -   We need a tool that can clean data and is easy to integrate with our
     current workflow.
--   We want to use an established tool that is well supported.
--   We want a tool which users will find easy to learn and use.
--   We do not want to build a tool from scratch.
 
 ## Considered options
 
@@ -56,9 +57,8 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
-There are a number of tools available to use for data cleaning, but as
-we want something which will run in python, and which is well supported,
-we have narrowed our options down to the following:
+While there are a number of tools available to use for data cleaning, given our requirements,
+these are the options we've considered:
 
 -   [DuckDB](https://www.duckdb.org/)
 -   [Pandas](https://pandas.pydata.org/)
@@ -66,8 +66,8 @@ we have narrowed our options down to the following:
 
 ### DuckDB
 
-DuckDB is as the name implies not a Python library, but an in-process
-OLAP database solution. It is a very young tool, version 1.0.0 was
+DuckDB is an in-process
+online analytical process (OLAP) database tool that has API extensions in many languages including Python. It is a very young tool, version 1.0.0 was
 released in 2024, although the first version was released in 2019. The
 developers have set it up as a not-for-profit foundation in the
 Netherlands.
@@ -94,12 +94,11 @@ Netherlands.
 ### Polars
 
 The Polars project started in 2020 and is based in the Netherlands.
-Relatively small team but seems to have a fast growing user base, and
+They have a relatively small team but seem to have a fast growing user base, and
 very enthusiastic developers. Polars is written in Rust and available
-for Python. It is designed to be faster than Pandas, and to handle all
+for Python. Because it is written in Rust (which is a low level language), it is very fast, and can handle all
 common data formats. The two main developers are described as
-enthusiastic about open source, which makes it a potentially good choice
-for us.
+enthusiastic about open source.
 
 ::: columns
 ::: column
@@ -116,8 +115,7 @@ for us.
 
 -   Relatively young project, so may not have all the features of more
     established tools.
--   Not as well known as Pandas, but certainly getting there.
--   Compared with Pandas there aren't as many online courses available.
+-   Because it is still new, it isn't as widely used and doesn't have too many learning resources available yet.
 :::
 :::
 
@@ -144,7 +142,6 @@ working with large data sets.
 #### Drawbacks
 
 -   Can be slow when working with large data sets.
--   May see itself overtaken by newer tools in future.
 :::
 :::
 
@@ -155,7 +152,7 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-We have decided to use Polars for data cleaning, as it is a fast and well documented, and we expect that we may use it elsewhere in the project. It is also a relatively new tool, but it is already well supported with an enthusiastic following, which we expect will continue in future. Our second choice would be Pandas, not because DuckDB isn't a good tool (we may use it elsewhere in the project), but because it is not designed to be used as a data cleaning tool.
+We have decided to use Polars for data cleaning, as it is a fast and well documented, and we expect that we may use it elsewhere in the project. It is also a relatively new tool, but it is already well supported with an enthusiastic following, which we expect will continue in future.
 
 ### Consequences
 
