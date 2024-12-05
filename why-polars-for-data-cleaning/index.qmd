@@ -21,19 +21,20 @@ statement in the form of a question for the problem.
 
 When working with data analysis, data is rarely ready to be used 'as
 is'. There will always be things that are either very wrong (like text
-in what should be a number field), slightly wrong (like a single
-missing or incorrect value), or an outlier potentially due to an error in data entry. 
-Since we don't have domain knowledge to know about missing values or
-the definition or meaning of an outlier. But there are some basic things we can
-check and fix, such as whether the data contradicts any constraints in the
-definition of the data resource (eg. a number in a date field). There are a lot of
-tools that can be used to both analyse a data set, and to clean it,
-either as part of the analysis, or as part of the initial check before
-the data is transformed and stored. So, our question is:
+in what should be a number field), slightly wrong (like a single missing
+or incorrect value), or an outlier potentially due to an error in data
+entry. Since we don't have domain knowledge to know about missing values
+or the definition or meaning of an outlier. But there are some basic
+things we can check and fix, such as whether the data contradicts any
+constraints in the definition of the data resource (eg. a number in a
+date field). There are a lot of tools that can be used to both analyse a
+data set, and to clean it, either as part of the analysis, or as part of
+the initial check before the data is transformed and stored. So, our
+question is:
 
-*Which tool should we use for cleaning and processing data in our software 
-and what tool should we recommend users to use when cleaning and processing
-needs to happen outside of our software?*
+*Which tool should we use for cleaning and processing data in our
+software and what tool should we recommend users to use when cleaning
+and processing needs to happen outside of our software?*
 
 ## Decision drivers
 
@@ -42,13 +43,14 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-- Can be installed and used in Python.
-- Is designed and built to be fast for processing data.
-- Has minimal dependencies, so can be installed quickly.
-- Is flexible to reading different data storage formats (e.g. SQL databases, Parquet, CSV).
-- Can write to different storage formats (as with above).
--   We need a tool that can clean data and is easy to integrate with our
-    current workflow.
+-   Can be installed and used in Python.
+-   Is designed and built to be fast for processing data.
+-   Has minimal dependencies, so can be installed quickly.
+-   Is flexible to reading different data storage formats (e.g. SQL
+    databases, Parquet, CSV).
+-   Can write to different storage formats (as with above).
+-   We need a tool that can clean data and is either written in Python
+    or has a Python package available.
 
 ## Considered options
 
@@ -57,8 +59,8 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
-While there are a number of tools available to use for data cleaning, given our requirements,
-these are the options we've considered:
+While there are a number of tools available to use for data cleaning,
+given our requirements, these are the options we've considered:
 
 -   [DuckDB](https://www.duckdb.org/)
 -   [Pandas](https://pandas.pydata.org/)
@@ -66,11 +68,11 @@ these are the options we've considered:
 
 ### DuckDB
 
-DuckDB is an in-process
-online analytical process (OLAP) database tool that has API extensions in many languages including Python. It is a very young tool, version 1.0.0 was
-released in 2024, although the first version was released in 2019. The
-developers have set it up as a not-for-profit foundation in the
-Netherlands.
+DuckDB is an in-process online analytical process (OLAP) database tool
+that has API extensions in many languages including Python. It is a very
+young tool, version 1.0.0 was released in 2024, although the first
+version was released in 2019. The developers have set it up as a
+not-for-profit foundation in the Netherlands.
 
 ::: columns
 ::: column
@@ -81,26 +83,29 @@ Netherlands.
     -   The code is open source, and the way it has been set up is
         promising for it to remain that way.
 -   It is very fast, and can handle large data sets.
-- It is designed for data cleaning using SQL syntax.
-- Extensive documentation with user guide sections embedded.
+-   It is designed for data cleaning using SQL syntax.
+-   Extensive documentation with user guide sections embedded.
 :::
 
 ::: column
 #### Drawbacks
 
--   It is not designed exclusively to be used as a data cleaning tool, this is more of an add-on on the way to storing data.
-- To use it to its full potential, users need to have some knowledge of SQL.
+-   It is not designed exclusively to be used as a data cleaning tool,
+    this is more of an add-on on the way to storing data.
+-   To use it to its full potential, users need to have some knowledge
+    of SQL.
 :::
 :::
 
 ### Polars
 
-The Polars project started in 2020 and is based in the Netherlands.
-They have a relatively small team but seem to have a fast growing user base, and
-very enthusiastic developers. Polars is written in Rust and available
-for Python. Because it is written in Rust (which is a low level language), it is very fast, and can handle all
-common data formats. The two main developers are described as
-enthusiastic about open source.
+The Polars project started in 2020 and is based in the Netherlands. They
+have a relatively small team but seem to have a fast growing user base,
+and very enthusiastic developers. Polars is written in Rust and
+available for Python. Because it is written in Rust (which is a low
+level language), it is very fast, and can handle all common data
+formats. The two main developers are described as enthusiastic about
+open source.
 
 ::: columns
 ::: column
@@ -110,8 +115,7 @@ enthusiastic about open source.
 -   Supports several languages, including Python.
 -   Handles all common data formats.
 -   Faster than Pandas.
-- Polars have an extensive user guide section.
-
+-   Polars have an extensive user guide section.
 :::
 
 ::: column
@@ -119,16 +123,18 @@ enthusiastic about open source.
 
 -   Relatively young project, so may not have all the features of more
     established tools.
--   Because it is still new, it isn't as widely used and doesn't have too many learning resources available yet.
-- No traditional documentation section, everything is in the user guide.
+-   Because it is still new, it isn't as widely used and doesn't have
+    too many learning resources available yet.
+-   No traditional documentation section, everything is in the user
+    guide.
 :::
 :::
 
 ### Pandas
 
 Pandas was initially released in 2008, and is now a well established
-tool to work with data frames in Python. The tool
-is written in Python, and is designed to be easy to use.
+tool to work with data frames in Python. The tool is written in Python,
+and is designed to be easy to use.
 
 ::: columns
 ::: column
@@ -136,11 +142,13 @@ is written in Python, and is designed to be easy to use.
 
 -   Established tool with a large user base.
 -   Well supported, and well documented.
-- Plenty of learning resources available from a variety of sources.
+-   Plenty of learning resources available from a variety of sources.
 -   Works with all relevant languages and data formats.
-- The pandas website contains a very thorough section on how to get started, including customised tutorials for people that have experience with many other tools.
-- The documentation seem very thorough, and includes a lot of examples.
-
+-   The pandas website contains a very thorough section on how to get
+    started, including customised tutorials for people that have
+    experience with many other tools.
+-   The documentation seem very thorough, and includes a lot of
+    examples.
 :::
 
 ::: column
@@ -157,7 +165,11 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-We have decided to use Polars for data cleaning, as it is a fast and well documented, and we expect that we may use it elsewhere in the project. It is also a relatively new tool, but it is already well supported with an enthusiastic following, which we expect will continue in future.
+We have decided to use Polars for data cleaning, as it is a fast and
+well documented, and we expect that we may use it elsewhere in the
+project. It is also a relatively new tool, but it is already well
+supported with an enthusiastic following, which we expect will continue
+in future.
 
 ### Consequences
 
@@ -165,7 +177,10 @@ We have decided to use Polars for data cleaning, as it is a fast and well docume
 List some potential consequences of this decision.
 :::
 
-We don't expect that we will find any problems with this decision down the line, but as always it is something that we will review on a regular basis. If we find that Polars is not meeting our needs, we will look at other tools that are available.
+We don't expect that we will find any problems with this decision down
+the line, but as always it is something that we will review on a regular
+basis. If we find that Polars is not meeting our needs, we will look at
+other tools that are available.
 
 ## Resources used for this post
 
