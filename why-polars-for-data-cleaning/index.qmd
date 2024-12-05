@@ -81,13 +81,15 @@ Netherlands.
     -   The code is open source, and the way it has been set up is
         promising for it to remain that way.
 -   It is very fast, and can handle large data sets.
+- It is designed for data cleaning using SQL syntax.
+- Extensive documentation with user guide sections embedded.
 :::
 
 ::: column
 #### Drawbacks
 
--   It is not designed to be used as a data cleaning tool, but as a
-    database.
+-   It is not designed exclusively to be used as a data cleaning tool, this is more of an add-on on the way to storing data.
+- To use it to its full potential, users need to have some knowledge of SQL.
 :::
 :::
 
@@ -108,6 +110,8 @@ enthusiastic about open source.
 -   Supports several languages, including Python.
 -   Handles all common data formats.
 -   Faster than Pandas.
+- Polars have an extensive user guide section.
+
 :::
 
 ::: column
@@ -116,18 +120,15 @@ enthusiastic about open source.
 -   Relatively young project, so may not have all the features of more
     established tools.
 -   Because it is still new, it isn't as widely used and doesn't have too many learning resources available yet.
+- No traditional documentation section, everything is in the user guide.
 :::
 :::
 
 ### Pandas
 
 Pandas was initially released in 2008, and is now a well established
-tool to work with data frames in Python. The tool is well supported, and
-has a large user base. It is also well documented, and there are a lot
-of online courses available for users to learn how to use it. The tool
-is written in Python, and is designed to be easy to use, and to work
-with large data sets. The main critique is that it can be slow when
-working with large data sets.
+tool to work with data frames in Python. The tool
+is written in Python, and is designed to be easy to use.
 
 ::: columns
 ::: column
@@ -135,7 +136,11 @@ working with large data sets.
 
 -   Established tool with a large user base.
 -   Well supported, and well documented.
+- Plenty of learning resources available from a variety of sources.
 -   Works with all relevant languages and data formats.
+- The pandas website contains a very thorough section on how to get started, including customised tutorials for people that have experience with many other tools.
+- The documentation seem very thorough, and includes a lot of examples.
+
 :::
 
 ::: column
