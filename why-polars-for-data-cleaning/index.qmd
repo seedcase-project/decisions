@@ -1,10 +1,9 @@
 ---
-title: "Why use Polars for data cleaning?"
-description: "The key to useful and meaningful data is data that is good quality and tidy. Getting data to be tidy and higher quality is an often undervalued and underestimated activity, at the same time being very labour intensive. But it is essential to have higher quality and tidier data to have better quality results from the analysis. This post explains why we chose to use Polars for data cleaning and processing tasks."
+title: "Why Polars"
+description: "The key to useful and meaningful data is data that is good quality and tidy. Getting data to be tidy and higher quality is an often undervalued and underestimated activity, at the same time being very labour intensive. But it is essential to have higher quality and tidier data to have better quality results from the analysis. This post explains why we chose to use Polars for data processing tasks."
 date: "2024-12-04"
 categories:
-- data cleaning
-- pre-processing data
+- data processing
 ---
 
 ::: content-hidden
@@ -22,19 +21,17 @@ statement in the form of a question for the problem.
 When working with data analysis, data is rarely ready to be used 'as
 is'. There will always be things that are either very wrong (like text
 in what should be a number field), slightly wrong (like a single missing
-or incorrect value), or an outlier potentially due to an error in data
+or incorrect value), needing to be rearranged or reorganized, or an outlier potentially due to an error in data
 entry. Since we don't have domain knowledge to know about missing values
 or the definition or meaning of an outlier. But there are some basic
 things we can check and fix, such as whether the data contradicts any
 constraints in the definition of the data resource (eg. a number in a
-date field). There are a lot of tools that can be used to both analyse a
-data set, and to clean it, either as part of the analysis, or as part of
-the initial check before the data is transformed and stored. So, our
+date field). There are a lot of tools that can process data so, our
 question is:
 
-*Which tool should we use for cleaning and processing data in our
-software and what tool should we recommend users to use when cleaning
-and processing needs to happen outside of our software?*
+*Which tool should we use for processing data in our
+software and what tool should we recommend users to use when
+processing needs to happen outside of our software?*
 
 ## Decision drivers
 
@@ -49,8 +46,6 @@ have arisen that impact work.
 -   Is flexible to reading different data storage formats (e.g. SQL
     databases, Parquet, CSV).
 -   Can write to different storage formats (as with above).
--   We need a tool that can clean data and is either written in Python
-    or has a Python package available.
 
 ## Considered options
 
@@ -59,8 +54,7 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
-While there are a number of tools available to use for data cleaning,
-given our requirements, these are the options we've considered:
+In addition to our requirements defined by our [principles](https://design.seedcase-project.org/software/principles) and our requirements listed above, these are the options we've considered:
 
 -   [DuckDB](https://www.duckdb.org/)
 -   [Pandas](https://pandas.pydata.org/)
@@ -83,16 +77,13 @@ not-for-profit foundation in the Netherlands.
     -   The code is open source, and the way it has been set up is
         promising for it to remain that way.
 -   It is very fast, and can handle large data sets.
--   It is designed for data cleaning using SQL syntax.
 -   Extensive documentation with user guide sections embedded.
 :::
 
 ::: column
 #### Drawbacks
 
--   It is not designed exclusively to be used as a data cleaning tool,
-    this is more of an add-on on the way to storing data.
--   To use it to its full potential, users need to have some knowledge
+-   To use it to its full potential in Python, users need to have some knowledge
     of SQL.
 :::
 :::
@@ -102,9 +93,7 @@ not-for-profit foundation in the Netherlands.
 The Polars project started in 2020 and is based in the Netherlands. They
 have a relatively small team but seem to have a fast growing user base,
 and very enthusiastic developers. Polars is written in Rust and
-available for Python. Because it is written in Rust (which is a low
-level language), it is very fast, and can handle all common data
-formats. The two main developers are described as enthusiastic about
+available for Python. The two main developers are described as enthusiastic about
 open source.
 
 ::: columns
@@ -114,8 +103,8 @@ open source.
 -   Enthusiastic user community, with a lot of support available.
 -   Supports several languages, including Python.
 -   Handles all common data formats.
--   Faster than Pandas.
--   Polars have an extensive user guide section.
+-   Written in Rust (a very fast, low level language), so it processes data very fast.
+-   Polars has an extensive user guide section.
 :::
 
 ::: column
@@ -144,10 +133,10 @@ and is designed to be easy to use.
 -   Well supported, and well documented.
 -   Plenty of learning resources available from a variety of sources.
 -   Works with all relevant languages and data formats.
--   The pandas website contains a very thorough section on how to get
+-   The Pandas website contains a very thorough section on how to get
     started, including customised tutorials for people that have
     experience with many other tools.
--   The documentation seem very thorough, and includes a lot of
+-   The documentation seems very thorough, and includes a lot of
     examples.
 :::
 
@@ -155,6 +144,7 @@ and is designed to be easy to use.
 #### Drawbacks
 
 -   Can be slow when working with large data sets.
+-   Because it was developed more than a decade ago, some of it's syntax and design is out-dated.
 :::
 :::
 
@@ -165,7 +155,7 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-We have decided to use Polars for data cleaning, as it is a fast and
+We have decided to use Polars for data processing, as it is a fast and
 well documented, and we expect that we may use it elsewhere in the
 project. It is also a relatively new tool, but it is already well
 supported with an enthusiastic following, which we expect will continue
