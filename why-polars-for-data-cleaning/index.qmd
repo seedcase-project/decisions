@@ -179,14 +179,9 @@ List the resources used to write this post
 :::
 
 -   [DuckDB wikipage](https://en.wikipedia.org/wiki/DuckDB)
-
 -   [DuckBD website](https://www.duckdb.org/)
-
 -   [Pandas wikipage](https://en.wikipedia.org/wiki/Pandas_(software))
-
 -   [Pandas website](https://pandas.pydata.org/)
-
 -   [Polars website](https://pola.rs/)
-
 -   [DuckDB study](https://github.com/prrao87/duckdb-study) speed
     comparison between DuckDB, Pandas and Polars.
