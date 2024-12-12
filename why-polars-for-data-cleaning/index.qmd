@@ -22,8 +22,8 @@ When working with data analysis, data is rarely ready to be used 'as
 is'. There will always be things that are either very wrong (like text
 in what should be a number field), slightly wrong (like a single missing
 or incorrect value), needing to be rearranged or reorganized, or an outlier potentially due to an error in data
-entry. Since we don't have domain knowledge to know about missing values
-or the definition or meaning of an outlier. But there are some basic
+entry. While we don't have domain knowledge to know about missing values
+or the definition or meaning of an outlier, there are some basic
 things we can check and fix, such as whether the data contradicts any
 constraints in the definition of the data resource (eg. a number in a
 date field). There are a lot of tools that can process data, so our
@@ -114,8 +114,6 @@ open source.
     established tools.
 -   Because it is still new, it isn't as widely used and doesn't have
     too many learning resources available yet.
--   No traditional documentation section, everything is in the user
-    guide.
 :::
 :::
 
