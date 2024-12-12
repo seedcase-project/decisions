@@ -26,7 +26,7 @@ entry. Since we don't have domain knowledge to know about missing values
 or the definition or meaning of an outlier. But there are some basic
 things we can check and fix, such as whether the data contradicts any
 constraints in the definition of the data resource (eg. a number in a
-date field). There are a lot of tools that can process data so, our
+date field). There are a lot of tools that can process data, so our
 question is:
 
 *Which tool should we use for processing data in our
@@ -144,7 +144,7 @@ and is designed to be easy to use.
 #### Drawbacks
 
 -   Can be slow when working with large data sets.
--   Because it was developed more than a decade ago, some of it's syntax and design is out-dated.
+-   Because it was developed more than a decade ago, some of its syntax and design is out-dated.
 :::
 :::
 
@@ -155,7 +155,7 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-We have decided to use Polars for data processing, as it is a fast and
+We have decided to use Polars for data processing, as it is fast and
 well documented, and we expect that we may use it elsewhere in the
 project. It is also a relatively new tool, but it is already well
 supported with an enthusiastic following, which we expect will continue
