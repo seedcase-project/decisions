@@ -32,7 +32,7 @@ working in a team-based and open source setting.
 Note that the benefits described above are tightly coupled to a clear,
 consistent workflow on commit frequency and content (see the decision
 post on why we aim to make [atomic commits and
-PRs](why-atomic-commits.qmd)).
+PRs](/why-atomic-commits-and-prs/index.qmd)).
 :::
 
 Since commit message conventions are not enforced by Git itself, but
@@ -53,7 +53,7 @@ transparency and collaboration. Therefore, it is essential to have a
 clear and consistent commit message convention to maintain these
 principles, both within the team and across external contributions.
 
-Since we follow the [GitHub flow](why-github-flow.qmd), changes are made
+Since we follow the [GitHub flow](/why-github-flow/index.qmd), changes are made
 on topic branches and reviewed before merging into the main branch.
 Having a clear commit message convention can ease the review process, as
 the context and purpose of changes will be clearer for reviewers.
@@ -116,7 +116,7 @@ the history of the project more understandable and easier to track.
 A conventional commit includes a **header**, an optional **body**, and
 an optional **footer** in each commit message, like shown below:
 
-```         
+```
 <type>[optional scope]: <description>
 
 [optional body]
@@ -172,7 +172,7 @@ explanations of the meaning of each emoji. Each commit message consists
 of an **intention** (an emoji), an optional **scope**, and a
 **message**, like shown below:
 
-```         
+```
 <intention>(<scope>): <message>
 ```
 
@@ -249,5 +249,5 @@ Note that following a commit message convention alone doesn't ensure a
 clear project history. Following a commit convention that includes
 commit content and frequency is as essential as a commit message
 convention. See the [Why atomic commits and
-PRs](why-atomic-commits-and-prs.qmd) decision post for a discussion of
+PRs](/why-atomic-commits-and-prs/index.qmd) decision post for a discussion of
 such conventions.

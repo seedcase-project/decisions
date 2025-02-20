@@ -23,7 +23,7 @@ use cases. Even though all have a similar concept of images and
 containers, there are some technical differences worth noting.
 
 As to why we have chosen containerization, see the page [Why choose
-containerization technology](why-containers.qmd).
+containerization technology](/why-containers/index.qmd).
 
 ## Comparison of technologies
 

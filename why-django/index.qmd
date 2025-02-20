@@ -47,7 +47,7 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-We are developing Seedcase in Python (see [Why Python](why-python.qmd)
+We are developing Seedcase in Python (see [Why Python](/why-python/index.qmd)
 for more information about this decision), so we only consider web
 frameworks for Python. The core part of Seedcase software is or will be
 a relatively complex web application with a front end, an API and a data
@@ -106,7 +106,7 @@ pattern.
     away much of the database logic and allows developers to work with
     database models in a Pythonic way.
 -   Supports all major databases (including PostgreSQL - see our [Why
-    PostgreSQL](why-postgres.qmd) decision post) and has a migration
+    PostgreSQL](/why-postgres/index.qmd) decision post) and has a migration
     mechanism, making it easy to evolve the database schema over time.
 -   Has good file storage support, making it easier to work with raw
     data and image files.

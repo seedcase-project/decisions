@@ -26,7 +26,7 @@ As the documentation for the Seedcase Project grows, we are likely to
 reach a level where it is impossible for one person to keep an overview
 and ensure a consistent layout of the pages. To help with this there are
 a few tools that can standardise how we write the documentation.
-[Quarto](why-quarto.qmd) can help with quite a few things (like
+[Quarto](/why-quarto/index.qmd) can help with quite a few things (like
 consistent layout of links and keywords), but it could also be of
 benefit to us as a team, if it is easy to use the same layout for things
 like tables and hidden comments.
@@ -70,7 +70,7 @@ An example of the code used to insert a hidden comment is given below.
     "Insert a hidden comment section":{
         "prefix": "hidden",
         "body": [
-            "::: content-hidden" 
+            "::: content-hidden"
             "${0:Write comments here}"
             ":::"
         ],

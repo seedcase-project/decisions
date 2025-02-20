@@ -56,7 +56,7 @@ following needs when it comes to this decision:
 -   Good, beginner-friendly documentation on how to use the tool.
 -   Relatively easy theming and aesthetic customization.
 -   Uses Markdown as the basis for writing content (see [Why
-    Markdown](why-markdown.qmd) for reasons on why).
+    Markdown](/why-markdown/index.qmd) for reasons on why).
 
 ## Considered options
 

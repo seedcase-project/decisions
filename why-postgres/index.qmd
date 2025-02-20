@@ -26,7 +26,7 @@ defined by
 [DB-Engines](https://db-engines.com/en/ranking/relational+dbms) in
 November 2022): MySQL, PostgreSQL, and SQLite.
 
-As we are planning to use [container technology](why-containers.qmd) to
+As we are planning to use [container technology](/why-containers/index.qmd) to
 run the database it is not as important which operating systems the
 database will run on. Having said that, of the three systems that we are
 looking at, MySQL and PostgreSQL will run on multiple operating systems
