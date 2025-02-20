@@ -4,7 +4,7 @@ description: "The reasons we use Commitizen for automated versioning and releasi
 date: "2024-11-08"
 categories:
 - communicate
-- organize
+- organise
 ---
 
 ::: content-hidden

@@ -4,8 +4,8 @@ description: "Our reasons for using conventional commits (with optional emojis f
 date: "2024-05-14"
 categories:
 - git
-- communication
-- collaboration
+- communicate
+- collaborate
 - workflow
 ---
 

@@ -3,7 +3,7 @@ title: "Why Quarto"
 description: "Our reasons for using Quarto to build the website and write the general documentation."
 date: "2023-06-25"
 categories:
-  - documentation
+  - document
   - web
 ---
 

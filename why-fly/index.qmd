@@ -6,8 +6,8 @@ description: |
 date: "2023-12-08"
 date-modified: last-modified
 categories:
-  - development
-  - deploying
+  - develop
+  - deploy
 ---
 
 ## Context and problem statement

@@ -4,8 +4,8 @@ description: "Our reasons for using conventional branch names."
 date: "2024-06-08"
 categories:
 - git
-- communication
-- collaboration
+- communicate
+- collaborate
 - workflow
 ---
 

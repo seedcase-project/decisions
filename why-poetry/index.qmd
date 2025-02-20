@@ -4,7 +4,7 @@ description: "Our reasons for using Poetry for managing Python package dependenc
 date: "2024-01-29"
 categories:
 - dependencies
-- development
+- develop
 - workflow
 ---
 
@@ -77,7 +77,7 @@ management.
 #### Drawbacks
 
 - Design is a bit older and not as intuitive/clear to use
-- Documentation is a bit too verbose/technical
+- document is a bit too verbose/technical
 - Package caching doesn't seem to be well designed/robust, so packages could get unnecessarily re-installed
 - Only handles package dependency management, which means we need another tool to develop software (like a Python package)
 

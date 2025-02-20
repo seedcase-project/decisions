@@ -3,10 +3,10 @@ title: "Why choose Semantic Versioning (SemVer) for software"
 description: "Our reasons for using SemVer for versioning the releases of our software projects."
 date: "2024-05-24"
 categories:
-- development
-- management
-- organization
-- communication
+- develop
+- manage
+- organise
+- communicate
 ---
 
 ::: content-hidden
