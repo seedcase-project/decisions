@@ -5,6 +5,7 @@ description: |
   of SQL. This decision post contains the reasons for using PostgreSQL, which is
   a powerful and feature-full variant of SQL.
 date: "2024-01-05"
+previous: true
 categories:
   - backend
   - database

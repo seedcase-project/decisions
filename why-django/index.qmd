@@ -4,6 +4,7 @@ description: |
   Web frameworks are designed to support building both web front ends and API layers. Django is a popular full-stack framework with solutions for most web development tasks out of the box.
 date: "2023-03-22"
 date-modified: "2024-05-16"
+previous: true
 categories:
   - development
   - framework

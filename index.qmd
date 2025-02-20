@@ -1,23 +1,13 @@
 ---
 title: Archive of Decision Records
+toc: false
 about:
-  id: hero-heading
   template: jolla
   image: home.svg
   image-title: "Making decisions"
   image-alt: "A cartoon illustration of a person with their arms outstretched looking uncertain, with a green arrow and black arrow pointing in opposite directions, symbolising a choice or decision."
   image-shape: rectangle
   image-width: 20rem
-listing:
-  id: decisions
-  contents: why-*/*.qmd
-  categories: true
-  type: grid
-  fields:
-    - title
-    - description
-    - date
-  sort: "title"
 ---
 
 ```{=html}
@@ -28,23 +18,10 @@ div.quarto-about-jolla {
 </style>
 ```
 
-::: column-screen
-::: {#hero-heading}
 Decision records inspired by [Architectural Decision
-Records](https://adr.github.io/). 
+Records](https://adr.github.io/) and written in the
+[Diátaxis](https://diataxis.fr/) explanation format. They describe and
+explain our reasons for why we choose certain tools, technologies, or
+processes for our products and how we work.
 
-*Illustration by [Storyset](https://storyset.com/choice)*
-:::
-:::
-
-<hr>
-
-We write structured decision records (or "posts") describing the reasons
-for why we choose certain tools, technologies, or processes for our
-software, our collaboration workflow, and our websites. All our
-decisions adhere to our [Values and
-principles](https://seedcase-project.org/about/principles).
-
-::: {#decisions}
-:::
-
+## Illustration by [Storyset](https://storyset.com/choice) {.appendix}

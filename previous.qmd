@@ -1,0 +1,18 @@
+---
+title: Previous
+listing:
+  contents: why-*/*.qmd
+  categories: true
+  type: grid
+  include:
+    previous: true
+  fields:
+    - title
+    - description
+    - date
+  sort: "date desc"
+  max-items: 50
+---
+
+These are decision posts we have previously made and followed but that
+no longer apply or are relevant

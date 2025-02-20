@@ -1,0 +1,19 @@
+---
+title: Current
+listing:
+  contents: why-*/*.qmd
+  categories: true
+  type: grid
+  exclude:
+    previous: true
+  fields:
+    - title
+    - description
+    - date
+  sort: "date desc"
+  max-items: 50
+---
+
+These decision posts are ones we currently use and follow. All our
+decisions adhere to our [values and
+principles](https://design.seedcase-project.org/).
