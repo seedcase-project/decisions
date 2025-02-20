@@ -3,7 +3,7 @@ title: "Why RESTful API"
 description: |
   REST is a widely used design style for developing APIs.
 date: "2023-03-22"
-draft: true
+previous: true
 categories:
   - api
   - software-architecture
