@@ -1,143 +1,175 @@
 ---
 title: "Why an MIT License"
 description: |
-  Open and permissive licensing of copyrighted content is a way to increase use of a software product, ease collaboration and re-use, and sharing intellectual ideas with others. This post contains our reasons for choosing the MIT License, which is a very permissive copyright license.
+  Open and permissive licensing of copyrighted content is a way to increase use of a software product,
+  ease collaboration and re-use, and share intellectual ideas with others. This post contains our
+  reasons for choosing the MIT License, which is a very permissive copyright license.
 date: "2023-04-01"
-date-modified: last-modified
+date-modified: "2025-02-20"
 categories:
 - license
 ---
 
-<!--TODO #38 docs: Update 'Why MIT license with benefits and drawbacks -->
-
 ## Context and problem statement
 
-When developing a new piece of software it is important to consider the
-following question as early as possible.
+When developing software or any intellectual property, one of the first
+things to consider is how it should be licensed for use. Given our
+[principles](https://design.seedcase-project.org) of using and building
+open source tools, we need to decide on which open source license to
+use. Which leads to the question:
 
-> What kind of re-use will we ultimately allow other developers to make
-> of our software?
-
-In order to control this use, it is important to have considered which
-license type we want our software to be available under, as this will
-tell the rest of the development community what they can (and can't) do
-with it.
+*What license fits our needs and values best, while also being easy to
+use, enforce, and understand?*
 
 ## Decision drivers
 
-Although no license means that a piece of software on GitHub will be
-under exclusive copyright, leaving our code without one will make it
-difficult for other users to (easily) (re-)use, modify, contribute, or
-enhance our software due to copyright reasons. Our mission isn't only to
-build a piece of software; we also aim to develop a creative community
-around the Seedcase Project and the topics we work on. We want people to
-be able to freely and smoothly contribute enhancements and other
-improvements that can be incorporated into future releases of Seedcase
-software products. It is also our intention to make the Seedcase
-software available to commercial enterprises, which means that we need
-to carefully consider which license we adopt.
+The type of license we use will strongly impact how we develop and share
+our software products, both now and in the future. Aside from our
+guiding [principles](https://design.seedcase-project.org/software),
+there are few other things we need:
+
+-   Easy to understand and implement
+-   Permissive enough to allow for easy commercial use
+-   Doesn't require much enforcement or legal action given how it is
+    used, shared, and distributed
+-   Encourages collaboration and sharing of ideas
+
+A major driver here is the effort and energy required to enforce the
+license of any software we build, which will take time away from
+developing and improving the software itself.
 
 ## Considered options
 
 The Open Source Initiative (OSI)
 [approves](https://opensource.org/licenses) a specific set of licenses
-that determine whether a project can be called "open source". These
-licenses are our starting point on deciding which license to use and how
-permissive we want it to be, in terms of who can work on our code and
-how it can be used.
+that determine whether a project can be called "open source". We'll use
+these licenses as a starting point. Open source licenses fall under two
+main classes: **permissive** and **copy-left**.
 
-The primary license is the one that governs how our code can be used,
-modified, and shared, which is described more below. For managing
-copyright of contributed code from users who are external to the
-project, agreements could include either a Contributor License Agreement
-(CLA), a Developer Certificate of Origin (DCO), or neither of those,
-which we discussion below as well.
+-   **Copy-left**: Allows easy re-use and re-distribution if a third
+    party makes changes to the existing product or incorporates the code
+    within another software program. But the restriction is that the
+    resulting software (if distributed external from your organisation)
+    must also be made under the same license. This is considered an
+    "infectious" license, since it spreads as others use it. The
+    drawback is that it can limit the commercial use and does require
+    some legal enforcement to ensure compliance.
 
-### Software licenses
+-   **Permissive**: Has all the same rights as the copy-left licenses,
+    but they do not enforce that derived works or new works contain the
+    same license as the original work. These type of licenses are
+    generally seen as more friendly to commercial enterprises, as they
+    will allow companies to use bits of code in proprietary software
+    without having to release the source code for free.
 
-Overall, the open source community have licenses that work along two
-strands, **permissive** and **copy-left**. Both of these "allow software
-to be freely used, modified, and shared" (see more detail on the
-[OSI](https://opensource.org/licenses) website). We will be using the
-OSI's definition of free software that among other things covers the
-source code being available to download and read/study, to allow for
-derived works to be created and distributed without violating the given
-license.
+Given our drivers, we focus on permissive licenses, which are:
 
-The **copy-Left licenses** generally state that if a third party makes
-changes to the existing product, or incorporates the code alongside
-another code set, then the resulting software must also be available
-under the same license. This is the broadest definition of free
-software, as it forces any subsequent development to be shared for free
-(although most of those licenses state that you are allowed to modify
-code for own use, the copy-left license only comes into play if you make
-your modifications available outside your organisation). Examples of
-Copy-Left licenses are
-[EUPL-1.2](https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/2020-03/EUPL-1.2%20EN.txt),
-[GPL](https://www.gnu.org/licenses/gpl-3.0.en.html), and
-[LGPL](https://www.gnu.org/licenses/lgpl-3.0.en.html).
+-   [MIT License](https://opensource.org/licenses/MIT)
+-   [Apache License 2.0](https://opensource.org/licenses/Apache-2.0)
+-   [BSD 3-Clause
+    License](https://opensource.org/license/bsd-3-clause/))
 
-The **permissive licenses** gives you all the above mentioned rights,
-but they do not enforce that derived works or new works created by
-taking bits of source code from the original product are made available
-under the same license. These type of licenses are generally seen as
-more friendly to commercial enterprises as they will allow companies to
-use bits of code in proprietary software without having to release the
-source code for free. Examples of Permissive licenses are
-[Apache](https://www.apache.org/licenses/LICENSE-2.0), BSD (no matter
-the number of clauses, e.g., [BSD
-2-Clause](https://opensource.org/license/bsd-2-clause/) or [BSD
-3-Clause](https://opensource.org/license/bsd-3-clause/)), and
-[MIT](https://opensource.org/license/mit/).
+### MIT License
 
-### CLA versus DCO
+Of the three licenses, the MIT License is the most permissive and with
+the least restrictions.
 
-Some open source projects are asking contributors to sign up to a
-Contributor License Agreement (CLA) or, alternatively, a Developer
-Certificate of Origin (DCO).
+::::: columns
+::: column
+#### Benefits
 
-Looking at a number of **CLAs** (in particular
-[Threema](https://threema.ch/en/open-source/cla),
-[Meta](https://code.facebook.com/cla), and
-[ImageWorks](https://www.imageworks.com/technology/opensource/cla)), it
-seems that these projects are mainly concerned with the following:
+-   Very popular and widely used with the open source community, for
+    example, most of Python, R, and JavaScript packages are licensed
+    under the MIT License.
+-   Very easy to understand and implement, with minimal legal jargon. It
+    has a total of some 200 words, so it is very easy to read.
+-   Allows for commercial use and distribution, with no requirement to
+    release the source code of any derived works.
+-   Requires nearly no legal enforcement, as it is so permissive.
+-   Includes the software's documentation as part of it's license
+    coverage.
+:::
 
--   A person submitting code that they are not the copyright holder for.
--   Withdrawal of the right to use the submitted code.
--   The need to apply for patents in future for parts or all of the
-    source code.
--   A change in the type of license that the source code was given at
-    the time of contribution.
+::: column
+#### Drawbacks
 
-There are also some agreements that touch on the subject of loss and
-damages that may arise from the use of a particular section of code, as
-well as how a request for support will be dealt with in future.
+-   The only major drawback is the same thing as it's strength: It is so
+    permissive that it allows for anyone to use the software in any way
+    they see fit, including proprietary software. This can be seen as
+    a drawback if you want to ensure that your software remains open
+    source.
+:::
+:::::
 
-An alternative to a CLA is a **DCO**. The **DCO** was first employed by
-the Linux Foundation in 2004 and is basically a short document that
-confirms that the person contributing code is allowed to do so, gives
-permission for the project to subsequently use it, by adding a
-Signed-off-by line to their commit message (for an example see the
-[BeeWare projects DCO](https://beeware.org/contributing/how/dco/what/)).
+### Apache License 2.0
+
+The Apache License 2.0 is very similar to the MIT License, but with a
+few more restrictions.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Quite popular in the open source community.
+-   Includes a section on patents, which can be useful if you are a
+    company with patents.
+:::
+
+::: column
+#### Drawbacks
+
+-   Is a bit more complex than the MIT License, with more legal jargon.
+-   Requires some legal enforcement to ensure compliance.
+-   The patent section is a bit difficult to understand as a developer,
+    so presumably it is also difficult for users to understand.
+-   Doesn't include the documentation as part of the license coverage.
+:::
+:::::
+
+### BSD 3-Clause License
+
+The BSD 3-Clause License is similar to both the other licenses, but with
+less restrictions than the Apache License 2.0 and slightly more than the
+MIT License. There is also the BSD 2-Clause License, but it is not as
+commonly used and, while nearly identical to the MIT License, is less
+specific in it's language. In simple terms, the BSD 2-Clause License is a worse version of the
+MIT License, so we don't cover it here.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Is nearly identical to the MIT License, but has a clause to indicate
+    not to use the name of the copyright holder to endorse or promote
+    products derived from the software.
+:::
+
+::: column
+#### Drawbacks
+
+-   Only covers the software and it's binary format, not the
+    documentation.
+-   The least commonly used of the licenses considered here.
+:::
+:::::
 
 ## Decision outcome
 
-It is in our stated [goals](https://seedcase-project.org/about) that
-Seedcase software is available for commercial enterprises as well as
-academic/healthcare organizations and groups. Aligning with our stated
-[Guiding
-Principles](https://seedcase-project.org/about.html#principles), we will
-use a **permissive** license as it will be the best fit for the Seedcase
-Project. Of the permissive license types we will go with the MIT License
-as it is the most permissive and easiest to understand and use.
+We decided on using the MIT license, as it is the most permissive and
+easiest to understand and use.
 
 ### Consequences
 
-Currently, we're not sure if we need to implement a CLA before people
-outside the team contribute to the code. However, we will likely
-implementing a **DCO** that future contributors will need to agree to
-before making a contribution to the project. This could be done either
-by checking that a commit contains the signed-off-by clause before
-merging it, or by implementing something like the [GitHub App
-DCO](https://github.com/apps/dco). The license text itself is available
-[here](https://developercertificate.org).
+-   We may have issues in the future if we convert to a company and deal
+    with different types of legal issues, given how permissive the
+    license is.
+
+## Resources
+
+-   StackExchange questions on MIT vs BSD
+    [here](https://opensource.stackexchange.com/questions/11109/what-are-the-practical-differences-between-mit-apache-and-bsd-licenses)
+    and
+    [here](https://opensource.stackexchange.com/questions/217/what-are-the-essential-differences-between-the-bsd-and-mit-licences)
+-   [Open Source Initiative](https://opensource.org/)
+-   [Blog post on which to
+    use](https://www.exygy.com/blog/which-license-should-i-use-mit-vs-apache-vs-gpl)
