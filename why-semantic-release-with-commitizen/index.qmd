@@ -4,7 +4,7 @@ description: "The reasons we use Commitizen for automated versioning and releasi
 date: "2024-11-08"
 categories:
 - communicate
-- organize
+- organise
 ---
 
 ::: content-hidden
@@ -105,7 +105,7 @@ creating and adhering to Conventional Commits.
 #### Benefits
 
 -   We already use it for our [commit
-    linting](/why-semantic-release/index.qmd).
+    linting](/why-semantic-release-with-commitizen/index.qmd).
 -   The documentation and website are very easy to navigate and
     understand.
 -   Very widely used with a large number of GitHub stars.

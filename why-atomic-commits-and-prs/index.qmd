@@ -3,6 +3,9 @@ title: "Why atomic commits"
 description: "Our reasons for using atomic commits in our projects instead of squashing commits and ...? rebase? "
 date: "2024-05-14"
 categories:
+- git
+- collaborate
+- communicate
 ---
 
 ::: content-hidden
@@ -17,11 +20,11 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-A software project like Seedcase needs an easy way to manage and track changes in the codebase. 
+A software project like Seedcase needs an easy way to manage and track changes in the codebase.
 This includes making sure that changes are well documented, easy to understand, and can be reverted if necessary.
 We use Git as our version control system, and the GitHub flow as our branching strategy. We then need to decide the best approach for managing commits and PRs in our projects.
 
-The question then becomes: 
+The question then becomes:
 
 > Which strategy should we use in our projects in regards to commit and PR content and frequency to ensure a clear project history and efficient collaboration?
 
@@ -73,7 +76,7 @@ When you create branches for one specific purpose, it benefits your (and your co
 1. It enables you to give the branch a short, descriptive name that clearly communicates to your collaborators what work has been done on this particular branch.
 2. Smaller changes allows for a faster reviewing and merging to the `main` branch, since it is easier for your collaborators to get an overview of the work you have done.
 
-As an example, a branch could cover a fix to a particular bug or [issue](issues.md) (i.e., a problem in the current code or documentation that has been reported in the repository in GitHub) or add a new feature, such as a new plot, like in the figure above showing parallel development.
+As an example, a branch could cover a fix to a particular bug or issue (i.e., a problem in the current code or documentation that has been reported in the repository in GitHub) or add a new feature, such as a new plot, like in the figure above showing parallel development.
 
 
 

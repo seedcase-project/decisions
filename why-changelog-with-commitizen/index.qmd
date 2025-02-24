@@ -140,7 +140,7 @@ Release](https://semantic-release.gitbook.io/semantic-release/) tool.
     for linting our commit messages and version bumps.
 -   A bit difficult to get started with: As detailed in the [Semantic
     release
-    post](../why-semantic-release-with-commitizen/index.qmd#python-semantic-release),
+    post](/why-semantic-release-with-commitizen/index.qmd#python-semantic-release),
     their website doesn't include any tutorials or "getting started"
     guides.
 :::

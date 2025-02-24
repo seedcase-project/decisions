@@ -3,10 +3,10 @@ title: "Why choose Semantic Versioning (SemVer) for software"
 description: "Our reasons for using SemVer for versioning the releases of our software projects."
 date: "2024-05-24"
 categories:
-- development
-- management
-- organization
-- communication
+- develop
+- manage
+- organise
+- communicate
 ---
 
 ::: content-hidden
@@ -94,7 +94,7 @@ change, so from `0.1.0` to `1.0.0`.
         Changelog](https://github.com/conventional-changelog/conventional-changelog)
         to automatically generate changelogs based on the commit
         messages that use the [Conventional
-        Commits](why-conventional-commits.qmd) format.
+        Commits](/why-conventional-commits/index.qmd) format.
     -   [Python Semantic
         Release](https://python-semantic-release.readthedocs.io/en/latest/)
         to automatically increment the version number based on the

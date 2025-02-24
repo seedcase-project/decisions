@@ -4,8 +4,8 @@ description: "Our reasons for using conventional branch names."
 date: "2024-06-08"
 categories:
 - git
-- communication
-- collaboration
+- communicate
+- collaborate
 - workflow
 ---
 
@@ -24,9 +24,9 @@ statement in the form of a question for the problem.
 For the Seedcase Project, we aim to follow best practices and have
 explicit and clear structures for how we work together. This includes
 workflows on how we work with Git and GitHub (see the decision posts
-[Why GitHub flow](why-github-flow.qmd), [Why atomic commits and
-PRs](why-atomic-commits-and-prs.qmd), and [Why conventional
-commits](why-conventional-commits.qmd)).
+[Why GitHub flow](/why-github-flow/index.qmd), [Why atomic commits and
+PRs](/why-atomic-commits-and-prs/index.qmd), and [Why conventional
+commits](/why-conventional-commits/index.qmd)).
 
 Since we follow the GitHub flow, we need a structure for how we name our
 branches, since branch naming is important for keeping a project
@@ -73,7 +73,7 @@ When researching for branch naming conventions, most of the described
 best practices involve a naming scheme that follows a structure similar
 to Conventional Commits, which works very well for the Seedcase core
 team, since we follow this convention for our commit messages (see the
-[Why conventional commits](why-conventional-commits.qmd) decision post
+[Why conventional commits](/why-conventional-commits/index.qmd) decision post
 for why we follow this convention).
 
 In general, these naming schemes involves a prefix describing the
@@ -104,12 +104,12 @@ will be fleshed out below.
 When especially larger teams work on a project, they tend to have some
 kind of project management system, with tickets or items for each
 developer to work on. The Seedcase core team uses GitHub projects (see
-the [Why GitHub projects](why-github-projects.qmd) post), which includes
+the [Why GitHub projects](/why-github-projects/index.qmd) post), which includes
 numbering of issues across repositories.
 
 This information can easily be added to a branch name like so:
 
-```         
+```
 feat/issue-123-short-description
 ```
 
@@ -192,7 +192,7 @@ REASONS."
 
 We decided to follow the following naming scheme:
 
-```         
+```
 <type>/short-description
 ```
 

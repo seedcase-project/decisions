@@ -3,7 +3,7 @@ title: "Why FigJam for retrospectives"
 description: "Our reasons for using FigJam for our retrospectives."
 date: "2024-10-25"
 categories:
-  - collaboration
+  - collaborate
   - retrospectives
 ---
 
@@ -180,7 +180,7 @@ account.
 :::
 
 ```{=html}
-<!-- https://scrumlr.io/board/8b5ca88c-f97e-438d-898d-cf1c19e7aac8 
+<!-- https://scrumlr.io/board/8b5ca88c-f97e-438d-898d-cf1c19e7aac8
 board created on the 1st November 2024-->
 ```
 
