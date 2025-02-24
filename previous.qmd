@@ -14,5 +14,5 @@ listing:
   max-items: 50
 ---
 
-These are decision posts we have previously made and followed but that
-no longer apply or are relevant
+These decision posts reflect previous decisions that are
+no longer applicable or relevant.

@@ -14,6 +14,6 @@ listing:
   max-items: 50
 ---
 
-These decision posts are ones we currently use and follow. All our
+These decision posts reflect the decisions we currently adhere to. All our
 decisions adhere to our [values and
 principles](https://design.seedcase-project.org/).
