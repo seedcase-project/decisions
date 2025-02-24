@@ -2,7 +2,7 @@
 title: "Why an MIT License"
 description: |
   Open and permissive licensing of copyrighted content is a way to increase use of a software product,
-  ease collaboration and re-use, and sharing intellectual ideas with others. This post contains our
+  ease collaboration and re-use, and share intellectual ideas with others. This post contains our
   reasons for choosing the MIT License, which is a very permissive copyright license.
 date: "2023-04-01"
 date-modified: "2025-02-20"
@@ -95,7 +95,7 @@ the least restrictions.
 
 -   The only major drawback is the same thing as it's strength: It is so
     permissive that it allows for anyone to use the software in any way
-    they see fit, including in proprietary software. This can be seen as
+    they see fit, including proprietary software. This can be seen as
     a drawback if you want to ensure that your software remains open
     source.
 :::
@@ -121,7 +121,7 @@ few more restrictions.
 -   Is a bit more complex than the MIT License, with more legal jargon.
 -   Requires some legal enforcement to ensure compliance.
 -   The patent section is a bit difficult to understand as a developer,
-    so presumably is difficult for users.
+    so presumably it is also difficult for users to understand.
 -   Doesn't include the documentation as part of the license coverage.
 :::
 :::::
@@ -132,8 +132,8 @@ The BSD 3-Clause License is similar to both the other licenses, but with
 less restrictions than the Apache License 2.0 and slightly more than the
 MIT License. There is also the BSD 2-Clause License, but it is not as
 commonly used and, while nearly identical to the MIT License, is less
-specific in it's language. In simple terms, it is a worse version of the
-MIT License. So we don't covered it here.
+specific in it's language. In simple terms, the BSD 2-Clause License is a worse version of the
+MIT License, so we don't cover it here.
 
 ::::: columns
 ::: column
@@ -149,7 +149,7 @@ MIT License. So we don't covered it here.
 
 -   Only covers the software and it's binary format, not the
     documentation.
--   The least commonly used.
+-   The least commonly used of the licenses considered here.
 :::
 :::::
 
