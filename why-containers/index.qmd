@@ -4,7 +4,7 @@ description: |
   Containers are a way to bundle a software's environment to simplify
   development, installation, and dependency management.
 date: "2022-12-10"
-draft: true
+previous: true
 categories:
   - container
   - installation

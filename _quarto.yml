@@ -11,6 +11,9 @@ website:
     logo-alt: "Seedcase Decisions logo: Main page"
     pinned: true
     search: true
+    left:
+      - current.qmd
+      - previous.qmd
     tools:
       - icon: house
         href: "https://seedcase-project.org"

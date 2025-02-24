@@ -4,7 +4,7 @@ description: |
   Showcasing a demo of Seedcase software helps make things more tangible. This
   post describes our reasons for using Fly.io as a deployment host for showcasing our demo.
 date: "2023-12-08"
-date-modified: last-modified
+previous: true
 categories:
   - development
   - deploying
