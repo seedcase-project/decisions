@@ -1,0 +1,138 @@
+---
+title: "Why Markdown"
+description: |
+    Markup languages are systems for writing plain text in a structured way that
+    dictates how it will be displayed. There are many markup languages and this
+    post describes our reasons for using Markdown.
+date: "2025-02-28"
+categories:
+- contribute
+- develop
+- document
+- write
+---
+
+## Context and problem statement
+
+Writing documentation is the core of any human activity, be it a set of
+instructions, agreements, how-to guides, or even notes. What tools we
+use to write documentation can have a significant impact on how we
+write, how we collaborate, and how we share information. Following from
+our principles, we want open source tools that integrate well with other
+tools we use. These tools are called "markup languages". However, there
+are many different markup languages to choose from, and we need to
+decide which one to use. The question then becomes:
+
+*Which markup language should we use as the basis for writing all types
+of documentation across Seedcase activities?*
+
+## Decision drivers
+
+Aside from our principles, additional drivers are:
+
+-   Familiar to a wide range of people.
+-   Popular and well-established.
+-   Easy to learn and use.
+-   Plain-text based.
+-   Able to produce output in multiple formats.
+
+## Considered options
+
+While HTML and LaTeX are popular and well-established markup languages,
+their main disadvantage is that they cannot output to different formats.
+So we don't consider them. The two main options that fit our drivers
+are:
+
+-   [Markdown](https://en.wikipedia.org/wiki/Markdown)
+-   [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText)
+
+### Markdown
+
+Markdown, also commonly referred to as
+[CommonMark](https://commonmark.org/), is a lightweight markup language
+with plain text formatting syntax. It is designed so that it can be
+converted to HTML and many other formats using a tool by the same name.
+Markdown is often used to format readme files, for writing messages in
+online discussion forums, and to create rich text using a plain text
+editor.
+
+::::: columns
+::: column
+#### Benefits
+
+-   It is by far the most popular markup language used by the widest
+    range of people, not just developers.
+-   Integrated in nearly all major platforms, like GitHub, WordPress,
+    Stack Exchange, many communication tools like Slack.
+-   Has the massive advantage of having a powerful format converter
+    called [Pandoc](https://pandoc.org/).
+-   Many tools and libraries that use and support it, such as [R
+    Markdown](https://rmarkdown.rstudio.com/), [Jupyter
+    Notebooks](https://jupyter.org/), and [Quarto](https://quarto.org/).
+-   It is very easy to use and learn, with a simple syntax that is
+    intuitive and easy to remember. Even non-technical people can start
+    using it within minutes.
+:::
+
+::: column
+#### Drawbacks
+
+-   There are many different versions of Markdown, though there are
+    strong efforts to standardize it onto CommonMark.
+-   Because of it's ease of use, there are some more powerful features
+    that are not implemented in the original Markdown syntax, so
+    extensions are needed to use features that may be needed in some
+    cases.
+:::
+:::::
+
+### reStructuredText
+
+reStructuredText is a format used for writing technical documentation,
+it's popularly is largely due to it being the default format for
+documentation in Python projects and packages. Like Markdown, it is
+plain text, fairly simple to use.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Because it is the default for Python documentation, it's use and
+    support is widely available in the Python community.
+-   It is more powerful than Markdown, with more features built in
+    mainly because it was designed for technical writing in mind.
+:::
+
+::: column
+#### Drawbacks
+
+-   Not nearly as widely used as Markdown.
+-   Is a bit more difficult to learn and to read, at least relative to
+    Markdown.
+-   While Pandoc can convert it to many formats, because Markdown is the
+    core to Pandoc, it can't convert many of its features into the other
+    formats, which minimises it's benefit of being more powerful.
+:::
+:::::
+
+## Decision outcome
+
+We decided on **Markdown** because it is the most popular and widely
+used markup language, it is easy to learn and use, and it has a powerful
+format converter in Pandoc. We also use [Quarto](/why-quarto/index.qmd)
+for creating websites and other output, which is built on top of
+Pandoc's Markdown. Through Quarto we have access to many powerful
+features that make up for Markdown's less powerful features.
+
+### Consequences
+
+-   We don't foresee any major consequences to this decision.
+
+## Resources used for this post
+
+::: content-hidden
+List the resources used to write this post
+:::
+
+-   [Stack Overflow Developer Survey
+    2024](https://survey.stackoverflow.co/2024/technology#2-programming-scripting-and-markup-languages)
