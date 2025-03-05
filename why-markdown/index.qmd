@@ -63,7 +63,7 @@ editor.
 -   It is by far the most popular markup language used by the widest
     range of people, not just developers.
 -   Integrated in nearly all major platforms, like GitHub, WordPress,
-    Stack Exchange, many communication tools like Slack.
+    Stack Exchange, and many communication tools like Slack and Discord.
 -   Has the massive advantage of having a powerful format converter
     called [Pandoc](https://pandoc.org/).
 -   Many tools and libraries that use and support it, such as [R
@@ -97,10 +97,10 @@ plain text, fairly simple to use.
 ::: column
 #### Benefits
 
--   Because it is the default for Python documentation, it's use and
+-   Because it is the default for Python documentation, its use and
     support is widely available in the Python community.
 -   It is more powerful than Markdown, with more features built in
-    mainly because it was designed for technical writing in mind.
+    mainly because it was designed with technical writing in mind.
 :::
 
 ::: column
