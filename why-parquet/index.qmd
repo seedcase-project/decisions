@@ -1,0 +1,125 @@
+---
+title: "Why Parquet"
+description: "The format for storing data directly impacts how it is used later. "
+date: "2025-03-03"
+categories:
+- database
+- organise
+---
+
+## Context and problem statement
+
+The way 
+
+Storing for the data that will be used, shared etc
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+- Mainly used for storing various sizes of data.
+- We don't do "transactional" data processing or data entry, so we don't need to worry about [ACID](https://en.wikipedia.org/wiki/ACID) compliance as much nor do we need to worry about row-level write speeds.
+- Stores the schema within the format itself, and can also handle [schema evolution]()
+- Suitable for both local, single-node processing and remote, distributed processing.
+- Has good compressed file sizes.
+- Is also relatively simple to use and understand for those doing data analysis, which means it can integrate easily with software like R and Python.
+
+## Considered options
+
+- [Parquet](https://parquet.apache.org/)
+- [Avro](https://avro.apache.org/)
+- [SQL (e.g. SQLite)](https://www.sqlite.org/)
+
+Not considered:
+
+- CSV, JSON, and other text-based formats are some of the most commonly used file formats for data. However, their biggest disadvantage is that they don't store the data schema nor are they good for file compression and eventual analysis. So we don't consider them.
+- [ORC](https://orc.apache.org) is a format that is similar to Parquet, but is used mostly within distributed computing and Big Data environments like in [Hadoop](https://hadoop.apache.org/) or [Hive](https://hive.apache.org/) systems. We don't use these technologies, so we are not considering ORC.
+- [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html), which is a common file system used in Big Data environments. We don't consider it because both Parquet and Avro are natively supported with HDFS systems. We also don't consider it because Hadoop is not a common use case for our problems we aim to solution.
+
+### Parquet
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Designed for batch processing, which is how most research data analysis is performed.
+- Stores the schema within the format itself, and can also handle schema evolution.
+- Of the options considered, it has the best compressed file sizes because it stores data by column, not by row. What this means is that each line in the file format is a column, not a row unlike formats like CSV where each line in the file is a row.
+- Integrates very easily into both R and Python ecosystems for data analysis via popular packages like [arrow](https://arrow.apache.org/).
+- Is natively supported by the incredibly powerful in-memory SQL engine [DuckDB](https://duckdb.org/), which is a great tool for data analysis.
+- Has plugins for most common data processing tools, including SQLite.
+- Can handle unstructured data.
+- Designed to handle the situation of many columns relative to rows (though still lots of rows). Most research data falls under this category, for instance -omic type data, where there are often many hundreds of columns and maybe a few thousand rows.
+:::
+::: {.column}
+#### Drawbacks
+
+- Not particularly well designed for inserting new rows into the dataset. This isn't strictly an issue for our purposes, since we don't do "transactional" data processing.
+- Is in a binary format, so is not human-readable. This is a drawback for people who want to quickly look at their data.
+- Not very good at row-level scans or lookups, though this isn't a common use case in research data analysis.
+:::
+
+### Avro
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Can handle unstructured data.
+- Has the schema stored within the format itself.
+- Very good file size compression.
+- Better at writing new rows to the dataset than Parquet.
+- Has better schema evolution features than Parquet.
+- For individual row lookups, Avro is faster than Parquet since it stores data by row, not column.
+:::
+::: {.column}
+#### Drawbacks
+
+- Not as fast as Parquet at reading data.
+- Doesn't have as good compressed file sizes as Parquet because it stores data by row, not column.
+- Isn't as well integrated into common research analysis tools like R and Python.
+:::
+
+### SQL (e.g. SQLite)
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Is a well established, classic relational, embedded SQL database format.
+- Very fast at reading and writing data (though not as fast as Parquet or Avro for reading).
+- Can handle unstructured data.
+:::
+::: {.column}
+#### Drawbacks
+
+- Item 1
+:::
+:::
+
+## Decision outcome
+
+
+
+### Consequences
+
+- Since Parquet is not a text-based format, it is not human-readable. This means that for people wanting to have a quick look at their data won't be able to do that.
+A consequence will be that some use cases will not be ideal for Parquet, so people who have smaller datasets may not use our solutions.
+
+## Resources used for this post
+
+::: content-hidden
+List the resources used to write this post
+:::
+
+- https://towardsdatascience.com/big-data-file-formats-explained-dfaabe9e8b33/
+- https://thenewstack.io/the-architects-guide-to-data-and-file-formats/
+- https://risingwave.com/blog/big-data-file-formats-a-comprehensive-guide/
+- https://stackoverflow.com/questions/36822224/what-are-the-pros-and-cons-of-the-apache-parquet-format-compared-to-other-format
+- https://db-blog.web.cern.ch/blog/zbigniew-baranowski/2017-01-performance-comparison-different-file-formats-and-storage-engines
+- https://blog.matthewrathbone.com/2019/12/20/parquet-or-bust.html
+- https://medium.com/ssense-tech/csv-vs-parquet-vs-avro-choosing-the-right-tool-for-the-right-job-79c9f56914a8
+- https://www.snowflake.com/trending/avro-vs-parquet
