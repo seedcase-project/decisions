@@ -12,8 +12,8 @@ categories:
 
 ## Context and problem statement
 
-Writing documentation is the core of any human activity, be it a set of
-instructions, agreements, how-to guides, or even notes. What tools we
+Writing, either for communication or making documents, is a fundamental component of any human activity.
+In technical writing, it includes documents like instructions, agreements, how-to guides, or explanations. What tools we
 use to write documentation can have a significant impact on how we
 write, how we collaborate, and how we share information. Following from
 our principles, we want open source tools that integrate well with other
@@ -38,6 +38,7 @@ Aside from our principles, additional drivers are to choose a markup language th
 
 While HTML and LaTeX are popular and well-established markup languages,
 their main disadvantage is that they cannot output to different formats.
+For example, they can't convert to each other's formats, from HTML to LaTeX or vice versa.
 So we don't consider them. The two options that fit our drivers
 are:
 
@@ -49,7 +50,7 @@ are:
 Markdown, also commonly referred to as
 [CommonMark](https://commonmark.org/), is a lightweight markup language
 with plain text formatting syntax. It is designed so it can be
-converted to HTML and many other formats using a tool by the same name.
+converted to HTML and many other formats.
 Markdown is often used to format README files, to write messages in
 online discussion forums, and to create rich text using a plain text
 editor.
@@ -80,7 +81,9 @@ editor.
 -   Because of it's ease of use, there are some more powerful features
     that are not implemented in the original Markdown syntax, so
     extensions are needed to use features that may be needed in some
-    cases.
+    cases. For instance, they can't handle special formatting around text 
+    like a "callout" block often used on websites or in books to draw attention
+    to a tip or important piece of information.
 :::
 :::::
 
@@ -120,7 +123,8 @@ used markup language, it is easy to learn and use, and it has a powerful
 format converter in Pandoc. We also use [Quarto](/why-quarto/index.qmd)
 for creating websites and other output, which is built on top of
 Pandoc's Markdown. Through Quarto we have access to many powerful
-features that make up for Markdown's less powerful features.
+features that make up for Markdown's less powerful features, such as the previously
+mentioned "callout" blocks or creating multi-column page layouts.
 
 ### Consequences
 
