@@ -73,7 +73,7 @@ Commonly used file formats that we don't consider are:
     [MySQL](https://www.mysql.com/)) because they require a server to
     use and aren't stored as a file on a local filesystem.
 -   Excel or similar spreadsheet programs, as they aren't technically
-    open source nor do
+    open source nor do they store any schema information.
 
 ### Parquet
 
