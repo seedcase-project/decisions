@@ -16,7 +16,7 @@ categories:
 The core aim of Seedcase is to structure and organise data to be modern,
 FAIR, and standardised so that it can be more easily used and shared
 later on. How we store the data directly affects how it can be used
-later on. There are a large variety of file formats, so we need to
+later on. There is a large variety of file formats, so we need to
 decide on the best one for our needs. So the question is:
 
 *What file format should we use for storing data organised and
@@ -67,7 +67,7 @@ Commonly used file formats that we don't consider are:
     which is a common file system used in Big Data environments. We
     don't consider it because both Parquet and Avro are natively
     supported within HDFS systems. We also don't consider it because
-    Hadoop is not a common use case for our problems we aim to solve.
+    Hadoop is not a common use case for the problems we aim to solve.
 -   Non-embedded SQL engines (like
     [Postgres](https://www.postgresql.org/) or
     [MySQL](https://www.mysql.com/)) because they require a server to
@@ -79,7 +79,7 @@ Commonly used file formats that we don't consider are:
 
 [Parquet](https://parquet.apache.org) is a column-oriented binary file
 format, where each line in the file represents a "column" of data rather
-than each line being a "row" of a data as is seen with spreadsheet
+than each line being a "row" of data as is seen with spreadsheet
 structured data formats. This Parquet file format is optimized for
 compression and storage as well as very large-scale data processing and
 analysis. It is designed to handle complex data structures and is
@@ -97,7 +97,7 @@ natively supported by many big data processing frameworks like
     schema evolution.
 -   Of the options considered, it has the best compressed file sizes
     because it stores data by column, not by row. What this means is
-    that each line in the file format is a column, not a row unlike
+    that each line in the file format is a column, not a row, unlike
     formats like CSV where each line in the file is a row.
 -   Integrates very easily into both R and Python ecosystems for data
     analysis via popular packages like
@@ -196,13 +196,13 @@ contains the entire database.
 ## Decision outcome
 
 We've decided to use the Parquet file format for storing our data as it
-is the best file format for our needs, which are mainly for storing and
+is the best file format for our needs, which are mainly storing and
 processing large amounts of data for research purposes.
 
 ### Consequences
 
 -   Since Parquet is not a text-based format, it is not human-readable.
-    This means that for people wanting to have a quick look at their
+    This means that people wanting to have a quick look at their
     data won't be able to do that. A consequence will be that some use
     cases will not be ideal for Parquet, so people who have smaller
     datasets may not use our solutions.
