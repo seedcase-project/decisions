@@ -83,15 +83,14 @@ framework in Java) and has a similar structure to it.
 ::: column
 #### Drawbacks
 
--   Requires more extra code to set up and structure tests. For instance,
-    all tests need to be a `class` object and some testing needs
-    `setUp()` and `tearDown()` methods.
+-   Requires more extra code to set up and structure tests. For
+    instance, all tests need to be a `class` object and some testing
+    needs `setUp()` and `tearDown()` methods.
 -   The test output is not very readable and beginner friendly.
 -   Creating tests takes more effort and time compared to alternatives.
 -   Writing tests follows more of an object-oriented programming style,
-    which can be harder to reason about and design tests for 
-    (for multiple, highly technical reasons outside the scope of
-    this post)
+    which can be harder to reason about and design tests for (for
+    multiple, highly technical reasons outside the scope of this post)
 :::
 :::::
 
@@ -107,13 +106,15 @@ default unittest framework.
 #### Benefits
 
 -   Integrates with [unittest style
-    tests](https://docs.pytest.org/en/7.1.x/how-to/unittest.html), so you
-    don't need to refactor all existing tests.
+    tests](https://docs.pytest.org/en/7.1.x/how-to/unittest.html), so
+    you don't need to refactor all existing tests.
 -   Has easier to read output of the test results.
 -   Uses a simpler syntax for writing tests, with a simple `assert`
-    statement, as compared to `unittest`'s assert statements, e.g., `assertEqual` and `assertTrue`.
+    statement, as compared to `unittest`'s assert statements, e.g.,
+    `assertEqual` and `assertTrue`.
 -   Created and developed more recently and from scratch, so is better
-    designed than unittest for Python (since unittest was modeled off of Java's framework).
+    designed than unittest for Python (since unittest was modeled off of
+    Java's framework).
 -   While it isn't the default unit testing framework in Python, it is
     widely used.
 :::
@@ -123,8 +124,8 @@ default unittest framework.
 
 -   Requires installing two additional packages: `pytest` and
     `pytest-django`.
--   Integrating pytest with other types of testing frameworks can be
-		a bit difficult and may require some configuration.
+-   Integrating pytest with other types of testing frameworks can be a
+    bit difficult and may require some configuration.
 :::
 :::::
 
@@ -135,10 +136,11 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-We decided on using pytest because it is more developer friendly, has easier
-to read output, and requires less code to write tests (e.g., tests don't need to be within a `class` object and the shorter `assert` syntax)
-still run unittest style tests, we don't need to refactor all existing
-tests right away.
+We decided on using pytest because it is more developer friendly, has
+easier to read output, and requires less code to write tests (e.g.,
+tests don't need to be within a `class` object and the shorter `assert`
+syntax) still run unittest style tests, we don't need to refactor all
+existing tests right away.
 
 ### Consequences
 
