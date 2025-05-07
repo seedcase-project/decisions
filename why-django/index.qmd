@@ -31,7 +31,7 @@ patterns and guidelines for structuring code consistently. They also
 promote code reuse and modular design both within and between
 applications.
 
-Overall, frameworks make applications robust, secure and scaleable,
+Overall, frameworks make applications robust, secure and scalable,
 collaborative development quicker and easier, and software maintenance
 less onerous, allowing the team to focus on implementing
 project-specific features.
