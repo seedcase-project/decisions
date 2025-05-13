@@ -109,7 +109,7 @@ package management and project development in mind.
 -   Versions below 2.0.0 were not completely PEP compliant (not yet
     support [PEP 621](https://peps.python.org/pep-0621/), but an Issue
     on it is [here](https://github.com/python-poetry/roadmap/issues/3)),
-    but after 2.0.0 it is PEP-compliant
+    but after 2.0.0 it is PEP compliant
 :::
 
 ::: column
@@ -130,12 +130,11 @@ designed to manage package dependencies and Python projects.
 #### Benefits
 
 -   Very similar to Poetry
--   Is fully PEP-compliant
--   Is relatively new
+-   Is fully PEP compliant
 -   Is very opinionated
 -   Good documentation
 -   Now maintained under the official PyPA
--   Because of being PEP-compliant and hosted by PyPA, may be the better
+-   Because of being PEP compliant and hosted by PyPA, may become the recommended
     option in the future
 :::
 
@@ -157,15 +156,14 @@ Poetry and Hatch, is designed for managing packages and Python projects.
 ::: column
 #### Benefits
 
--   Fully PEP-compliant
+-   Fully PEP compliant
 -   Decent documentation
 :::
 
 ::: column
 #### Drawbacks
 
--   Relatively new
--   Not as widely used or as popular
+-   Not as widely used or as popular as the other options considered here
 -   Doesn't have distribution specific installation builds (need to use
     `curl` to install, which isn't the most secure way of installing)
 -   Can't install through `pipx`
@@ -190,7 +188,7 @@ written in Rust and is extremely fast.
 -   Can install Python from its interface
 -   Will automatically detected the Python version need for a project in
     the `pyproject.toml` file and install the needed version.
--   Fully PEP-compliant from the start
+-   Fully PEP compliant
 -   It simplifies many of the common project management tasks, often
     doing them automatically in the process of doing other tasks
 -   Is designed to be an easy replace for common tools like `pip`
