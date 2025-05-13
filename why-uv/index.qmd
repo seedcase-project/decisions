@@ -1,0 +1,233 @@
+---
+title: "Why uv"
+description: "Python projects need a tool to manage dependencies and virtual environments. This post describes our reasons for using uv for those tasks."
+date: "2024-01-29"
+date-modified: "2025-04-15"
+categories:
+- dependencies
+- develop
+- workflow
+---
+
+## Context and problem statement
+
+Managing the packages we depend on when building Python packages isn't
+"simply" installing it on your computer. The issue with installing
+Python packages on your computer is dependency conflicts that occur,
+where the "dependency trees" of one package require a different
+dependency tree than another one. So installing a package that requires
+a specific version of one package, while another package you already
+have installed requires another version can cause system problems.
+
+The solution to this problem is by using "virtual environments" in
+Python. These are environments that are separate from the rest of the
+system and can install any packages without impacting other
+environments.
+
+There are multiple ways of creating these virtual environments and
+managing package dependencies, and the optional solution depends on the
+project. So the question is:
+
+*What package dependency management tool should we use for our Python
+projects?*
+
+## Decision drivers
+
+-   Package dependency management is a critical task, so we need a tool
+    for it.
+-   Ensuring we have some way of building our Python projects in a way
+    that is less likely to be a "it works on my computer" issue.
+
+## Considered options
+
+There are (unfortunately) multiple tools to manage package dependencies.
+See the list of resources below for all the different options available.
+We'll only cover these more popular tools as they fit our basic
+principles the most:
+
+-   [Pipenv](https://pipenv.pypa.io/en/latest/index.html)
+-   [Poetry](https://python-poetry.org/)
+-   [Hatch](https://hatch.pypa.io/latest/version/)
+-   [PDM](https://pdm-project.org/latest/usage/dependency/)
+
+There's also a very new tool that isn't listed on many comparison pages
+but has already gained a lot of attention and been adopted by many
+projects because of how well designed it is and the problems it solves.
+So we will also consider it:
+
+-   [uv](https://docs.astral.sh/uv/)
+
+### Pipenv
+
+[Pipenv](https://pipenv.pypa.io/en/latest/index.html) was designed to
+combine the existing functionality of `pip` and `virtualenv`, rather
+than being designed and built specifically for the purpose of package
+management.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Is very popular and widely used
+-   Has been around for a while
+-   Only handles package dependencies (no other features)
+:::
+
+::: column
+#### Drawbacks
+
+-   Design is a bit older and not as intuitive/clear to use
+-   document is a bit too verbose/technical
+-   Package caching doesn't seem to be well designed/robust, so packages
+    could get unnecessarily re-installed
+-   Only handles package dependency management, which means we need
+    another tool to develop software (like a Python package)
+:::
+:::::
+
+### Poetry
+
+[Poetry](https://python-poetry.org/) was built and designed to address
+some of the short comings of pipenv and is specifically designed with
+package management and project development in mind.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Popular and widely used
+-   Very well designed website and documentation
+-   Handles package dependencies with lock files (detailed list of
+    packages and versioning)
+-   Can set up and help manage a Python project (e.g. Python package)
+-   Designed from the ground up to consider the needs of package
+    development and dependency resolution
+-   Allows for external plug-ins for further customization
+-   Similar dependency management to other languages
+-   Installable with `pipx`
+-   Integrates well with existing IDE/editors (PyCharm and VSCode)
+-   Versions below 2.0.0 were not completely PEP compliant (not yet
+    support [PEP 621](https://peps.python.org/pep-0621/), but an Issue
+    on it is [here](https://github.com/python-poetry/roadmap/issues/3)),
+    but after 2.0.0 it is PEP compliant
+:::
+
+::: column
+#### Drawbacks
+
+-   Installation and resolving package dependency trees (so there are no
+    conflicts) can be a bit slow
+:::
+:::::
+
+### Hatch
+
+[Hatch](https://hatch.pypa.io/latest/version/), like Poetry, was
+designed to manage package dependencies and Python projects.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Very similar to Poetry
+-   Is fully PEP compliant
+-   Is very opinionated
+-   Good documentation
+-   Now maintained under the official PyPA
+-   Because of being PEP compliant and hosted by PyPA, may become the recommended
+    option in the future
+:::
+
+::: column
+#### Drawbacks
+
+-   Is very opinionated
+-   Is relatively new, so might still be working through things
+-   Not as widely used compared to the others
+:::
+:::::
+
+### PDM
+
+[PDM](https://pdm-project.org/latest/usage/dependency/), like both
+Poetry and Hatch, is designed for managing packages and Python projects.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Fully PEP compliant
+-   Decent documentation
+:::
+
+::: column
+#### Drawbacks
+
+-   Not as widely used or as popular as the other options considered here
+-   Doesn't have distribution specific installation builds (need to use
+    `curl` to install, which isn't the most secure way of installing)
+-   Can't install through `pipx`
+:::
+:::::
+
+### uv
+
+[uv](https://docs.astral.sh/uv/) is a new tool that was designed from
+the ground up to directly solve many of the dependency management issues
+found in Python, rather than try to refactor existing tools. It is also
+written in Rust and is extremely fast.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Has all the same benefits as Poetry above
+-   The command line interface is very simple and easy to use
+-   Is very fast at resolving dependencies and installing the necessary
+    packages
+-   Can install Python from its interface
+-   Will automatically detected the Python version need for a project in
+    the `pyproject.toml` file and install the needed version.
+-   Fully PEP compliant
+-   It simplifies many of the common project management tasks, often
+    doing them automatically in the process of doing other tasks
+-   Is designed to be an easy replace for common tools like `pip`
+:::
+
+::: column
+#### Drawbacks
+
+-   Because it is still new, it doesn't have as many packaging features
+    that are found in Poetry, though the developers of uv have these
+    features in their roadmap
+:::
+:::::
+
+## Decision outcome
+
+We decided on uv because it has amazing documentation, is fast, is very
+well-designed, and is already being recommended by many in the community
+to be used over other tools.
+
+### Consequences
+
+-   It is still fairly new, but seems to already be very well designed.
+    So we may encounter issues because it is still new, but we expect
+    that it will be well supported and maintained in the future.
+
+## Resources used for this post
+
+-   [Poetry vs uv vs
+    pip](https://envelope.dev/blog/poetry-vs-uv-vs-pip-choosing-the-right-package-installer)
+-   [Python Packaging User
+    Guide](https://packaging.python.org/en/latest/tutorials/managing-dependencies/#other-tools-for-application-dependency-management)
+-   [Awesome Python: Poetry
+    alternatives](https://python.libhunt.com/poetry-alternatives).
+-   [Ritza Articles: Comparisons of
+    tools](https://ritza.co/articles/gen-articles/pipenv-vs-virtualenv-vs-poetry-vs-pyenv-vs-pip/),
+-   [warp: Prose about
+    Poetry](https://www.warp.dev/blog/prose-about-poetry)
+-   [Python Package Manager
+    Comparison](https://dev.to/adamghill/python-package-manager-comparison-1g98)
+-   [A review of pipenv vs poetry vs
+    PDM](https://dev.to/frostming/a-review-pipenv-vs-poetry-vs-pdm-39b4)
