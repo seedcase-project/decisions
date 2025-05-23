@@ -1,8 +1,8 @@
 ---
 title: "Why Pytest"
 description: |
-  Testing software is a requirement for ensuring it works as intended and because we use a test-driven development workflow.  
-  This post explains why we choose to use pytest over the built-in 
+  Testing software is a requirement for ensuring it works as intended and because we use a test-driven development workflow.
+  This post explains why we choose to use pytest over the built-in
   unittest framework for testing Python code.
 date: "2024-07-17"
 categories:

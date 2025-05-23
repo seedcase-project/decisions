@@ -133,7 +133,7 @@ conventional commits standard and checks to ensure that standard is followed.
 
 ### gitlint
 
-Gitlint checks your commit messages for style. 
+Gitlint checks your commit messages for style.
 
 ::::: columns
 ::: column
