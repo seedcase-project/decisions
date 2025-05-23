@@ -1,7 +1,7 @@
 ---
 title: "Why `jsonschema`"
 description: |
-  As we follow the Data Package standard for structuring metadata, we have to make sure that our metadata files conform to this standard. 
+  As we follow the Data Package standard for structuring metadata, we have to make sure that our metadata files conform to this standard.
   This post explains why we chose `jsonschema` for automating the process of checking metadata files and objects against the standard.
 date: "2024-11-07"
 categories:

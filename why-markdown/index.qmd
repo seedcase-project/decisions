@@ -81,7 +81,7 @@ editor.
 -   Because of it's ease of use, there are some more powerful features
     that are not implemented in the original Markdown syntax, so
     extensions are needed to use features that may be needed in some
-    cases. For instance, they can't handle special formatting around text 
+    cases. For instance, they can't handle special formatting around text
     like a "callout" block often used on websites or in books to draw attention
     to a tip or important piece of information.
 :::
