@@ -27,7 +27,7 @@ we use ourselves when we are the owners of the data. There are many
 licenses available, but given we are a project that follows open
 principles, we want to use a license that is open. So the question is:
 
-**What open license should we use for our own data and that we recommend
+**What open license should we use for our own data and recommend
 to others?**
 
 ## Decision drivers
@@ -41,7 +41,7 @@ It needs or should be:
 
 -   A valid [open license](https://opendefinition.org/licenses/)
 -   Easy to understand.
--   Be fairly widely used or recommended.
+-   Fairly widely used or recommended.
 -   Applicable to a wide range of data.
 -   A globally applicable license.
 -   Applicable to data itself, not the database architecture.
@@ -54,7 +54,7 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
-Licensing of data is quite a complex topic, nor are we lawyers. So we
+Licensing of data is quite a complex topic, and we are not lawyers. So we
 need to select licenses that are well established, widely used, and
 simple. For instance, facts (someone's weight in kilograms) cannot be
 copyrighted and since generally research/scientific data is fact-based,
@@ -62,7 +62,7 @@ it might not even be copyrightable, depending on the jurisdiction. For
 *data* (not database structure or organisation), there are two main
 "providers" of open licenses: Open Data Commons and Creative Commons.
 Within these, there are share-alike, non-commercial, and non-derivative
-versions of their licenses. There are not generally recommended for
+versions of their licenses. These are not generally recommended for
 scientific data, as they can substantially limit the practical use of
 the data, even for purely academic purposes and even if everything is
 legal and applicable. For those reasons, we won't consider them.
@@ -103,7 +103,7 @@ source.
     using the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
     license instead.
 -   Of the ODC licenses, it seems it is not as widely used. The ODC-ODbL
-    is more widely used of the ODC licenses.
+    is the more widely used of the ODC licenses.
 :::
 :::::
 
