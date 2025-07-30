@@ -67,7 +67,7 @@ scientific data, as they can substantially limit the practical use of
 the data, even for purely academic purposes and even if everything is
 legal and applicable. For those reasons, we won't consider them.
 
-From post, we consider these options:
+From this context, we consider these options:
 
 -   [Open Data Commons Attribution License
     (ODC-By)](https://opendatacommons.org/licenses/by/)
