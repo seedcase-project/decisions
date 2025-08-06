@@ -60,7 +60,7 @@ have arisen that impact work.
     tokens with high level permission access to our repositories (in
     order to update the projects using the template). Meaning that the
     tool should work at the local level.
--   Needs a command line interface to interact with.
+-   Has a command line interface to interact with.
 -   Allows easy migration of existing projects to the new template.
 
 ## Considered options
@@ -70,7 +70,7 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
-There are large number of tools that are used as templates to making new
+There are a large number of tools that are used as templates to making new
 projects, however, few of them include the configuration management
 features we need. Based on our needs, we only found two options:
 
@@ -126,7 +126,7 @@ management).
     them to the new template.
 -   Already has a [good
     number](https://github.com/topics/copier-template) of templates
-    available, that will at the least serve as inspiration for us.
+    available that will at the least serve as inspiration for us.
 :::
 
 ::: column
@@ -159,8 +159,8 @@ List some potential consequences of this decision.
     some bugs or issues that need to be resolved.
 -   We will need to create our own templates for the projects we want to
     use it with. This isn't a major issue, as we would already have
-    needed to do this as many templates are not regularly updated or
-    maintained. Which means they quickly are out of date with the latest
+    needed to do this because many templates are not updated or
+    maintained regularly, which means they quickly become out of date with the latest
     tools and practices.
 
 ## Resources used for this post
