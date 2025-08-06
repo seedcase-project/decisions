@@ -1,0 +1,175 @@
+---
+title: "Why Copier"
+description: |
+    Configuration drift is a major problem when managing multiple repositories.
+    This post describes why we chose Copier as our tool for managing
+    configurations in existing projects and creating new projects.
+date: "2025-08-05"
+categories:
+- template
+- standardise
+- organise
+---
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+As we add more repositories for websites, Python packages, and other
+projects, we encounter the problem of drifts in configurations,
+settings, and other development support files. As we learn and grow from
+our experiences, we naturally improve our workflows and practices. But
+if we don't have a way of easily applying these improvements across all
+our projects, we end up with inconsistencies and inefficiencies. And a
+lot of potentially manual work to limit the impact of the drift.
+Thankfully there is the whole field of [configuration
+management](https://en.wikipedia.org/wiki/Software_configuration_management).
+Unfortunately, it is also a big field with lots of different tools and
+approaches available.
+
+We also want a way to help create new projects that include all of these
+configurations and settings we've developed and refined. So we also need
+some type of template or boilerplate tool. This is also called [code
+scaffolding](https://en.wikipedia.org/wiki/Scaffold_(programming)). So
+our question is:
+
+*What tool do we use to help create new projects that use our setup and
+to manage our configurations and settings across all of our
+repositories?*
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+-   Ideally it integrates easily with a variety of projects, such as
+    Quarto-based websites or Python packages.
+-   Easy to install without requiring a lot of extra dependencies (e.g.
+    ideally is built in Python or at least doesn't require installing
+    extra package managers).
+-   Is open source.
+-   Can be used as a template for new projects.
+-   Can be used to keep projects updated with the latest changes made to
+    the template.
+-   Limits security risks by not requiring external authentication
+    tokens with high level permission access to our repositories (in
+    order to update the projects using the template). Meaning that the
+    tool should work at the local level.
+-   Has a command line interface to interact with.
+-   Allows easy migration of existing projects to the new template.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+There are a large number of tools that are used as templates to making new
+projects, however, few of them include the configuration management
+features we need. Based on our needs, we only found two options:
+
+-   [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/)
+-   [Copier](https://copier.readthedocs.io/en/stable/)
+
+Copier also includes a page on a
+[comparison](https://copier.readthedocs.io/en/stable/comparisons) with
+alternative options, which we used to help us make our decision.
+
+### Cookiecutter
+
+This is a [very
+popular](https://www.cookiecutter.io/article-post/cookiecutter-alternatives)
+tool for creating new Python projects from templates.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Very popular, well-established, older, and widely used.
+-   [Large number](https://www.cookiecutter.io/templates) of templates
+    and extensions available.
+-   Can be used for a wide range of project types, not just Python.
+:::
+
+::: column
+#### Drawbacks
+
+-   On its own, it doesn't include configuration management features,
+    like updating existing projects with changes made to the template.
+    To include this, you need to use the cookiecutter extension
+    [cruft](https://github.com/cruft/cruft).
+-   Doesn't include a way to migrate existing projects to the new
+    template.
+:::
+:::::
+
+### Copier
+
+Is a newer tool for creating projects from a template. The goals include
+code scaffolding and "code lifecycle management" (i.e. configuration
+management).
+
+::::: columns
+::: column
+#### Benefits
+
+-   Has powerful and modern templating features.
+-   Has built-in support for managing configurations and settings across
+    projects.
+-   Can be used on top of existing projects, allowing you to migrate
+    them to the new template.
+-   Already has a [good
+    number](https://github.com/topics/copier-template) of templates
+    available that will at the least serve as inspiration for us.
+:::
+
+::: column
+#### Drawbacks
+
+-   Not as widely used, is newer, and is still actively being developed.
+    Which means it may not be as stable or have as many templates
+    available.
+:::
+:::::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+We decided on Copier because it has the features we need for both
+creating new projects and managing configurations and settings across
+existing projects.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+-   Because it is newer and still actively developed, we may encounter
+    some bugs or issues that need to be resolved.
+-   We will need to create our own templates for the projects we want to
+    use it with. This isn't a major issue, as we would already have
+    needed to do this because many templates are not updated or
+    maintained regularly, which means they quickly become out of date with the latest
+    tools and practices.
+
+## Resources used for this post
+
+::: content-hidden
+List the resources used to write this post
+:::
+
+-   [Cookiecutter
+    alternatives](https://www.cookiecutter.io/article-post/cookiecutter-alternatives)
+-   [Comparing copier to other project
+    generators](https://copier.readthedocs.io/en/stable/comparisons)
