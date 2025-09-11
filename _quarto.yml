@@ -25,7 +25,7 @@ website:
 format:
   seedcase-theme-html:
     include-before-body:
-      - "site-counter.html"
+      - "includes/site-counter.html"
 
 editor:
   markdown:
