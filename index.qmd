@@ -18,6 +18,8 @@ div.quarto-about-jolla {
 </style>
 ```
 
+{{< include /includes/_badges.qmd >}}
+
 Decision records inspired by [Architectural Decision
 Records](https://adr.github.io/) and written in the
 [Diátaxis](https://diataxis.fr/) explanation format. They describe and
