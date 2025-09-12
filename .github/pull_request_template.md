@@ -1,10 +1,10 @@
 # Description
 
-These changes PURPOSE, because REASON.
+EXPLANATION
 
 Closes #
 
-This PR needs a quick/an in-depth review.
+Needs a quick/an in-depth review.
 
 ## Checklist
 
