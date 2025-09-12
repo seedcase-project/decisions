@@ -1,0 +1,43 @@
+{
+  "creators": [
+    {
+      "name": "Johnston, Luke",
+      "affiliation": "Steno Diabetes Center Aarhus",
+      "orcid": "0000-0003-4169-2616"
+    },
+    {
+      "name": "Brødbæk, Signe Kirk",
+      "affiliation": "Steno Diabetes Center Aarhus",
+      "orcid": "0009-0000-2208-7088"
+    },
+    {
+      "name": "Beicher, Kristiane",
+      "affiliation": "Steno Diabetes Center Aarhus",
+      "orcid": "0000-0001-7556-9566"
+    },
+    {
+      "name": "Vago, Marton",
+      "affiliation": "Steno Diabetes Center Aarhus",
+      "orcid": "0009-0007-4628-655X"
+    }
+  ],
+  "title": "Archival records of decisions made about tools or processes used in the Seedcase Project",
+  "description": "This contains files related to decisions we've made for processes, workflows, tools, and services. They follow the style of 'architectural decision records. See our website at https://decisions.seedcase-project.org for more information.",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/seedcase-project/decisions",
+      "relation": "isIdenticalTo",
+      "resource_type": "other"
+    }
+  ],
+  "keywords": [
+    "quarto website",
+    "architectural decision records",
+    "decision records"
+  ],
+  "license": "cc-by-4.0",
+  "upload_type": "publication",
+  "publication_type": "other",
+  "language": "eng"
+}
