@@ -2,8 +2,7 @@
 
 # decisions: Archival records of decisions made about tools or processes we use in the Seedcase Project
 
-<!-- TODO: Include DOI after uploading -->
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17108628.svg)](https://doi.org/10.5281/zenodo.17108628)
 [![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json?raw=true.svg)](https://github.com/copier-org/copier)
 [![GitHub
 License](https://img.shields.io/github/license/seedcase-project/decisions.svg)](https://github.com/seedcase-project/decisions/blob/main/LICENSE.md)
