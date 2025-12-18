@@ -1,0 +1,227 @@
+---
+title: "Why `mypy`"
+description: |
+  Static type checking helps to catch bugs earlier and contributes to the long-term maintainability and overall quality of Python codebases.
+  This post explains why we chose `mypy` as our static type checker over other alternatives.
+date: "2025-12-18"
+categories:
+- backend
+- develop
+- quality
+---
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+We already use type hints extensively in all our Python codebases to
+document intent, improve readability, and support richer IDE feedback.
+However, without a mechanism to enforce these annotations, they remain
+just guidelines, which can easily drift out of sync with the actual
+behaviour of the code. The goal of static type checkers is to verify
+that there are no inconsistencies between declared types and actual
+usage by analysing the code without executing it. Static type checking
+can be integrated both in local development workflows and CI/CD
+pipelines, effectively preventing type errors from entering the
+codebase.
+
+Given that there are multiple static type checkers available for Python,
+the question then is:
+
+*Which static type checking tool should we adopt to enforce our existing
+type hints consistently across development and CI?*
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+The static type checker should:
+
+-   Enforce existing type hints.
+-   Integrate well with IDEs (particularly VS Code). Additional features
+    like inline feedback and autocompletion are a bonus.
+-   Integrate with existing GitHub CI pipelines.
+-   Handle both typed and untyped dependencies.
+-   Run fast enough for frequent checks during local development.
+-   Be actively maintained, widely adopted, and well documented.
+-   Improve the maintainability of our Python projects.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+The most popular static type checkers available for Python are:
+
+-   [`mypy`](http://mypy-lang.org/)
+-   [Pyright](https://github.com/microsoft/pyright)
+-   [Pyre](https://pyre-check.org/) and its next iteration,
+    [Pyrefly](https://pyrefly.org/)
+-   [`ty`](https://docs.astral.sh/ty/)
+
+### Mypy
+
+[`mypy`](http://mypy-lang.org/) is the oldest and most widely used
+static type checker. It is written in Python and developed by the Python
+community.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Closely aligned with Python's standard typing specifications (PEP
+    484 and related PEPs).
+-   Very popular, well established, and widely used.
+-   Good documentation and lots of resources.
+-   Integrates well with most IDEs and CI pipelines.
+-   Configurable.
+:::
+
+::: column
+#### Drawbacks
+
+-   Slower than some alternatives for large codebases.
+-   Does not provide its own language server for IDEs, relying on editor
+    plugins (e.g., VS Code extensions) instead.
+:::
+:::::
+
+### Pyright
+
+[Pyright](https://github.com/microsoft/pyright) is a fast static type
+checker for Python developed by Microsoft. It powers VS Code's Pylance
+extension and can also run as a standalone CLI tool.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Popular and widely used.
+-   Very fast, suitable for large codebases and frequent local checks.
+-   Native integration with VS Code via the Pylance extension, providing
+    inline feedback, autocompletion, and error highlighting.
+-   Can run in CI pipelines.
+-   Configurable.
+:::
+
+::: column
+#### Drawbacks
+
+-   As Pylance bundles Pyright and type stubs locally, but in CI
+    pipelines the Pyright CLI relies on the CI environment, their
+    diagnostics may not always match exactly.
+:::
+:::::
+
+### Pyre and Pyrefly
+
+[Pyre](https://pyre-check.org/) is a static type checker developed by
+Facebook/Meta. It focuses on speed and incremental checking, ideal for
+large codebases. [Pyrefly](https://pyrefly.org/) is Meta's
+next-generation type checker for Python, written in Rust.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Designed for high performance and fast feedback, particularly on
+    large codebases.
+-   Can be integrated into CI pipelines.
+-   Pyrefly aims to provide better IDE integration, richer type
+    inference, and more responsive developer feedback compared to Pyre.
+:::
+
+::: column
+#### Drawbacks
+
+-   Less widely adopted than `mypy` or Pyright.
+-   Pyrefly is relatively new and still evolving, making long-term
+    stability and tooling support harder to assess.
+-   Both Pyre and Pyrefly were designed to address problems specific to
+    Meta's products and internal infrastructure.
+:::
+:::::
+
+### Ty
+
+[`ty`](https://docs.astral.sh/ty/) is an extremely fast type checker for
+Python, written in Rust by the creators of `uv` and Ruff.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Very fast, probably the fastest of all alternatives.
+-   Most common IDEs are supported.
+-   Can be integrated into CI pipelines.
+-   Comes with a language server offering code navigation,
+    autocompletion, auto-import, and more.
+-   Supports advanced typing features in modern Python.
+-   Configurable.
+-   We already use Ruff and `uv`, so staying in the same ecosystem for
+    type checking is an attractive prospect.
+:::
+
+::: column
+#### Drawbacks
+
+-   The newest project of all options considered.
+-   Currently (December 2025) only in beta release, so may be more
+    unstable than mature type checkers.
+:::
+:::::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+We decided on `mypy` because it is the de-facto standard for Python type
+checking, has excellent documentation and community support, is easy to
+set up, and runs both as a CLI tool and via the VS Code extension with
+consistent output. Its drawback, slower performance on very large
+codebases, is less relevant for us because our repositories are small
+compared to giants like Facebook. Additionally, we continue to use VS
+Code's Pylance language server, which runs Pyright internally,
+complementing the feedback we get from `mypy`.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+-   We should keep an eye on `mypy`'s performance, just in case it
+    begins to impact developer experience negatively.
+-   Given our use of other tools by [Astral](https://docs.astral.sh), we
+    have a good case for switching to `ty` once it becomes stable.
+
+## Resources used for this post
+
+::: content-hidden
+List the resources used to write this post
+:::
+
+-   [`mypy` docs](http://mypy-lang.org/)
+-   [Pyright docs](https://github.com/microsoft/pyright)
+-   [Pyre docs](https://pyre-check.org/)
+-   [Pyrefly docs](https://pyrefly.org/)
+-   [`ty` docs](https://docs.astral.sh/ty/)
+-   [Python Advanced: Mypy vs
+    Pyright](https://python.plainenglish.io/python-advanced-mypy-vs-pyright-a-detailed-comparison-with-examples-40e2c2d94e3f)
+-   [Introducing
+    Pyrefly](https://engineering.fb.com/2025/05/15/developer-tools/introducing-pyrefly-a-new-type-checker-and-ide-experience-for-python/)
+-   [Google Ends Support for
+    Pytype](https://medium.com/techtofreedom/google-ends-support-for-pytype-this-is-how-python-developers-can-adapt-a703d964028a)
+-   [Static Type Checking in
+    Python](https://engineering.blackrock.com/static-type-checking-in-python-where-did-the-ducks-go-d17881d3205e)
