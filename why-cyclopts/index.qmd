@@ -21,7 +21,7 @@ statement in the form of a question for the problem.
 :::
 
 We want to build command line interfaces (CLIs) for some of our Python
-tools. Python doesn't natively support building CLIs, nor was it
+tools, but Python doesn't natively support building CLIs, nor was it
 designed initially to do that. However, there are many packages
 available, including some built-in standard libraries, for exposing a
 Python package as a CLI application. So the question is:
@@ -39,13 +39,13 @@ have arisen that impact work.
 Aside from our [design
 principles](https://design.seedcase-project.org/software/principles)
 that we generally follow when using or choosing software, the package
-needs to be:
+needs to:
 
--   Well maintained and actively developed.
--   Integrates easily into our current development workflow and style.
--   Ergonomic and easy to use, so we can develop CLIs quickly and
+-   Be well maintained and actively developed.
+-   Integrate easily into our current development workflow and style.
+-   Be ergonomic and easy to use, so we can develop CLIs quickly and
     easily.
--   Has excellent documentation that is easy to follow.
+-   Have excellent documentation that is easy to follow.
 
 ## Considered options
 
@@ -54,11 +54,11 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
-These are the packages we considered that were still actively maintained
-and developed at the time of this post, which was taken from the
+Based on the
 [Awesome Python: Command-Line Interface
 Development](https://github.com/vinta/awesome-python#command-line-interface-development)
-list.
+list, we considered these packages, since they were still actively maintained
+and developed at the time of this post:
 
 -   [Argparse](https://docs.python.org/3/library/argparse.html)
 -   [Python Fire](https://python-fire.readthedocs.io/en/latest/)
@@ -72,16 +72,16 @@ one way or another:
 -   [cement](https://docs.builtoncement.com/en/latest/): It isn't that
     actively maintained, but importantly, it seems to be more of an
     advanced framework for building CLIs (e.g. with Dockerfiles), which
-    is more than what we need.
+    is more complex than what we need.
 -   [prompt_toolkit](https://python-prompt-toolkit.readthedocs.io/en/latest/):
-    Designed more for building "full screen" terminal applications,
-    which is more than what we need.
+    Is designed more for building "full screen" terminal applications,
+    which is more complex than what we need.
 -   [cliff](https://docs.openstack.org/cliff/latest/): Is not regularly
     updated. The documentation was last updated in 2021.
 
 ### Argparse
 
-This is part of the standard library in Python for building CLIs.
+Argparse is a part of the standard library in Python for building CLIs.
 
 ::::: columns
 ::: column
@@ -99,10 +99,9 @@ This is part of the standard library in Python for building CLIs.
 -   Needs to duplicate a lot of code and information between the
     function/class signatures and the argument parsing code.
 -   Lacks a lot of features that they openly state in the documentation,
-    and even state that [click or
+    and even refers to [click and
     Typer](https://docs.python.org/3/library/optparse.html#choosing-an-argument-parsing-library)
-    would be better alternatives, especially Typer as it uses the type
-    hints when building the CLI, which can simplify a lot of the code.
+    as alternatives, stating that e.g., Typer integrates with type hints.
 :::
 :::::
 
@@ -110,10 +109,10 @@ This is part of the standard library in Python for building CLIs.
 
 There isn't as much information (blogs, tutorials, etc) about [Python
 Fire](https://python-fire.readthedocs.io/en/latest/), including their
-own documentation, so it's can't really describe it that well. Based on
+own documentation, so we can't really describe it that well. Based on
 their tag line, it is:
 
-> Python Fire is a library for automatically generating command line
+> [...] a library for automatically generating command line
 > interfaces (CLIs) from absolutely any Python object.
 
 ::::: columns
@@ -121,7 +120,7 @@ their tag line, it is:
 #### Benefits
 
 -   A Google built library (though not an official product).
--   A lot of GitHub stars, so seems to be popular.
+-   A lot of GitHub stars, so it seems to be popular.
 :::
 
 ::: column
@@ -155,8 +154,8 @@ A widely used, very popular library for building CLIs in Python.
 -   Because it was developed before Python had type hints, it doesn't
     use them, so there is a lot of duplicated information between the
     function signatures and the decorators.
--   It is an older package, so was designed before some of the more
-    modern Python features were available (e.g. type hints, docstring
+-   It is an older package, so it was designed before some of the more
+    modern Python features were available (e.g. type hints and docstring
     parsing).
 :::
 :::::
@@ -174,7 +173,7 @@ type hints.
 -   Documentation is very well written, easy to follow, and beginner
     friendly.
 -   Like Click, it is very widely used and popular, so there are a lot
-    of resources available.
+    of resources available to learn from.
 -   Of the previous options, this is the newest and most well-designed.
 -   While only "owned" by one person, it has a core team of maintainers.
 :::
@@ -203,8 +202,8 @@ limitations](https://cyclopts.readthedocs.io/en/latest/vs_typer/README.html).
     the ground up to take advantage of modern Python features like type
     hints and docstring parsing.
 -   Very ergonomic and requires little to no boilerplate code.
--   Includes features like parsing docstrings for the help text,
-    including for the argument/option help text.
+-   Includes features like parsing docstrings for help texts,
+    including the argument/option help text.
 -   Can check input values against a set of allowed values, for both
     string and number types.
 -   Supports `Union` types, which also means it can support `Optional`
