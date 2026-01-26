@@ -5,7 +5,6 @@ description: |
   This post explains why we chose to use `pandera` for automating this process.
 date: "2024-11-08"
 categories:
-- backend
 - develop
 - check
 ---

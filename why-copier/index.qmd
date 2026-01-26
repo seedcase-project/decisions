@@ -6,7 +6,7 @@ description: |
     configurations in existing projects and creating new projects.
 date: "2025-08-05"
 categories:
-- template
+- develop
 - standardise
 - organise
 ---

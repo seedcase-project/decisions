@@ -4,7 +4,7 @@ description: "Python projects need a tool to manage dependencies and virtual env
 date: "2024-01-29"
 date-modified: "2025-04-15"
 categories:
-- dependencies
+- manage
 - develop
 - workflow
 ---
