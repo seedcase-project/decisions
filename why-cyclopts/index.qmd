@@ -54,11 +54,10 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
-Based on the
-[Awesome Python: Command-Line Interface
+Based on the [Awesome Python: Command-Line Interface
 Development](https://github.com/vinta/awesome-python#command-line-interface-development)
-list, we considered these packages, since they were still actively maintained
-and developed at the time of this post:
+list, we considered these packages, since they were still actively
+maintained and developed at the time of this post:
 
 -   [Argparse](https://docs.python.org/3/library/argparse.html)
 -   [Python Fire](https://python-fire.readthedocs.io/en/latest/)
@@ -98,10 +97,12 @@ Argparse is a part of the standard library in Python for building CLIs.
     documentation) is not easy to follow or read.
 -   Needs to duplicate a lot of code and information between the
     function/class signatures and the argument parsing code.
--   Lacks a lot of features (hence requires the duplicate code mentioned above) that they openly state in the documentation,
-    and even refers to [click and
+-   Lacks a lot of features (hence requires the duplicate code mentioned
+    above) that they openly state in the documentation, and even refers
+    to [click and
     Typer](https://docs.python.org/3/library/optparse.html#choosing-an-argument-parsing-library)
-    as alternatives, stating that e.g., Typer integrates with type hints.
+    as alternatives, stating that e.g., Typer integrates with type
+    hints.
 :::
 :::::
 
@@ -112,8 +113,8 @@ Fire](https://python-fire.readthedocs.io/en/latest/), including their
 own documentation, so we can't really describe it that well. Based on
 their tag line, it is:
 
-> [...] a library for automatically generating command line
-> interfaces (CLIs) from absolutely any Python object.
+> \[...\] a library for automatically generating command line interfaces
+> (CLIs) from absolutely any Python object.
 
 ::::: columns
 ::: column
@@ -202,8 +203,8 @@ limitations](https://cyclopts.readthedocs.io/en/latest/vs_typer/README.html).
     the ground up to take advantage of modern Python features like type
     hints and docstring parsing.
 -   Very ergonomic and requires little to no boilerplate code.
--   Includes features like parsing docstrings for help texts,
-    including the argument/option help text.
+-   Includes features like parsing docstrings for help texts, including
+    the argument/option help text.
 -   Can check input values against a set of allowed values, for both
     string and number types.
 -   Supports `Union` types, which also means it can support `Optional`
