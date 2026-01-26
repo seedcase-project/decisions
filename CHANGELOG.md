@@ -15,6 +15,12 @@ that any individual release will not have many changes within it. Below
 is a list of the releases we've made so far, along with what was changed
 within each release.
 
+## 0.3.1 (2026-01-26)
+
+### Refactor
+
+- :arrow_up: update theme and files from template (#238)
+
 ## 0.3.0 (2025-12-18)
 
 ### Feat
