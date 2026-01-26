@@ -21,6 +21,12 @@ within each release.
 
 - :sparkles: add why mypy post (#227)
 
+## 0.3.0 (2025-12-18)
+
+### Feat
+
+- :sparkles: add why mypy post (#227)
+
 ## 0.2.0 (2025-09-12)
 
 ### Feat
