@@ -7,7 +7,7 @@ website:
   repo-url: "https://github.com/seedcase-project/decisions"
   navbar:
     title: false
-    logo: _extensions/seedcase-project/seedcase-theme/logos/navbar-logo-seedcase-decisions.svg
+    logo: _extensions/seedcase-project/seedcase-theme/logos/docs/navbar-decisions.svg
     logo-alt: "Seedcase Decisions logo: Main page"
     pinned: true
     search: true

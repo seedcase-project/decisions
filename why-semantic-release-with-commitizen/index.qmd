@@ -66,7 +66,7 @@ There are only two options that fit our requirements:
     Release](https://github.com/python-semantic-release/python-semantic-release)
 -   [Commitizen](https://github.com/commitizen-tools/commitizen)
 
-While most package management systems like [Poetry](/why-poetry/index.qmd),
+While most package management systems like [uv](/why-uv/index.qmd),
 which we already use, can do version updating and releasing, they don't rely on
 automation based on commit messages. For this reason, we don't consider them.
 
