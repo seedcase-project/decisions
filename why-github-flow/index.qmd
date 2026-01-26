@@ -37,7 +37,7 @@ references:
       given: S
     issued:
       year: 2023
-    URL: https://medium.com/@sreekanth.thummala/choosing-the-right-git-branching-strategy-a-comparative-analysis-f5e635443423#
+    URL: "https://medium.com/@sreekanth.thummala/choosing-the-right-git-branching-strategy-a-comparative-analysis-f5e635443423#"
   - id: driessen
     title: A successful Git branching model
     author:
