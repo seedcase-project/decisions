@@ -5,7 +5,6 @@ website:
   title: "Seedcase Project: Decisions Archive"
   site-url: "https://decisions.seedcase-project.org/"
   repo-url: "https://github.com/seedcase-project/decisions"
-  favicon: "_extensions/seedcase-project/seedcase-theme/logos/seedcase/icon.svg"
   navbar:
     title: false
     logo: _extensions/seedcase-project/seedcase-theme/logos/docs/navbar-decisions.svg
