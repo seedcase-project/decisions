@@ -98,7 +98,7 @@ Argparse is a part of the standard library in Python for building CLIs.
     documentation) is not easy to follow or read.
 -   Needs to duplicate a lot of code and information between the
     function/class signatures and the argument parsing code.
--   Lacks a lot of features that they openly state in the documentation,
+-   Lacks a lot of features (hence requires the duplicate code mentioned above) that they openly state in the documentation,
     and even refers to [click and
     Typer](https://docs.python.org/3/library/optparse.html#choosing-an-argument-parsing-library)
     as alternatives, stating that e.g., Typer integrates with type hints.
