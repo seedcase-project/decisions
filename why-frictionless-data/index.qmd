@@ -3,7 +3,6 @@ title: "Why Frictionless Data"
 description: "Why we choose to use the Frictionless Data standard for structuring metadata and data."
 date: "2024-07-15"
 categories:
-- framework
 - standardise
 - organise
 - manage

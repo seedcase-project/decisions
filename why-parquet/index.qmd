@@ -7,7 +7,7 @@ description: |
     ecosystems.
 date: "2025-03-10"
 categories:
-- database
+- store
 - organise
 ---
 

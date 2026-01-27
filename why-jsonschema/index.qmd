@@ -5,8 +5,9 @@ description: |
   This post explains why we chose `jsonschema` for automating the process of checking metadata files and objects against the standard.
 date: "2024-11-07"
 categories:
-- backend
 - develop
+- standardise
+- check
 ---
 
 ::: content-hidden

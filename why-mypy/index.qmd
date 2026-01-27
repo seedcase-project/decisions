@@ -5,9 +5,8 @@ description: |
   This post explains why we chose `mypy` as our static type checker over other alternatives.
 date: "2025-12-18"
 categories:
-- backend
 - develop
-- quality
+- check
 ---
 
 ## Context and problem statement

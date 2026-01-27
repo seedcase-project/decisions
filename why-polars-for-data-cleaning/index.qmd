@@ -3,7 +3,8 @@ title: "Why Polars"
 description: "The key to useful and meaningful data is data that is good quality and tidy. Getting data to be tidy and higher quality is an often undervalued and underestimated activity, at the same time being very labour intensive. But it is essential to have higher quality and tidier data to have better quality results from the analysis. This post explains why we chose to use Polars for data processing tasks."
 date: "2024-12-04"
 categories:
-- data processing
+- process
+- develop
 ---
 
 ::: content-hidden
