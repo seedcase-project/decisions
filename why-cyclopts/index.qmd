@@ -73,9 +73,9 @@ one way or another:
     advanced framework for building CLIs (e.g. with Dockerfiles), which
     is more complex than what we need.
 -   [prompt_toolkit](https://python-prompt-toolkit.readthedocs.io/en/latest/):
-    Is designed more for building "full screen" terminal applications,
+    It is designed more for building "full screen" terminal applications,
     which is more complex than what we need.
--   [cliff](https://docs.openstack.org/cliff/latest/): Is not regularly
+-   [cliff](https://docs.openstack.org/cliff/latest/): It isn't regularly
     updated. The documentation was last updated in 2021.
 
 ### Argparse
