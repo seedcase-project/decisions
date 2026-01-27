@@ -15,6 +15,12 @@ that any individual release will not have many changes within it. Below
 is a list of the releases we've made so far, along with what was changed
 within each release.
 
+## 0.3.2 (2026-01-27)
+
+### Refactor
+
+- :wrench: standardise and simplify some of the categories (#242)
+
 ## 0.3.1 (2026-01-26)
 
 ### Refactor
