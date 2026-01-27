@@ -81,7 +81,7 @@ development](https://en.wikipedia.org/wiki/Agile_software_development)
 either, as most of the above approaches are already considered Agile and
 because Agile is more of a mindset, philosophy, or cultural practice
 that encompasses multiple other aspects outside of just software
-development. Because this, it makes it very difficult to easily compare
+development. Because of this, it makes it very difficult to easily compare
 with other approaches.
 
 We include Scrum even though it is often grouped as an Agile
@@ -169,7 +169,7 @@ we'll only list a few here:
 -   Much easier to create and manage a roadmap or plan, as the overall
     project is broken down into smaller, more manageable pieces.
 -   Each increment can add value to the user, as each increment is
-    (technically) a working piece of the final software
+    (technically) a working piece of the final software.
 :::
 
 ::: column
@@ -182,8 +182,8 @@ we'll only list a few here:
     come up during the process, it requires changing the plan and where
     or how increments are developed.
 -   Because there is less focus on getting user feedback regularly and
-    often, there may be a risk of a misalignment with user needs and
-    expectations with the final product.
+    often, there may be a risk of a misalignment between the final product and the user needs and
+    expectations.
 :::
 :::::
 
@@ -317,7 +317,7 @@ board as they progress through the workflow.
     online platforms, but can be more difficult for projects that have a
     clear end goal or deadline.
 -   Without proper discipline and management, tasks can start piling up.
-    It requires a cultural mindset
+    It requires a cultural mindset.
 -   Requires regular curation of the items on the board to ensure that
     it accurately reflects the current state of work, both from moving
     items to different columns, but also to ordering items in the todo
@@ -337,7 +337,7 @@ and retrospectives from Scrum are all also useful.
 ### Consequences
 
 -   There will be some management and planning overhead in order to
-    curate the workflow. But we believe it will be worth it from a
+    curate the workflow. But we believe it is worth it from a
     stress and cognitive load perspective. That's because it helps us to
     have a structure and a general goal or roadmap that we are working
     towards.
