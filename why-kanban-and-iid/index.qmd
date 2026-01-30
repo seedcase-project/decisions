@@ -81,13 +81,13 @@ development](https://en.wikipedia.org/wiki/Agile_software_development)
 either, as most of the above approaches are already considered Agile and
 because Agile is more of a mindset, philosophy, or cultural practice
 that encompasses multiple other aspects outside of just software
-development. Because of this, it makes it very difficult to easily compare
-with other approaches.
+development. This makes it very difficult to easily compare with other
+approaches.
 
 We include Scrum even though it is often grouped as an Agile
 methodology. Because Scrum has specific practices, rituals, and
 processes, it makes it less of a mindset and more of a formal process.
-Because of this, it is easier to compare it to the other options.
+This makes it easier to compare it to the other options.
 
 ### Iterative development
 
@@ -182,8 +182,8 @@ we'll only list a few here:
     come up during the process, it requires changing the plan and where
     or how increments are developed.
 -   Because there is less focus on getting user feedback regularly and
-    often, there may be a risk of a misalignment between the final product and the user needs and
-    expectations.
+    often, there may be a risk of a misalignment between the final
+    product and the user needs and expectations.
 :::
 :::::
 
@@ -194,6 +194,11 @@ development](https://en.wikipedia.org/wiki/Iterative_and_incremental_development
 approach. It involves breaking down the project into smaller increments,
 and then within each increment, following an iterative cycle of
 designing, prototyping, testing, analyzing, and refining.
+
+An analogy might be building a house one room at a time (incremental),
+but within each room, starting with making a rough sketch, then adding
+pieces to it slowly, all while regularly getting feedback and refining
+the design based on the feedback (iterative).
 
 ::::: columns
 ::: column
@@ -230,6 +235,14 @@ that uses "time constrained" iterations called sprints, along with
 regular "stand-ups" (update meetings), retrospectives (at the end of
 each sprint), and other rituals and processes to help teams work
 together effectively.
+
+The iterative and/or incremental development approaches above are much
+less prescriptive, so analogies help to describe them and the
+differences between them. Scrum on the other hand is a strongly
+prescriptive and well defined process and framework (you can even get
+certified in it), so an analogy isn't as necessary here. Scrum more
+closely applies an iterative approach than an incremental one, though
+sprints could be seen as increments as well.
 
 ::::: columns
 ::: column
@@ -337,10 +350,9 @@ and retrospectives from Scrum are all also useful.
 ### Consequences
 
 -   There will be some management and planning overhead in order to
-    curate the workflow. But we believe it is worth it from a
-    stress and cognitive load perspective. That's because it helps us to
-    have a structure and a general goal or roadmap that we are working
-    towards.
+    curate the workflow. But we believe it is worth it from a stress and
+    cognitive load perspective. That's because it helps us to have a
+    structure and a general goal or roadmap that we are working towards.
 -   Because this process is flexible, we can always easily decide to
     change or adapt as we learn and grow.
 
