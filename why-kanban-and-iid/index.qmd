@@ -1,6 +1,9 @@
 ---
 title: "Why a mix of Kanban and iterative and incremental development"
-description: "Developing software can be done many ways, especially when working in a team. Here we describe why we chose to mix aspects of Kanban with an iterative and incremental development workflow."
+description: |
+    Developing software can be done many ways, especially when working in a
+    team. Here we describe why we chose to mix aspects of Kanban with an
+    iterative and incremental development workflow.
 date: "2026-01-12"
 categories:
 - workflow
@@ -30,9 +33,8 @@ formally, or at least intentionally, choose a way of working together as
 a team that is grounded in knowledge, evidence, and reasoning. So our
 question is:
 
-*What planning and management workflow should we use to
-manage developing software and other types of
-products together as a team?*
+*What planning and management workflow should we use to manage
+developing software and other types of products together as a team?*
 
 ## Decision drivers
 
@@ -163,12 +165,11 @@ Like with iterative development above, there are many benefits, but
 we'll only list the most relevant ones here:
 
 -   A strong initial planning and design phase helps to ensure a strong
-    overall architecture and structure of the software as well as
-    to incorporate as much of the user requirements as
-    possible.
--   As the overall
-    project is broken down into smaller, more manageable pieces,
-    it becomes much easier to create and manage a roadmap or plan.
+    overall architecture and structure of the software as well as to
+    incorporate as much of the user requirements as possible.
+-   As the overall project is broken down into smaller, more manageable
+    pieces, it becomes much easier to create and manage a roadmap or
+    plan.
 -   Each increment can add value to the user, as each increment is
     (technically) a working piece of the final software.
 :::
@@ -180,8 +181,8 @@ we'll only list the most relevant ones here:
     inherent coupling and interdependence, it can be difficult to apply
     incremental development.
 -   Like with iterative development, if additional requirements or needs
-    come up during the process, it requires changing the plan including where
-    or how increments are developed.
+    come up during the process, it requires changing the plan including
+    where or how increments are developed.
 -   Because there is less focus on getting user feedback regularly and
     often, there may be a risk of a misalignment between the final
     product and the user needs and expectations.
@@ -192,14 +193,14 @@ we'll only list the most relevant ones here:
 
 This is the combination of the [iterative and incremental
 development](https://en.wikipedia.org/wiki/Iterative_and_incremental_development)
-approaches. It involves breaking down the project into smaller increments,
-and then within each increment, following an iterative cycle of
-designing, prototyping, testing, analyzing, and refining.
+approaches. It involves breaking down the project into smaller
+increments, and then within each increment, following an iterative cycle
+of designing, prototyping, testing, analyzing, and refining.
 
 An analogy could be building a house one room at a time (incremental),
 but within each room, starting with making a rough sketch, then adding
-pieces to it slowly, all while regularly getting user feedback and refining
-the design based on the feedback (iterative).
+pieces to it slowly, all while regularly getting user feedback and
+refining the design based on the feedback (iterative).
 
 ::::: columns
 ::: column
@@ -220,8 +221,8 @@ the design based on the feedback (iterative).
 #### Drawbacks
 
 -   Because it combines two different approaches, it can be more complex
-    and difficult to manage effectively, so it needs a stronger and
-    more consistent focus on project management.
+    and difficult to manage effectively, so it needs a stronger and more
+    consistent focus on project management.
 :::
 :::::
 
@@ -254,9 +255,9 @@ sprints could be seen as increments as well.
     development, for example, stand-ups, sprints, and retrospectives.
 -   Lots of training material is available, as well as experienced
     practitioners.
--   Has a lot of prescriptive ceremonies and processes, which can help those who are new
-    to software development or team-based work with a clear structure
-    to follow.
+-   Has a lot of prescriptive ceremonies and processes, which can help
+    those who are new to software development or team-based work with a
+    clear structure to follow.
 :::
 
 ::: column
@@ -330,7 +331,8 @@ board as they progress through the workflow.
     online platforms, but can be more difficult for projects that have a
     clear end goal or deadline.
 -   Without proper discipline and management, tasks can start piling up.
-    It requires a cultural mindset to value prioritisation and curation of tasks.
+    It requires a cultural mindset to value prioritisation and curation
+    of tasks.
 -   Requires regular curation of the items on the board to ensure that
     it accurately reflects the current state of work, both from moving
     items to different columns, but also to ordering items in the todo
@@ -345,7 +347,8 @@ with a mix of Kanban and some aspects of Scrum. For example, the use of
 the Kanban board to manage and visualise work as well as the emphasis on
 limiting work in progress are all great aspects of Kanban. Likewise, the
 use of time-constrained iterations, regular and short update meetings,
-and retrospectives popularised by Scrum (though not unique to it by any means) are all also useful.
+and retrospectives popularised by Scrum (though not unique to it by any
+means) are all also useful.
 
 ### Consequences
 
