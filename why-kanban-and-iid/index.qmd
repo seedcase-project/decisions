@@ -330,7 +330,7 @@ board as they progress through the workflow.
     online platforms, but can be more difficult for projects that have a
     clear end goal or deadline.
 -   Without proper discipline and management, tasks can start piling up.
-    It requires a cultural mindset.
+    It requires a cultural mindset to value prioritisation and curation of tasks.
 -   Requires regular curation of the items on the board to ensure that
     it accurately reflects the current state of work, both from moving
     items to different columns, but also to ordering items in the todo
@@ -345,7 +345,7 @@ with a mix of Kanban and some aspects of Scrum. For example, the use of
 the Kanban board to manage and visualise work as well as the emphasis on
 limiting work in progress are all great aspects of Kanban. Likewise, the
 use of time-constrained iterations, regular and short update meetings,
-and retrospectives from Scrum are all also useful.
+and retrospectives popularised by Scrum (though not unique to it by any means) are all also useful.
 
 ### Consequences
 
