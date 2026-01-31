@@ -80,7 +80,7 @@ shouldn't mix these different types of content together.
     of documentation a software or technical product needs to help
     different types of users.
 -   It has become more popular and more widely used recently. For example,
-    Canonical, the company that develops Ubuntu, [uses it for their 
+    Canonical, the company that develops Ubuntu, [uses it for their
     documentation](https://ubuntu.com/blog/diataxis-a-new-foundation-for-canonical-documentation)
 -   Isn't prescriptive about how to write documentation, instead,
     it's more of a guide to thinking about documentation.
