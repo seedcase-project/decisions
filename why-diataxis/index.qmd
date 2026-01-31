@@ -59,7 +59,7 @@ We did find one other resource: [The Good Docs
 Project](https://www.thegooddocsproject.dev). However, it is less a
 framework and more a set of templates for writing documentation. For
 example, there is a template for writing a "Getting Started" guide or
-writing a "Contributing" guide. While useful, because they are templates for 
+writing a "Contributing" guide. While useful, because they are templates for
 specific document types, it doesn't provide a framework for writing any
 type of documentation and doesn't fit our needs.
 
