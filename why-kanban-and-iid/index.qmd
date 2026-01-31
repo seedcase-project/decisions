@@ -30,8 +30,8 @@ formally, or at least intentionally, choose a way of working together as
 a team that is grounded in knowledge, evidence, and reasoning. So our
 question is:
 
-*What planning and management process or workflow should we use to help
-manage and coordinate the developing software and other types of
+*What planning and management workflow should we use to
+manage developing software and other types of
 products together as a team?*
 
 ## Decision drivers
@@ -41,7 +41,7 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-We want or need:
+We want and need:
 
 -   A structured and explicit way of working together and building
     software.
@@ -98,8 +98,8 @@ building a rough version of it quickly, testing it, getting user
 feedback on it, improving it based on that feedback, and repeating the
 cycle until a satisfactory product is achieved.
 
-An analogy might be making a painting or drawing. Start with a rough
-sketch, and then slowly add in more detail as you go along.
+An analogy could be making a painting or drawing, starting with a rough
+sketch, and then adding more detail as you go along.
 
 ::::: columns
 ::: column
@@ -151,7 +151,7 @@ delivered independently. Each incremental stage might involve some
 planning, prototyping, and testing, but the focus is on delivering a
 working piece of the final product with each increment.
 
-An analogy might be building a house one room at a time. Each room is a
+An analogy could be building a house one room at a time. Each room is a
 functional part of the overall house, and you can live in or use each
 room as it's completed, even if the entire house isn't finished yet.
 
@@ -160,14 +160,15 @@ room as it's completed, even if the entire house isn't finished yet.
 #### Benefits
 
 Like with iterative development above, there are many benefits, but
-we'll only list a few here:
+we'll only list the most relevant ones here:
 
 -   A strong initial planning and design phase helps to ensure a strong
-    overall architecture and structure of the software as well as to
-    ensure as much of the user requirements are incorporated as
+    overall architecture and structure of the software as well as
+    to incorporate as much of the user requirements as
     possible.
--   Much easier to create and manage a roadmap or plan, as the overall
-    project is broken down into smaller, more manageable pieces.
+-   As the overall
+    project is broken down into smaller, more manageable pieces,
+    it becomes much easier to create and manage a roadmap or plan.
 -   Each increment can add value to the user, as each increment is
     (technically) a working piece of the final software.
 :::
@@ -179,7 +180,7 @@ we'll only list a few here:
     inherent coupling and interdependence, it can be difficult to apply
     incremental development.
 -   Like with iterative development, if additional requirements or needs
-    come up during the process, it requires changing the plan and where
+    come up during the process, it requires changing the plan including where
     or how increments are developed.
 -   Because there is less focus on getting user feedback regularly and
     often, there may be a risk of a misalignment between the final
@@ -189,15 +190,15 @@ we'll only list a few here:
 
 ### Iterative and incremental development
 
-This is the combination of both an [iterative and an incremental
+This is the combination of the [iterative and incremental
 development](https://en.wikipedia.org/wiki/Iterative_and_incremental_development)
-approach. It involves breaking down the project into smaller increments,
+approaches. It involves breaking down the project into smaller increments,
 and then within each increment, following an iterative cycle of
 designing, prototyping, testing, analyzing, and refining.
 
-An analogy might be building a house one room at a time (incremental),
+An analogy could be building a house one room at a time (incremental),
 but within each room, starting with making a rough sketch, then adding
-pieces to it slowly, all while regularly getting feedback and refining
+pieces to it slowly, all while regularly getting user feedback and refining
 the design based on the feedback (iterative).
 
 ::::: columns
@@ -211,7 +212,7 @@ the design based on the feedback (iterative).
     while also ensuring a strong overall architecture and structure of
     the software.
 -   Doesn't have as many of the drawbacks of either approach alone, as
-    the weaknesses of one approach are often mitigated by the strengths
+    the weaknesses of one approach are mostly mitigated by the strengths
     of the other.
 :::
 
@@ -219,8 +220,8 @@ the design based on the feedback (iterative).
 #### Drawbacks
 
 -   Because it combines two different approaches, it can be more complex
-    and difficult to manage effectively, so it needs a strong and
-    consistent focus on project management.
+    and difficult to manage effectively, so it needs a stronger and
+    more consistent focus on project management.
 :::
 :::::
 
@@ -233,7 +234,7 @@ programming](https://en.wikipedia.org/wiki/Extreme_programming) that
 inspired the Agile movement. It is an iterative and incremental approach
 that uses "time constrained" iterations called sprints, along with
 regular "stand-ups" (update meetings), retrospectives (at the end of
-each sprint), and other rituals and processes to help teams work
+each sprint), and other rituals and processes aiming to help teams work
 together effectively.
 
 The iterative and/or incremental development approaches above are much
@@ -253,22 +254,21 @@ sprints could be seen as increments as well.
     development, for example, stand-ups, sprints, and retrospectives.
 -   Lots of training material is available, as well as experienced
     practitioners.
--   Has a lot of rituals and processes, which can help those who are new
-    to software development or team-based work to have a clear structure
+-   Has a lot of prescriptive ceremonies and processes, which can help those who are new
+    to software development or team-based work with a clear structure
     to follow.
 :::
 
 ::: column
 #### Drawbacks
 
--   Its rituals and processes can end up adding a lot more overhead and
-    inflexibility, because it is a "recipe to follow", which makes
-    non-technical management follow it more strictly than is necessary.
+-   Its prescriptive processes can end up adding a lot more overhead and
+    inflexibility, because it is a "recipe to follow".
 -   Because of its structure and nature, it can potentially lead to more
     burn out and stress in order to "finish the sprint goals"
     (especially given the name "sprint").
 -   Can lead to a focus on completing tasks within the sprint, rather
-    than on delivering value to the user.
+    than on delivering value to users.
 -   Metrics used in Scrum, such as "velocity" (completing tasks and/or
     merging pull requests), can be gamed or misused, leading to a focus
     on "hitting the numbers" rather than on delivering quality software.
