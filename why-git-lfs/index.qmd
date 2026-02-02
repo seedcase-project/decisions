@@ -37,10 +37,10 @@ data never leaves the secure server on which it is stored.
 While Git is well suited to tracking changes in source code, it is not
 optimised for tracking data files. Working-tree operations on large
 files are slow, and delta compression offers limited benefits for binary
-data. Moreover, because sensitive data must remain on a secure server,
+data. Moreover, because sensitive data must remain on a secure server for legal reasons (e.g. the EU's GDPR),
 it cannot be stored on GitHub as part of the central repository.
 
-Given that there are multiple tools available for version controlling
+Given that there are multiple tools available for the version control of
 large files, the question we need to answer is:
 
 *Which file version control system should we adopt to store and version
@@ -85,8 +85,8 @@ The most popular data version control systems are:
 
 ### Git LFS
 
-[Git LFS](https://git-lfs.com/) is a widely used system for version
-controlling large files within Git-based workflows. It is an open-source
+[Git LFS](https://git-lfs.com/) is a widely used system for the version
+control of large files within Git-based workflows. It is an open-source
 Git extension developed and maintained by GitHub and other contributors.
 Git LFS works by storing large data files in a separate LFS object store
 and replacing them in the Git repository with small pointer files that
@@ -254,7 +254,7 @@ List some potential consequences of this decision.
     the risk of accidental data upload due to human error.
     Clear documentation and guidance are therefore required to ensure
     that contributors understand the correct workflow when working with
-    sensitive data.
+    the version control of sensitive data.
 
 ## Resources used for this post
 
