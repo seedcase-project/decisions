@@ -212,9 +212,9 @@ provides features that support the broader machine learning lifecycle.
 -   More complex to set up and use than Git LFS.
 -   Many of DVC's machine learning–specific features are not relevant to
     our use case.
--   The basic workflow of adding and editing data files is more complex,
-    because separate commands have to be issued for managing data files
-    and code files.
+-   The basic workflow of adding and editing data files is more complex
+    than with Git LFS, because separate commands have to be issued for
+    managing data files and code files.
 -   Integration with Git tooling is weaker than for Git LFS.
 :::
 :::::
