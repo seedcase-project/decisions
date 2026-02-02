@@ -19,16 +19,16 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-[Data Packages](https://datapackage.org) often contain large data files, which can be sensitive in
-nature, for example because they include personally identifiable
-information. Data evolves over time through the addition of new files,
-as well as through the correction or redaction of existing data items.
-When researchers start an analysis project, they are typically provided
-with a subset of the data as it exists at a specific point in its
-history. Being able to keep track of what changed between updates in a
-Data Package, and what version of data is used by each iteration of an
-analysis project is helpful both for reproducibility and data
-governance.
+[Data Packages](https://datapackage.org) often contain large data files
+that may be sensitive in nature, for example because they include
+personally identifiable information. This data can evolve over time
+through the addition of new files, as well as through the correction or
+redaction of existing data items. When researchers start an analysis
+project, they are typically provided with a subset of the data as it
+exists at a specific point in time. Being able to track what changed
+between updates to a Data Package---and to specify which version of the
+data is used by each iteration of an analysis project---is important
+both for reproducibility and data governance.
 
 Together, these considerations mean that we need to version control data
 files contained in Data Packages, while also ensuring that sensitive
@@ -37,14 +37,16 @@ data never leaves the secure server on which it is stored.
 While Git is well suited to tracking changes in source code, it is not
 optimised for tracking data files. Working-tree operations on large
 files are slow, and delta compression offers limited benefits for binary
-data. Moreover, because sensitive data must remain on a secure server for legal reasons (e.g. the EU's GDPR),
-it cannot be stored on GitHub as part of the central repository.
+data. Moreover, because sensitive data must remain on a secure server
+for legal reasons (e.g. the EU's GDPR), it cannot be stored on GitHub as
+part of the central repository.
 
 Given that there are multiple tools available for the version control of
 large files, the question we need to answer is:
 
 *Which file version control system should we adopt to store and version
-control our data files while complying with data privacy policies and laws?*
+control our data files while complying with data privacy policies and
+laws?*
 
 ## Decision drivers
 
@@ -55,20 +57,21 @@ have arisen that impact work.
 
 The file version control system should:
 
--   Support version control of large files
--   Preserve a sequential history of changes
--   Allow the data to be restored to a specific point in its history
--   Work well in a secure server context (such as [GenomeDK](https://genome.au.dk/))
--   Allow files to be stored locally on a secure server without
-    pushing data to an external remote (e.g., GitHub)
+-   Support version control of large files.
+-   Preserve a sequential history of changes.
+-   Allow the data to be restored to a specific point in its history.
+-   Work well in a secure server context (such as
+    [GenomeDK](https://genome.au.dk/)).
+-   Allow files to be stored locally on a secure server without pushing
+    data to an external remote (e.g., GitHub).
 -   Be easy to install on a secure server without requiring
-    administrative privileges
+    administrative privileges.
 -   Enable working on personal machines outside the secure server, where
-    the data is not available
+    the data is not available.
 -   Integrate well with Git, which we will continue to use to version
-    control code and metadata
--   Be easy to configure and use
--   Be actively maintained, widely adopted, and well documented
+    control code and metadata.
+-   Be easy to configure and use.
+-   Be actively maintained, widely adopted, and well documented.
 
 ## Considered options
 
@@ -155,7 +158,8 @@ links to this local object store.
     to annex automatically.
 -   Allows working without data access on personal machines.
 -   Does not assume any specific hosting provider by default, so there
-    is a lower risk of accidentally pushing data to a remote location such as GitHub.
+    is a lower risk of accidentally pushing data to a remote location
+    such as GitHub.
 -   Can be installed without administrative privileges, for example, via
     `conda` on GenomeDK.
 -   Possible to manage the annex via a GUI by running a locally served
@@ -238,7 +242,9 @@ data management operations. However, our use case is relatively simple,
 and ease of use is a key factor in our decision. DVC may nevertheless be
 of interest for analysis projects, as it can record rich metadata about
 datasets and can track which scripts produced which data explicitly
-through metadata files. But, since Data Packages aren't analysis projects, the simplicity and full Git integration of Git LFS outweigh the benefits of DVC.
+through metadata files. But, since Data Packages aren't analysis
+projects, the simplicity and full Git integration of Git LFS outweigh
+the benefits of DVC.
 
 ### Consequences
 
@@ -246,15 +252,17 @@ through metadata files. But, since Data Packages aren't analysis projects, the s
 List some potential consequences of this decision.
 :::
 
--   Because Git LFS is tightly integrated with Git and GitHub, its default
-    configuration assumes a GitHub-managed LFS server. As a result,
-    additional safeguards (e.g., checks via pre-commit hooks) may be
-    required to prevent sensitive data from being uploaded to GitHub by accident.
--   Even with such safeguards in place, as with *any* other tool, it is not possible to completely eliminate
-    the risk of accidental data upload due to human error.
-    Clear documentation and guidance are therefore required to ensure
-    that contributors understand the correct workflow when working with
-    the version control of sensitive data.
+-   Because Git LFS is tightly integrated with Git and GitHub, its
+    default configuration assumes a GitHub-managed LFS server. As a
+    result, additional safeguards (e.g., checks via pre-commit hooks)
+    may be required to prevent sensitive data from being uploaded to
+    GitHub by accident.
+-   Even with such safeguards in place, as with *any* other tool, it is
+    not possible to completely eliminate the risk of accidental data
+    upload due to human error. Clear documentation and guidance are
+    therefore required to ensure that contributors understand the
+    correct workflow when working with the version control of sensitive
+    data.
 
 ## Resources used for this post
 
