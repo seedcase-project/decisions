@@ -177,7 +177,6 @@ links to this local object store.
 -   The basic workflow of adding and editing data files is more complex,
     because tracking the files with `git-annex` and storing the files in
     a particular storage location are two distinct tasks.
--   Integration with Git tooling is weaker than for Git LFS.
 -   Less widely adopted than Git LFS, mainly used by specialist
     communities.
 :::
@@ -215,7 +214,6 @@ provides features that support the broader machine learning lifecycle.
 -   The basic workflow of adding and editing data files is more complex
     than with Git LFS, because separate commands have to be issued for
     managing data files and code files.
--   Integration with Git tooling is weaker than for Git LFS.
 :::
 :::::
 
