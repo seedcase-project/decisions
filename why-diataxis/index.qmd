@@ -1,7 +1,8 @@
 ---
 title: "Why the Diataxis framework for documentation"
 description: |
-    The difference between software that is used vs not used is often the
+    The difference between software that is used and not used is often the
+
     quality of the documentation. This post describes why we chose the Diataxis
     framework for writing our technical documentation.
 date: "2026-01-26"
@@ -64,7 +65,7 @@ framework and more a set of templates for writing documentation. For
 example, there is a template for writing a "Getting Started" guide or
 writing a "Contributing" guide. While useful, because they are templates
 for specific document types, it doesn't provide a framework for writing
-any type of documentation and doesn't fit our needs.
+any type of documentation, so it doesn't fit our needs.
 
 ### Diataxis
 
@@ -83,7 +84,7 @@ shouldn't mix these different types of content together.
 -   Provides a clear structure for thinking about what different types
     of documentation a software or technical product needs to help
     different types of users.
--   It has become more popular and more widely used recently. For
+-   Has become more popular and more widely used recently. For
     example, Canonical, the company that develops Ubuntu, [uses it for
     their
     documentation](https://ubuntu.com/blog/diataxis-a-new-foundation-for-canonical-documentation)
