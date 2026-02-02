@@ -1,8 +1,9 @@
 ---
 title: "Why Git LFS"
 description: |
-  Data Packages contain research data that is often large in size and may be sensitive in nature. Storing this data securely and tracking changes over time reliably is essential for good data governance and reproducible research.
-  This post explains why we chose Git LFS over other alternatives to manage our data files.
+  Data Packages contain research data that is often large in size and may be sensitive in nature. 
+  Storing this data securely and tracking changes over time reliably is essential for good data governance and reproducible research.
+  This post explains why we chose Git LFS over other alternatives to manage data files.
 date: "2026-01-28"
 categories:
 - develop
@@ -18,7 +19,7 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-Data Packages often contain large data files, which can be sensitive in
+[Data Packages](https://datapackage.org) often contain large data files, which can be sensitive in
 nature, for example because they include personally identifiable
 information. Data evolves over time through the addition of new files,
 as well as through the correction or redaction of existing data items.
@@ -29,11 +30,11 @@ Data Package, and what version of data is used by each iteration of an
 analysis project is helpful both for reproducibility and data
 governance.
 
-Together, these requirements mean that we need to version control data
+Together, these considerations mean that we need to version control data
 files contained in Data Packages, while also ensuring that sensitive
 data never leaves the secure server on which it is stored.
 
-While Git is well suited to version controlling source code, it is not
+While Git is well suited to tracking changes in source code, it is not
 optimised for tracking data files. Working-tree operations on large
 files are slow, and delta compression offers limited benefits for binary
 data. Moreover, because sensitive data must remain on a secure server,
@@ -43,7 +44,7 @@ Given that there are multiple tools available for version controlling
 large files, the question we need to answer is:
 
 *Which file version control system should we adopt to store and version
-control our data files while complying with data privacy policies?*
+control our data files while complying with data privacy policies and laws?*
 
 ## Decision drivers
 
@@ -57,13 +58,13 @@ The file version control system should:
 -   Support version control of large files
 -   Preserve a sequential history of changes
 -   Allow the data to be restored to a specific point in its history
--   Work well in a secure server context (such as GenomeDK)
--   Allow files to be stored locally on the secure server without
+-   Work well in a secure server context (such as [GenomeDK](https://genome.au.dk/))
+-   Allow files to be stored locally on a secure server without
     pushing data to an external remote (e.g., GitHub)
--   Be easy to install on the secure server without requiring
+-   Be easy to install on a secure server without requiring
     administrative privileges
 -   Enable working on personal machines outside the secure server, where
-    the data will not be available
+    the data is not available 
 -   Integrate well with Git, which we will continue to use to version
     control code and metadata
 -   Be easy to configure and use
@@ -96,7 +97,7 @@ reference the stored objects.
 #### Benefits
 
 -   Maintains a history of file versions over time.
--   Allows restoring data to a previous version.
+-   Allows restoring data to previous versions.
 -   While `git diff` shows the difference between the pointers by
     default, it is possible to configure Git to show the difference
     between the data files.
@@ -107,7 +108,7 @@ reference the stored objects.
 -   Supports local or self-hosted storage: a shared folder on GenomeDK
     can be used as the LFS object store instead of a GitHub-managed LFS
     server.
--   Integrates seamlessly with Git, the same Git commands are used to
+-   Integrates seamlessly with Git; the same Git commands are used to
     manage data and code files.
 -   Supports working without data access on personal machines by
     configuring Git not to run LFS-related logic outside the secure
@@ -154,7 +155,7 @@ links to this local object store.
     to annex automatically.
 -   Allows working without data access on personal machines.
 -   Does not assume any specific hosting provider by default, so there
-    is a lower risk of accidentally pushing data to GitHub.
+    is a lower risk of accidentally pushing data to a remote location such as GitHub.
 -   Can be installed without administrative privileges, for example, via
     `conda` on GenomeDK.
 -   Possible to manage the annex via a GUI by running a locally served
@@ -192,7 +193,7 @@ provides features that support the broader machine learning lifecycle.
 #### Benefits
 
 -   Maintains a history of file versions over time.
--   Allows restoring data to a previous version.
+-   Allows restoring data to previous versions.
 -   Storage options are very flexible.
 -   Allows working without data access on personal machines.
 -   Does not assume any specific hosting provider by default.
@@ -221,7 +222,7 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-We decided to use Git LFS because, while all of the options considered
+We decided on using Git LFS because, while all of the options considered
 fulfil our requirements, Git LFS is the simplest to set up and use. It
 integrates fully with Git, meaning that, after initial configuration,
 there is no need to learn an additional version control system, and that
@@ -237,7 +238,7 @@ data management operations. However, our use case is relatively simple,
 and ease of use is a key factor in our decision. DVC may nevertheless be
 of interest for analysis projects, as it can record rich metadata about
 datasets and can track which scripts produced which data explicitly
-through metadata files.
+through metadata files. But, since Data Packages aren't analysis projects, the simplicity and full Git integration of Git LFS outweigh the benefits of DVC. 
 
 ### Consequences
 
@@ -245,12 +246,12 @@ through metadata files.
 List some potential consequences of this decision.
 :::
 
--   Because Git LFS is tightly integrated with Git, its default
+-   Because Git LFS is tightly integrated with Git and GitHub, its default
     configuration assumes a GitHub-managed LFS server. As a result,
     additional safeguards (e.g., checks via pre-commit hooks) may be
-    required to prevent sensitive data from being uploaded to GitHub.
--   Even with such safeguards in place, it is not possible to eliminate
-    completely the risk of accidental data upload due to human error.
+    required to prevent sensitive data from being uploaded to GitHub by accident.
+-   Even with such safeguards in place, as with *any* other tool, it is not possible to completely eliminate
+    the risk of accidental data upload due to human error.
     Clear documentation and guidance are therefore required to ensure
     that contributors understand the correct workflow when working with
     sensitive data.
