@@ -1,7 +1,7 @@
 ---
 title: "Why Git LFS"
 description: |
-  Data Packages contain research data that is often large in size and may be sensitive in nature. 
+  Data Packages contain research data that is often large in size and may be sensitive in nature.
   Storing this data securely and tracking changes over time reliably is essential for good data governance and reproducible research.
   This post explains why we chose Git LFS over other alternatives to manage data files.
 date: "2026-01-28"
@@ -64,7 +64,7 @@ The file version control system should:
 -   Be easy to install on a secure server without requiring
     administrative privileges
 -   Enable working on personal machines outside the secure server, where
-    the data is not available 
+    the data is not available
 -   Integrate well with Git, which we will continue to use to version
     control code and metadata
 -   Be easy to configure and use
@@ -238,7 +238,7 @@ data management operations. However, our use case is relatively simple,
 and ease of use is a key factor in our decision. DVC may nevertheless be
 of interest for analysis projects, as it can record rich metadata about
 datasets and can track which scripts produced which data explicitly
-through metadata files. But, since Data Packages aren't analysis projects, the simplicity and full Git integration of Git LFS outweigh the benefits of DVC. 
+through metadata files. But, since Data Packages aren't analysis projects, the simplicity and full Git integration of Git LFS outweigh the benefits of DVC.
 
 ### Consequences
 
