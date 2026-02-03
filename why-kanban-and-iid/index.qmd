@@ -1,5 +1,5 @@
 ---
-title: "Why a mix of Kanban and iterative and incremental development"
+title: "Why use (mainly) Kanban and iterative and incremental development"
 description: |
     Developing software can be done many ways, especially when working in a
     team. Here we describe why we chose to mix aspects of Kanban with an
