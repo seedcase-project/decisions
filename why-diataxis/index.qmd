@@ -1,0 +1,148 @@
+---
+title: "Why the Diataxis framework for documentation"
+description: |
+    The difference between software that is used and not used is often the
+
+    quality of the documentation. This post describes why we chose the Diataxis
+    framework for writing our technical documentation.
+date: "2026-01-26"
+categories:
+- document
+- communicate
+---
+
+::: callout-note
+We wrote this after already using [Diataxis](https://diataxis.fr/) for
+our initial products. However, we are still early in our development of
+products that we decided to formally investigate what frameworks to use
+and why we will use them.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+Writing good, usable, and beginner-friendly documentation is hard. There
+are many ways to write documentation, some structured and most
+unstructured. Like in many other fields of work, there are certain
+structured approaches to writing documents that make them much easier to
+write and to read. For example, in academic research, the typical
+structure is the IMRaD pattern (introduction/background, methods,
+results, and discussion). However, there is no clear convention for
+writing technical documentation for software. So our question is:
+
+*What framework should we use to write our technical documentation?*
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+-   The framework should itself be well described and structured, if it
+    aims to help us write better documentation.
+-   The framework should be flexible enough to be used for different
+    types of documentation.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+Unfortunately, we could only find one option for technical
+documentation: [Diataxis](https://diataxis.fr/). So, this post will only
+describe the benefits and drawbacks of that framework.
+
+We did find one other resource: [The Good Docs
+Project](https://www.thegooddocsproject.dev). However, it is less a
+framework and more a set of templates for writing documentation. For
+example, there is a template for writing a "Getting Started" guide or
+writing a "Contributing" guide. While useful, because they are templates
+for specific document types, it doesn't provide a framework for writing
+any type of documentation, so it doesn't fit our needs.
+
+### Diataxis
+
+[Diataxis](https://diataxis.fr/) is a documentation framework that
+identifies four types of technical documents: tutorials, how-to guides,
+explanations, and reference. Each type has a different purpose and
+different characteristics. This grouping can be used to help the writer
+decide what to communicate to the reader, and help the reader to better
+understand what is being communicated. Ideally, a piece of documentation
+shouldn't mix these different types of content together.
+
+::::: columns
+::: column
+#### Benefits
+
+-   Provides a clear structure for thinking about what different types
+    of documentation a software or technical product needs to help
+    different types of users.
+-   Has become more popular and more widely used recently. For
+    example, Canonical, the company that develops Ubuntu, [uses it for
+    their
+    documentation](https://ubuntu.com/blog/diataxis-a-new-foundation-for-canonical-documentation)
+-   Isn't prescriptive about how to write documentation, instead, it's
+    more of a guide to thinking about documentation.
+-   Following this structure can make it much easier to communicate to
+    readers what the aim of each piece of documentation is.
+-   Documentation following this framework is much more coherent and
+    focused, as it keeps the intended audience and their needs clearly
+    in mind when writing.
+-   Has substantial supporting theory and reasoning behind it, which has
+    lead to it being well designed.
+-   The documentation on Diataxis is also high-quality and easy to use
+    and read.
+:::
+
+::: column
+#### Drawbacks
+
+-   Some types of documentation may not fit neatly into one of the four
+    categories.
+-   It can be difficult to decide which category a piece of
+    documentation belongs to, though this is mostly a matter of practice
+    and experience.
+:::
+:::::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+Given there are no other frameworks available (at least none that are
+easy to find), we don't have much choice in what we decide on. However,
+Diataxis on its own is well thought out and designed, with clear
+benefits for writing better documentation. So, we've decided to use it
+when writing technical documentation.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+-   Since it is really the only choice, a new option might come up in
+    the future that is better suited to our needs. But for now, we don't
+    see much risk in this decision.
+
+## Resources used for this post
+
+::: content-hidden
+List the resources used to write this post
+:::
+
+-   [Diataxis website](https://diataxis.fr/)
+-   [Diátaxis, a new foundation for Canonical
+    documentation](https://ubuntu.com/blog/diataxis-a-new-foundation-for-canonical-documentation)
+-   [What is Diátaxis and should you be using it with your
+    documentation?](https://idratherbewriting.com/blog/what-is-diataxis-documentation-framework)
