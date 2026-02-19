@@ -26,8 +26,8 @@ designed initially to do that. However, there are many packages
 available, including some built-in standard libraries, for exposing a
 Python package as a CLI application. So the question is:
 
-**Which package should we use to build command line interfaces (CLIs)
-for our Python tools?**
+Which package should we use to build command line interfaces (CLIs)
+for our Python tools?
 
 ## Decision drivers
 
@@ -41,11 +41,11 @@ principles](https://design.seedcase-project.org/software/principles)
 that we generally follow when using or choosing software, the package
 needs to:
 
--   Be well maintained and actively developed.
--   Integrate easily into our current development workflow and style.
--   Be ergonomic and easy to use, so we can develop CLIs quickly and
-    easily.
--   Have excellent documentation that is easy to follow.
+- Be well maintained and actively developed.
+- Integrate easily into our current development workflow and style.
+- Be ergonomic and easy to use, so we can develop CLIs quickly and
+  easily.
+- Have excellent documentation that is easy to follow.
 
 ## Considered options
 
@@ -54,29 +54,29 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
-Based on the [Awesome Python: Command-Line Interface
-Development](https://github.com/vinta/awesome-python#command-line-interface-development)
+Based on the
+[Awesome Python: Command-Line Interface Development](https://github.com/vinta/awesome-python#command-line-interface-development)
 list, we considered these packages, since they were still actively
 maintained and developed at the time of this post:
 
--   [Argparse](https://docs.python.org/3/library/argparse.html)
--   [Python Fire](https://python-fire.readthedocs.io/en/latest/)
--   [Click](https://click.palletsprojects.com/en/stable/)
--   [Typer](https://typer.tiangolo.com/)
--   [Cyclopts](https://cyclopts.readthedocs.io/en/latest/index.html)
+- [Argparse](https://docs.python.org/3/library/argparse.html)
+- [Python Fire](https://python-fire.readthedocs.io/en/latest/)
+- [Click](https://click.palletsprojects.com/en/stable/)
+- [Typer](https://typer.tiangolo.com/)
+- [Cyclopts](https://cyclopts.readthedocs.io/en/latest/index.html)
 
 There are a few others that almost matched our criteria, but didn't in
 one way or another:
 
--   [cement](https://docs.builtoncement.com/en/latest/): It isn't that
-    actively maintained, but importantly, it seems to be more of an
-    advanced framework for building CLIs (e.g. with Dockerfiles), which
-    is more complex than what we need.
--   [prompt_toolkit](https://python-prompt-toolkit.readthedocs.io/en/latest/):
-    It is designed more for building "full screen" terminal applications,
-    which is more complex than what we need.
--   [cliff](https://docs.openstack.org/cliff/latest/): It isn't regularly
-    updated. The documentation was last updated in 2021.
+- [cement](https://docs.builtoncement.com/en/latest/): It isn't that
+  actively maintained, but importantly, it seems to be more of an
+  advanced framework for building CLIs (e.g. with Dockerfiles), which is
+  more complex than what we need.
+- [prompt_toolkit](https://python-prompt-toolkit.readthedocs.io/en/latest/):
+  It is designed more for building "full screen" terminal applications,
+  which is more complex than what we need.
+- [cliff](https://docs.openstack.org/cliff/latest/): It isn't regularly
+  updated. The documentation was last updated in 2021.
 
 ### Argparse
 
@@ -86,23 +86,23 @@ Argparse is a part of the standard library in Python for building CLIs.
 ::: column
 #### Benefits
 
--   Comes built-in with Python, so no extra dependencies.
+- Comes built-in with Python, so no extra dependencies.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Not very ergonomic and requires a lot of code to set up.
--   The documentation (like a lot of Python standard library
-    documentation) is not easy to follow or read.
--   Needs to duplicate a lot of code and information between the
-    function/class signatures and the argument parsing code.
--   Lacks a lot of features (hence requires the duplicate code mentioned
-    above) that they openly state in the documentation, and even refers
-    to [click and
-    Typer](https://docs.python.org/3/library/optparse.html#choosing-an-argument-parsing-library)
-    as alternatives, stating that e.g., Typer integrates with type
-    hints.
+- Not very ergonomic and requires a lot of code to set up.
+- The documentation (like a lot of Python standard library
+  documentation) is not easy to follow or read.
+- Needs to duplicate a lot of code and information between the
+  function/class signatures and the argument parsing code.
+- Lacks a lot of features (hence requires the duplicate code mentioned
+  above) that they openly state in the documentation, and even refers to
+  [click and Typer](https://docs.python.org/3/library/optparse.html#choosing-an-argument-parsing-library)
+  as alternatives, stating that e.g., Typer integrates with type hints.
+
 :::
 :::::
 
@@ -120,17 +120,19 @@ their tag line, it is:
 ::: column
 #### Benefits
 
--   A Google built library (though not an official product).
--   A lot of GitHub stars, so it seems to be popular.
+- A Google built library (though not an official product).
+- A lot of GitHub stars, so it seems to be popular.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   The documentation is sparse, disorganised, and not very beginner
-    friendly.
--   Given the documentation, it's very difficult to assess it well
-    enough to make an informed decision.
+- The documentation is sparse, disorganised, and not very beginner
+  friendly.
+- Given the documentation, it's very difficult to assess it well enough
+  to make an informed decision.
+
 :::
 :::::
 
@@ -142,22 +144,24 @@ A widely used, very popular library for building CLIs in Python.
 ::: column
 #### Benefits
 
--   Because of its popularity, there are a lot of resources available
-    online to learn from.
--   Has a lot of features and is very flexible and powerful.
+- Because of its popularity, there are a lot of resources available
+  online to learn from.
+- Has a lot of features and is very flexible and powerful.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Requires a lot of decorators, one for each CLI argument/option, for
-    each function that would be a CLI command.
--   Because it was developed before Python had type hints, it doesn't
-    use them, so there is a lot of duplicated information between the
-    function signatures and the decorators.
--   It is an older package, so it was designed before some of the more
-    modern Python features were available (e.g. type hints and docstring
-    parsing).
+- Requires a lot of decorators, one for each CLI argument/option, for
+  each function that would be a CLI command.
+- Because it was developed before Python had type hints, it doesn't use
+  them, so there is a lot of duplicated information between the function
+  signatures and the decorators.
+- It is an older package, so it was designed before some of the more
+  modern Python features were available (e.g. type hints and docstring
+  parsing).
+
 :::
 :::::
 
@@ -171,58 +175,62 @@ type hints.
 ::: column
 #### Benefits
 
--   Documentation is very well written, easy to follow, and beginner
-    friendly.
--   Like Click, it is very widely used and popular, so there are a lot
-    of resources available to learn from.
--   Of the previous options, this is the newest and most well-designed.
--   While only "owned" by one person, it has a core team of maintainers.
+- Documentation is very well written, easy to follow, and beginner
+  friendly.
+- Like Click, it is very widely used and popular, so there are a lot of
+  resources available to learn from.
+- Of the previous options, this is the newest and most well-designed.
+- While only "owned" by one person, it has a core team of maintainers.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Because it was built on top of Click, it inherits some of its
-    drawbacks.
--   Still needs some level of boilerplate and duplication of code (e.g.
-    CLI help text needs to be written in both the function docstring and
-    the argument/option declaration via `Annotated` Python code).
+- Because it was built on top of Click, it inherits some of its
+  drawbacks.
+- Still needs some level of boilerplate and duplication of code (e.g.
+  CLI help text needs to be written in both the function docstring and
+  the argument/option declaration via `Annotated` Python code).
+
 :::
 :::::
 
 ### Cyclopts
 
-A package specifically designed to resolve some of [Typer's
-limitations](https://cyclopts.readthedocs.io/en/latest/vs_typer/README.html).
+A package specifically designed to resolve some of
+[Typer's limitations](https://cyclopts.readthedocs.io/en/latest/vs_typer/README.html).
 
 ::::: columns
 ::: column
 #### Benefits
 
--   Rather than build on top of previous packages, it is designed from
-    the ground up to take advantage of modern Python features like type
-    hints and docstring parsing.
--   Very ergonomic and requires little to no boilerplate code.
--   Includes features like parsing docstrings for help texts, including
-    the argument/option help text.
--   Can check input values against a set of allowed values, for both
-    string and number types.
--   Supports `Union` types, which also means it can support `Optional`
-    types natively.
--   Multiple input values to an argument/option are supported.
+- Rather than build on top of previous packages, it is designed from the
+  ground up to take advantage of modern Python features like type hints
+  and docstring parsing.
+- Very ergonomic and requires little to no boilerplate code.
+- Includes features like parsing docstrings for help texts, including
+  the argument/option help text.
+- Can check input values against a set of allowed values, for both
+  string and number types.
+- Supports `Union` types, which also means it can support `Optional`
+  types natively.
+- Multiple input values to an argument/option are supported.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   It is a newer package with a smaller user base, so there are fewer
-    resources available online.
--   Because it is newer, it might have more undiscovered bugs or missing
-    features.
--   Since it is still in active development, there might be breaking
-    changes in future releases.
--   Seems to be developed by only one person, so long-term maintenance
-    is uncertain.
+- It is a newer package with a smaller user base, so there are fewer
+  resources available online.
+- Because it is newer, it might have more undiscovered bugs or missing
+  features.
+- Since it is still in active development, there might be breaking
+  changes in future releases.
+- Seems to be developed by only one person, so long-term maintenance is
+  uncertain.
+
 :::
 :::::
 
@@ -245,10 +253,10 @@ to develop and maintain.
 List some potential consequences of this decision.
 :::
 
--   Because it is a much newer package, there might be some issues that
-    come up that lead to breaking changes that we'd have to resolve.
--   Long term maintenance is uncertain, so if the package is abandoned,
-    we might have to switch to another package in the future.
+- Because it is a much newer package, there might be some issues that
+  come up that lead to breaking changes that we'd have to resolve.
+- Long term maintenance is uncertain, so if the package is abandoned, we
+  might have to switch to another package in the future.
 
 ## Resources used for this post
 
@@ -256,11 +264,7 @@ List some potential consequences of this decision.
 List the resources used to write this post
 :::
 
--   [Python Packaging User Guide: Creating and packaging command-line
-    tools](https://packaging.python.org/en/latest/guides/creating-command-line-tools/)
--   [Typer: Alternatives, Inspirations, and
-    Comparisons](https://typer.tiangolo.com/alternatives/)
--   [Typer: Probably the Simplest to Use Python Command Line Interface
-    Library](https://towardsdatascience.com/typer-probably-the-simplest-to-use-python-command-line-interface-library-17abf1a5fd3e/)
--   [Awesome Python: Command-Line Interface
-    Development](https://github.com/vinta/awesome-python#command-line-interface-development)
+- [Python Packaging User Guide: Creating and packaging command-line tools](https://packaging.python.org/en/latest/guides/creating-command-line-tools/)
+- [Typer: Alternatives, Inspirations, and Comparisons](https://typer.tiangolo.com/alternatives/)
+- [Typer: Probably the Simplest to Use Python Command Line Interface Library](https://towardsdatascience.com/typer-probably-the-simplest-to-use-python-command-line-interface-library-17abf1a5fd3e/)
+- [Awesome Python: Command-Line Interface Development](https://github.com/vinta/awesome-python#command-line-interface-development)

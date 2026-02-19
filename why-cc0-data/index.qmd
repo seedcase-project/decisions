@@ -27,8 +27,8 @@ we use ourselves when we are the owners of the data. There are many
 licenses available, but given we are a project that follows open
 principles, we want to use a license that is open. So the question is:
 
-**What open license should we use for our own data and recommend
-to others?**
+What open license should we use for our own data and recommend
+to others?
 
 ## Decision drivers
 
@@ -39,13 +39,13 @@ have arisen that impact work.
 
 It needs or should be:
 
--   A valid [open license](https://opendefinition.org/licenses/)
--   Easy to understand.
--   Fairly widely used or recommended.
--   Applicable to a wide range of data.
--   A globally applicable license.
--   Applicable to data itself, not the database architecture.
--   Generally applicable or specific to scientific/research data.
+- A valid [open license](https://opendefinition.org/licenses/)
+- Easy to understand.
+- Fairly widely used or recommended.
+- Applicable to a wide range of data.
+- A globally applicable license.
+- Applicable to data itself, not the database architecture.
+- Generally applicable or specific to scientific/research data.
 
 ## Considered options
 
@@ -54,8 +54,8 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
-Licensing of data is quite a complex topic, and we are not lawyers. So we
-need to select licenses that are well established, widely used, and
+Licensing of data is quite a complex topic, and we are not lawyers. So
+we need to select licenses that are well established, widely used, and
 simple. For instance, facts (someone's weight in kilograms) cannot be
 copyrighted and since generally research/scientific data is fact-based,
 it might not even be copyrightable, depending on the jurisdiction. For
@@ -69,14 +69,10 @@ legal and applicable. For those reasons, we won't consider them.
 
 From this context, we consider these options:
 
--   [Open Data Commons Attribution License
-    (ODC-By)](https://opendatacommons.org/licenses/by/)
--   [Creative Commons Attribution 4.0 International
-    (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/)
--   [Open Data Commons Public Domain Dedication and License
-    (PDDL)](https://opendatacommons.org/licenses/pddl/)
--   [Creative Commons
-    CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [Open Data Commons Attribution License (ODC-By)](https://opendatacommons.org/licenses/by/)
+- [Creative Commons Attribution 4.0 International (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/)
+- [Open Data Commons Public Domain Dedication and License (PDDL)](https://opendatacommons.org/licenses/pddl/)
+- [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ### ODC-By
 
@@ -89,21 +85,23 @@ source.
 ::: column
 #### Benefits
 
--   It is specifically designed for data and databases.
--   It is a simple license that allows for the data to be used freely,
-    as long as the attribution is given to the original source.
+- It is specifically designed for data and databases.
+- It is a simple license that allows for the data to be used freely, as
+  long as the attribution is given to the original source.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   It seems, [according to an Open Data Commons
-    discussion](https://discuss.okfn.org/t/maintenance-and-future-of-the-open-data-commons-licences/4460/24),
-    that it is not being actively maintained and that they recommend
-    using the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
-    license instead.
--   Of the ODC licenses, it seems it is not as widely used. The ODC-ODbL
-    is the more widely used of the ODC licenses.
+- It seems,
+  [according to an Open Data Commons discussion](https://discuss.okfn.org/t/maintenance-and-future-of-the-open-data-commons-licences/4460/24),
+  that it is not being actively maintained and that they recommend using
+  the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license
+  instead.
+- Of the ODC licenses, it seems it is not as widely used. The ODC-ODbL
+  is the more widely used of the ODC licenses.
+
 :::
 :::::
 
@@ -116,17 +114,19 @@ clarifications that make it more applicable to data.
 ::: column
 #### Benefits
 
--   Has the same benefits as ODC-By, but is more widely used and
-    recommended.
+- Has the same benefits as ODC-By, but is more widely used and
+  recommended.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Unlike ODC-By, it is not specifically designed for data and
-    databases, but rather for creative works.
--   With data itself, it isn't as clear nor unambiguous on how it
-    applies to data.
+- Unlike ODC-By, it is not specifically designed for data and databases,
+  but rather for creative works.
+- With data itself, it isn't as clear nor unambiguous on how it applies
+  to data.
+
 :::
 :::::
 
@@ -139,20 +139,22 @@ means that any rights and conditions to the use of the data are removed.
 ::: column
 #### Benefits
 
--   Ensure very easy (re)use as the conditions are unambiguously clear:
-    A researcher or user can use the data without any conditions.
+- Ensure very easy (re)use as the conditions are unambiguously clear: A
+  researcher or user can use the data without any conditions.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Has the same drawbacks as the ODC-By license, meaning the ODC
-    licenses aren't actively maintained.
--   Because of no conditions on the use of the data, attribution is not
-    required, which is something that the research community relies on
-    for career and funding purposes. However, the research community
-    still generally has a practice of citing things they use, so this is
-    not a major drawback.
+- Has the same drawbacks as the ODC-By license, meaning the ODC licenses
+  aren't actively maintained.
+- Because of no conditions on the use of the data, attribution is not
+  required, which is something that the research community relies on for
+  career and funding purposes. However, the research community still
+  generally has a practice of citing things they use, so this is not a
+  major drawback.
+
 :::
 :::::
 
@@ -165,25 +167,24 @@ rights.
 ::: column
 #### Benefits
 
--   It is the most widely used license for data, recommended by many
-    organisations and repositories. Creative Commons even have a
-    specific
-    [page](https://wiki.creativecommons.org/wiki/CC0_use_for_data) for
-    it.
--   It ensures zero ambiguity about the rights of the data, as they are
-    waived.
--   Makes it much easier to use and re-use the data without any
-    ambiguity.
+- It is the most widely used license for data, recommended by many
+  organisations and repositories. Creative Commons even have a specific
+  [page](https://wiki.creativecommons.org/wiki/CC0_use_for_data) for it.
+- It ensures zero ambiguity about the rights of the data, as they are
+  waived.
+- Makes it much easier to use and re-use the data without any ambiguity.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Like the ODC-PDDL, because of lack of attribution requirements,
-    users or researchers may not cite it if they use it, which can have
-    funding and career implications for the data owners. However, the
-    research community generally has a practice of citing things they
-    use so this might not be important.
+- Like the ODC-PDDL, because of lack of attribution requirements, users
+  or researchers may not cite it if they use it, which can have funding
+  and career implications for the data owners. However, the research
+  community generally has a practice of citing things they use so this
+  might not be important.
+
 :::
 :::::
 
@@ -209,7 +210,7 @@ apply to data, such as privacy laws or data protection laws.
 List some potential consequences of this decision.
 :::
 
--   We don't foresee any major consequences of this decision.
+- We don't foresee any major consequences of this decision.
 
 ## Resources used for this post
 
@@ -217,19 +218,12 @@ List some potential consequences of this decision.
 List the resources used to write this post
 :::
 
--   [Open Data Licenses](https://opendatacommons.org/)
--   [Guide to Open Data
-    Licensing](https://opendefinition.org/guide/data/)
--   [List of all open
-    licenses](https://opendefinition.org/licenses/api/#all-licenses)
--   [Creative Commons wiki on
-    data](https://wiki.creativecommons.org/wiki/Data)
--   [data.world license help](https://data.world/license-help)
--   [Creative Commons Wiki on CC0 use for
-    data](https://wiki.creativecommons.org/wiki/CC0_use_for_data)
--   [figshare: How to choose a license for your
-    data](https://info.figshare.com/user-guide/how-to-choose-a-licence/)
--   [Post-publication sharing of data and
-    tools](https://www.nature.com/articles/461171a)
--   [Open Knowledge Foundation discussion on their Open Data Commons
-    licenses](https://discuss.okfn.org/t/maintenance-and-future-of-the-open-data-commons-licences/4460/24)
+- [Open Data Licenses](https://opendatacommons.org/)
+- [Guide to Open Data Licensing](https://opendefinition.org/guide/data/)
+- [List of all open licenses](https://opendefinition.org/licenses/api/#all-licenses)
+- [Creative Commons wiki on data](https://wiki.creativecommons.org/wiki/Data)
+- [data.world license help](https://data.world/license-help)
+- [Creative Commons Wiki on CC0 use for data](https://wiki.creativecommons.org/wiki/CC0_use_for_data)
+- [figshare: How to choose a license for your data](https://info.figshare.com/user-guide/how-to-choose-a-licence/)
+- [Post-publication sharing of data and tools](https://www.nature.com/articles/461171a)
+- [Open Knowledge Foundation discussion on their Open Data Commons licenses](https://discuss.okfn.org/t/maintenance-and-future-of-the-open-data-commons-licences/4460/24)

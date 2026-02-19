@@ -25,7 +25,7 @@ version as well as deciding when a given state of the software requires
 a version is time- and energy-consuming. So instead, we would
 rather automate this process. So the question is:
 
-*What tool can we use that will automate versioning for us?*
+What tool can we use that will automate versioning for us?
 
 ## Decision drivers
 
@@ -36,22 +36,21 @@ have arisen that impact work.
 
 The main drivers for this decision are that:
 
--   We don't want to manually have to update the version number in files
-    throughout our software.
--   We don't want to manually add Git tags for the versions.
--   We want the version to be determined based on some principles,
-    rather that just a "feeling" or potentially arbitrary decision.
+- We don't want to manually have to update the version number in files
+  throughout our software.
+- We don't want to manually add Git tags for the versions.
+- We want the version to be determined based on some principles, rather
+  that just a "feeling" or potentially arbitrary decision.
 
 Our requirements for the tool are that it:
 
--   Follows [Semantic Versioning](/why-semver/index.qmd).
--   Relies on [Conventional
-    Commits](/why-conventional-commits/index.qmd) to determine which
-    version to set.
--   Includes GitHub Action workflows to auto-generate releases upon
-    merging to the main branch.
--   Updates the version number in the `pyproject.toml` file.
--   Creates a Git tag for the release.
+- Follows [Semantic Versioning](/why-semver/index.qmd).
+- Relies on [Conventional Commits](/why-conventional-commits/index.qmd)
+  to determine which version to set.
+- Includes GitHub Action workflows to auto-generate releases upon
+  merging to the main branch.
+- Updates the version number in the `pyproject.toml` file.
+- Creates a Git tag for the release.
 
 ## Considered options
 
@@ -62,13 +61,13 @@ and drawbacks for each option.
 
 There are only two options that fit our requirements:
 
--   [Python Semantic
-    Release](https://github.com/python-semantic-release/python-semantic-release)
--   [Commitizen](https://github.com/commitizen-tools/commitizen)
+- [Python Semantic Release](https://github.com/python-semantic-release/python-semantic-release)
+- [Commitizen](https://github.com/commitizen-tools/commitizen)
 
 While most package management systems like [uv](/why-uv/index.qmd),
-which we already use, can do version updating and releasing, they don't rely on
-automation based on commit messages. For this reason, we don't consider them.
+which we already use, can do version updating and releasing, they don't
+rely on automation based on commit messages. For this reason, we don't
+consider them.
 
 ### Python Semantic Release
 
@@ -78,20 +77,22 @@ Automatically updates version information for Python projects.
 ::: column
 #### Benefits
 
--   Widely used with a large number of GitHub stars.
--   Often recommended on external guides and websites (e.g. the [Python
-    Packages](https://py-pkgs.org/07-releasing-versioning.html#automatic-version-bumping)
-    book).
--   Very actively maintained and developed.
--   Can also generate an auto-generated changelog.
+- Widely used with a large number of GitHub stars.
+- Often recommended on external guides and websites (e.g. the
+  [Python Packages](https://py-pkgs.org/07-releasing-versioning.html#automatic-version-bumping)
+  book).
+- Very actively maintained and developed.
+- Can also generate an auto-generated changelog.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   The website is difficult to navigate, relative to Commitizen at
-    least. For instance, there aren't any tutorials or "getting started"
-    guides and the colour scheme is a bit hard on the eyes.
+- The website is difficult to navigate, relative to Commitizen at least.
+  For instance, there aren't any tutorials or "getting started" guides
+  and the colour scheme is a bit hard on the eyes.
+
 :::
 :::::
 
@@ -104,19 +105,21 @@ creating and adhering to Conventional Commits.
 ::: column
 #### Benefits
 
--   We already use it for our [commit
-    linting](/why-semantic-release-with-commitizen/index.qmd).
--   The documentation and website are very easy to navigate and
-    understand.
--   Very widely used with a large number of GitHub stars.
--   Very actively maintained and developed.
--   Can also generate an auto-generated changelog.
+- We already use it for our
+  [commit linting](/why-semantic-release-with-commitizen/index.qmd).
+- The documentation and website are very easy to navigate and
+  understand.
+- Very widely used with a large number of GitHub stars.
+- Very actively maintained and developed.
+- Can also generate an auto-generated changelog.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   None.
+- None.
+
 :::
 :::::
 
@@ -138,8 +141,8 @@ between tools.
 List some potential consequences of this decision.
 :::
 
--   Because it's a tool we already use, integrating it should be fairly
-    easy.
+- Because it's a tool we already use, integrating it should be fairly
+  easy.
 
 ## Resources used for this post
 
@@ -147,5 +150,4 @@ List some potential consequences of this decision.
 List the resources used to write this post
 :::
 
--   [Libhunt: Discovering Python
-    packages](https://www.libhunt.com/l/python)
+- [Libhunt: Discovering Python packages](https://www.libhunt.com/l/python)

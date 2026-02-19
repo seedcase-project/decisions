@@ -18,8 +18,8 @@ things to consider is how it should be licensed for use. Given our
 open source tools, we need to decide on which open source license to
 use. Which leads to the question:
 
-*What license fits our needs and values best, while also being easy to
-use, enforce, and understand?*
+What license fits our needs and values best, while also being easy to
+use, enforce, and understand?
 
 ## Decision drivers
 
@@ -28,11 +28,11 @@ our software products, both now and in the future. Aside from our
 guiding [principles](https://design.seedcase-project.org/software),
 there are few other things we need:
 
--   Easy to understand and implement
--   Permissive enough to allow for easy commercial use
--   Doesn't require much enforcement or legal action given how it is
-    used, shared, and distributed
--   Encourages collaboration and sharing of ideas
+- Easy to understand and implement
+- Permissive enough to allow for easy commercial use
+- Doesn't require much enforcement or legal action given how it is used,
+  shared, and distributed
+- Encourages collaboration and sharing of ideas
 
 A major driver here is the effort and energy required to enforce the
 license of any software we build, which will take time away from
@@ -46,28 +46,27 @@ that determine whether a project can be called "open source". We'll use
 these licenses as a starting point. Open source licenses fall under two
 main classes: **permissive** and **copy-left**.
 
--   **Copy-left**: Allows easy re-use and re-distribution if a third
-    party makes changes to the existing product or incorporates the code
-    within another software program. But the restriction is that the
-    resulting software (if distributed external from your organisation)
-    must also be made under the same license. This is considered an
-    "infectious" license, since it spreads as others use it. The
-    drawback is that it can limit the commercial use and does require
-    some legal enforcement to ensure compliance.
+- **Copy-left**: Allows easy re-use and re-distribution if a third party
+  makes changes to the existing product or incorporates the code within
+  another software program. But the restriction is that the resulting
+  software (if distributed external from your organisation) must also be
+  made under the same license. This is considered an "infectious"
+  license, since it spreads as others use it. The drawback is that it
+  can limit the commercial use and does require some legal enforcement
+  to ensure compliance.
 
--   **Permissive**: Has all the same rights as the copy-left licenses,
-    but they do not enforce that derived works or new works contain the
-    same license as the original work. These type of licenses are
-    generally seen as more friendly to commercial enterprises, as they
-    will allow companies to use bits of code in proprietary software
-    without having to release the source code for free.
+- **Permissive**: Has all the same rights as the copy-left licenses, but
+  they do not enforce that derived works or new works contain the same
+  license as the original work. These type of licenses are generally
+  seen as more friendly to commercial enterprises, as they will allow
+  companies to use bits of code in proprietary software without having
+  to release the source code for free.
 
 Given our drivers, we focus on permissive licenses, which are:
 
--   [MIT License](https://opensource.org/licenses/MIT)
--   [Apache License 2.0](https://opensource.org/licenses/Apache-2.0)
--   [BSD 3-Clause
-    License](https://opensource.org/license/bsd-3-clause/))
+- [MIT License](https://opensource.org/licenses/MIT)
+- [Apache License 2.0](https://opensource.org/licenses/Apache-2.0)
+- [BSD 3-Clause License](https://opensource.org/license/bsd-3-clause/))
 
 ### MIT License
 
@@ -78,26 +77,27 @@ the least restrictions.
 ::: column
 #### Benefits
 
--   Very popular and widely used with the open source community, for
-    example, most of Python, R, and JavaScript packages are licensed
-    under the MIT License.
--   Very easy to understand and implement, with minimal legal jargon. It
-    has a total of some 200 words, so it is very easy to read.
--   Allows for commercial use and distribution, with no requirement to
-    release the source code of any derived works.
--   Requires nearly no legal enforcement, as it is so permissive.
--   Includes the software's documentation as part of it's license
-    coverage.
+- Very popular and widely used with the open source community, for
+  example, most of Python, R, and JavaScript packages are licensed under
+  the MIT License.
+- Very easy to understand and implement, with minimal legal jargon. It
+  has a total of some 200 words, so it is very easy to read.
+- Allows for commercial use and distribution, with no requirement to
+  release the source code of any derived works.
+- Requires nearly no legal enforcement, as it is so permissive.
+- Includes the software's documentation as part of it's license
+  coverage.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   The only major drawback is the same thing as it's strength: It is so
-    permissive that it allows for anyone to use the software in any way
-    they see fit, including proprietary software. This can be seen as
-    a drawback if you want to ensure that your software remains open
-    source.
+- The only major drawback is the same thing as it's strength: It is so
+  permissive that it allows for anyone to use the software in any way
+  they see fit, including proprietary software. This can be seen as a
+  drawback if you want to ensure that your software remains open source.
+
 :::
 :::::
 
@@ -110,19 +110,21 @@ few more restrictions.
 ::: column
 #### Benefits
 
--   Quite popular in the open source community.
--   Includes a section on patents, which can be useful if you are a
-    company with patents.
+- Quite popular in the open source community.
+- Includes a section on patents, which can be useful if you are a
+  company with patents.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Is a bit more complex than the MIT License, with more legal jargon.
--   Requires some legal enforcement to ensure compliance.
--   The patent section is a bit difficult to understand as a developer,
-    so presumably it is also difficult for users to understand.
--   Doesn't include the documentation as part of the license coverage.
+- Is a bit more complex than the MIT License, with more legal jargon.
+- Requires some legal enforcement to ensure compliance.
+- The patent section is a bit difficult to understand as a developer, so
+  presumably it is also difficult for users to understand.
+- Doesn't include the documentation as part of the license coverage.
+
 :::
 :::::
 
@@ -132,24 +134,26 @@ The BSD 3-Clause License is similar to both the other licenses, but with
 less restrictions than the Apache License 2.0 and slightly more than the
 MIT License. There is also the BSD 2-Clause License, but it is not as
 commonly used and, while nearly identical to the MIT License, is less
-specific in it's language. In simple terms, the BSD 2-Clause License is a worse version of the
-MIT License, so we don't cover it here.
+specific in it's language. In simple terms, the BSD 2-Clause License is
+a worse version of the MIT License, so we don't cover it here.
 
 ::::: columns
 ::: column
 #### Benefits
 
--   Is nearly identical to the MIT License, but has a clause to indicate
-    not to use the name of the copyright holder to endorse or promote
-    products derived from the software.
+- Is nearly identical to the MIT License, but has a clause to indicate
+  not to use the name of the copyright holder to endorse or promote
+  products derived from the software.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Only covers the software and it's binary format, not the
-    documentation.
--   The least commonly used of the licenses considered here.
+- Only covers the software and it's binary format, not the
+  documentation.
+- The least commonly used of the licenses considered here.
+
 :::
 :::::
 
@@ -160,16 +164,15 @@ easiest to understand and use.
 
 ### Consequences
 
--   We may have issues in the future if we convert to a company and deal
-    with different types of legal issues, given how permissive the
-    license is.
+- We may have issues in the future if we convert to a company and deal
+  with different types of legal issues, given how permissive the license
+  is.
 
 ## Resources
 
--   StackExchange questions on MIT vs BSD
-    [here](https://opensource.stackexchange.com/questions/11109/what-are-the-practical-differences-between-mit-apache-and-bsd-licenses)
-    and
-    [here](https://opensource.stackexchange.com/questions/217/what-are-the-essential-differences-between-the-bsd-and-mit-licences)
--   [Open Source Initiative](https://opensource.org/)
--   [Blog post on which to
-    use](https://www.exygy.com/blog/which-license-should-i-use-mit-vs-apache-vs-gpl)
+- StackExchange questions on MIT vs BSD
+  [here](https://opensource.stackexchange.com/questions/11109/what-are-the-practical-differences-between-mit-apache-and-bsd-licenses)
+  and
+  [here](https://opensource.stackexchange.com/questions/217/what-are-the-essential-differences-between-the-bsd-and-mit-licences)
+- [Open Source Initiative](https://opensource.org/)
+- [Blog post on which to use](https://www.exygy.com/blog/which-license-should-i-use-mit-vs-apache-vs-gpl)

@@ -99,7 +99,7 @@ preferences).
 
 The question is, therefore:
 
-> Which branching strategy is the best fit for the Seedcase Project?
+Which branching strategy is the best fit for the Seedcase Project?
 
 ## Decision drivers
 
@@ -122,12 +122,12 @@ quality of everyone's work.
 
 For the Seedcase Project, we want to employ a branching strategy that:
 
-1)  is simple, transparent, and beginner-friendly
-2)  enables consistency across contributions through clear guidelines
-    for branching, committing, and reviewing
-3)  works well with parallel, asynchronous development
-4)  supports continuous delivery
-5)  works well for smaller teams
+1. Is simple, transparent, and beginner-friendly.
+2. Enables consistency across contributions through clear guidelines for
+   branching, committing, and reviewing.
+3. Works well with parallel, asynchronous development.
+4. Supports continuous delivery.
+5. Works well for smaller teams.
 
 ## Considered options
 
@@ -163,21 +163,22 @@ directly to the trunk/`main` branch.
 ::: column
 #### Benefits
 
--   More continuous integration with frequent merges to the `main`
-    branch
--   Focuses on smaller, self-contained changes
--   Minimises merge conflicts
--   Allows for quick releases
--   Works well for smaller teams
+- More continuous integration with frequent merges to the `main` branch
+- Focuses on smaller, self-contained changes
+- Minimises merge conflicts
+- Allows for quick releases
+- Works well for smaller teams
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Frequent integration requires strong collaboration and communication
-    skills, potentially with frequent sync-up meetings
--   Works best with small, self-contained tasks to enable short-lived
-    branches (or omission of additional branches all together)
+- Frequent integration requires strong collaboration and communication
+  skills, potentially with frequent sync-up meetings
+- Works best with small, self-contained tasks to enable short-lived
+  branches (or omission of additional branches all together)
+
 :::
 :::
 
@@ -208,20 +209,22 @@ created from the `main` branch and is be merged into both `main` and
 ::: column
 #### Benefits
 
--   Clear framework offering an explicit shared understanding of the
-    branching and releasing processes
--   Clear responsibilities for each branch
--   Versioning per definition
--   Production versions are easy to navigate through tags
+- Clear framework offering an explicit shared understanding of the
+  branching and releasing processes
+- Clear responsibilities for each branch
+- Versioning per definition
+- Production versions are easy to navigate through tags
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Revolves around releases, and we, currently, need a more continuous
-    delivery-like approach
--   Complexity due to the number of branches, which could lead to merge
-    conflicts and slow down the development process
+- Revolves around releases, and we, currently, need a more continuous
+  delivery-like approach
+- Complexity due to the number of branches, which could lead to merge
+  conflicts and slow down the development process
+
 :::
 :::
 
@@ -248,22 +251,24 @@ on the new branch is deployed as soon as it is merged into `main`.
 ::: column
 #### Benefits
 
--   Allows for continuous development and the ability to quickly address
-    issues of all kinds (including security issues, bugs, and small
-    feature requests)
--   The same simple processes are used to address smaller and larger
-    developments
--   Works well for smaller teams and asynchronous collaboration, common
-    in open-source projects
+- Allows for continuous development and the ability to quickly address
+  issues of all kinds (including security issues, bugs, and small
+  feature requests)
+- The same simple processes are used to address smaller and larger
+  developments
+- Works well for smaller teams and asynchronous collaboration, common in
+  open-source projects
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Does not by definition include releases
--   Might be more susceptible to bugs in production (compared to Git
-    flow) because of the lack of dedicated development branches
--   Long-living branches can increase the risk of merge conflicts
+- Does not by definition include releases
+- Might be more susceptible to bugs in production (compared to Git flow)
+  because of the lack of dedicated development branches
+- Long-living branches can increase the risk of merge conflicts
+
 :::
 :::
 
@@ -276,17 +281,17 @@ REASONS."
 
 We decided on using the GitHib flow branching strategy because:
 
-1)  It is simple and beginner-friendly strategy
-2)  It is both well-known and well documented, creating clear guidelines
-    that enable consistency across contributions
-3)  It offers clear guidelines on every step of collaborative
-    development, including branching, committing, and review processes
-4)  Longer-living branches works well with parallel, asynchronous work
-5)  The balance between having multiple branches as well as using
-    continuous integration and delivery approaches
-6)  Not overly complex for a smaller team like ours
-7)  Allows for continuous development with the same simple processes for
-    both
+1. It is simple and beginner-friendly strategy.
+2. It is both well-known and well documented, creating clear guidelines
+   that enable consistency across contributions.
+3. It offers clear guidelines on every step of collaborative
+   development, including branching, committing, and review processes.
+4. Longer-living branches works well with parallel, asynchronous work.
+5. The balance between having multiple branches as well as using
+   continuous integration and delivery approaches.
+6. Not overly complex for a smaller team like ours.
+7. Allows for continuous development with the same simple processes for
+   both.
 
 ### Consequences
 

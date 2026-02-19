@@ -19,14 +19,14 @@ statement in the form of a question for the problem.
 :::
 
 Communication within a team is often done with email or, in more modern
-and tech environments, with instant messengers like Slack. While email is a great tool
-when communicating with people external to a team (or organization),
-there are numerous reasons why it is a poor communication tool within
-teams. It is therefore important to us to select a way of communicating
-within our development team that will facilitate good cooperation. The
-question here becomes:
+and tech environments, with instant messengers like Slack. While email
+is a great tool when communicating with people external to a team (or
+organization), there are numerous reasons why it is a poor communication
+tool within teams. It is therefore important to us to select a way of
+communicating within our development team that will facilitate good
+cooperation. The question here becomes:
 
-> Which tool should we use for inter-team communication?
+Which tool should we use for inter-team communication?
 
 ## Decision drivers
 
@@ -66,19 +66,21 @@ accessible after 90 days.
 ::: column
 #### Benefits
 
--   Instant messaging with colleagues
--   Option to create channels or groups for specific jobs or teams
--   It is possible to download conversation in groups, as well as
-    personal chats to avoid knowledge loss
+- Instant messaging with colleagues
+- Option to create channels or groups for specific jobs or teams
+- It is possible to download conversation in groups, as well as personal
+  chats to avoid knowledge loss
+
 :::
 
 ::: column
 #### Drawbacks
 
--   History is lost after 90 days on the free version
--   Traditionally not geared towards voice communication (although it
-    does support that)
--   Only 1-on-1 conversations (Huddles) in the free version
+- History is lost after 90 days on the free version
+- Traditionally not geared towards voice communication (although it does
+  support that)
+- Only 1-on-1 conversations (Huddles) in the free version
+
 :::
 :::
 
@@ -96,20 +98,21 @@ community engagement.
 ::: column
 #### Benefits
 
--   Free version with no restrictions on functionality
--   You can video/voice call with individuals and teams and share
-    screens
--   History is always available, and accessible to new members added to
-    groups
+- Free version with no restrictions on functionality
+- You can video/voice call with individuals and teams and share screens
+- History is always available, and accessible to new members added to
+  groups
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Not entirely intuitive for beginners
--   Adds for 'fun' add-ons must be closed every time you log in
--   Historically a problem with uptime, but hovering around 99.6% for
-    the last couple of years
+- Not entirely intuitive for beginners
+- Adds for 'fun' add-ons must be closed every time you log in
+- Historically a problem with uptime, but hovering around 99.6% for the
+  last couple of years
+
 :::
 :::
 
@@ -122,14 +125,14 @@ REASONS."
 
 We have decided on Discord for the following reasons:
 
--   Its free plan is very suitable for our purposes
+- Its free plan is very suitable for our purposes
 
--   Its overall focus and values (community based) align with our goals
-    and values, since we want to encourage and build an online (and in
-    person) community around Seedcase and related projects
+- Its overall focus and values (community based) align with our goals
+  and values, since we want to encourage and build an online (and in
+  person) community around Seedcase and related projects
 
--   Text chat history is available in the free version. So onboarding a
-    new member is easier for them to see what's been happening
+- Text chat history is available in the free version. So onboarding a
+  new member is easier for them to see what's been happening
 
--   Joining the voice/video channels are very easy, which is perfect in
-    remote working settings and when co-working together
+- Joining the voice/video channels are very easy, which is perfect in
+  remote working settings and when co-working together

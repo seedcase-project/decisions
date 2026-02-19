@@ -8,23 +8,24 @@ categories:
   - code
   - text
 ---
+
 <!--TODO #42 docs: Write a Why document on Text-based tools -->
 
 "Everything as code"
 
-https://www.adaptavist.com/blog/everything-as-code-embracing-the-codified-evolution
+<https://www.adaptavist.com/blog/everything-as-code-embracing-the-codified-evolution>
 
-https://medium.com/ethanjb/the-beginning-of-everything-as-code-a25c4e9a75e9
+<https://medium.com/ethanjb/the-beginning-of-everything-as-code-a25c4e9a75e9>
 
-https://openpracticelibrary.com/practice/everything-as-code/
+<https://openpracticelibrary.com/practice/everything-as-code/>
 
-https://thenewstack.io/automate-devops-with-an-everything-as-code-approach/
+<https://thenewstack.io/automate-devops-with-an-everything-as-code-approach/>
 
-https://octopus.com/blog/what-is-everything-as-code
+<https://octopus.com/blog/what-is-everything-as-code>
 
-https://medium.com/geekculture/code-as-diagrams-whats-the-point-13dbe6053738
+<https://medium.com/geekculture/code-as-diagrams-whats-the-point-13dbe6053738>
 
-https://www.cloudbolt.io/blog/3-advantages-and-challenges-of-infrastructure-as-code-iac/
+<https://www.cloudbolt.io/blog/3-advantages-and-challenges-of-infrastructure-as-code-iac/>
 
 ::: content-hidden
 Use other decision posts as inspiration to writing these.
@@ -47,8 +48,8 @@ have arisen that impact work.
 ## Considered options
 
 ::: content-hidden
-List and describe some of the options, as well as some of the benefits and
-drawbacks for each option.
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
 :::
 
 ### Option 1
@@ -58,11 +59,14 @@ drawbacks for each option.
 #### Benefits
 
 - Item 1
+
 :::
+
 ::: {.column}
 #### Drawbacks
 
 - Item 1
+
 :::
 :::
 

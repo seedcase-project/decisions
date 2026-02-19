@@ -1,7 +1,7 @@
 # Changelog
 
-Since we follow [Conventional
-Commits](https://decisions.seedcase-project.org/why-conventional-commits),
+Since we follow
+[Conventional Commits](https://decisions.seedcase-project.org/why-conventional-commits),
 we're able to automatically create formal "releases" of the website
 based on our commit messages. Releases in the context of websites are
 simply snapshots in time of the website content. We use
@@ -31,7 +31,8 @@ within each release.
 
 ### Feat
 
-- :sparkles: post on iterative and incremental with Kanban development (#239)
+- :sparkles: post on iterative and incremental with Kanban development
+  (#239)
 
 ## 0.4.0 (2026-01-28)
 
@@ -50,12 +51,6 @@ within each release.
 ### Refactor
 
 - :arrow_up: update theme and files from template (#238)
-
-## 0.3.0 (2025-12-18)
-
-### Feat
-
-- :sparkles: add why mypy post (#227)
 
 ## 0.3.0 (2025-12-18)
 
@@ -93,10 +88,12 @@ within each release.
 - :coffin: Remove unnecessary style code for column widths
 - :globe_with_meridians: Fixed link to internal decision post
 - :pencil2: The yaml header was incomplete.
-- :globe_with_meridians: Fix links to internal and external files/content
+- :globe_with_meridians: Fix links to internal and external
+  files/content
 - :rotating_light: Fixed URLs that we're resolving
 
 ### Refactor
 
 - :recycle: decide on uv, not Poetry (#170)
-- :recycle: reduce number of categories, remove redundant/unecessary ones
+- :recycle: reduce number of categories, remove redundant/unecessary
+  ones

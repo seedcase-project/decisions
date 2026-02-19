@@ -23,41 +23,41 @@ team/organisation that will use our software.
 
 So our question is:
 
-> Which cloud hosting provider should we use for our demonstrating and
-> testing purposes?
+Which cloud hosting provider should we use for our demonstrating and
+testing purposes?
 
 ## Decision drivers
 
 We want to decide on a cloud provider based on these features/metrics:
 
--   Price: Relatively inexpensive in costs, since it will only be for
-    demonstration purposes.
--   Easy of use: It shouldn't be too difficult to use.
--   Customisable: The provider should be easy to customise to use
-    different frameworks/tools, if we need to adjust. For instance we
-    should be able to use either of: venv, poetry, docker and etc.
--   GitHub Authentication: The cloud provider should integrate with
-    GitHub Authentication, because we already use GitHub for the
-    Seedcase repositories and project management.
--   GitHub Actions Integration: The cloud provider should integrate with
-    GitHub Actions, allowing us to create pipelines easily.
--   Managed PostgreSQL: It should have a managed PostgreSQL database to
-    store application data if needed.
--   "Native" support for Django application: It should have support for
-    running a Django application without the need to wrap it in package
-    or Docker container.
--   Docker image or Dockerfile support: The cloud provider should also
-    have support for running Docker images. Potentially, providing a
-    Dockerfile would be convenient.
--   Docker-compose support: A cloud provider with docker-compose support
-    would allow us to easily spin up complicated environment
-    (application, database and etc) in a similar way as we do locally.
--   Logging and alerting: Logging and alerts would be nice features for
-    the cloud provider, but not so relevant (and, therefore, not
-    required) for a demo environment.
--   Similar to production environment: We want the demo environment to
-    be similar to the production environment, but this may vary a lot
-    based on the team/organisation using the software.
+- Price: Relatively inexpensive in costs, since it will only be for
+  demonstration purposes.
+- Easy of use: It shouldn't be too difficult to use.
+- Customisable: The provider should be easy to customise to use
+  different frameworks/tools, if we need to adjust. For instance we
+  should be able to use either of: venv, poetry, docker and etc.
+- GitHub Authentication: The cloud provider should integrate with GitHub
+  Authentication, because we already use GitHub for the Seedcase
+  repositories and project management.
+- GitHub Actions Integration: The cloud provider should integrate with
+  GitHub Actions, allowing us to create pipelines easily.
+- Managed PostgreSQL: It should have a managed PostgreSQL database to
+  store application data if needed.
+- "Native" support for Django application: It should have support for
+  running a Django application without the need to wrap it in package or
+  Docker container.
+- Docker image or Dockerfile support: The cloud provider should also
+  have support for running Docker images. Potentially, providing a
+  Dockerfile would be convenient.
+- Docker-compose support: A cloud provider with docker-compose support
+  would allow us to easily spin up complicated environment (application,
+  database and etc) in a similar way as we do locally.
+- Logging and alerting: Logging and alerts would be nice features for
+  the cloud provider, but not so relevant (and, therefore, not required)
+  for a demo environment.
+- Similar to production environment: We want the demo environment to be
+  similar to the production environment, but this may vary a lot based
+  on the team/organisation using the software.
 
 ## Considered options
 
@@ -69,7 +69,7 @@ Ocean](https://www.digitalocean.com/), [Vercel](https://vercel.com/) and
 the different features.
 
 |                                                              | Azure           | Render                               | Digital Ocean            | Vercel                 | Fly.io              |
-|----------------|------------|------------|------------|------------|------------|
+|--------------------------------------------------------------|-----------------|--------------------------------------|--------------------------|------------------------|---------------------|
 | Price (per month)                                            | 1000kr          | Free or 19\$ user + 20\$ DB          | ?                        | Free or 20\$ user      | Cost for usage only |
 | Ease of use                                                  | Hard            | Easy                                 | Medium                   | Easy                   | Easy / Medium       |
 | Customizability (venv, Poetry, Docker)                       | High            | Medium                               | High                     | Low                    | Medium              |
@@ -108,28 +108,28 @@ Prometheus and Grafana).
 
 The other cloud providers, where not chosen for these reasons:
 
--   Render was our initial choice. It was cheap and easy to setup, but
-    the cost is per user plus the usage (around 100\$ per month vs 1\$
-    for Fly). Render is very user friendly with magic deployments, but
-    we would need to adjust these anyway for test and etc.
--   Azure is able to do everything we require, but it is too complicated
-    for a demo environment.
--   Vercel is easy to use, but lacks customisability. For instance, it
-    seemed not to work so well with Poetry and it is unable to work with
-    Docker.
--   Digital Ocean could be a fair choice, but I was unable to make it
-    work - so in that sense it fails the "ease of use"-criteria.
+- Render was our initial choice. It was cheap and easy to setup, but the
+  cost is per user plus the usage (around 100\$ per month vs 1\$ for
+  Fly). Render is very user friendly with magic deployments, but we
+  would need to adjust these anyway for test and etc.
+- Azure is able to do everything we require, but it is too complicated
+  for a demo environment.
+- Vercel is easy to use, but lacks customisability. For instance, it
+  seemed not to work so well with Poetry and it is unable to work with
+  Docker.
+- Digital Ocean could be a fair choice, but I was unable to make it work
+  - so in that sense it fails the "ease of use"-criteria.
 
 ### Consequences
 
--   PostgreSQL is a natural part of Fly.io, but it is not a **Managed
-    PostgreSQL** like the other cloud providers. A PostgreSQL is "just
-    an app" in Fly.io, so it might require a bit more maintenance.
-    However, even in the unlikely scenario of complete data loss, there
-    is no significant impact since Fly.io serves solely as a
-    demonstration environment.
--   Storage is cheap in Fly.io, but there are some limitations [Volume
-    considerations](https://fly.io/docs/reference/volumes/#volume-considerations).
-    But again this is only a demo environment
--   Fly.io lacks docker-compose support, so we will not be able to reuse
-    docker-compose files from our local development.
+- PostgreSQL is a natural part of Fly.io, but it is not a
+  **Managed PostgreSQL** like the other cloud providers. A PostgreSQL is
+  "just an app" in Fly.io, so it might require a bit more maintenance.
+  However, even in the unlikely scenario of complete data loss, there is
+  no significant impact since Fly.io serves solely as a demonstration
+  environment.
+- Storage is cheap in Fly.io, but there are some limitations
+  [Volume considerations](https://fly.io/docs/reference/volumes/#volume-considerations).
+  But again this is only a demo environment
+- Fly.io lacks docker-compose support, so we will not be able to reuse
+  docker-compose files from our local development.

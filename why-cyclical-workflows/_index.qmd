@@ -7,6 +7,7 @@ draft: true
 #  -
 ---
 
-Follow the tidyverse team approach to repo development, by dedicating periods of time to specific repos, and rotating between.
+Follow the tidyverse team approach to repo development, by dedicating
+periods of time to specific repos, and rotating between.
 
 <!--TODO #34 Write a Why doc on Cyclical Workflow-->

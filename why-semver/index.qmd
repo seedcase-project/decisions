@@ -30,8 +30,7 @@ or update is released that is widely used throughout the software
 industry, almost for as long as software as been built. But there are
 different ways to version software, so the question is:
 
-> Which style of software versioning do we use for our software
-> projects?
+Which style of software versioning do we use for our software products?
 
 ## Decision drivers
 
@@ -66,8 +65,8 @@ made. Broadly, each style has variations, which sometimes can be a
 combination of the two. We'll compare the two most common, standardised
 systems:
 
--   [Semantic Versioning (SemVer)](https://semver.org/)
--   [Calendar Versioning (CalVer)](https://calver.org/)
+- [Semantic Versioning (SemVer)](https://semver.org/)
+- [Calendar Versioning (CalVer)](https://calver.org/)
 
 ### SemVer
 
@@ -83,34 +82,33 @@ change, so from `0.1.0` to `1.0.0`.
 ::: column
 #### Benefits
 
--   This is the most widely used versioning system in the software
-    industry, so it's familiar to most people in the industry.
--   It conveys information about changes well, since it's clear from the
-    numbering what has changed between versions
--   It has a large number of tools and packages that support it, combine
-    well with it, or integrate well into development workflows around
-    it. For instance, tools like:
-    -   [Conventional
-        Changelog](https://github.com/conventional-changelog/conventional-changelog)
-        to automatically generate changelogs based on the commit
-        messages that use the [Conventional
-        Commits](/why-conventional-commits/index.qmd) format.
-    -   [Python Semantic
-        Release](https://python-semantic-release.readthedocs.io/en/latest/)
-        to automatically increment the version number based on the
-        changes made and create a release based on changes to the
-        version.
+- This is the most widely used versioning system in the software
+  industry, so it's familiar to most people in the industry.
+- It conveys information about changes well, since it's clear from the
+  numbering what has changed between versions
+- It has a large number of tools and packages that support it, combine
+  well with it, or integrate well into development workflows around it.
+  For instance, tools like:
+  - [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog)
+    to automatically generate changelogs based on the commit messages
+    that use the
+    [Conventional Commits](/why-conventional-commits/index.qmd) format.
+  - [Python Semantic Release](https://python-semantic-release.readthedocs.io/en/latest/)
+    to automatically increment the version number based on the changes
+    made and create a release based on changes to the version.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   It can be very difficult to determine when something is a major,
-    minor, or patch change. Sometimes it is perfectly clear, but often,
-    a change is hard to place in these three categories.
--   It can be difficult to determine what constitutes a breaking change.
--   More difficult (but not impossible) to automate, since it can
-    involve a large amount of human judgement.
+- It can be very difficult to determine when something is a major,
+  minor, or patch change. Sometimes it is perfectly clear, but often, a
+  change is hard to place in these three categories.
+- It can be difficult to determine what constitutes a breaking change.
+- More difficult (but not impossible) to automate, since it can involve
+  a large amount of human judgement.
+
 :::
 :::
 
@@ -125,24 +123,25 @@ SemVer and CalVer, such as `YYYY.MINOR.PATCH`.
 ::: column
 #### Benefits
 
--   Very easy to use and understand, as it is based on dates. Whatever
-    date the software is released on is the version number.
--   Works very well for some software projects, especially those with
-    very regular releases. For instance, the most popular Linux
-    distribution, Ubuntu, uses a form of CalVer, that increment every 6
-    months.
+- Very easy to use and understand, as it is based on dates. Whatever
+  date the software is released on is the version number.
+- Works very well for some software projects, especially those with very
+  regular releases. For instance, the most popular Linux distribution,
+  Ubuntu, uses a form of CalVer, that increment every 6 months.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   It doesn't contain any information on what was changed between
-    versions.
--   Breaking changes are not communicated in the version number.
--   There are substantially fewer tools and packages to help automate
-    release and development workflows compared to SemVer.
--   Doesn't work as well for some software projects, especially those
-    that are not released on a regular basis.
+- It doesn't contain any information on what was changed between
+  versions.
+- Breaking changes are not communicated in the version number.
+- There are substantially fewer tools and packages to help automate
+  release and development workflows compared to SemVer.
+- Doesn't work as well for some software projects, especially those that
+  are not released on a regular basis.
+
 :::
 :::
 

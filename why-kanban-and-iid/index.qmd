@@ -33,8 +33,8 @@ formally, or at least intentionally, choose a way of working together as
 a team that is grounded in knowledge, evidence, and reasoning. So our
 question is:
 
-*What planning and management workflow should we use to manage
-developing software and other types of products together as a team?*
+What planning and management workflow should we use to manage
+developing software and other types of products together as a team?
 
 ## Decision drivers
 
@@ -45,13 +45,13 @@ have arisen that impact work.
 
 We want and need:
 
--   A structured and explicit way of working together and building
-    software.
--   A lightweight process that doesn't add too much overhead, as we are
-    a small team.
--   Flexibility and adaptability, especially since we are continually
-    learning what best practices are, how to best work together, and
-    what the *specific* needs actually are that we want to solve.
+- A structured and explicit way of working together and building
+  software.
+- A lightweight process that doesn't add too much overhead, as we are a
+  small team.
+- Flexibility and adaptability, especially since we are continually
+  learning what best practices are, how to best work together, and what
+  the *specific* needs actually are that we want to solve.
 
 ## Considered options
 
@@ -62,14 +62,11 @@ and drawbacks for each option.
 
 We considered the following options:
 
--   [Iterative
-    development](https://en.wikipedia.org/wiki/Iterative_design)
--   [Incremental
-    development](https://en.wikipedia.org/wiki/Incremental_build_model)
--   [Iterative and incremental
-    development](https://en.wikipedia.org/wiki/Iterative_and_incremental_development)
--   [Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development))
--   [Kanban](https://en.wikipedia.org/wiki/Kanban_(development))
+- [Iterative development](https://en.wikipedia.org/wiki/Iterative_design)
+- [Incremental development](https://en.wikipedia.org/wiki/Incremental_build_model)
+- [Iterative and incremental development](https://en.wikipedia.org/wiki/Iterative_and_incremental_development)
+- [Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development))
+- [Kanban](https://en.wikipedia.org/wiki/Kanban_(development))
 
 We don't consider the [waterfall
 model](https://en.wikipedia.org/wiki/Waterfall_model), as it is not
@@ -111,33 +108,34 @@ There are numerous benefits to using an iterative development approach,
 as is seen in most of the resources linked at the bottom of this post.
 Some of the main ones are:
 
--   Because of the cyclical nature of building, testing, and getting
-    feedback early and often, products built with this approach tend to
-    be better aligned with user needs and expectations.
--   You're more likely to identify problems earlier and then addressing
-    them, which means the product is less likely to have failures or
-    bugs later on.
--   It's a flexible and adaptive approach that makes it more resilient
-    to changes in user requirements (and other things that happen in the
-    world).
+- Because of the cyclical nature of building, testing, and getting
+  feedback early and often, products built with this approach tend to be
+  better aligned with user needs and expectations.
+- You're more likely to identify problems earlier and then addressing
+  them, which means the product is less likely to have failures or bugs
+  later on.
+- It's a flexible and adaptive approach that makes it more resilient to
+  changes in user requirements (and other things that happen in the
+  world).
+
 :::
 
 ::: column
 #### Drawbacks
 
--   In general, this approach works best with a skilled and experienced
-    team, especially when it comes to designing the initial "idea" or
-    mental model of the product, as well as having a good understanding
-    of user needs and how to gather feedback effectively.
--   Usually an explicit design stage is skipped or minimized, as
-    "working software" and a prototype are the focus. This can lead to
-    technical debt or suboptimal architecture if not managed well.
--   Works well when the overall goal is fairly clear, but the details
-    are not. If the overall goal is unclear or keeps changing, it can
-    lead to "feature creep" or a lack of focus as additional things are
-    added.
--   A general roadmap isn't usually defined clearly, given the nature of
-    this approach.
+- In general, this approach works best with a skilled and experienced
+  team, especially when it comes to designing the initial "idea" or
+  mental model of the product, as well as having a good understanding of
+  user needs and how to gather feedback effectively.
+- Usually an explicit design stage is skipped or minimized, as "working
+  software" and a prototype are the focus. This can lead to technical
+  debt or suboptimal architecture if not managed well.
+- Works well when the overall goal is fairly clear, but the details are
+  not. If the overall goal is unclear or keeps changing, it can lead to
+  "feature creep" or a lack of focus as additional things are added.
+- A general roadmap isn't usually defined clearly, given the nature of
+  this approach.
+
 :::
 :::::
 
@@ -164,35 +162,36 @@ room as it's completed, even if the entire house isn't finished yet.
 Like with iterative development above, there are many benefits, but
 we'll only list the most relevant ones here:
 
--   A strong initial planning and design phase helps to ensure a strong
-    overall architecture and structure of the software as well as to
-    incorporate as much of the user requirements as possible.
--   As the overall project is broken down into smaller, more manageable
-    pieces, it becomes much easier to create and manage a roadmap or
-    plan.
--   Each increment can add value to the user, as each increment is
-    (technically) a working piece of the final software.
+- A strong initial planning and design phase helps to ensure a strong
+  overall architecture and structure of the software as well as to
+  incorporate as much of the user requirements as possible.
+- As the overall project is broken down into smaller, more manageable
+  pieces, it becomes much easier to create and manage a roadmap or plan.
+- Each increment can add value to the user, as each increment is
+  (technically) a working piece of the final software.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   If the final working software isn't easily broken down because of
-    inherent coupling and interdependence, it can be difficult to apply
-    incremental development.
--   Like with iterative development, if additional requirements or needs
-    come up during the process, it requires changing the plan including
-    where or how increments are developed.
--   Because there is less focus on getting user feedback regularly and
-    often, there may be a risk of a misalignment between the final
-    product and the user needs and expectations.
+- If the final working software isn't easily broken down because of
+  inherent coupling and interdependence, it can be difficult to apply
+  incremental development.
+- Like with iterative development, if additional requirements or needs
+  come up during the process, it requires changing the plan including
+  where or how increments are developed.
+- Because there is less focus on getting user feedback regularly and
+  often, there may be a risk of a misalignment between the final product
+  and the user needs and expectations.
+
 :::
 :::::
 
 ### Iterative and incremental development
 
-This is the combination of the [iterative and incremental
-development](https://en.wikipedia.org/wiki/Iterative_and_incremental_development)
+This is the combination of the
+[iterative and incremental development](https://en.wikipedia.org/wiki/Iterative_and_incremental_development)
 approaches. It involves breaking down the project into smaller
 increments, and then within each increment, following an iterative cycle
 of designing, prototyping, testing, analyzing, and refining.
@@ -206,23 +205,25 @@ refining the design based on the feedback (iterative).
 ::: column
 #### Benefits
 
--   Has the combined benefits of both iterative and incremental
-    development approaches, as described above.
--   Because of the combination of both approaches, it tends to be more
-    flexible and adaptive to changes in user requirements and needs,
-    while also ensuring a strong overall architecture and structure of
-    the software.
--   Doesn't have as many of the drawbacks of either approach alone, as
-    the weaknesses of one approach are mostly mitigated by the strengths
-    of the other.
+- Has the combined benefits of both iterative and incremental
+  development approaches, as described above.
+- Because of the combination of both approaches, it tends to be more
+  flexible and adaptive to changes in user requirements and needs, while
+  also ensuring a strong overall architecture and structure of the
+  software.
+- Doesn't have as many of the drawbacks of either approach alone, as the
+  weaknesses of one approach are mostly mitigated by the strengths of
+  the other.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Because it combines two different approaches, it can be more complex
-    and difficult to manage effectively, so it needs a stronger and more
-    consistent focus on project management.
+- Because it combines two different approaches, it can be more complex
+  and difficult to manage effectively, so it needs a stronger and more
+  consistent focus on project management.
+
 :::
 :::::
 
@@ -250,41 +251,42 @@ sprints could be seen as increments as well.
 ::: column
 #### Benefits
 
--   Is a very popular way of building software. Many features of it are
-    widely adopted outside of Scrum itself and even outside of software
-    development, for example, stand-ups, sprints, and retrospectives.
--   Lots of training material is available, as well as experienced
-    practitioners.
--   Has a lot of prescriptive ceremonies and processes, which can help
-    those who are new to software development or team-based work with a
-    clear structure to follow.
+- Is a very popular way of building software. Many features of it are
+  widely adopted outside of Scrum itself and even outside of software
+  development, for example, stand-ups, sprints, and retrospectives.
+- Lots of training material is available, as well as experienced
+  practitioners.
+- Has a lot of prescriptive ceremonies and processes, which can help
+  those who are new to software development or team-based work with a
+  clear structure to follow.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Its prescriptive processes can end up adding a lot more overhead and
-    inflexibility, because it is a "recipe to follow".
--   Because of its structure and nature, it can potentially lead to more
-    burn out and stress in order to "finish the sprint goals"
-    (especially given the name "sprint").
--   Can lead to a focus on completing tasks within the sprint, rather
-    than on delivering value to users.
--   Metrics used in Scrum, such as "velocity" (completing tasks and/or
-    merging pull requests), can be gamed or misused, leading to a focus
-    on "hitting the numbers" rather than on delivering quality software.
--   Because of its popularity, many companies use it without
-    understanding it fully, which can lead to poor implementation and
-    negative experiences.
--   The strict delegation of roles (e.g. product owner, scrum master)
-    can potentially reduce a feeling of ownership and shared
-    responsibility among team members. This strict role division can
-    also lead to skill silos, where team members may not develop a broad
-    understanding of the project beyond their specific roles (e.g.
-    product owner might not know anything about software development and
-    effective software design or they might not actively contribute code
-    and instead focus on project management, coordination, and general
-    management).
+- Its prescriptive processes can end up adding a lot more overhead and
+  inflexibility, because it is a "recipe to follow".
+- Because of its structure and nature, it can potentially lead to more
+  burn out and stress in order to "finish the sprint goals" (especially
+  given the name "sprint").
+- Can lead to a focus on completing tasks within the sprint, rather than
+  on delivering value to users.
+- Metrics used in Scrum, such as "velocity" (completing tasks and/or
+  merging pull requests), can be gamed or misused, leading to a focus on
+  "hitting the numbers" rather than on delivering quality software.
+- Because of its popularity, many companies use it without understanding
+  it fully, which can lead to poor implementation and negative
+  experiences.
+- The strict delegation of roles (e.g. product owner, scrum master) can
+  potentially reduce a feeling of ownership and shared responsibility
+  among team members. This strict role division can also lead to skill
+  silos, where team members may not develop a broad understanding of the
+  project beyond their specific roles (e.g. product owner might not know
+  anything about software development and effective software design or
+  they might not actively contribute code and instead focus on project
+  management, coordination, and general management).
+
 :::
 :::::
 
@@ -308,35 +310,37 @@ board as they progress through the workflow.
 ::: column
 #### Benefits
 
--   Is a very simple and lightweight approach that doesn't require a lot
-    of overhead or formal processes. While simple, it is an incredibly
-    powerful and effectiveness way of managing work.
--   The visual nature of the Kanban board makes it easy to see the
-    status of tasks and identify bottlenecks in the workflow.
--   Emphasizes limiting work in progress (WIP), which helps to reduce
-    multitasking and improve focus and productivity.
--   Is a flexible and adaptive approach that allows teams to easily
-    adjust their workflow based on changing priorities and needs.
--   Can be easily combined with other methodologies and approaches, such
-    as iterative and incremental development.
+- Is a very simple and lightweight approach that doesn't require a lot
+  of overhead or formal processes. While simple, it is an incredibly
+  powerful and effectiveness way of managing work.
+- The visual nature of the Kanban board makes it easy to see the status
+  of tasks and identify bottlenecks in the workflow.
+- Emphasizes limiting work in progress (WIP), which helps to reduce
+  multitasking and improve focus and productivity.
+- Is a flexible and adaptive approach that allows teams to easily adjust
+  their workflow based on changing priorities and needs.
+- Can be easily combined with other methodologies and approaches, such
+  as iterative and incremental development.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Because of the nature of Kanban, there is less emphasis on planning
-    and structure, which can lead to a lack of direction or focus if not
-    managed well. This works particularly well for continually running
-    or maintenance projects, such as with developing cload services or
-    online platforms, but can be more difficult for projects that have a
-    clear end goal or deadline.
--   Without proper discipline and management, tasks can start piling up.
-    It requires a cultural mindset to value prioritisation and curation
-    of tasks.
--   Requires regular curation of the items on the board to ensure that
-    it accurately reflects the current state of work, both from moving
-    items to different columns, but also to ordering items in the todo
-    column by priority.
+- Because of the nature of Kanban, there is less emphasis on planning
+  and structure, which can lead to a lack of direction or focus if not
+  managed well. This works particularly well for continually running or
+  maintenance projects, such as with developing cload services or online
+  platforms, but can be more difficult for projects that have a clear
+  end goal or deadline.
+- Without proper discipline and management, tasks can start piling up.
+  It requires a cultural mindset to value prioritisation and curation of
+  tasks.
+- Requires regular curation of the items on the board to ensure that it
+  accurately reflects the current state of work, both from moving items
+  to different columns, but also to ordering items in the todo column by
+  priority.
+
 :::
 :::::
 
@@ -352,28 +356,20 @@ means) are all also useful.
 
 ### Consequences
 
--   There will be some management and planning overhead in order to
-    curate the workflow. But we believe it is worth it from a stress and
-    cognitive load perspective. That's because it helps us to have a
-    structure and a general goal or roadmap that we are working towards.
--   Because this process is flexible, we can always easily decide to
-    change or adapt as we learn and grow.
+- There will be some management and planning overhead in order to curate
+  the workflow. But we believe it is worth it from a stress and
+  cognitive load perspective. That's because it helps us to have a
+  structure and a general goal or roadmap that we are working towards.
+- Because this process is flexible, we can always easily decide to
+  change or adapt as we learn and grow.
 
 ## Resources used for this post
 
--   [Software Development Life Cycle (SDLC)
-    Models](https://www.geeksforgeeks.org/software-engineering/top-8-software-development-models-used-in-industry/)
--   [Why iterative software development is
-    critical](https://about.gitlab.com/blog/why-its-crucial-to-break-things-down-into-smallest-iterations/)
--   [What is iterative
-    development?](https://www.techtarget.com/searchsoftwarequality/definition/iterative-development)
--   [Iterative
-    Development](https://agilealliance.org/glossary/iterative-development/)
--   [Incremental
-    Development](https://agilealliance.org/glossary/incremental-development/)
--   [Agile Development: Iterative and
-    Incremental](https://www.visual-paradigm.com/scrum/agile-development-iterative-and-incremental/)
--   [Comparing Iterative vs. Incremental Development
-    Strategies](https://www.advisedskills.com/blog/agile-and-scrum/comparing-iterative-vs-incremental-development-strategies)
--   [What's the difference between incremental and iterative
-    development?](https://www.everyday.design/guides/whats-the-difference-between-incremental-and-iterative-development)
+- [Software Development Life Cycle (SDLC) Models](https://www.geeksforgeeks.org/software-engineering/top-8-software-development-models-used-in-industry/)
+- [Why iterative software development is critical](https://about.gitlab.com/blog/why-its-crucial-to-break-things-down-into-smallest-iterations/)
+- [What is iterative development?](https://www.techtarget.com/searchsoftwarequality/definition/iterative-development)
+- [Iterative Development](https://agilealliance.org/glossary/iterative-development/)
+- [Incremental Development](https://agilealliance.org/glossary/incremental-development/)
+- [Agile Development: Iterative and Incremental](https://www.visual-paradigm.com/scrum/agile-development-iterative-and-incremental/)
+- [Comparing Iterative vs. Incremental Development Strategies](https://www.advisedskills.com/blog/agile-and-scrum/comparing-iterative-vs-incremental-development-strategies)
+- [What's the difference between incremental and iterative development?](https://www.everyday.design/guides/whats-the-difference-between-incremental-and-iterative-development)

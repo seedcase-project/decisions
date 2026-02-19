@@ -1,6 +1,10 @@
 ---
 title: "Why standardized snippets"
-description: "The larger a project is, the more important it becomes to have a joint set of standards when writing documentation.  We decided to set up shortcuts that are shared across the team, so that all documentation follows the same classification and formatting."
+description: |
+    The larger a project is, the more important it becomes to have a joint set
+    of standards when writing documentation.  We decided to set up shortcuts
+    that are shared across the team, so that all documentation follows the same
+    classification and formatting.
 date: "2023-11-23"
 categories:
   - communicate
@@ -16,9 +20,9 @@ The more documentation we create for the Seedcase Project, the more
 important it becomes to ensure a smooth reader experience, both in terms
 of consistency between authors, and in terms of managing the keywords.
 
-> How do we ensure a uniform layout, an easier to creating
-> documentation, and a usable set of keywords as the documentation for
-> the Seedcase Project grows?
+How do we ensure a uniform layout, an easier to creating documentation,
+and a usable set of keywords as the documentation for the Seedcase
+Project grows?
 
 ## Decision drivers
 
@@ -95,14 +99,14 @@ tagged with the key word "databases".
 
 The following guidelines for selecting key words apply:
 
--   **Form** we prefer using nouns over verbs (eg. "documentation" over
-    "documenting", "contribution" over "contributing")
--   **Plural vs Singular** we prefer singular over plural (eg.
-    "database" over "databases", and "container" over "containers")
--   **More than one word** we prefer to write keywords that consist of
-    more than one word without hyphens (eg. "design architecture" over
-    "design-architecture"), the exception is of course where the word is
-    normally spelled with a hyphen (eg. "back-end")
+- **Form** we prefer using nouns over verbs (eg. "documentation" over
+  "documenting", "contribution" over "contributing")
+- **Plural vs Singular** we prefer singular over plural (eg. "database"
+  over "databases", and "container" over "containers")
+- **More than one word** we prefer to write keywords that consist of
+  more than one word without hyphens (eg. "design architecture" over
+  "design-architecture"), the exception is of course where the word is
+  normally spelled with a hyphen (eg. "back-end")
 
 #### Implementation
 

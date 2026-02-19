@@ -32,8 +32,8 @@ constraints listed in the metadata (e.g. maximum values, specific
 formats). We are looking for a tool to automate the data verification
 and validation process. The question then is:
 
-*Which data verification and validation tools are available and which
-one should we use?*
+Which data verification and validation tools are available and which
+one should we use?
 
 ## Decision drivers
 
@@ -42,14 +42,14 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
--   The new tool should support both data verification and validation.
--   Ideally, it should support multiple tabular data formats, including
-    [`polars`](https://pola.rs/) data frames.
--   It should be easy to transform JSON metadata into the representation
-    required by the tool.
--   The tool should be able to handle relatively large datasets
-    efficiently.
--   Support for extracting metadata from data would be a plus.
+- The new tool should support both data verification and validation.
+- Ideally, it should support multiple tabular data formats, including
+  [`polars`](https://pola.rs/) data frames.
+- It should be easy to transform JSON metadata into the representation
+  required by the tool.
+- The tool should be able to handle relatively large datasets
+  efficiently.
+- Support for extracting metadata from data would be a plus.
 
 ## Considered options
 
@@ -58,11 +58,10 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
--   [`frictionless-py`](https://framework.frictionlessdata.io/)
--   [`pandera`](https://pandera.readthedocs.io/en/stable/index.html)
--   [Great
-    Expectations](https://docs.greatexpectations.io/docs/core/introduction/)
--   [Pydantic](https://docs.pydantic.dev/latest/)
+- [`frictionless-py`](https://framework.frictionlessdata.io/)
+- [`pandera`](https://pandera.readthedocs.io/en/stable/index.html)
+- [Great Expectations](https://docs.greatexpectations.io/docs/core/introduction/)
+- [Pydantic](https://docs.pydantic.dev/latest/)
 
 ### `frictionless-py`
 
@@ -77,28 +76,30 @@ building pipelines for transforming data.
 ::: column
 #### Benefits
 
--   Supports both data verification and validation, although it is not
-    possible to run these checks separately.
--   Multiple tabular data formats are supported, including `pandas` data
-    frames.
--   Directly compatible with our JSON metadata, as it implements the
-    Data Package standard.
--   Supports large data files.
--   Supports extracting metadata from data, matching the Data Package
-    standard.
+- Supports both data verification and validation, although it is not
+  possible to run these checks separately.
+- Multiple tabular data formats are supported, including `pandas` data
+  frames.
+- Directly compatible with our JSON metadata, as it implements the Data
+  Package standard.
+- Supports large data files.
+- Supports extracting metadata from data, matching the Data Package
+  standard.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   The API suggests that it is possible to filter for specific errors,
-    but this functionality does not seem to work fully.
--   There are a number of different entry points to the
-    verification/validation flow and it is quite difficult to foresee
-    how these differ in behaviour.
--   `polars` data frames are not supported.
--   So far we've found it a bit difficult to navigate the
-    `frictionless-py` codebase and documentation.
+- The API suggests that it is possible to filter for specific errors,
+  but this functionality does not seem to work fully.
+- There are a number of different entry points to the
+  verification/validation flow and it is quite difficult to foresee how
+  these differ in behaviour.
+- `polars` data frames are not supported.
+- So far we've found it a bit difficult to navigate the
+  `frictionless-py` codebase and documentation.
+
 :::
 :::::
 
@@ -114,26 +115,28 @@ data and generating synthetic data from `pandera` schemas.
 ::: column
 #### Benefits
 
--   Supports both data verification and validation, and can run these
-    checks separately.
--   Supports `polars` data frames to a large extent (see on the right).
--   Supports large datasets.
--   Offers schema inference, although not with `polars`.
--   `pandera` is widely used, extensively tested, and has good
-    documentation.
+- Supports both data verification and validation, and can run these
+  checks separately.
+- Supports `polars` data frames to a large extent (see on the right).
+- Supports large datasets.
+- Offers schema inference, although not with `polars`.
+- `pandera` is widely used, extensively tested, and has good
+  documentation.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Only data frames are accepted as input, so other formats (e.g. CSV)
-    have to be loaded into a data frame first.
--   While `polars` is supported, the integration is [not yet
-    complete](https://pandera.readthedocs.io/en/stable/index.html#supported-features).
-    E.g., it cannot yet extract metadata from `polars` data frames.
--   We would need to write custom code to translate our table metadata
-    from JSON to `pandera` schemas in Python. For its own schemas,
-    `pandera` provides JSON conversion out of the box.
+- Only data frames are accepted as input, so other formats (e.g. CSV)
+  have to be loaded into a data frame first.
+- While `polars` is supported, the integration is
+  [not yet complete](https://pandera.readthedocs.io/en/stable/index.html#supported-features).
+  E.g., it cannot yet extract metadata from `polars` data frames.
+- We would need to write custom code to translate our table metadata
+  from JSON to `pandera` schemas in Python. For its own schemas,
+  `pandera` provides JSON conversion out of the box.
+
 :::
 :::::
 
@@ -151,24 +154,26 @@ expectation suites.
 ::: column
 #### Benefits
 
--   Supports both data verification and validation, and can run these
-    checks separately.
--   Supports a wide range of data formats, although not `polars`.
--   Supports large datasets.
--   Can generate an expectation suite based on data.
+- Supports both data verification and validation, and can run these
+  checks separately.
+- Supports a wide range of data formats, although not `polars`.
+- Supports large datasets.
+- Can generate an expectation suite based on data.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   No support for `polars`.
--   We would need to write custom code to translate our table metadata
-    from JSON to expectations in Python. For its own expectations
-    suites, Great Expectations provides JSON conversion out of the box.
--   The API for declaring expectations matches the structure of the Data
-    Package standard less closely than that of the other options.
--   Significantly larger and more complex to set up than any of the
-    other options.
+- No support for `polars`.
+- We would need to write custom code to translate our table metadata
+  from JSON to expectations in Python. For its own expectations suites,
+  Great Expectations provides JSON conversion out of the box.
+- The API for declaring expectations matches the structure of the Data
+  Package standard less closely than that of the other options.
+- Significantly larger and more complex to set up than any of the other
+  options.
+
 :::
 :::::
 
@@ -185,20 +190,22 @@ is highly customisable.
 ::: column
 #### Benefits
 
--   Supports data validation.
+- Supports data validation.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   No out-of-the-box support for data verification.
--   We would need to translate our JSON metadata into Pydantic models.
--   Pydantic only accepts dictionary-like objects as input, so data
-    files would need to be loaded into Python manually and fed to the
-    Pydantic model row by row.
--   The above means that support for large datasets would depend on our
-    implementation.
--   No support for model extraction.
+- No out-of-the-box support for data verification.
+- We would need to translate our JSON metadata into Pydantic models.
+- Pydantic only accepts dictionary-like objects as input, so data files
+  would need to be loaded into Python manually and fed to the Pydantic
+  model row by row.
+- The above means that support for large datasets would depend on our
+  implementation.
+- No support for model extraction.
+
 :::
 :::::
 
@@ -231,11 +238,10 @@ other tools.
 List some potential consequences of this decision.
 :::
 
--   We will have to write custom logic for transforming JSON metadata
-    into `pandera` schemas.
--   We will have to find a solution for extracting metadata from data,
-    as `pandera` cannot currently infer schemas from `polars` data
-    frames.
--   If we want to add any checks or behaviours based on file-level
-    properties of the data (e.g. file size, hash, encoding, etc.), these
-    will have to be implemented outside of `pandera`.
+- We will have to write custom logic for transforming JSON metadata into
+  `pandera` schemas.
+- We will have to find a solution for extracting metadata from data, as
+  `pandera` cannot currently infer schemas from `polars` data frames.
+- If we want to add any checks or behaviours based on file-level
+  properties of the data (e.g. file size, hash, encoding, etc.), these
+  will have to be implemented outside of `pandera`.
