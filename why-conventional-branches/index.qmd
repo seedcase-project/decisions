@@ -36,8 +36,8 @@ structure.
 
 The question is:
 
-> Which naming scheme should we follow for branch naming to ensure clear
-> and streamlined contributions?
+Which naming scheme should we follow for branch naming to ensure clear
+and streamlined contributions?
 
 ## Decision drivers
 
@@ -53,14 +53,14 @@ identify and understand what work has been implemented in a branch.
 
 We want to provide a naming scheme for naming branches that:
 
-1.  Is simple
+1. Is simple
 
-2.  Is descriptive and informative, so it's easy for reviewers to
-    understand what work is being done on the branch
+2. Is descriptive and informative, so it's easy for reviewers to
+   understand what work is being done on the branch
 
-3.  Is easy to implement, for example with a VS Code extension
+3. Is easy to implement, for example with a VS Code extension
 
-4.  Works well with the other workflow conventions we follow
+4. Works well with the other workflow conventions we follow
 
 ## Considered options
 
@@ -73,8 +73,8 @@ When researching for branch naming conventions, most of the described
 best practices involve a naming scheme that follows a structure similar
 to Conventional Commits, which works very well for the Seedcase core
 team, since we follow this convention for our commit messages (see the
-[Why conventional commits](/why-conventional-commits/index.qmd) decision post
-for why we follow this convention).
+[Why conventional commits](/why-conventional-commits/index.qmd) decision
+post for why we follow this convention).
 
 In general, these naming schemes involves a prefix describing the
 **type** of branch and a short **description**.
@@ -85,16 +85,16 @@ identify the purpose of the branch. Prefixes include `feat`, `fix`,
 
 In general, the following best practices apply for branch naming:
 
-1.  Only use lower casing
+1. Only use lower casing
 
-2.  Only use alphanumeric characters (don't use punctuation, spaces,
-    underscores, or other any non-alphanumeric characters than hyphen)
+2. Only use alphanumeric characters (don't use punctuation, spaces,
+   underscores, or other any non-alphanumeric characters than hyphen)
 
-3.  Use kebab-casing, i.e., separate words by hyphens (for example
-    `short-description-of-branch`)
+3. Use kebab-casing, i.e., separate words by hyphens (for example
+   `short-description-of-branch`)
 
-4.  Concise and informative descriptions (avoid branch names longer than
-    50 characters)
+4. Concise and informative descriptions (avoid branch names longer than
+   50 characters)
 
 There are, however, minor diverging conventions. The details of these
 will be fleshed out below.
@@ -104,12 +104,12 @@ will be fleshed out below.
 When especially larger teams work on a project, they tend to have some
 kind of project management system, with tickets or items for each
 developer to work on. The Seedcase core team uses GitHub projects (see
-the [Why GitHub projects](/why-github-projects/index.qmd) post), which includes
-numbering of issues across repositories.
+the [Why GitHub projects](/why-github-projects/index.qmd) post), which
+includes numbering of issues across repositories.
 
 This information can easily be added to a branch name like so:
 
-```
+```text
 feat/issue-123-short-description
 ```
 
@@ -117,24 +117,26 @@ feat/issue-123-short-description
 ::: column
 #### Benefits
 
--   Clear reference that couples the issue and branch
+- Clear reference that couples the issue and branch
+
 :::
 
 ::: column
 #### Drawbacks
 
--   The branch name becomes longer
+- The branch name becomes longer
 
--   Risk of using incorrect issue numbers (due to mistyping or
-    misremembering)
+- Risk of using incorrect issue numbers (due to mistyping or
+  misremembering)
 
--   Need for looking up the ticket number in the project management
-    system (GitHub for the Seedcase core team)
+- Need for looking up the ticket number in the project management system
+  (GitHub for the Seedcase core team)
 
--   If only the issue ID is included, there is no explicit context for
-    your collaborators to know what the works of the branch covers.
-    Instead, reviewers may need to find the issue in the project
-    management system to figure out the context.
+- If only the issue ID is included, there is no explicit context for
+  your collaborators to know what the works of the branch covers.
+  Instead, reviewers may need to find the issue in the project
+  management system to figure out the context.
+
 :::
 :::
 
@@ -148,17 +150,19 @@ of this practice:
 ::: column
 #### Benefits
 
--   Adds a clear separation of the prefix and description
--   Shows a hierarchy in the branch name which many platforms and IDEs
-    (like VS Code) will recognise and sort branches by
+- Adds a clear separation of the prefix and description
+- Shows a hierarchy in the branch name which many platforms and IDEs
+  (like VS Code) will recognise and sort branches by
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Could be confused with a directory structure
--   Adds complexity to the branch name which could lead to errors and,
-    thus, inconsistencies
+- Could be confused with a directory structure
+- Adds complexity to the branch name which could lead to errors and,
+  thus, inconsistencies
+
 :::
 :::
 
@@ -171,15 +175,17 @@ track of each developer's work.
 ::: column
 #### Benefits
 
--   Easy to track who is working on what
--   Can be useful for larger teams
+- Easy to track who is working on what
+- Can be useful for larger teams
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Adds complexity to the branch name
--   Could be seen as unnecessary, especially in smaller teams
+- Adds complexity to the branch name
+- Could be seen as unnecessary, especially in smaller teams
+
 :::
 :::
 
@@ -192,7 +198,7 @@ REASONS."
 
 We decided to follow the following naming scheme:
 
-```
+```text
 <type>/short-description
 ```
 
@@ -209,8 +215,8 @@ Since our team is small and we work closely together, we decided to not
 include user IDs or usernames in the branch names to keep the complexity
 of the branch names to a minimum.
 
-This convention is easy to implement, using the [Conventional
-Branch](https://marketplace.visualstudio.com/items?itemName=pshaddel.conventional-branch)
+This convention is easy to implement, using the
+[Conventional Branch](https://marketplace.visualstudio.com/items?itemName=pshaddel.conventional-branch)
 extension for VS Code. This extension lets us define the wanted naming
 structure and can easily be used to create new branches with the correct
 naming convention (using the command palette in VS Code).
@@ -239,16 +245,9 @@ as possible.
 
 ## Resources used for this post
 
--   [Best practices for naming Git
-    branches](https://graphite.dev/guides/git-branch-naming-conventions)
--   [Naming conventions for Git Branches - a
-    Cheatsheet](https://medium.com/@abhay.pixolo/naming-conventions-for-git-branches-a-cheatsheet-8549feca2534)
--   [A Simplified Convention for Naming Branches and Commits in
-    Git](https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4)
--   [Git Branching Naming Convention: Best Practices to
-    Follow](https://phoenixnap.com/kb/git-branch-name-convention)
--   [Best Practices for Naming Git
-    Branches](https://tilburgsciencehub.com/topics/automation/version-control/advanced-git/naming-git-branches/)
--   [🌿 The Ultimate Guide to Naming Git Branches: Best Practices and
-    Tips
-    🔖](https://hardikchotaliya.hashnode.dev/the-ultimate-guide-to-naming-git-branches-best-practices-and-tips)
+- [Best practices for naming Git branches](https://graphite.dev/guides/git-branch-naming-conventions)
+- [Naming conventions for Git Branches - a Cheatsheet](https://medium.com/@abhay.pixolo/naming-conventions-for-git-branches-a-cheatsheet-8549feca2534)
+- [A Simplified Convention for Naming Branches and Commits in Git](https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4)
+- [Git Branching Naming Convention: Best Practices to Follow](https://phoenixnap.com/kb/git-branch-name-convention)
+- [Best Practices for Naming Git Branches](https://tilburgsciencehub.com/topics/automation/version-control/advanced-git/naming-git-branches/)
+- [🌿 The Ultimate Guide to Naming Git Branches: Best Practices and Tips 🔖](https://hardikchotaliya.hashnode.dev/the-ultimate-guide-to-naming-git-branches-best-practices-and-tips)

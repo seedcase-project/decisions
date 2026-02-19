@@ -19,14 +19,14 @@ frameworks instead of building from scratch.
 
 The UI framework should:
 
--   Be aesthetically pleasing.
--   Integrate well with Figma. The wireframes in Figma should be easy to
-    reproduce in Django templates.
--   Be easy to use with Django. Since we use Django and it is a Python
-    framework, we don't want to rely on frameworks that require node/npm
-    or too much JavaScript. Preferably, we want a CSS framework, where
-    CSS classes can be directly added to HTML elements.
--   Have a great documentation and community.
+- Be aesthetically pleasing.
+- Integrate well with Figma. The wireframes in Figma should be easy to
+  reproduce in Django templates.
+- Be easy to use with Django. Since we use Django and it is a Python
+  framework, we don't want to rely on frameworks that require node/npm
+  or too much JavaScript. Preferably, we want a CSS framework, where CSS
+  classes can be directly added to HTML elements.
+- Have a great documentation and community.
 
 ## Considered options
 
@@ -41,15 +41,17 @@ widely used CSS frameworks.
 ::: column
 #### Benefits
 
--   Widely used, lots of support and community
--   Great integration with Django through the Python package
-    [`django-bootstrap5`](https://pypi.org/project/django-bootstrap5/)
+- Widely used, lots of support and community.
+- Great integration with Django through the Python package
+  [`django-bootstrap5`](https://pypi.org/project/django-bootstrap5/).
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Harder to customize individual components (for example, a button)
+- Harder to customize individual components (for example, a button).
+
 :::
 :::
 
@@ -62,21 +64,23 @@ designed by Google.
 ::: column
 #### Benefits
 
--   Has multiple implementations, like [Materialize
-    Web](https://materializeweb.com/) and
-    [BeerCSS](https://www.beercss.com/) that works well with Django
--   Prioritizes CSS over JavaScript
--   Very customizable
--   Looks very aesthetically pleasing (backed by the strong design
-    community within Google)
--   [Figma](https://www.figma.com/) (which can be used for sketching out
-    the UI) has great support for Material Design
+- Has multiple implementations, like
+  [Materialize Web](https://materializeweb.com/) and
+  [BeerCSS](https://www.beercss.com/) that works well with Django
+- Prioritizes CSS over JavaScript.
+- Very customizable.
+- Looks very aesthetically pleasing (backed by the strong design
+  community within Google).
+- [Figma](https://www.figma.com/) (which can be used for sketching out
+  the UI) has great support for Material Design.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Has multiple implementations, which might take time to decide on
+- Has multiple implementations, which might take time to decide on
+
 :::
 :::
 
@@ -89,17 +93,19 @@ a high level of customisability.
 ::: column
 #### Benefits
 
--   CSS only
--   Very highly customisable
+- CSS only.
+- Very highly customisable.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Requires time and skill to customize
--   Relies on [Node.js](https://nodejs.org/en) (via
-    [npm](https://www.npmjs.com/)) which is an additional dependency and
-    needs time to learn to use
+- Requires time and skill to customize.
+- Relies on [Node.js](https://nodejs.org/en) (via
+  [npm](https://www.npmjs.com/)) which is an additional dependency and
+  needs time to learn to use.
+
 :::
 :::
 
@@ -111,13 +117,15 @@ a high level of customisability.
 ::: column
 #### Benefits
 
--   Seems relatively easy to use
+- Seems relatively easy to use.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Requires Node.js (via npm) to install
+- Requires Node.js (via npm) to install.
+
 :::
 :::
 
@@ -129,5 +137,5 @@ Google backing it's development), is widely used, and customizable.
 
 ### Consequences
 
--   There is better Django integration with Bootstrap, so we might need
-    to spend some time properly integrating Material Design
+- There is better Django integration with Bootstrap, so we might need to
+  spend some time properly integrating Material Design

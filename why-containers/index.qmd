@@ -11,8 +11,6 @@ categories:
   - deploy
 ---
 
-<!-- TODO: Update this to match style of other posts -->
-
 ## What is containerization
 
 Containerization is the technology of packaging software development
@@ -47,10 +45,10 @@ seconds.
 
 ### Improved security
 
-Since containers are isolated from one another, you can be sure that each of
-your apps is executing in a completely separate environment. Therefore,
-even if the security of one container is compromised, that host's other
-containers are still protected.
+Since containers are isolated from one another, you can be sure that
+each of your apps is executing in a completely separate environment.
+Therefore, even if the security of one container is compromised, that
+host's other containers are still protected.
 
 Containers can only interact with computational resources in a very
 limited way and are segregated from each other as well as the host
@@ -62,9 +60,9 @@ is intrinsically more secure.
 Containers may be quickly created, deployed to any environment, and
 utilised to address a wide range of requirements. You may rapidly create
 a container to handle a task when it arises. You can set it to
-automatically shut down, when it is no longer required. This
-method is called *orchestration*. The process of organising, controlling,
-scaling, and deleting containers can be achieved very easily.
+automatically shut down, when it is no longer required. This method is
+called *orchestration*. The process of organising, controlling, scaling,
+and deleting containers can be achieved very easily.
 
 ### Ease of management
 
@@ -74,12 +72,8 @@ container without affecting others.
 
 ### Developer-friendly
 
-Containers are developer-friendly, because they allow developers to use a
-single environment for development and production, which is a common
+Containers are developer-friendly, because they allow developers to use
+a single environment for development and production, which is a common
 roadblock in application development. The development team may create an
 app on a Windows laptop that does not run on a Mac workstation. But a
 containerized application will not run into that issue.
-
-<!-- TODO: Add "disadvantages" -->
-
-<!-- TODO: Add section connecting to the design philosophy -->

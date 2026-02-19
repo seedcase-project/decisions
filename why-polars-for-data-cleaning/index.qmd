@@ -1,6 +1,12 @@
 ---
 title: "Why Polars"
-description: "The key to useful and meaningful data is data that is good quality and tidy. Getting data to be tidy and higher quality is an often undervalued and underestimated activity, at the same time being very labour intensive. But it is essential to have higher quality and tidier data to have better quality results from the analysis. This post explains why we chose to use Polars for data processing tasks."
+description: |
+    The key to useful and meaningful data is data that is good quality and tidy.
+    Getting data to be tidy and higher quality is an often undervalued and
+    underestimated activity, at the same time being very labour intensive. But
+    it is essential to have higher quality and tidier data to have better
+    quality results from the analysis. This post explains why we chose to use
+    Polars for data processing tasks.
 date: "2024-12-04"
 categories:
 - process
@@ -22,17 +28,17 @@ statement in the form of a question for the problem.
 When working with data analysis, data is rarely ready to be used 'as
 is'. There will always be things that are either very wrong (like text
 in what should be a number field), slightly wrong (like a single missing
-or incorrect value), needing to be rearranged or reorganized, or an outlier potentially due to an error in data
-entry. While we don't have domain knowledge to know about missing values
-or the definition or meaning of an outlier, there are some basic
-things we can check and fix, such as whether the data contradicts any
-constraints in the definition of the data resource (eg. a number in a
-date field). There are a lot of tools that can process data, so our
-question is:
+or incorrect value), needing to be rearranged or reorganized, or an
+outlier potentially due to an error in data entry. While we don't have
+domain knowledge to know about missing values or the definition or
+meaning of an outlier, there are some basic things we can check and fix,
+such as whether the data contradicts any constraints in the definition
+of the data resource (eg. a number in a date field). There are a lot of
+tools that can process data, so our question is:
 
-*Which tool should we use for processing data in our
-software and what tool should we recommend users to use when
-processing needs to happen outside of our software?*
+Which tool should we use for processing data in our software and what
+tool should we recommend users to use when processing needs to happen
+outside of our software?
 
 ## Decision drivers
 
@@ -41,12 +47,12 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
--   Can be installed and used in Python.
--   Is designed and built to be fast for processing data.
--   Has minimal dependencies, so can be installed quickly.
--   Is flexible to reading different data storage formats (e.g. SQL
-    databases, Parquet, CSV).
--   Can write to different storage formats (as with above).
+- Can be installed and used in Python.
+- Is designed and built to be fast for processing data.
+- Has minimal dependencies, so can be installed quickly.
+- Is flexible to reading different data storage formats (e.g. SQL
+  databases, Parquet, CSV).
+- Can write to different storage formats (as with above).
 
 ## Considered options
 
@@ -55,11 +61,14 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
-In addition to our requirements defined by our [principles](https://design.seedcase-project.org/software/principles) and our requirements listed above, these are the options we've considered:
+In addition to our requirements defined by our
+[principles](https://design.seedcase-project.org/software/principles)
+and our requirements listed above, these are the options we've
+considered:
 
--   [DuckDB](https://www.duckdb.org/)
--   [Pandas](https://pandas.pydata.org/)
--   [Polars](https://pola.rs/)
+- [DuckDB](https://www.duckdb.org/)
+- [Pandas](https://pandas.pydata.org/)
+- [Polars](https://pola.rs/)
 
 ### DuckDB
 
@@ -73,19 +82,21 @@ not-for-profit foundation in the Netherlands.
 ::: column
 #### Benefits
 
--   Although a very young project it is already in use by a number of
-    large companies and has a large community of users.
-    -   The code is open source, and the way it has been set up is
-        promising for it to remain that way.
--   It is very fast, and can handle large data sets.
--   Extensive documentation with user guide sections embedded.
+- Although a very young project it is already in use by a number of
+  large companies and has a large community of users.
+  - The code is open source, and the way it has been set up is promising
+    for it to remain that way.
+- It is very fast, and can handle large data sets.
+- Extensive documentation with user guide sections embedded.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   To use it to its full potential in Python, users need to have some knowledge
-    of SQL.
+- To use it to its full potential in Python, users need to have some
+  knowledge of SQL.
+
 :::
 :::
 
@@ -94,27 +105,30 @@ not-for-profit foundation in the Netherlands.
 The Polars project started in 2020 and is based in the Netherlands. They
 have a relatively small team but seem to have a fast growing user base,
 and very enthusiastic developers. Polars is written in Rust and
-available for Python. The two main developers are described as enthusiastic about
-open source.
+available for Python. The two main developers are described as
+enthusiastic about open source.
 
 ::: columns
 ::: column
 #### Benefits
 
--   Enthusiastic user community, with a lot of support available.
--   Supports several languages, including Python.
--   Handles all common data formats.
--   Written in Rust (a very fast, low level language), so it processes data very fast.
--   Polars has an extensive user guide section.
+- Enthusiastic user community, with a lot of support available.
+- Supports several languages, including Python.
+- Handles all common data formats.
+- Written in Rust (a very fast, low level language), so it processes
+  data very fast.
+- Polars has an extensive user guide section.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Relatively young project, so may not have all the features of more
-    established tools.
--   Because it is still new, it isn't as widely used and doesn't have
-    too many learning resources available yet.
+- Relatively young project, so may not have all the features of more
+  established tools.
+- Because it is still new, it isn't as widely used and doesn't have too
+  many learning resources available yet.
+
 :::
 :::
 
@@ -128,22 +142,24 @@ and is designed to be easy to use.
 ::: column
 #### Benefits
 
--   Established tool with a large user base.
--   Well supported, and well documented.
--   Plenty of learning resources available from a variety of sources.
--   Works with all relevant languages and data formats.
--   The Pandas website contains a very thorough section on how to get
-    started, including customised tutorials for people that have
-    experience with many other tools.
--   The documentation seems very thorough, and includes a lot of
-    examples.
+- Established tool with a large user base.
+- Well supported, and well documented.
+- Plenty of learning resources available from a variety of sources.
+- Works with all relevant languages and data formats.
+- The Pandas website contains a very thorough section on how to get
+  started, including customised tutorials for people that have
+  experience with many other tools.
+- The documentation seems very thorough, and includes a lot of examples.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Can be slow when working with large data sets.
--   Because it was developed more than a decade ago, some of its syntax and design is out-dated.
+- Can be slow when working with large data sets.
+- Because it was developed more than a decade ago, some of its syntax
+  and design is out-dated.
+
 :::
 :::
 
@@ -177,10 +193,10 @@ other tools that are available.
 List the resources used to write this post
 :::
 
--   [DuckDB wikipage](https://en.wikipedia.org/wiki/DuckDB)
--   [DuckBD website](https://www.duckdb.org/)
--   [Pandas wikipage](https://en.wikipedia.org/wiki/Pandas_(software))
--   [Pandas website](https://pandas.pydata.org/)
--   [Polars website](https://pola.rs/)
--   [DuckDB study](https://github.com/prrao87/duckdb-study) speed
-    comparison between DuckDB, Pandas and Polars.
+- [DuckDB wikipage](https://en.wikipedia.org/wiki/DuckDB)
+- [DuckBD website](https://www.duckdb.org/)
+- [Pandas wikipage](https://en.wikipedia.org/wiki/Pandas_(software))
+- [Pandas website](https://pandas.pydata.org/)
+- [Polars website](https://pola.rs/)
+- [DuckDB study](https://github.com/prrao87/duckdb-study) speed
+  comparison between DuckDB, Pandas and Polars.

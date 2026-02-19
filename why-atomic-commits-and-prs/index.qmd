@@ -1,6 +1,6 @@
 ---
-title: "Why atomic commits"
-description: "Our reasons for using atomic commits in our projects instead of squashing commits and ...? rebase? "
+title: "Why atomic commits and pull requests"
+description: "Our reasons for using atomic commits and pull requests in our projects."
 date: "2024-05-14"
 categories:
 - git
@@ -20,14 +20,18 @@ State the context and some background on the issue, then write a
 statement in the form of a question for the problem.
 :::
 
-A software project like Seedcase needs an easy way to manage and track changes in the codebase.
-This includes making sure that changes are well documented, easy to understand, and can be reverted if necessary.
-We use Git as our version control system, and the GitHub flow as our branching strategy. We then need to decide the best approach for managing commits and PRs in our projects.
+A software project like Seedcase needs an easy way to manage and track
+changes in the codebase. This includes making sure that changes are well
+documented, easy to understand, and can be reverted if necessary. We use
+Git as our version control system, and the GitHub flow as our branching
+strategy. We then need to decide the best approach for managing commits
+and PRs in our projects.
 
 The question then becomes:
 
-> Which strategy should we use in our projects in regards to commit and PR content and frequency to ensure a clear project history and efficient collaboration?
-
+Which strategy should we use in our projects in regards to commit and
+PR content and frequency to ensure a clear project history and efficient
+collaboration?
 
 ## Decision drivers
 
@@ -36,95 +40,155 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
-There are several different strategies on commit and PR content and frequency that can be used in software projects, each with its own benefits and drawbacks. Since we are working in a team, we need to ensure that our version control practices are efficient and effective for collaboration.
+There are several different strategies on commit and PR content and
+frequency that can be used in software projects, each with its own
+benefits and drawbacks. Since we are working in a team, we need to
+ensure that our version control practices are efficient and effective
+for collaboration.
 
-When deciding on which commit strategy to use, we need to take into account the following factors:
+When deciding on which commit strategy to use, we need to take into
+account the following factors:
 
-- Clarity: We want to maintain a clear and understandable commit history that accurately reflects the changes made to the codebase.
-- Revertibility: We need to be able to easily revert changes if necessary, so we need a strategy that allows for granular control over the commit history.
-- Simplicity: We want a commit strategy that is easy to understand and implement, so that all team members can follow the same process.
+- Clarity: We want to maintain a clear and understandable commit history
+  that accurately reflects the changes made to the codebase.
+- Revertibility: We need to be able to easily revert changes if
+  necessary, so we need a strategy that allows for granular control over
+  the commit history.
+- Simplicity: We want a commit strategy that is easy to understand and
+  implement, so that all team members can follow the same process.
 
 ## Considered options
 
 ::: content-hidden
-List and describe some of the options, as well as some of the benefits and
-drawbacks for each option.
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
 :::
 
-With the factors described above in mind, we have considered three strategies that could be used in our projects: atomic commits and PRs, squashing commits, and rebasing. Each of these strategies has its own benefits and drawbacks, which we need to weigh in order to make an informed decision.
+With the factors described above in mind, we have considered three
+strategies that could be used in our projects: atomic commits and PRs,
+squashing commits, and rebasing. Each of these strategies has its own
+benefits and drawbacks, which we need to weigh in order to make an
+informed decision.
 
 ### Atomic commits
 
-Atomic commits provide a structured approach to version control by allowing developers to make small, self-contained changes that can be easily understood and reverted if necessary. In order to ensure the integrity and stability of the project, we have decided to use atomic commits instead of squashing commits or rebasing.
+Atomic commits provide a structured approach to version control by
+allowing developers to make small, self-contained changes that can be
+easily understood and reverted if necessary. In order to ensure the
+integrity and stability of the project, we have decided to use atomic
+commits instead of squashing commits or rebasing.
 
 By using atomic commits, we can:
-- Facilitate collaboration: Atomic commits make it easier for multiple developers to work on the same codebase without stepping on each other's toes. Each commit represents a logical unit of work that can be reviewed and merged independently.
-- Simplify debugging: When an issue arises, atomic commits allow us to pinpoint the exact change that introduced the problem. This makes it easier to identify and fix bugs, as we can isolate the problematic code changes.
-- Enhance code readability: Atomic commits promote clean and concise code changes. By focusing on small, specific modifications, we can maintain a clear and understandable commit history, which is beneficial for code reviews and future maintenance.
 
-- Atomic commits: Atomic commits provide a structured approach to version control by allowing developers to make small, self-contained changes that can be easily understood and reverted if necessary. This strategy promotes collaboration, simplifies debugging, and enhances code readability.
+- Facilitate collaboration: Atomic commits make it easier for multiple
+  developers to work on the same codebase without stepping on each
+  other's toes. Each commit represents a logical unit of work that can
+  be reviewed and merged independently.
+- Simplify debugging: When an issue arises, atomic commits allow us to
+  pinpoint the exact change that introduced the problem. This makes it
+  easier to identify and fix bugs, as we can isolate the problematic
+  code changes.
+- Enhance code readability: Atomic commits promote clean and concise
+  code changes. By focusing on small, specific modifications, we can
+  maintain a clear and understandable commit history, which is
+  beneficial for code reviews and future maintenance.
 
-A way to check whether a change is atomic: You shouldn't need to use the word "and" when describing the commit or PR.
+- Atomic commits: Atomic commits provide a structured approach to
+  version control by allowing developers to make small, self-contained
+  changes that can be easily understood and reverted if necessary. This
+  strategy promotes collaboration, simplifies debugging, and enhances
+  code readability.
 
+A way to check whether a change is atomic: You shouldn't need to use the
+word "and" when describing the commit or PR.
 
 ## When to create branches (and how much they should cover)
 
-Every time you want to add something new to or modify existing work in a Git repository, you should create a new branch (following the [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow) approach). Importantly, each branch should represent a specific task or development effort. That is, a branch should be created for one particular purpose, independently of how many new lines of work is required for that purpose. Multiple developers can also contribute to the same branch.
+Every time you want to add something new to or modify existing work in a
+Git repository, you should create a new branch (following the
+[GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+approach). Importantly, each branch should represent a specific task or
+development effort. That is, a branch should be created for one
+particular purpose, independently of how many new lines of work is
+required for that purpose. Multiple developers can also contribute to
+the same branch.
 
-When you create branches for one specific purpose, it benefits your (and your collaborators') workflow in (at least) two ways:
+When you create branches for one specific purpose, it benefits your (and
+your collaborators') workflow in (at least) two ways:
 
-1. It enables you to give the branch a short, descriptive name that clearly communicates to your collaborators what work has been done on this particular branch.
-2. Smaller changes allows for a faster reviewing and merging to the `main` branch, since it is easier for your collaborators to get an overview of the work you have done.
+1. It enables you to give the branch a short, descriptive name that
+   clearly communicates to your collaborators what work has been done on
+   this particular branch.
+2. Smaller changes allows for a faster reviewing and merging to the
+   `main` branch, since it is easier for your collaborators to get an
+   overview of the work you have done.
 
-As an example, a branch could cover a fix to a particular bug or issue (i.e., a problem in the current code or documentation that has been reported in the repository in GitHub) or add a new feature, such as a new plot, like in the figure above showing parallel development.
-
-
+As an example, a branch could cover a fix to a particular bug or issue
+(i.e., a problem in the current code or documentation that has been
+reported in the repository in GitHub) or add a new feature, such as a
+new plot, like in the figure above showing parallel development.
 
 ::: {.columns}
 ::: {.column}
-#### Benefits
+### Benefits
 
-- Each commit and PR refer to a single logical change (which can be a bug fix, a new feature, a refactoring, etc.)
+- Each commit and PR refer to a single logical change (which can be a
+  bug fix, a new feature, a refactoring, etc.)
+
 :::
 ::: {.column}
+
 #### Drawbacks
 
 - Item 1
+
 :::
 :::
 
 ### Squashing commits
 
-Squashing commits involves combining multiple commits into a single commit. This can be useful for cleaning up the commit history and presenting a more concise view of the changes. However, it can make it more difficult to track individual changes and can lead to loss of context.
-
+Squashing commits involves combining multiple commits into a single
+commit. This can be useful for cleaning up the commit history and
+presenting a more concise view of the changes. However, it can make it
+more difficult to track individual changes and can lead to loss of
+context.
 
 ::: {.columns}
 ::: {.column}
 #### Benefits
 
 - Item 1
+
 :::
 ::: {.column}
+
 #### Drawbacks
 
 - Item 1
+
 :::
 :::
 
 ### Rebasing
 
-Rebasing involves moving or combining a sequence of commits to a new base commit. This can be useful for incorporating changes from a main branch into a feature branch or resolving conflicts. However, it can introduce complexity and potential conflicts if not done carefully.
+Rebasing involves moving or combining a sequence of commits to a new
+base commit. This can be useful for incorporating changes from a main
+branch into a feature branch or resolving conflicts. However, it can
+introduce complexity and potential conflicts if not done carefully.
 
 ::: {.columns}
 ::: {.column}
 #### Benefits
 
 - Item 1
+
 :::
 ::: {.column}
+
 #### Drawbacks
 
 - Item 1
+
 :::
 :::
 
@@ -135,10 +199,14 @@ What decision was made, use the form "We decided on CHOICE because of
 REASONS."
 :::
 
-In conclusion, we have chosen to adopt atomic commits in our projects because they provide a structured and efficient approach to version control, enabling better collaboration, debugging, and code readability.
+In conclusion, we have chosen to adopt atomic commits in our projects
+because they provide a structured and efficient approach to version
+control, enabling better collaboration, debugging, and code readability.
 
-After careful consideration, we have decided to adopt atomic commits as our commit strategy. This decision was made because atomic commits provide a structured and efficient approach to version control, enabling better collaboration, debugging, and code readability.
-
+After careful consideration, we have decided to adopt atomic commits as
+our commit strategy. This decision was made because atomic commits
+provide a structured and efficient approach to version control, enabling
+better collaboration, debugging, and code readability.
 
 ### Consequences
 
@@ -146,5 +214,9 @@ After careful consideration, we have decided to adopt atomic commits as our comm
 List some potential consequences of this decision.
 :::
 
-
-It is important to note that the chosen commit strategy may have consequences, such as the need for clear communication and coordination among team members, as well as potential conflicts during code integration. However, we believe that the benefits of atomic commits outweigh the drawbacks and will contribute to the overall success of our projects.
+It is important to note that the chosen commit strategy may have
+consequences, such as the need for clear communication and coordination
+among team members, as well as potential conflicts during code
+integration. However, we believe that the benefits of atomic commits
+outweigh the drawbacks and will contribute to the overall success of our
+projects.

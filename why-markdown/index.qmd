@@ -11,38 +11,43 @@ categories:
 
 ## Context and problem statement
 
-Writing, either for communication or making documents, is a fundamental component of any human activity.
-In technical writing, it includes documents like instructions, agreements, how-to guides, or explanations. What tools we
-use to write documentation can have a significant impact on how we
-write, how we collaborate, and how we share information. Following from
-our principles, we want open source tools that integrate well with other
-tools we use. For writing documentation, the tools we'll use to write text are called "markup languages". Markup languages are systems for writing plain text in a structured way that dictates how it will be displayed. However, there
-are many different markup languages to choose from, and we need to
-decide which one to use. The question then becomes:
+Writing, either for communication or making documents, is a fundamental
+component of any human activity. In technical writing, it includes
+documents like instructions, agreements, how-to guides, or explanations.
+What tools we use to write documentation can have a significant impact
+on how we write, how we collaborate, and how we share information.
+Following from our principles, we want open source tools that integrate
+well with other tools we use. For writing documentation, the tools we'll
+use to write text are called "markup languages". Markup languages are
+systems for writing plain text in a structured way that dictates how it
+will be displayed. However, there are many different markup languages to
+choose from, and we need to decide which one to use. The question then
+becomes:
 
-*Which markup language should we use as the basis for writing all types
-of documentation across Seedcase activities?*
+Which markup language should we use as the basis for writing all types
+of documentation across Seedcase activities?
 
 ## Decision drivers
 
-Aside from our principles, additional drivers are to choose a markup language that is:
+Aside from our principles, additional drivers are to choose a markup
+language that is:
 
--   Familiar to a wide range of people.
--   Popular and well-established.
--   Easy to learn and use.
--   Plain-text based.
--   Able to produce output in multiple formats.
+- Familiar to a wide range of people.
+- Popular and well-established.
+- Easy to learn and use.
+- Plain-text based.
+- Able to produce output in multiple formats.
 
 ## Considered options
 
 While HTML and LaTeX are popular and well-established markup languages,
 their main disadvantage is that they cannot output to different formats.
-For example, they can't convert to each other's formats, from HTML to LaTeX or vice versa.
-So we don't consider them. The two options that fit our drivers
-are:
+For example, they can't convert to each other's formats, from HTML to
+LaTeX or vice versa. So we don't consider them. The two options that fit
+our drivers are:
 
--   [Markdown](https://en.wikipedia.org/wiki/Markdown)
--   [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText)
+- [Markdown](https://en.wikipedia.org/wiki/Markdown)
+- [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText)
 
 ### Markdown
 
@@ -58,31 +63,34 @@ editor.
 ::: column
 #### Benefits
 
--   It is by far the most popular markup language used by the widest
-    range of people, not just developers.
--   Integrated in nearly all major platforms, like GitHub, WordPress,
-    Stack Exchange, and many communication tools like Slack and Discord.
--   Has the massive advantage of having a powerful format converter
-    called [Pandoc](https://pandoc.org/).
--   Many tools and libraries that use and support it, such as [R
-    Markdown](https://rmarkdown.rstudio.com/), [Jupyter
-    Notebooks](https://jupyter.org/), and [Quarto](https://quarto.org/).
--   It is very easy to use and learn, with a simple syntax that is
-    intuitive and easy to remember. Even non-technical people can start
-    using it within minutes.
+- It is by far the most popular markup language used by the widest range
+  of people, not just developers.
+- Integrated in nearly all major platforms, like GitHub, WordPress,
+  Stack Exchange, and many communication tools like Slack and Discord.
+- Has the massive advantage of having a powerful format converter called
+  [Pandoc](https://pandoc.org/).
+- Many tools and libraries that use and support it, such as
+  [R Markdown](https://rmarkdown.rstudio.com/),
+  [Jupyter Notebooks](https://jupyter.org/), and
+  [Quarto](https://quarto.org/).
+- It is very easy to use and learn, with a simple syntax that is
+  intuitive and easy to remember. Even non-technical people can start
+  using it within minutes.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   There are many different versions of Markdown, though there are
-    strong efforts to standardize it onto CommonMark.
--   Because of it's ease of use, there are some more powerful features
-    that are not implemented in the original Markdown syntax, so
-    extensions are needed to use features that may be needed in some
-    cases. For instance, they can't handle special formatting around text
-    like a "callout" block often used on websites or in books to draw attention
-    to a tip or important piece of information.
+- There are many different versions of Markdown, though there are strong
+  efforts to standardize it onto CommonMark.
+- Because of it's ease of use, there are some more powerful features
+  that are not implemented in the original Markdown syntax, so
+  extensions are needed to use features that may be needed in some
+  cases. For instance, they can't handle special formatting around text
+  like a "callout" block often used on websites or in books to draw
+  attention to a tip or important piece of information.
+
 :::
 :::::
 
@@ -97,21 +105,23 @@ plain text and fairly simple to use.
 ::: column
 #### Benefits
 
--   Because it is the default for Python documentation, its use and
-    support is widely available in the Python community.
--   It is more powerful than Markdown, with more features built in
-    mainly because it was designed with technical writing in mind.
+- Because it is the default for Python documentation, its use and
+  support is widely available in the Python community.
+- It is more powerful than Markdown, with more features built in mainly
+  because it was designed with technical writing in mind.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Not nearly as widely used as Markdown.
--   Is a bit more difficult to learn and to read, at least relative to
-    Markdown.
--   Because Markdown is the
-    core to Pandoc, Pandoc can't convert many of its features into the other
-    formats that don't overlap with Markdown, like those found in reStructuredText.
+- Not nearly as widely used as Markdown.
+- Is a bit more difficult to learn and to read, at least relative to
+  Markdown.
+- Because Markdown is the core to Pandoc, Pandoc can't convert many of
+  its features into the other formats that don't overlap with Markdown,
+  like those found in reStructuredText.
+
 :::
 :::::
 
@@ -122,12 +132,13 @@ used markup language, it is easy to learn and use, and it has a powerful
 format converter in Pandoc. We also use [Quarto](/why-quarto/index.qmd)
 for creating websites and other output, which is built on top of
 Pandoc's Markdown. Through Quarto we have access to many powerful
-features that make up for Markdown's less powerful features, such as the previously
-mentioned "callout" blocks or creating multi-column page layouts.
+features that make up for Markdown's less powerful features, such as the
+previously mentioned "callout" blocks or creating multi-column page
+layouts.
 
 ### Consequences
 
--   We don't foresee any major consequences to this decision.
+- We don't foresee any major consequences to this decision.
 
 ## Resources used for this post
 
@@ -135,5 +146,4 @@ mentioned "callout" blocks or creating multi-column page layouts.
 List the resources used to write this post
 :::
 
--   [Stack Overflow Developer Survey
-    2024](https://survey.stackoverflow.co/2024/technology#2-programming-scripting-and-markup-languages)
+- [Stack Overflow Developer Survey 2024](https://survey.stackoverflow.co/2024/technology#2-programming-scripting-and-markup-languages)

@@ -1,8 +1,9 @@
 ---
 title: "Why Python"
 description: |
-  Python is one of the most common and widely used programming languages.
-  As it is used across multiple domains and industries, it is likely to be familiar to a wider audience.
+  Python is one of the most common and widely used programming languages.  As it
+  is used across multiple domains and industries, it is likely to be familiar to
+  a wider audience.
 date: "2023-03-22"
 date-modified: "2024-05-10"
 categories:
@@ -29,8 +30,8 @@ that can handle large amounts of data, provide efficient data processing
 capabilities, and integrate well with other technologies commonly used
 in the research area.
 
-> Which programming language should we use for developing Seedcase
-> software?
+Which programming language should we use for developing Seedcase
+software?
 
 ## Decision drivers
 
@@ -60,35 +61,37 @@ and drawbacks for each option.
 ::: column
 #### Benefits
 
--   Well-suited for real-time and performance-critical applications.
--   Allows fine-grained control over memory and hardware resources,
-    enabling low-level, use-case-specific optimisations.
--   Compilation to native machine code for the target platform prior to
-    execution guarantees better runtime performance than Python and,
-    potentially by a smaller margin, Java.
--   Static type-checking at compile time helps to catch certain types of
-    bugs early on.
--   Mature libraries and frameworks available for web development and
-    data analysis.
--   Active community and extensive resources.
+- Well-suited for real-time and performance-critical applications.
+- Allows fine-grained control over memory and hardware resources,
+  enabling low-level, use-case-specific optimisations.
+- Compilation to native machine code for the target platform prior to
+  execution guarantees better runtime performance than Python and,
+  potentially by a smaller margin, Java.
+- Static type-checking at compile time helps to catch certain types of
+  bugs early on.
+- Mature libraries and frameworks available for web development and data
+  analysis.
+- Active community and extensive resources.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Compilation to native machine code makes C++ programs more platform
-    dependent, broadly speaking, than programs in interpreted languages.
--   Use of platform-specific language features or libraries can lead to
-    portability issues.
--   Lack of automatic garbage collection means that developers need more
-    awareness of how memory is managed in the application.
--   Offer of database management libraries is more limited than for Java
-    or Python.
--   Syntax is verbose and less close to natural language, making
-    development less rapid.
--   No inline documentation generation system out of the box.
--   Less widespread in academic and research communities.
--   Has a steep learning curve, arguably steeper than Java's.
+- Compilation to native machine code makes C++ programs more platform
+  dependent, broadly speaking, than programs in interpreted languages.
+- Use of platform-specific language features or libraries can lead to
+  portability issues.
+- Lack of automatic garbage collection means that developers need more
+  awareness of how memory is managed in the application.
+- Offer of database management libraries is more limited than for Java
+  or Python.
+- Syntax is verbose and less close to natural language, making
+  development less rapid.
+- No inline documentation generation system out of the box.
+- Less widespread in academic and research communities.
+- Has a steep learning curve, arguably steeper than Java's.
+
 :::
 :::
 
@@ -98,28 +101,30 @@ and drawbacks for each option.
 ::: column
 #### Benefits
 
--   Code is run on a Java Virtual Machine, making Java programs,
-    generally, platform independent (provided the host has a Java
-    Runtime Environment installed).
--   Better runtime performance than Python.
--   Static type-checking at compile time helps to catch certain types of
-    bugs early on.
--   Comes with inline documentation generation system out of the box
-    (Javadoc).
--   Large ecosystem of mature libraries and frameworks for web
-    development and database management.
--   Active community and extensive resources.
+- Code is run on a Java Virtual Machine, making Java programs,
+  generally, platform independent (provided the host has a Java Runtime
+  Environment installed).
+- Better runtime performance than Python.
+- Static type-checking at compile time helps to catch certain types of
+  bugs early on.
+- Comes with inline documentation generation system out of the box
+  (Javadoc).
+- Large ecosystem of mature libraries and frameworks for web development
+  and database management.
+- Active community and extensive resources.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Fewer libraries for data analysis than Python.
--   Syntax is verbose and less close to natural language, making
-    development less rapid.
--   Less widespread in academic and research communities.
--   Has a steeper learning curve than Python, especially for people with
-    little programming experience.
+- Fewer libraries for data analysis than Python.
+- Syntax is verbose and less close to natural language, making
+  development less rapid.
+- Less widespread in academic and research communities.
+- Has a steeper learning curve than Python, especially for people with
+  little programming experience.
+
 :::
 :::
 
@@ -129,30 +134,30 @@ and drawbacks for each option.
 ::: column
 #### Benefits
 
--   Code is executed by a Python interpreter, making Python programs
-    platform independent (provided the host has an interpreter
-    installed).
--   Concise, easy-to-read, beginner-friendly syntax.
--   Easy to iterate and prototype rapidly.
--   Large ecosystem of mature libraries and frameworks for web
-    development (e.g. [Django](https://www.djangoproject.com),
-    [Flask](https://flask.palletsprojects.com/en/2.3.x/)), database
-    management (e.g. [SQLAlchemy](https://www.sqlalchemy.org), Django's
-    Object Relational Mapper), and data analysis.
--   Active community and extensive resources.
--   Very popular in data-intensive research and academia, some target
-    users of Seedcase are likely to be familiar with Python.
+- Code is executed by a Python interpreter, making Python programs
+  platform independent (provided the host has an interpreter installed).
+- Concise, easy-to-read, beginner-friendly syntax.
+- Easy to iterate and prototype rapidly.
+- Large ecosystem of mature libraries and frameworks for web development
+  (e.g. [Django](https://www.djangoproject.com),
+  [Flask](https://flask.palletsprojects.com/en/2.3.x/)), database
+  management (e.g. [SQLAlchemy](https://www.sqlalchemy.org), Django's
+  Object Relational Mapper), and data analysis.
+- Active community and extensive resources.
+- Very popular in data-intensive research and academia, some target
+  users of Seedcase are likely to be familiar with Python.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Worse runtime performance than Java or C++, partly because the
-    interpreter does less pre-execution optimisation and instead follows
-    the layout of the source coded sequentially during program
-    execution.
--   Dynamic type-checking at runtime can make it more difficult to catch
-    certain types of bugs early on.
+- Worse runtime performance than Java or C++, partly because the
+  interpreter does less pre-execution optimisation and instead follows
+  the layout of the source coded sequentially during program execution.
+- Dynamic type-checking at runtime can make it more difficult to catch
+  certain types of bugs early on.
+
 :::
 :::
 
@@ -162,23 +167,25 @@ and drawbacks for each option.
 ::: column
 #### Benefits
 
--   Designed for statistical computing with excellent data visualisation
-    capabilities.
--   Wide array of packages for data analysis.
--   Active community and extensive resources.
--   Very popular in data-intensive research and academia, some target
-    users of Seedcase are likely to be familiar with R.
+- Designed for statistical computing with excellent data visualisation
+  capabilities.
+- Wide array of packages for data analysis.
+- Active community and extensive resources.
+- Very popular in data-intensive research and academia, some target
+  users of Seedcase are likely to be familiar with R.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Less versatile and general purpose than the other languages
-    considered.
--   While there is a web application framework for R
-    ([Shiny](https://shiny.posit.co/)), this is intended primarily for
-    interactive data visualisation, and offers more limited features
-    than the frameworks for the other languages considered.
+- Less versatile and general purpose than the other languages
+  considered.
+- While there is a web application framework for R
+  ([Shiny](https://shiny.posit.co/)), this is intended primarily for
+  interactive data visualisation, and offers more limited features than
+  the frameworks for the other languages considered.
+
 :::
 :::
 

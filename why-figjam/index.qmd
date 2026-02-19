@@ -69,25 +69,25 @@ future wish to change then we will need to make a prioritised list.
 
 The following features are needed for the cards:
 
--   They should be easy to create, edit, and delete.
--   They should not have a maximum length (or it should be quite long).
--   They should be movable.
--   They should have clear ownership.
--   They should be easy to read.
--   They should be able to have different colours.
+- They should be easy to create, edit, and delete.
+- They should not have a maximum length (or it should be quite long).
+- They should be movable.
+- They should have clear ownership.
+- They should be easy to read.
+- They should be able to have different colours.
 
 #### Organisation of cards
 
 The following features are needed for the organisation of the cards:
 
--   It should be easy to group cards.
--   It should be possible to keep groups of cards visually separate.
--   It should be possible to move groups of cards.
--   It should be possible to add comments and actions to cards.
--   There should not be a maximum length for comments.
--   It should be easy to convert cards to actions/issues.
--   It should be easy to navigate the board and get a visual overview of
-    the cards.
+- It should be easy to group cards.
+- It should be possible to keep groups of cards visually separate.
+- It should be possible to move groups of cards.
+- It should be possible to add comments and actions to cards.
+- There should not be a maximum length for comments.
+- It should be easy to convert cards to actions/issues.
+- It should be easy to navigate the board and get a visual overview of
+  the cards.
 
 At present we don't see a need to be able to vote on cards, and likewise
 there is no need to archive or search for specific cards. This could
@@ -98,21 +98,20 @@ change and should not be discarded as possible features for the future.
 The overall functionality of the board and individual sessions should
 include the following:
 
--   It should be possible to save a retrospective session.
-    -   This could include a timer function to keep the session on
-        track.
--   It should be possible to archive a session, so that it is easy to
-    refer back to it.
--   It should be possible to share the board with all participants.
--   It should be possible to follow board activity on screen for all
-    participants.
--   It should be possible to have multiple users on the board at the
-    same time.
--   The board should be accessible to all participants at all times.
--   The board should be hosted online, so that it is easy to access from
-    anywhere, and not dependent on a specific machine to be running.
--   It would be nice to have a number of fun elements (stickers, emojis,
-    etc.) to make the session more engaging.
+- It should be possible to save a retrospective session.
+- This could include a timer function to keep the session on track.
+- It should be possible to archive a session, so that it is easy to
+  refer back to it.
+- It should be possible to share the board with all participants.
+- It should be possible to follow board activity on screen for all
+  participants.
+- It should be possible to have multiple users on the board at the same
+  time.
+- The board should be accessible to all participants at all times.
+- The board should be hosted online, so that it is easy to access from
+  anywhere, and not dependent on a specific machine to be running.
+- It would be nice to have a number of fun elements (stickers, emojis,
+  etc.) to make the session more engaging.
 
 We don't see a need for audio or chat functionality at present, as we
 are using Discord for the meeting itself. This could change in the
@@ -125,15 +124,14 @@ List and describe some of the options, as well as some of the benefits
 and drawbacks for each option.
 :::
 
-There is a list of open source retrospective tools available at [Project
-Management
-Planet](https://www.projectmanagementplanet.com/open-source-retrospectives-tools/),
+There is a list of open source retrospective tools available at
+[Project Management Planet](https://www.projectmanagementplanet.com/open-source-retrospectives-tools/),
 which we used as a starting point. To see a brief overview of the tools
-we looked at, see the original issue on GitHub: [Seedcase Project Team
-Issue 184](https://github.com/seedcase-project/team/issues/184). There
-are 10 tools on the list, and there is a brief description of them in
-the issue comment. We have narrowed it down to three that we will take a
-slightly closer look at, alongside FigJam.
+we looked at, see the original issue on GitHub:
+[Seedcase Project Team Issue 184](https://github.com/seedcase-project/team/issues/184).
+There are 10 tools on the list, and there is a brief description of them
+in the issue comment. We have narrowed it down to three that we will
+take a slightly closer look at, alongside FigJam.
 
 ### Scrumlr
 
@@ -150,32 +148,34 @@ account.
 ::: column
 #### Benefits
 
--   Cards are easy to create, edit, and delete once you figure out that
-    clicking on a card will open it up.
--   Cards show the author and allows for other users to add emojis to
-    them.
--   Cards allow for a lot of text.
--   The board allows multiple users to be on it at the same time and
-    provides a timer function.
--   There is an Actions column and all columns can be renamed as well as
-    more columns added if needed.
--   It is possible to export a board into various formats, and the
-    invitation link works even if all users have closed the board.
+- Cards are easy to create, edit, and delete once you figure out that
+  clicking on a card will open it up.
+- Cards show the author and allows for other users to add emojis to
+  them.
+- Cards allow for a lot of text.
+- The board allows multiple users to be on it at the same time and
+  provides a timer function.
+- There is an Actions column and all columns can be renamed as well as
+  more columns added if needed.
+- It is possible to export a board into various formats, and the
+  invitation link works even if all users have closed the board.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   It is not possible to group cards in a way that allows you to read
-    all of them on the screen at the same time.
--   Cards only show the first three lines of text.
--   Because of the column layout it is not possible to move groups of
-    cards in a way that allows for more than one or two groups to be
-    visible at the same time.
--   It is not possible to change the colour (they are all white).
--   It is at present not clear how long a board is stored for, so it
-    would need to be exported after each session, making it more
-    difficult to refer back to previous sessions.
+- It is not possible to group cards in a way that allows you to read all
+  of them on the screen at the same time.
+- Cards only show the first three lines of text.
+- Because of the column layout it is not possible to move groups of
+  cards in a way that allows for more than one or two groups to be
+  visible at the same time.
+- It is not possible to change the colour (they are all white).
+- It is at present not clear how long a board is stored for, so it would
+  need to be exported after each session, making it more difficult to
+  refer back to previous sessions.
+
 :::
 :::
 
@@ -200,38 +200,38 @@ have no way of knowing who wrote which card.
 ::: column
 #### Benefits
 
--   It is easy to create and delete cards.
--   The cards are easy to read.
--   It is easy to group cards, and all cards are visible on the screen
-    at the same time.
--   It is possible to moved groups of cards, although they can't be
-    moved between columns.
--   It is possible to fit quite a few cards on the screen, making an
-    overview easy.
--   It is possible to change the url to a custom format, thus making it
-    easier to share.
--   There is an export function at the end.
--   If using the custom url, it is possible to return to the board at a
-    later date, although it is not clear how long the board is stored
-    for.
--   It is possible to share the board, and for more than one user to
-    work on it, although once you've moved to the next step you can't go
-    back.
+- It is easy to create and delete cards.
+- The cards are easy to read.
+- It is easy to group cards, and all cards are visible on the screen at
+  the same time.
+- It is possible to moved groups of cards, although they can't be moved
+  between columns.
+- It is possible to fit quite a few cards on the screen, making an
+  overview easy.
+- It is possible to change the url to a custom format, thus making it
+  easier to share.
+- There is an export function at the end.
+- If using the custom url, it is possible to return to the board at a
+  later date, although it is not clear how long the board is stored for.
+- It is possible to share the board, and for more than one user to work
+  on it, although once you've moved to the next step you can't go back.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Cards can't be edited.
--   There is no obvious functionality to show who the author of various
-    cards is.
--   It is not possible to move cards from one column to another.
--   There is no timer function.
--   The cards are not actually shown as cards (but as numbered
-    comments), so it is impossible to change the colour of them.
--   It is not possible to add comments to cards.
--   The export function just creates a text file with all the cards.
--   There are no frills or entertaining features.
+- Cards can't be edited.
+- There is no obvious functionality to show who the author of various
+  cards is.
+- It is not possible to move cards from one column to another.
+- There is no timer function.
+- The cards are not actually shown as cards (but as numbered comments),
+  so it is impossible to change the colour of them.
+- It is not possible to add comments to cards.
+- The export function just creates a text file with all the cards.
+- There are no frills or entertaining features.
+
 :::
 :::
 
@@ -252,26 +252,28 @@ available.
 ::: column
 #### Benefits
 
--   Cards are easy to create, edit, and delete.
--   Cards have a maximum length, but it is quite long (over 2000
-    characters).
--   All participants can see which card is being discussed.
+- Cards are easy to create, edit, and delete.
+- Cards have a maximum length, but it is quite long (over 2000
+  characters).
+- All participants can see which card is being discussed.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Cards can't be moved within columns and they can't be moved between
-    columns.
--   Cards can't be grouped.
--   Cards do not show who the author is.
--   The colour of the cards can't be changed.
--   It is not possible to associate comments to cards.
--   A card is greyed out once it has being discussed.
--   If a couple of cards contain a lot of text it becomes difficult to
-    keep an overview of the board.
--   It would be difficult for more than one person to edit the board at
-    any given time.
+- Cards can't be moved within columns and they can't be moved between
+  columns.
+- Cards can't be grouped.
+- Cards do not show who the author is.
+- The colour of the cards can't be changed.
+- It is not possible to associate comments to cards.
+- A card is greyed out once it has being discussed.
+- If a couple of cards contain a lot of text it becomes difficult to
+  keep an overview of the board.
+- It would be difficult for more than one person to edit the board at
+  any given time.
+
 :::
 :::
 
@@ -281,18 +283,20 @@ available.
 ::: column
 #### Benefits
 
--   As the requirements and features we identified as necessary for a
-    good retrospective session are based on our current use of FigJam,
-    we have not listed them here.
+- As the requirements and features we identified as necessary for a good
+  retrospective session are based on our current use of FigJam, we have
+  not listed them here.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   The layout we have used so far does make it difficult to keep an
-    overview of each individual session as it grows.
--   It is not obvious if it would be possible to export the boards in a
-    way that would make it easy to search through them at a later date.
+- The layout we have used so far does make it difficult to keep an
+  overview of each individual session as it grows.
+- It is not obvious if it would be possible to export the boards in a
+  way that would make it easy to search through them at a later date.
+
 :::
 :::
 

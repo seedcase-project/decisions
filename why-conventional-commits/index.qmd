@@ -38,8 +38,8 @@ PRs](/why-atomic-commits-and-prs/index.qmd)).
 Since commit message conventions are not enforced by Git itself, but
 rather by the team working on a given project, the question becomes:
 
-> Which commit message convention should we follow when we write commit
-> messages in Seedcase codebases?
+Which commit message convention should we follow when we write commit
+messages in Seedcase codebases?
 
 ## Decision drivers
 
@@ -53,10 +53,11 @@ transparency and collaboration. Therefore, it is essential to have a
 clear and consistent commit message convention to maintain these
 principles, both within the team and across external contributions.
 
-Since we follow the [GitHub flow](/why-github-flow/index.qmd), changes are made
-on topic branches and reviewed before merging into the main branch.
-Having a clear commit message convention can ease the review process, as
-the context and purpose of changes will be clearer for reviewers.
+Since we follow the [GitHub flow](/why-github-flow/index.qmd), changes
+are made on topic branches and reviewed before merging into the main
+branch. Having a clear commit message convention can ease the review
+process, as the context and purpose of changes will be clearer for
+reviewers.
 
 In addition, some commit message conventions can automate changelogs and
 release processes, which is beneficial for version management and for
@@ -73,14 +74,15 @@ specific descriptions, avoiding vagueness and ambiguity), **relevant**
 
 A commit message should:
 
--   Include a short descriptive title, potentially followed by a body
-    with more details.
--   Use the imperative, present tense in the title and the body (e.g.,
-    "Add feature" instead of "Added feature")
--   Use the title to summarise the changes made in the commit.
--   Use a potential body to provide context and justifications for the
-    change (such as elaboration on the changes, breaking changes,
-    reference of issues, and tagging relevant people).
+- Include a short descriptive title, potentially followed by a body with
+  more details.
+- Use the imperative, present tense in the title and the body (e.g.,
+  "Add feature" instead of "Added feature")
+- Use the title to summarise the changes made in the commit.
+- Use a potential body to provide context and justifications for the
+  change (such as elaboration on the changes, breaking changes,
+  reference of issues, and tagging relevant people).
+
 :::
 
 ## Considered options
@@ -98,8 +100,8 @@ following sections.
 ### Conventional commits
 
 The [Conventional Commits](https://www.conventionalcommits.org/)
-convention builds on the [Angular
-convention](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines),
+convention builds on the
+[Angular convention](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines),
 but was generalised to go beyond Typescript. It's widely adopted due to
 its compatibility with semantic versioning and automated release
 processes. Moreover, it's commonly used in various software development
@@ -116,7 +118,7 @@ the history of the project more understandable and easier to track.
 A conventional commit includes a **header**, an optional **body**, and
 an optional **footer** in each commit message, like shown below:
 
-```
+```text
 <type>[optional scope]: <description>
 
 [optional body]
@@ -138,28 +140,30 @@ contrasts with previous implementations. The optional **footer**
 contains metadata about the change, such as potential breaking changes
 and references to relevant issues.
 
-The conventional commits convention is also supported by a [VS Code
-extension](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)
+The conventional commits convention is also supported by a
+[VS Code extension](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)
 that eases the process of writing commit messages in the correct format.
 
 ::: columns
 ::: column
 #### Benefits
 
--   Provides a clear structure for commit messages.
--   Has an easy-to-use VS Code extension.
--   Can be used to generate changelogs.
--   Widespread adoption in various software development and open-source
-    communities.
+- Provides a clear structure for commit messages.
+- Has an easy-to-use VS Code extension.
+- Can be used to generate changelogs.
+- Widespread adoption in various software development and open-source
+  communities.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   It might be too verbose for some projects (but using the VS Code
-    extension eases the process substantially).
--   No use of emojis which can make commit messages more visually
-    appealing and easier to scan for intention and purpose.
+- It might be too verbose for some projects (but using the VS Code
+  extension eases the process substantially).
+- No use of emojis which can make commit messages more visually
+  appealing and easier to scan for intention and purpose.
+
 :::
 :::
 
@@ -172,7 +176,7 @@ explanations of the meaning of each emoji. Each commit message consists
 of an **intention** (an emoji), an optional **scope**, and a
 **message**, like shown below:
 
-```
+```text
 <intention>(<scope>): <message>
 ```
 
@@ -186,22 +190,23 @@ visually oriented.
 ::: column
 #### Benefits
 
--   Provides a clear structure for commit messages.
--   Has an easy-to-use VS Code extension.
--   The use of emojis can make commit messages more visually appealing
-    and easier to scan to identify the purpose or intention.
--   Gitmoji is an open-source project which fits well with the
-    open-source philosophy of the Seedcase Project.
+- Provides a clear structure for commit messages.
+- Has an easy-to-use VS Code extension.
+- The use of emojis can make commit messages more visually appealing and
+  easier to scan to identify the purpose or intention.
+- Gitmoji is an open-source project which fits well with the open-source
+  philosophy of the Seedcase Project.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   For those not familiar with emojis or who are less visually
-    oriented, it might be harder to understand the meaning of the
-    commit.
--   No structured format for the body or footer of the commit message to
-    provide more context.
+- For those not familiar with emojis or who are less visually oriented,
+  it might be harder to understand the meaning of the commit.
+- No structured format for the body or footer of the commit message to
+  provide more context.
+
 :::
 :::
 
@@ -221,8 +226,8 @@ the history of the project more understandable and easier to track.
 We decided to use the **Conventional Commits** convention with the
 inclusion of optional emojis (following the use of emojis in the
 **Gitmoji** convention). The Conventional Commits convention is widely
-adopted, has an easy-to-use [VS Code
-extension](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits),
+adopted, has an easy-to-use
+[VS Code extension](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits),
 and can be used to generate SemVar changelogs. Since emojis are
 incorporated in the Conventional Commits extension, we have the option
 to include emojis in commit messages to make commit messages more
@@ -248,6 +253,6 @@ Conventional Commits convention effortlessly.
 Note that following a commit message convention alone doesn't ensure a
 clear project history. Following a commit convention that includes
 commit content and frequency is as essential as a commit message
-convention. See the [Why atomic commits and
-PRs](/why-atomic-commits-and-prs/index.qmd) decision post for a discussion of
-such conventions.
+convention. See the
+[Why atomic commits and PRs](/why-atomic-commits-and-prs/index.qmd)
+decision post for a discussion of such conventions.

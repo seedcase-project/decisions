@@ -34,7 +34,7 @@ structure is the IMRaD pattern (introduction/background, methods,
 results, and discussion). However, there is no clear convention for
 writing technical documentation for software. So our question is:
 
-*What framework should we use to write our technical documentation?*
+What framework should we use to write our technical documentation?
 
 ## Decision drivers
 
@@ -43,10 +43,10 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
--   The framework should itself be well described and structured, if it
-    aims to help us write better documentation.
--   The framework should be flexible enough to be used for different
-    types of documentation.
+- The framework should itself be well described and structured, if it
+  aims to help us write better documentation.
+- The framework should be flexible enough to be used for different types
+  of documentation.
 
 ## Considered options
 
@@ -81,34 +81,34 @@ shouldn't mix these different types of content together.
 ::: column
 #### Benefits
 
--   Provides a clear structure for thinking about what different types
-    of documentation a software or technical product needs to help
-    different types of users.
--   Has become more popular and more widely used recently. For
-    example, Canonical, the company that develops Ubuntu, [uses it for
-    their
-    documentation](https://ubuntu.com/blog/diataxis-a-new-foundation-for-canonical-documentation)
--   Isn't prescriptive about how to write documentation, instead, it's
-    more of a guide to thinking about documentation.
--   Following this structure can make it much easier to communicate to
-    readers what the aim of each piece of documentation is.
--   Documentation following this framework is much more coherent and
-    focused, as it keeps the intended audience and their needs clearly
-    in mind when writing.
--   Has substantial supporting theory and reasoning behind it, which has
-    lead to it being well designed.
--   The documentation on Diataxis is also high-quality and easy to use
-    and read.
+- Provides a clear structure for thinking about what different types of
+  documentation a software or technical product needs to help different
+  types of users.
+- Has become more popular and more widely used recently. For example,
+    Canonical, the company that develops Ubuntu,
+    [uses it for their documentation](https://ubuntu.com/blog/diataxis-a-new-foundation-for-canonical-documentation)
+- Isn't prescriptive about how to write documentation, instead, it's
+  more of a guide to thinking about documentation.
+- Following this structure can make it much easier to communicate to
+  readers what the aim of each piece of documentation is.
+- Documentation following this framework is much more coherent and
+  focused, as it keeps the intended audience and their needs clearly in
+  mind when writing.
+- Has substantial supporting theory and reasoning behind it, which has
+  lead to it being well designed.
+- The documentation on Diataxis is also high-quality and easy to use and
+  read.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Some types of documentation may not fit neatly into one of the four
-    categories.
--   It can be difficult to decide which category a piece of
-    documentation belongs to, though this is mostly a matter of practice
-    and experience.
+- Some types of documentation may not fit neatly into one of the four
+  categories.
+- It can be difficult to decide which category a piece of documentation
+  belongs to, though this is mostly a matter of practice and experience.
+
 :::
 :::::
 
@@ -131,9 +131,9 @@ when writing technical documentation.
 List some potential consequences of this decision.
 :::
 
--   Since it is really the only choice, a new option might come up in
-    the future that is better suited to our needs. But for now, we don't
-    see much risk in this decision.
+- Since it is really the only choice, a new option might come up in the
+  future that is better suited to our needs. But for now, we don't see
+  much risk in this decision.
 
 ## Resources used for this post
 
@@ -141,8 +141,6 @@ List some potential consequences of this decision.
 List the resources used to write this post
 :::
 
--   [Diataxis website](https://diataxis.fr/)
--   [Diátaxis, a new foundation for Canonical
-    documentation](https://ubuntu.com/blog/diataxis-a-new-foundation-for-canonical-documentation)
--   [What is Diátaxis and should you be using it with your
-    documentation?](https://idratherbewriting.com/blog/what-is-diataxis-documentation-framework)
+- [Diataxis website](https://diataxis.fr/)
+- [Diátaxis, a new foundation for Canonical documentation](https://ubuntu.com/blog/diataxis-a-new-foundation-for-canonical-documentation)
+- [What is Diátaxis and should you be using it with your documentation?](https://idratherbewriting.com/blog/what-is-diataxis-documentation-framework)

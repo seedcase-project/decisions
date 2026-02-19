@@ -22,15 +22,15 @@ statement in the form of a question for the problem.
 
 Since the Seedcase Project is focused on improving the structure and
 infrastructure around data, a critical component of that is how we
-structure the data and the metadata after it enters into Seedcase software.
-So, following our [guiding
-principles](https://seedcase-project.org/about/principles) and to
-minimize time spent on tasks that already have solutions, we need to
+structure the data and the metadata after it enters into Seedcase
+software. So, following our
+[guiding principles](https://seedcase-project.org/about/principles) and
+to minimize time spent on tasks that already have solutions, we need to
 find any standards or frameworks that exist for how data and especially
 metadata should be structured and organized. So the question is:
 
-*What standard should we follow when structuring and organizing our data
-and metadata?*
+What standard should we follow when structuring and organizing our data
+and metadata?
 
 ## Decision drivers
 
@@ -39,14 +39,14 @@ List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
 
--   We need a guide that will help us determine how data gets structured
-    when it enters into Seedcase software.
--   We want an established standard to follow so that we have better
-    interoperability with other tools and systems.
--   We want to reduce time spent on building solutions if one already
-    exists to solve the problem we have.
--   We need something that has a Python connector or package, since we
-    use Python.
+- We need a guide that will help us determine how data gets structured
+  when it enters into Seedcase software.
+- We want an established standard to follow so that we have better
+  interoperability with other tools and systems.
+- We want to reduce time spent on building solutions if one already
+  exists to solve the problem we have.
+- We need something that has a Python connector or package, since we use
+  Python.
 
 ## Considered options
 
@@ -67,22 +67,22 @@ There are some "data catalog" tools, but many don't fit our
 requirements. These are some that exist but that we don't consider, with
 reasons given below.
 
--   [DataHub](https://datahub.io/): Is built with JavaScript and React.
--   [CKAN](https://github.com/ckan/ckan): A data catalog tool that is
-    largely focused on a way of presenting data/metadata, without
-    consideration for how it is structured.
--   [OpenDataDiscovery](https://opendatadiscovery.org/): Requires a
-    Docker container to run, mostly focused on commercial needs, and is
-    intended as a platform for hosting and sharing (internal) data.
-    There is a command-line interface, but there is no easy
-    documentation on how to use it, nor is it actively developed.
--   [OpenMetadata](https://docs.open-metadata.org/v1.4.x): Similar to
-    OpenDataDiscovery.
+- [DataHub](https://datahub.io/): Is built with JavaScript and React.
+- [CKAN](https://github.com/ckan/ckan): A data catalog tool that is
+  largely focused on a way of presenting data/metadata, without
+  consideration for how it is structured.
+- [OpenDataDiscovery](https://opendatadiscovery.org/): Requires a Docker
+  container to run, mostly focused on commercial needs, and is intended
+  as a platform for hosting and sharing (internal) data. There is a
+  command-line interface, but there is no easy documentation on how to
+  use it, nor is it actively developed.
+- [OpenMetadata](https://docs.open-metadata.org/v1.4.x): Similar to
+  OpenDataDiscovery.
 
 The only real open metadata standard that seems to exist is the
 [Frictionless Data](https://frictionlessdata.io/) standard, which
-surprisingly wasn't listed in the resources above. This is likely for the
-opposite reasons we didn't consider the tools they list.
+surprisingly wasn't listed in the resources above. This is likely for
+the opposite reasons we didn't consider the tools they list.
 
 ### Frictionless Data
 
@@ -96,28 +96,29 @@ stores metadata about a collection of data files.
 ::: column
 #### Benefits
 
--   Documentation is extremely easy to use and follow.
--   The overall design and architecture of the standard is easy to
-    understand and well designed.
--   Interacts with multiple programming languages and services,
-    including Python and GitHub.
--   Has clearly described principles and values, which make it easy to
-    understand the intent of the standard.
--   Everything is stored in a JSON file, which makes it
-    machine-readable.
--   The Python package provides functionality to extract the metadata of
-    data files and to validate the input data against the metadata.
--   Has increasing
-    [adoption](https://frictionlessdata.io/adoption/#community-projects)
-    in many organizations and projects.
--   Has a clear specification for fields to include in the metadata.
+- Documentation is extremely easy to use and follow.
+- The overall design and architecture of the standard is easy to
+  understand and well designed.
+- Interacts with multiple programming languages and services, including
+  Python and GitHub.
+- Has clearly described principles and values, which make it easy to
+  understand the intent of the standard.
+- Everything is stored in a JSON file, which makes it machine-readable.
+- The Python package provides functionality to extract the metadata of
+  data files and to validate the input data against the metadata.
+- Has increasing
+  [adoption](https://frictionlessdata.io/adoption/#community-projects)
+  in many organizations and projects.
+- Has a clear specification for fields to include in the metadata.
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Is still relatively unknown and is not widely used (though, this is
-    a problem with all current metadata standards and tools).
+- Is still relatively unknown and is not widely used (though, this is a
+  problem with all current metadata standards and tools).
+
 :::
 :::::
 
@@ -141,7 +142,5 @@ with our values and principles.
 List the resources used to write this post
 :::
 
--   [Open Source Data Catalog tools in
-    2024](https://atlan.com/open-source-data-catalog-tools/)
--   [List of Awesome Data Catalog
-    tools](https://github.com/opendatadiscovery/awesome-data-catalogs)
+- [Open Source Data Catalog tools in 2024](https://atlan.com/open-source-data-catalog-tools/)
+- [List of Awesome Data Catalog tools](https://github.com/opendatadiscovery/awesome-data-catalogs)

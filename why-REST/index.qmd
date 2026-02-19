@@ -9,8 +9,6 @@ categories:
   - software-architecture
 ---
 
-<!--TODO #41 docs: Update 'Why REST' with decision drivers, options for REST and Decision -->
-
 ::: content-hidden
 Use other decision posts as inspiration to writing these. Leave the
 content-hidden sections in the text for future reference.
@@ -30,8 +28,7 @@ bearing in mind both what will work best for the application but also
 which resources there are available within the team. The question the
 becomes:
 
-> Which API technology will best serve the needs of the Seedcase
-> project?
+Which API technology will best serve our needs?
 
 ## Decision Drivers
 
@@ -39,8 +36,6 @@ becomes:
 List some reasons for why we need to make this decision and what things
 have arisen that impact work.
 :::
-
-<!--TODO docs: Write decision drivers for Why REST-->
 
 ## Considered Options
 
@@ -56,24 +51,23 @@ possible API tech for Seedcase.
 
 ### REST
 
-<!--TODO docs: complete considered option for REST in Why REST-->
-
 ::: columns
 ::: column
 #### Benefits
 
--   Is lightweight and easy to implement, making it a popular choice for
-    web-based applications
--   Uses a simple and intuitive set of HTTP methods, which makes it easy
-    for developers to understand and use
--   Provides a clear separation of responsibilities between the client
-    and server components, making it easier to develop, test, and deploy
-    each component independently
--   Follows a conceptually simple and traditional approach where the
-    client sends a request to the server, and the server responds with
-    the requested data
--   Is often simpler to implement and offers better caching mechanisms.
--   Has better tooling support and is more widely adopted
+- Is lightweight and easy to implement, making it a popular choice for
+  web-based applications
+- Uses a simple and intuitive set of HTTP methods, which makes it easy
+  for developers to understand and use
+- Provides a clear separation of responsibilities between the client and
+  server components, making it easier to develop, test, and deploy each
+  component independently
+- Follows a conceptually simple and traditional approach where the
+  client sends a request to the server, and the server responds with the
+  requested data
+- Is often simpler to implement and offers better caching mechanisms.
+- Has better tooling support and is more widely adopted
+
 :::
 
 ::: column
@@ -81,7 +75,8 @@ possible API tech for Seedcase.
 
 <!--TODO docs: Write drawbacks for REST in Why REST-->
 
--   Item 1
+?
+
 :::
 :::
 
@@ -96,18 +91,20 @@ types, making it quite flexible.
 ::: column
 #### Benefits
 
--   Based on XML
--   Supports a number of messaging formats making it flexible
+- Based on XML
+- Supports a number of messaging formats making it flexible
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Complex to implement
--   Requires additional metadata and processing overhead
-    -   can result in slower performance and higher resource consumption
--   Difficult to debug and test due to its complexity and lack of
-    visibility in the underlying communication logs
+- Complex to implement
+- Requires additional metadata and processing overhead, which can result
+  in slower performance and higher resource consumption
+- Difficult to debug and test due to its complexity and lack of
+  visibility in the underlying communication logs
+
 :::
 :::
 
@@ -124,15 +121,17 @@ could incorporate GraphQL into existing REST API.
 ::: column
 #### Benefits
 
--   Control over what is transmitted i very detailed
--   Flexible
--   Can be integrated into REST API
+- Control over what is transmitted in very detailed way.
+- Flexible
+- Can be integrated into REST API
+
 :::
 
 ::: column
 #### Drawbacks
 
--   Complex to set up and maintain
+- Complex to set up and maintain
+
 :::
 :::
 

@@ -8,9 +8,9 @@ metadata-files:
 
 {{< include /includes/_badges.qmd >}}
 
-This repository contains files related to decisions we've made for processes,
-workflows, tools, and services. They follow the style of a ["decision
-record"](https://adr.github.io/).
+This repository contains files related to decisions we've made for
+processes, workflows, tools, and services. They follow the style of a
+["decision record"](https://adr.github.io/).
 
 ::: callout-tip
 This website repository was generated from the
