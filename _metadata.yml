@@ -1,3 +1,7 @@
 gh:
   repo: decisions
   org: seedcase-project
+
+links:
+  github: "https://github.com/seedcase-project/decisions"
+  site: "https://decisions.seedcase-project.org"

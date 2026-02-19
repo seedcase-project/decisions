@@ -1,13 +1,13 @@
 # Contributing
 
-## Issues and bugs :bug:
+## :bug: Issues and bugs
 
 The easiest way to contribute is to report issues or bugs that you might
 find while reading through the website. You can do this by creating a
 [new](https://github.com/seedcase-project/decisions/issues/new/choose)
 issue on our GitHub repository.
 
-## Adding or modifying content :pencil2:
+## :pencil2: Adding or modifying content
 
 If you would like to contribute content, please check out our
 [guidebook](https://guidebook.seedcase-project.org/) for more specific
@@ -45,20 +45,20 @@ repository and running:
 just run-all
 ```
 
-When committing changes, please try to follow [Conventional
-Commits](https://decisions.seedcase-project.org/why-conventional-commits)
+When committing changes, please try to follow
+[Conventional Commits](https://decisions.seedcase-project.org/why-conventional-commits)
 as Git messages. Using this convention allows us to be able to
 automatically create a release based on the commit message by using
 [Commitizen](https://decisions.seedcase-project.org/why-semantic-release-with-commitizen).
 If you don't use Conventional Commits when making a commit, we will
-revise the pull request title to follow that format, as we use [squash
-merges](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/squashing-commits/about-squash-merges)
+revise the pull request title to follow that format, as we use
+[squash merges](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/squashing-commits/about-squash-merges)
 when merging pull requests, so all other commits in the pull request
 will be squashed into one commit.
 
 To create a new decision post:
 
-1.  Copy the `_template/` folder (including with its `index.qmd` file
+1. Copy the `_template/` folder (including with its `index.qmd` file
     inside) and paste then rename to `why-CHOICE/` (all lowercase).
-2.  Open the new `index.qmd` file and follow the instructions in the
+2. Open the new `index.qmd` file and follow the instructions in the
     file and fill in the details.

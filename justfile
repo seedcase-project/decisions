@@ -5,7 +5,7 @@
 @_builds: build-contributors build-readme build-website
 
 # Run all necessary build commands
-run-all: update-quarto-theme _checks _builds
+run-all: update-quarto-theme _checks format-md _builds
 
 # List all TODO items in the repository
 list-todos:
@@ -33,6 +33,10 @@ install-precommit:
 # Check spelling
 check-spelling:
   uvx typos
+
+# Format Markdown files
+format-md:
+    uvx rumdl fmt --silent
 
 # Check the commit messages on the current branch that are not on the main branch
 check-commits:
