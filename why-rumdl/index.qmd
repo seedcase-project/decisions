@@ -102,7 +102,7 @@ rumdl is a Rust-based formatter.
 
 - Is incredibly fast.
 - Can be installed and used easily via `uvx` (which is the
-  [uv](why-uv/index.qmd) package manager that we use already).
+  [uv](/why-uv/index.qmd) package manager that we use already).
 - Supports Quarto-flavored Markdown.
 - Includes coverage of many linting and formatting rules.
 - Is highly customisable.
