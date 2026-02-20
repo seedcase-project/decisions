@@ -28,14 +28,14 @@ statement in the form of a question for the problem.
 Having a consistent structure and format to Markdown can make it easier
 to read and maintain documentation as well as making it easier to review
 changes by focusing on content rather than format. However, there are
-very limited tools for formatting Markdown (at least for our needs). We
+limited tools available for formatting Markdown (at least for our needs). We
 historically used the manual VS Code workflow of converting our source
 Markdown files to "Quarto Visual Mode" and then back to Markdown. This
 workflow converts Markdown to Pandoc canonical format. It looks more or
 less similar to how it looks when using Pandoc to output a file to
 Markdown. However, this workflow is slow, manual, irritating, and not
 scalable. We have been looking for a better solution for a while, and we
-recently found rumdl. So this decision post is to explain why we decided
+recently found [rumdl](https://rumdl.dev). So this decision post is to explain why we decided
 to use rumdl for formatting Markdown files in our project and compare it
 to other similar ones. So the question more is:
 
@@ -103,6 +103,7 @@ rumdl is a Rust-based formatter.
 - Is incredibly fast.
 - Can be installed and used easily via `uvx` (which is the
   [uv](/why-uv/index.qmd) package manager that we use already).
+- The CLI is similar to [Ruff](/why-ruff/index.qmd), which we use.
 - Supports Quarto-flavored Markdown.
 - Includes coverage of many linting and formatting rules.
 - Is highly customisable.
@@ -119,7 +120,7 @@ rumdl is a Rust-based formatter.
   However, it is in very active development and the author is very
   responsive to issues.
 - Is still very new (repo started in early 2025), so there will be some
-  bugs and issues that come up.
+  bugs and issues that come up that we can report and contribute back to.
 
 :::
 :::
