@@ -90,7 +90,7 @@ last year (2025) and fits all of our needs. They include some
 comparisons between [mdformat](https://rumdl.dev/mdformat-comparison/)
 and [markdownlint](https://rumdl.dev/markdownlint-comparison/). While
 rumdl is the only tool that we are aware of that meets our needs, we'll
-still it.
+still describe it and explain why we choose it.
 
 ### rumdl
 
