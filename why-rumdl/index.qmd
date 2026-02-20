@@ -1,0 +1,151 @@
+---
+title: "Why rumdl?"
+description: |
+    Code formatting tools are commonly used in software projects.
+    However, Markdown formatting isn't nearly as common, mainly
+    because of limited tools. This post explains why we decided
+    to use rumdl for formatting Markdown files in our project.
+date: "2026-02-19"
+categories:
+  - collaborate
+  - develop
+  - workflow
+  - standardise
+---
+
+::: content-hidden
+Use other decision posts as inspiration to writing these.
+Leave the content-hidden sections in the text for future reference.
+:::
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a
+statement in the form of a question for the problem.
+:::
+
+Having a consistent structure and format to Markdown can make it easier
+to read and maintain documentation as well as making it easier to review
+changes by focusing on content rather than format. However, there are
+limited tools available for formatting Markdown (at least for our needs). We
+historically used the manual VS Code workflow of converting our source
+Markdown files to "Quarto Visual Mode" and then back to Markdown. This
+workflow converts Markdown to Pandoc canonical format. It looks more or
+less similar to how it looks when using Pandoc to output a file to
+Markdown. However, this workflow is slow, manual, irritating, and not
+scalable. We have been looking for a better solution for a while, and we
+recently found [rumdl](https://rumdl.dev). So this decision post is to explain why we decided
+to use rumdl for formatting Markdown files in our project and compare it
+to other similar ones. So the question more is:
+
+Why do we want to use rumdl for formatting Markdown files in our
+project?
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things
+have arisen that impact work.
+:::
+
+- Needs to support [Quarto](https://quarto.org/) flavored Markdown,
+  which is a superset of Pandoc Markdown.
+- Needs to be able to be used in a command line interface (CLI) so that
+  we can include it
+  in our [justfile](https://just.systems/man/en/) as well as our
+  [pre-commit hooks](https://pre-commit.com/). That way, the formatting
+  can be automated.
+- Needs to be usable within our ecosystem. We don't want to install a
+  tool from a different ecosystem (e.g. Node.js), as that would add much
+  more complexity to our setup.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits
+and drawbacks for each option.
+:::
+
+While there are a few tools that do formatting for Markdown, none so far
+have met our needs. The below tools are ones that so far exist and that
+we are aware of:
+
+- [Prettier](https://prettier.io/) is a very popular code formatter that
+  supports Markdown. However, it doesn't support Quarto-flavored
+  Markdown, it is a Node.js tool, and it includes a lot more features
+  for formatting many other languages that we don't need.
+
+- [markdownlint](https://github.com/DavidAnson/markdownlint) is a
+  popular Markdown linter that can be used to enforce style rules. It is
+  mostly a linter, not a formatter. It also doesn't support
+  Quarto-flavored Markdown and it is a Node.js tool.
+
+- [mdformat](https://mdformat.readthedocs.io/en/stable/) is a Python
+  tool that supports Markdown formatting, but doesn't support
+  Quarto-flavored Markdown.
+
+However, [rumdl](https://rumdl.dev) is a new tool that was first started
+last year (2025) and fits all of our needs. They include some
+comparisons between [mdformat](https://rumdl.dev/mdformat-comparison/)
+and [markdownlint](https://rumdl.dev/markdownlint-comparison/). While
+rumdl is the only tool that we are aware of that meets our needs, we'll
+still describe it and explain why we choose it.
+
+### rumdl
+
+rumdl is a Rust-based formatter.
+
+::: {.columns}
+::: {.column}
+#### Benefits
+
+- Is incredibly fast.
+- Can be installed and used easily via `uvx` (which is the
+  [uv](/why-uv/index.qmd) package manager that we use already).
+- The CLI is similar to [Ruff](/why-ruff/index.qmd), which we use.
+- Supports Quarto-flavored Markdown.
+- Includes coverage of many linting and formatting rules.
+- Is highly customisable.
+- Comes with a GitHub Action, a pre-commit hook, as well as editor
+  integrations for VS Code.
+- Includes both a formatter and a linter.
+
+:::
+::: {.column}
+
+#### Drawbacks
+
+- Is developed by one person, so there is a risk of it being abandoned.
+  However, it is in very active development and the author is very
+  responsive to issues.
+- Is still very new (repo started in early 2025), so there will be some
+  bugs and issues that come up that we can report and contribute back to.
+
+:::
+:::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+We didn't really have much choice of a tool, however, rumdl is a really
+great tool that fits all of our needs. It's fast, it's easy to use, and
+it's very configurable. So we decided that we will integrate it into all
+of our workflows and repositories.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+- Because it is still new, there will be bugs and issues that we will
+  encounter. However, the author appears to be very quick at responding
+  to and resolving issues.
+- It could be abandoned as it is only developed by one person. Because
+  it is open source, we could potentially fork it and take it over if
+  need be.
