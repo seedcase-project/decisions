@@ -68,14 +68,14 @@ maintained and developed at the time of this post:
 There are a few others that almost matched our criteria, but didn't in
 one way or another:
 
-- [cement](https://docs.builtoncement.com/en/latest/): It isn't that
+- [cement](https://docs.builtoncement.com/): It isn't that
   actively maintained, but importantly, it seems to be more of an
   advanced framework for building CLIs (e.g. with Dockerfiles), which is
   more complex than what we need.
 - [prompt_toolkit](https://python-prompt-toolkit.readthedocs.io/en/latest/):
   It is designed more for building "full screen" terminal applications,
   which is more complex than what we need.
-- [cliff](https://docs.openstack.org/cliff/latest/): It isn't regularly
+- [cliff](https://pypi.org/project/cliff/): It isn't regularly
   updated. The documentation was last updated in 2021.
 
 ### Argparse

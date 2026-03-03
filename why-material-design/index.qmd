@@ -103,8 +103,8 @@ a high level of customisability.
 
 - Requires time and skill to customize.
 - Relies on [Node.js](https://nodejs.org/en) (via
-  [npm](https://www.npmjs.com/)) which is an additional dependency and
-  needs time to learn to use.
+  [npm](https://en.wikipedia.org/wiki/Npm)) which is an additional
+  dependency and needs time to learn to use.
 
 :::
 :::

@@ -31,7 +31,7 @@ integration testing, unit testing, or system testing. This post is
 focused on unit testing.
 
 Since one of our [development
-principles](https://design.seedcase-project.org/style/development) is to
+principles](https://design.seedcase-project.org/) is to
 use a test-driven development workflow, we need a testing framework when
 building our applications. Since we are using Python and Django, we need
 a testing framework that works for both. The question then is:
@@ -164,7 +164,7 @@ List some potential consequences of this decision.
 List the resources used to write this post
 :::
 
-- [A comprehensive guide to testing in Django applications](https://atharvashah.netlify.app/posts/tech/django-testing-guide/)
+- [Testing in Django](https://docs.djangoproject.com/en/6.0/topics/testing/)
 - [Top 8 Python Testing Frameworks in 2024](https://www.browserstack.com/guide/top-python-testing-frameworks)
 - [Pytest vs unittest: Which is better?](https://blog.jetbrains.com/pycharm/2024/03/pytest-vs-unittest/)
 - [Pytest vs unittest: A comparison](https://www.browserstack.com/guide/pytest-vs-unittest)

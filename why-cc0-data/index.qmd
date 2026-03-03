@@ -225,5 +225,5 @@ List the resources used to write this post
 - [data.world license help](https://data.world/license-help)
 - [Creative Commons Wiki on CC0 use for data](https://wiki.creativecommons.org/wiki/CC0_use_for_data)
 - [figshare: How to choose a license for your data](https://info.figshare.com/user-guide/how-to-choose-a-licence/)
-- [Post-publication sharing of data and tools](https://www.nature.com/articles/461171a)
+- Post-publication sharing of data and tools (DOI: 10.1038/461171a)
 - [Open Knowledge Foundation discussion on their Open Data Commons licenses](https://discuss.okfn.org/t/maintenance-and-future-of-the-open-data-commons-licences/4460/24)

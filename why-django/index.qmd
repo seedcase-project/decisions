@@ -83,7 +83,7 @@ and drawbacks for each option.
 
 [Django](https://www.djangoproject.com) is a full-stack framework for
 building server-rendered web applications following a
-[Model-View-Template](https://www.geeksforgeeks.org/django-project-mvt-structure/)
+[Model-View-Template](https://www.geeksforgeeks.org/python/django-project-mvt-structure/)
 pattern.
 
 ::: columns
@@ -146,7 +146,7 @@ pattern.
 
 ### Flask
 
-[Flask](https://flask.palletsprojects.com/en/3.0.x/) is a lightweight
+[Flask](https://flask.palletsprojects.com/en/stable/) is a lightweight
 web framework, designed to be simple and flexible.
 
 ::: columns

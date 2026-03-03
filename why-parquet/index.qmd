@@ -68,8 +68,8 @@ Commonly used file formats that we don't consider are:
   within HDFS systems. We also don't consider it because Hadoop is not a
   common use case for the problems we aim to solve.
 - Non-embedded SQL engines (like [Postgres](https://www.postgresql.org/)
-  or [MySQL](https://www.mysql.com/)) because they require a server to
-  use and aren't stored as a file on a local filesystem.
+  or [MySQL](https://en.wikipedia.org/wiki/MySQL)) because they require
+  a server to use and aren't stored as a file on a local filesystem.
 - Excel or similar spreadsheet programs, as they aren't technically open
   source nor do they store any schema information.
 
@@ -225,4 +225,4 @@ List the resources used to write this post
 - [Performance comparison of different file formats and storage engines in the Hadoop ecosystem](https://db-blog.web.cern.ch/blog/zbigniew-baranowski/2017-01-performance-comparison-different-file-formats-and-storage-engines)
 - [Should you use Parquet?](https://blog.matthewrathbone.com/2019/12/20/parquet-or-bust.html)
 - [CSV vs Parquet vs Avro: Choosing the Right Tool for the Right Job](https://medium.com/ssense-tech/csv-vs-parquet-vs-avro-choosing-the-right-tool-for-the-right-job-79c9f56914a8)
-- [Avro vs. Parquet](https://www.snowflake.com/trending/avro-vs-parquet)
+- [Avro vs. Parquet](https://www.snowflake.com/en/fundamentals/avro-vs-parquet-choosing-a-data-format-for-modern-workflows/)

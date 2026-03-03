@@ -14,14 +14,6 @@ references:
     issued:
       year: 2023
     URL: https://blog.logrocket.com/product-management/a-guide-to-trunk-based-development/#whatistrunkbaseddevelopment
-  - id: tilburg
-    title: Git Branching Strategies (Tilburg Science Hub)
-    author:
-      family: Ambroziak
-      given: Paulina
-    issued:
-      year: n.d.
-    URL: https://tilburgsciencehub.com/building-blocks/collaborate-and-share-your-work/use-github/git-branching-strategies/
   - id: tbd
     title: Trunk-based development
     author:
@@ -30,14 +22,6 @@ references:
     issued:
       year: 2017-2020
     URL: https://trunkbaseddevelopment.com
-  - id: thummala
-    title: "Choosing the Right Git Branching Strategy: A Comparative Analysis"
-    author:
-      family: Thummala
-      given: S
-    issued:
-      year: 2023
-    URL: "https://medium.com/@sreekanth.thummala/choosing-the-right-git-branching-strategy-a-comparative-analysis-f5e635443423#"
   - id: driessen
     title: A successful Git branching model
     author:
@@ -66,7 +50,7 @@ references:
       family: GitHub
     issued:
       year: n.d.
-    URL: https://docs.github.com/en/get-started/quickstart/github-flow
+    URL: https://docs.github.com/en/get-started/using-github/github-flow
 
 nocite: |
   @tbd, @driessen, @githubflow, @gitkraken
@@ -86,7 +70,7 @@ statement in the form of a question for the problem.
 Since we develop software in a collaborative setting, we believe it's
 important to implement an explicitly stated Git branching strategy. This
 aligns with our [Guiding
-Principles](https://seedcase-project.org/principles). A clear and
+Principles](https://design.seedcase-project.org/). A clear and
 well-defined branching strategy enables consistency and efficiency, and,
 as a result, cleaner workflows across contributions with more time to
 focus on actual collaboration, problem-solving, and ensuring high
@@ -150,7 +134,7 @@ result in the loss of some nuances.
 In [trunk-based development](https://trunkbaseddevelopment.com),
 developers frequently integrate their code changes into a shared `main`
 branch, the **trunk**, instead of working on long-lived additional
-branches that will be merged into `main` less frequently [@tilburg].
+branches that will be merged into `main` less frequently.
 This workflow focuses on making smaller, self-contained changes which
 helps reduce complexity, minimise conflicts, and enable faster review
 processes and integration [@sooni]. Naturally, this leads to a more
@@ -194,7 +178,7 @@ next release. When the new developments are at a stable point and is
 ready to be released, all the changes from the `develop` branch will be
 merged into the `main` branch. As a result, whenever there is a new
 change to the `main` branch, this is a new release by definition. Each
-release version will be tagged [@thummala].
+release version will be tagged.
 
 Besides the two central branches, supporting branches will be created to
 enable parallel development across contributors. These supporting
@@ -230,9 +214,8 @@ created from the `main` branch and is be merged into both `main` and
 
 ### GitHub flow
 
-[GitHub
-flow](https://docs.github.com/en/get-started/quickstart/github-flow) is
-a simpler branching strategy than Git flow, revolving around the
+[GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow)
+is a simpler branching strategy than Git flow, revolving around the
 **`main`** branch. The only "hard" rule in this workflow is that
 anything on the `main` branch is deployable [@githubflowpost]. Whenever
 new work needs to be done, a new branch with a descriptive name is
