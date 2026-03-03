@@ -13,8 +13,6 @@ categories:
 
 "Everything as code"
 
-<https://www.adaptavist.com/blog/everything-as-code-embracing-the-codified-evolution>
-
 <https://medium.com/ethanjb/the-beginning-of-everything-as-code-a25c4e9a75e9>
 
 <https://openpracticelibrary.com/practice/everything-as-code/>

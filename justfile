@@ -1,7 +1,8 @@
 @_default:
     just --list --unsorted
 
-@_checks: check-spelling check-commits
+@_checks: check-spelling check-urls check-commits
+
 @_builds: build-contributors build-readme build-website
 
 # Run all necessary build commands
@@ -15,7 +16,6 @@ list-todos:
     --exclude=justfile \
     --exclude=_site \
     "TODO" *
-
 # Update the Quarto seedcase-theme extension
 update-quarto-theme:
   # # Add theme if it doesn't exist, update if it does
@@ -33,6 +33,15 @@ install-precommit:
 # Check spelling
 check-spelling:
   uvx typos
+
+# Install lychee from https://lychee.cli.rs/guides/getting-started/
+
+# Check that URLs work
+check-urls:
+    lychee . \
+      --verbose \
+      --extensions md,qmd \
+      --exclude-path "_badges.qmd"
 
 # Format Markdown files
 format-md:
