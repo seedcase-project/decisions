@@ -62,7 +62,6 @@ and cons.
 
 ### GitHub Projects
 
-
 GitHub has a built-in "Projects" feature for project management and
 visualizations. It comes with
 [extensive documentation](https://docs.github.com/en/issues/planning-and-tracking-with-projects)

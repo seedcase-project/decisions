@@ -36,6 +36,11 @@
     "architectural decision records",
     "decision records"
   ],
+  "communities": [
+    {
+      "identifier": "seedcase-project"
+    }
+  ],
   "license": "cc-by-4.0",
   "upload_type": "publication",
   "publication_type": "other",
