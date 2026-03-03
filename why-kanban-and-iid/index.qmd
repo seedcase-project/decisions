@@ -371,5 +371,4 @@ means) are all also useful.
 - [Iterative Development](https://agilealliance.org/glossary/iterative-development/)
 - [Incremental Development](https://agilealliance.org/glossary/incremental-development/)
 - [Agile Development: Iterative and Incremental](https://www.visual-paradigm.com/scrum/agile-development-iterative-and-incremental/)
-- [Comparing Iterative vs. Incremental Development Strategies](https://www.advisedskills.com/blog/agile-and-scrum/comparing-iterative-vs-incremental-development-strategies)
 - [What's the difference between incremental and iterative development?](https://www.everyday.design/guides/whats-the-difference-between-incremental-and-iterative-development)

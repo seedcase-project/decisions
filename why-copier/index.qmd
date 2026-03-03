@@ -78,7 +78,7 @@ features we need. Based on our needs, we only found two options:
 - [Copier](https://copier.readthedocs.io/en/stable/)
 
 Copier also includes a page on a
-[comparison](https://copier.readthedocs.io/en/stable/comparisons) with
+[comparison](https://copier.readthedocs.io/en/stable/comparisons/) with
 alternative options, which we used to help us make our decision.
 
 ### Cookiecutter
@@ -174,4 +174,4 @@ List the resources used to write this post
 :::
 
 - [Cookiecutter alternatives](https://www.cookiecutter.io/article-post/cookiecutter-alternatives)
-- [Comparing copier to other project generators](https://copier.readthedocs.io/en/stable/comparisons)
+- [Comparing copier to other project generators](https://copier.readthedocs.io/en/stable/comparisons/)

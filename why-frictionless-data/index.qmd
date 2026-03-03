@@ -24,7 +24,7 @@ Since the Seedcase Project is focused on improving the structure and
 infrastructure around data, a critical component of that is how we
 structure the data and the metadata after it enters into Seedcase
 software. So, following our
-[guiding principles](https://seedcase-project.org/about/principles) and
+[guiding principles](https://design.seedcase-project.org/) and
 to minimize time spent on tasks that already have solutions, we need to
 find any standards or frameworks that exist for how data and especially
 metadata should be structured and organized. So the question is:
@@ -76,7 +76,7 @@ reasons given below.
   as a platform for hosting and sharing (internal) data. There is a
   command-line interface, but there is no easy documentation on how to
   use it, nor is it actively developed.
-- [OpenMetadata](https://docs.open-metadata.org/v1.4.x): Similar to
+- [OpenMetadata](https://open-metadata.org): Similar to
   OpenDataDiscovery.
 
 The only real open metadata standard that seems to exist is the

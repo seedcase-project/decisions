@@ -106,7 +106,7 @@ word "and" when describing the commit or PR.
 
 Every time you want to add something new to or modify existing work in a
 Git repository, you should create a new branch (following the
-[GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+[GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow)
 approach). Importantly, each branch should represent a specific task or
 development effort. That is, a branch should be created for one
 particular purpose, independently of how many new lines of work is

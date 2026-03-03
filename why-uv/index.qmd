@@ -49,7 +49,7 @@ principles the most:
 
 - [Pipenv](https://pipenv.pypa.io/en/latest/index.html)
 - [Poetry](https://python-poetry.org/)
-- [Hatch](https://hatch.pypa.io/latest/version/)
+- [Hatch](https://hatch.pypa.io/latest/)
 - [PDM](https://pdm-project.org/latest/usage/dependency/)
 
 There's also a very new tool that isn't listed on many comparison pages

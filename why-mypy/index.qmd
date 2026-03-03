@@ -60,7 +60,7 @@ and drawbacks for each option.
 
 The most popular static type checkers available for Python are:
 
-- [`mypy`](http://mypy-lang.org/)
+- [`mypy`](https://mypy-lang.org/)
 - [Pyright](https://github.com/microsoft/pyright)
 - [Pyre](https://pyre-check.org/) and its next iteration,
   [Pyrefly](https://pyrefly.org/)
@@ -68,7 +68,7 @@ The most popular static type checkers available for Python are:
 
 ### Mypy
 
-[`mypy`](http://mypy-lang.org/) is the oldest and most widely used
+[`mypy`](https://mypy-lang.org/) is the oldest and most widely used
 static type checker. It is written in Python and developed by the Python
 community.
 
@@ -219,12 +219,10 @@ List some potential consequences of this decision.
 List the resources used to write this post
 :::
 
-- [`mypy` docs](http://mypy-lang.org/)
+- [`mypy` docs](https://mypy-lang.org/)
 - [Pyright docs](https://github.com/microsoft/pyright)
 - [Pyre docs](https://pyre-check.org/)
 - [Pyrefly docs](https://pyrefly.org/)
 - [`ty` docs](https://docs.astral.sh/ty/)
-- [Python Advanced: Mypy vs Pyright](https://python.plainenglish.io/python-advanced-mypy-vs-pyright-a-detailed-comparison-with-examples-40e2c2d94e3f)
 - [Introducing Pyrefly](https://engineering.fb.com/2025/05/15/developer-tools/introducing-pyrefly-a-new-type-checker-and-ide-experience-for-python/)
 - [Google Ends Support for Pytype](https://medium.com/techtofreedom/google-ends-support-for-pytype-this-is-how-python-developers-can-adapt-a703d964028a)
-- [Static Type Checking in Python](https://engineering.blackrock.com/static-type-checking-in-python-where-did-the-ducks-go-d17881d3205e)
