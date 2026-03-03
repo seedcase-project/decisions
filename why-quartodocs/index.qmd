@@ -135,7 +135,7 @@ don't fit our requirements:
 - Can wrap example code in the docstrings into executable code chunks
   that Quarto will render.
 - Has unofficial backing from
-  [Quarto dev team](https://github.com/quarto-dev/quarto-cli/discussions/2638#discussioncomment-11007165),
+  [Quarto dev team](https://github.com/orgs/quarto-dev/discussions/2638#discussioncomment-11007165),
   since it is developed (independently) by one of the Quarto dev team
   members.
 
@@ -182,5 +182,5 @@ List some potential consequences of this decision.
 List the resources used to write this post
 :::
 
-- [Discussion: Extension to autogenerate API reference docs for Python](https://github.com/quarto-dev/quarto-cli/discussions/2111)
-- [Discussion: Combining a Quarto Website with Auto-Generated Documentation](https://github.com/quarto-dev/quarto-cli/discussions/4925)
+- [Discussion: Extension to autogenerate API reference docs for Python](https://github.com/orgs/quarto-dev/discussions/2111)
+- [Discussion: Combining a Quarto Website with Auto-Generated Documentation](https://github.com/orgs/quarto-dev/discussions/4925)

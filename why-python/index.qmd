@@ -140,7 +140,7 @@ and drawbacks for each option.
 - Easy to iterate and prototype rapidly.
 - Large ecosystem of mature libraries and frameworks for web development
   (e.g. [Django](https://www.djangoproject.com),
-  [Flask](https://flask.palletsprojects.com/en/2.3.x/)), database
+  [Flask](https://flask.palletsprojects.com/en/stable/)), database
   management (e.g. [SQLAlchemy](https://www.sqlalchemy.org), Django's
   Object Relational Mapper), and data analysis.
 - Active community and extensive resources.
