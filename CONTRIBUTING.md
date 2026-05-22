@@ -58,6 +58,6 @@ request will be squashed into one commit.
 To create a new decision post:
 
 1. Copy the `_template/` folder (including with its `index.qmd` file
-    inside) and paste then rename to `why-CHOICE/` (all lowercase).
+   inside) and paste then rename to `why-CHOICE/` (all lowercase).
 2. Open the new `index.qmd` file and follow the instructions in the
-    file and fill in the details.
+   file and fill in the details.
