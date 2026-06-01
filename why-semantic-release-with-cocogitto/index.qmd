@@ -25,13 +25,13 @@ evolved, we encountered many limitations with it. For example:
 - With increasing supply chain attacks on package registers like PyPI and npm,
   we want to use tools that are more secure and that has better security
   practices.
-- Commitizen's GitHub Action workflow is quite complicated making it difficult to
-  assess the security risk of and to debug. This is one of the biggest
-  issues for us (related to the point about about triggering releases
-  that shouldn't have been triggered) and a big reason for needing to switch to
-  something else. For instance, the workflow requires passing a GitHub secret
-  token to a Docker container, without the ability to modify or improve on that
-  practice.
+- Commitizen's GitHub Action workflow is quite complicated making it difficult to
+  assess the security risk of and to debug. This is one of the biggest
+  issues for us (related to the point about about triggering releases
+  that shouldn't have been triggered) and a big reason for needing to switch to
+  something else. For instance, the workflow requires passing a GitHub secret
+  token to a Docker container, without the ability to modify or improve on that
+  practice.
 
 So we needed to switch to something else.
 
@@ -42,9 +42,9 @@ List some reasons for why we need to make this decision and what things have
 arisen that impact work.
 :::
 
-We already described a lot of available tooling in our 
+We already described a lot of available tooling in our
 [post on using Commitizen for semantic releases](/why-semantic-release-with-commitizen/index.qmd), so we won't cover those
-here (unless they change substantially). 
+here (unless they change substantially).
 
 We need a tool that:
 
