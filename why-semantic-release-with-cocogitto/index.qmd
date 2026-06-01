@@ -2,7 +2,7 @@
 title: "Why Cocogitto for semantic release"
 description: |
   Continuous delivery through using semantic releases reduces manual effort,
-  time, and potential errors. This post describes why we use Cocogitto for the
+  time, and potential errors. This post describes why we use Cocogitto for
   automated versioning and releasing of our software.
 date: "2026-05-26"
 categories:
@@ -13,18 +13,18 @@ categories:
 ## Context and problem statement
 
 We originally used [Commitizen](/why-semantic-release-with-commitizen/index.qmd)
-for automating our versioning and releasing, but as our needs and projects
+for automating the versioning and releasing of our software, but as our needs and projects
 evolved, we encountered many limitations with it. For example:
 
-- It sometimes would release something that based on Conventional Commit
-  messages that shouldn't have triggered a release. Debugged didn't lead into
-  any explanation on why this was happening.
-- It didn't have a lot of configuration customisations that we needed for the
-  diverse number of projects (e.g. websites, R packages) that we build and
+- It sometimes creates releases that, based on Conventional Commit
+  messages, shouldn't have triggered a release. Debugging didn't lead into
+  any explanation of why this was happening.
+- It doesn't include a lot of the configuration customisations we need for our
+  diverse projects (e.g. websites, R packages, and Python packages) that we build and
   maintain.
 - With increasing supply chain attacks on package registers like PyPI and npm,
-  we wanted to use tools that were more secure and that had better security
-  practices for these types of issues.
+  we want to use tools that are more secure and that has better security
+  practices.
 - Commitizen's GitHub Action workflow was quite complicated and difficult to
   assess the security risk of and to debug. This was actually one of the biggest
   issues we had with it (related to the point about about triggering releases
@@ -42,18 +42,19 @@ List some reasons for why we need to make this decision and what things have
 arisen that impact work.
 :::
 
-We already described a lot of available tooling in our [previous
-post](/why-semantic-release-with-commitizen/index.qmd), so we won't cover those
-again (unless they changed substantially). We need a tool that:
+We already described a lot of available tooling in our 
+[post on using Commitizen for semantic releases](/why-semantic-release-with-commitizen/index.qmd), so we won't cover those
+here (unless they change substantially). 
 
-- Has a simple, easily reviewing GitHub Action workflow, or at the least a way
+We need a tool that:
+
+- Has a simple GitHub Action workflow that's easy to review, or at the least has a way
   that makes it easy to use in a workflow, e.g. as a CLI command run through
   `run`.
-- Built by a more secure language, and installable without depending on another
-  tool to install.
-- Allows the use of GitHub's built-in `secrets` system in the workflows.
-- Can be used as a CLI tool, so that if a good GitHub Action workflow isn't a
-  barrier to using it.
+- Is built in a (more) secure language and is installable without depending on another
+  tool.
+- Allows the use of GitHub's built-in `secrets` system in its workflows.
+- Can be used as a CLI tool, so that if there are no good GitHub Action workflows, it can still be used e.g. with `run` in the workflow.
 - Has good configuration customisation for different types of projects.
 
 ## Considered options
@@ -64,8 +65,8 @@ drawbacks for each option.
 :::
 
 [Conventional Commits](https://www.conventionalcommits.org/en/about/) keeps a
-good list of tools that make use of their standard, which is where what we used
-to find tools to compare and use. However, since the previous post, there is
+good list of tools that make use of their standard, which we used
+to find tools to compare. However, since the previous post, there hasn't been any new tools and so there is
 really only one other option that fit our needs:
 
 - [Cocogitto](https://docs.cocogitto.io/)
@@ -82,13 +83,13 @@ really only one other option that fit our needs:
   custom commands before and after the version is bumped.
 - The GitHub Action workflow is very simple and doesn't require passing any
   secrets to it.
-- It's built in Rust, which is a more secure language.
+- It's built in Rust, which is a more secure language than most other languages.
 :::::
 
 ::::: column
 #### Drawbacks
 
-- Isn't as frequently updated, though Rust packages don't require as much
+- Isn't frequently updated, though Rust packages don't require as much
   maintenance as Python or JavaScript ones, so this might not be an issue.
 - Custom pre- and post-bump hooks mean we have to write custom commands
   ourselves, which could be more work compared to using a tool that has more
@@ -102,8 +103,8 @@ really only one other option that fit our needs:
 What decision was made, use the form "We decided on CHOICE because of REASONS."
 :::
 
-We didn't have any choices here, as there was really only one tool that fit our
-needs. But, Cocogitto is a well-developed tool that fits what we need.
+We didn't have any choice here, as there was really only one tool that fit our
+needs. But, Cocogitto is a well-developed tool that fits our needs.
 
 ### Consequences
 
