@@ -138,7 +138,7 @@ safety without needing a garbage collector.
   for cross-language use.
 - The compiler and checker provides very good messages that teach you about the
   issue as well as showing how to fix it.
-- Because of it's ownership model, as well as very strict and modern design, it
+- Because of its ownership model, as well as very strict and modern design, it
   requires learning and thinking more about how code is built, how computers
   work, and how to write good and safe code, which builds developer experience,
   skill, and knowledge.
@@ -164,7 +164,7 @@ safety without needing a garbage collector.
 ::::: {.column}
 #### Drawbacks
 
-- Because of it's strictness and lower-level nature, it has a steeper learning
+- Because of its strictness and lower-level nature, it has a steeper learning
   curve compared to other languages.
 - It still is a newer language, and while it is growing in popularity, it
   doesn't have as large of a community or ecosystem as some other languages,
