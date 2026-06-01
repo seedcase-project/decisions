@@ -13,27 +13,28 @@ categories:
 ## Context and problem statement
 
 We originally used [Commitizen](/why-semantic-release-with-commitizen/index.qmd)
-for automating the versioning and releasing of our software, but as our needs and projects
-evolved, we encountered many limitations with it. For example:
+for automating the versioning and releasing of our software, but as our needs
+and projects evolved, we encountered many limitations with it. For example:
 
-- It sometimes creates releases that, based on Conventional Commit
-  messages, shouldn't have triggered a release. Debugging didn't lead into
-  any explanation of why this was happening.
+- Commitizen's GitHub Action workflow is quite complicated, making it difficult
+  to assess the security risk of and to debug. For example, the workflow
+  requires passing a custom, fine-grained GitHub secret token to a Docker
+  container for its workflow, even though it isn't actually needed for the
+  workflow (permissions can be handled just fine through the `actions/checkout`
+  workflow).
+- It sometimes creates releases that, based on Conventional Commit messages,
+  shouldn't have triggered a release. Debugging didn't lead to any explanation
+  of why this was happening.
 - It doesn't include a lot of the configuration customisations we need for our
-  diverse projects (e.g. websites, R packages, and Python packages) that we build and
-  maintain.
+  diverse projects (e.g. websites, R packages, and Python packages) that we
+  build and maintain.
 - With increasing supply chain attacks on package registers like PyPI and npm,
-  we want to use tools that are more secure and that has better security
+  we want to use tools that are more secure and that have better security
   practices.
-- Commitizen's GitHub Action workflow is quite complicated making it difficult to
-  assess the security risk of and to debug. This is one of the biggest
-  issues for us (related to the point about about triggering releases
-  that shouldn't have been triggered) and a big reason for needing to switch to
-  something else. For instance, the workflow requires passing a GitHub secret
-  token to a Docker container, without the ability to modify or improve on that
-  practice.
 
-So we needed to switch to something else.
+The issues related to the workflow being complicated and the incorrect
+triggering of releases are major reasons for us to switch to something to handle
+our semantic release workflow.
 
 ## Decision drivers
 
@@ -42,19 +43,20 @@ List some reasons for why we need to make this decision and what things have
 arisen that impact work.
 :::
 
-We already described a lot of available tooling in our 
-[post on using Commitizen for semantic releases](/why-semantic-release-with-commitizen/index.qmd), so we won't cover those
-here (unless they change substantially). 
+We already described a lot of available tooling in our [post on using Commitizen
+for semantic releases](/why-semantic-release-with-commitizen/index.qmd), so we
+won't cover those here (unless they change substantially).
 
 We need a tool that:
 
-- Has a simple GitHub Action workflow that's easy to review, or at the least has a way
-  that makes it easy to use in a workflow, e.g. as a CLI command run through
-  `run`.
-- Is built in a (more) secure language and is installable without depending on another
-  tool.
+- Has a simple GitHub Action workflow that's easy to review, or at the least has
+  a way that makes it easy to use in a workflow, e.g. as a CLI command run
+  through `run`.
+- Is built in a (more) secure language and is installable without depending on
+  another tool.
 - Allows the use of GitHub's built-in `secrets` system in its workflows.
-- Can be used as a CLI tool, so that if there are no good GitHub Action workflows, it can still be used e.g. with `run` in the workflow.
+- Can be used as a CLI tool, so that if there are no good GitHub Action
+  workflows, it can still be used e.g. with `run` in the workflow.
 - Has good configuration customisation for different types of projects.
 
 ## Considered options
@@ -65,9 +67,9 @@ drawbacks for each option.
 :::
 
 [Conventional Commits](https://www.conventionalcommits.org/en/about/) keeps a
-good list of tools that make use of their standard, which we used
-to find tools to compare. However, since the previous post, there hasn't been any new tools and so there is
-really only one other option that fit our needs:
+good list of tools that make use of their standard, which we used to find tools
+to compare. However, since the previous post, there hasn't been any new tools
+and so there is really only one other option that fit our needs:
 
 - [Cocogitto](https://docs.cocogitto.io/)
 
