@@ -19,23 +19,24 @@ the form of a question for the problem.
 
 Building and designing stable, secure, and reliable software is hard. Really
 hard. And the needs for software built now are different and more complex than
-they were in the past, even just a few years ago. Especially with the rise
-of AI coding assistants, which has led to an increase in the amount of lower-quality software with inadequate security practices. Supply chain attacks,
-prioritizing volume over security, vulnerabilities, and bugs
-are all becoming more common. Combined with the fact that AI coding assistants can
-easily generate code, the importance of having strong guardrails to enforce software strictness and correctness is increasingly important.
+they were in the past, even just a few years ago. Especially with the rise of AI
+coding assistants, which has led to an increase in the amount of lower-quality
+software with inadequate security practices. Supply chain attacks, prioritizing
+volume over security, vulnerabilities, and bugs are all becoming more common.
+Combined with the fact that AI coding assistants can easily generate code, the
+importance of having strong guardrails to enforce software strictness and
+correctness is increasingly important.
 
 On top of that, we've refined our
-[values](https://design.seedcase-project.org/software/) for building software
-to include explicitness, a consideration for sustainability (meaning using as
+[values](https://design.seedcase-project.org/software/) for building software to
+include explicitness, a consideration for sustainability (meaning using as
 little computing resources as possible), and valuing the code itself just as
-much as the product built with it. As we have been working on the Seedcase ecosystem,
-we have also refined our needs and wants regarding which software we are going to build.
-We originally
-decided on [using Python for building software and processing
-data](/why-python/index.qmd), but it is no longer
-the best fit for our updated needs and values. This post updates our
-decision in regards to these changes.
+much as the product built with it. As we have been working on the Seedcase
+ecosystem, we have also refined our needs and wants regarding which software we
+are going to build. We originally decided on [using Python for building software
+and processing data](/why-python/index.qmd), but it is no longer the best fit
+for our updated needs and values. This post updates our decision in regards to
+these changes.
 
 ## Decision drivers
 
@@ -80,7 +81,8 @@ the above options, nor do they have a good match with our values (e.g. not a
 common language in developer/researcher tooling nor as common in
 academic/research settings):
 
-- [Go](https://golang.org/): Designed primarily for building applications that build on or interact with the web.
+- [Go](https://golang.org/): Designed primarily for building applications that
+  build on or interact with the web.
 - [C++](https://isocpp.org/): While powerful, it is much more complex and has a
   more fragmented tooling ecosystem.
 - [Java](https://www.java.com/): Rarely used in research settings and less
@@ -206,10 +208,20 @@ List some potential consequences of this decision.
   resource usage during development. But this is a tradeoff for the benefits for
   strictness and safety. Plus, there are many tools and techniques to mitigate
   this.
-- Rust isn't as common in research settings so we will not get as many
-  contributions and external collaborators. However, this might not be an issue
-  for us. For one, there's a strong trend for more Rust tools and libraries
-  being used in research settings because of its benefits, so this may change in
-  the future. For another, getting contributions is difficult for any language,
-  and even more so in research settings, so even from the start we never
-  expected many external contributions.
+- Because Rust isn't as common in research settings, we probably won't get as
+  many contributions and external collaborators. However, this might not be an
+  issue for us. For one, there's a strong trend for more Rust tools and
+  libraries being used in research settings because of its benefits, so this may
+  change in the future. For another, getting contributions is difficult for any
+  language, and even more so in research settings, so even from the start we
+  never expected many external contributions.
+- It might be harder for us to build most of our software in Rust, but write
+  code to process data in Python, which will require some context switching
+  between languages. However, this is also good practice for us to learn how to
+  work in multiple languages and to learn that we're capable of using the right
+  tool for the right task, even if it isn't something we're familiar with or
+  expertise in.
+- There may be some functionality that we've developed in Python that we won't
+  be able to use in Rust. This isn't a major issue, as most of our software so
+  far has been built as command-line tools, rather than libraries with reusable
+  functionality.
