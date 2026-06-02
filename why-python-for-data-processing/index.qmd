@@ -29,8 +29,10 @@ we compared languages that could do both of those things rather than just one of
 them. However, our needs for building software tools changed, especially as we
 shifted to building more command-line and web-based tools. Because of this, we
 reconsidered Python for building software tools, and instead [switched to
-Rust](/why-rust-for-building-software/index.qmd). We still need a language suitable for processing data and with this more narrow focus, we can ask the question: *which programming language is best suited for data
-processing work, including building supporting libraries?*.
+Rust](/why-rust-for-building-software/index.qmd). We still need a language
+suitable for processing data and with this more narrow focus, we can ask the
+question: *which programming language is best suited for data processing work,
+including building supporting libraries?*.
 
 ## Decision drivers
 
@@ -41,7 +43,8 @@ arisen that impact work.
 
 We need a language that:
 
-- Can be used for data processing directly and for building libraries supporting data processing workflows to be re-used in other projects.
+- Can be used for data processing directly and for building libraries supporting
+  data processing workflows to be re-used in other projects.
 - Has a strong ecosystem of packages for data processing as we don't need to
   worry as much about minimizing the number of dependencies we use, unlike when
   we build software tools.
@@ -79,8 +82,19 @@ There are other languages that match some of our drivers but not all of them:
   engineering, but is nearly unknown in data science and the research community.
 - [Julia](https://julialang.org/) is a fairly new language that is designed for
   data science and has powerful data processing capabilities. But it is not
-  widely used and it's mostly aimed at mathematical computation and
-  statistical analysis rather than data engineering.
+  widely used and it's mostly aimed at mathematical computation and statistical
+  analysis rather than data engineering.
+
+While we decided on using [Rust for building software
+tools](/why-rust-for-building-software/index.qmd), we are not considering it for
+data processing work because it isn't widely used in the data science and data
+engineering communities and it doesn't have a strong ecosystem of packages for
+data processing (aside from [Polars](https://www.pola.rs/)). It also has a much
+steeper learning curve compared to R and Python, has features that aren't that
+useful when processing data outside of a software development context (e.g.
+strict and enforced types, borrow checker), and doesn't have a
+[REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)
+functionality that makes data processing more interactive and easier to do.
 
 ### R
 
@@ -130,11 +144,11 @@ data analysis.
   nor are the checks that CRAN (the package registry) runs publicly available,
   which makes it more difficult to build packages that pass the CRAN checks
   without first uploading to them.
-- Its flexibility in the programming environment is also its weakness, as it
-  can lead to unexpected issues and behaviours if you don't know the language
-  well enough to know how to avoid those pitfalls. Because of this, writing code
-  that is robust, reliable, re-usable, and reproducible is a bit harder to
-  achieve compared to other languages.
+- Its flexibility in the programming environment is also its weakness, as it can
+  lead to unexpected issues and behaviours if you don't know the language well
+  enough to know how to avoid those pitfalls. Because of this, writing code that
+  is robust, reliable, re-usable, and reproducible is a bit harder to achieve
+  compared to other languages.
 :::::
 :::
 
@@ -150,14 +164,12 @@ for everything"](https://sixfeetup.com/blog/4-reasons-to-choose-python).
 ::::: column
 #### Benefits
 
-- It has a massive community
-  with a large number of packages for many different programming tasks,
-  including data processing.
+- It has a massive community with a large number of packages for many different
+  programming tasks, including data processing.
 - It is widely used in the data science, machine learning, and data engineering
   communities.
-- Many tools
-  have some bindings or connections into Python. For example, SQL databases can
-  be easily connected into Python with packages like
+- Many tools have some bindings or connections into Python. For example, SQL
+  databases can be easily connected into Python with packages like
   [SQLAlchemy](https://www.sqlalchemy.org/), and many data processing tools have
   Python bindings, such as [Arrow](https://arrow.apache.org/),
   [DuckDB](https://duckdb.org/), [Spark](https://spark.apache.org/), and
