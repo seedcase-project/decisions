@@ -34,15 +34,15 @@ and drawbacks for each option.
 ### Option 1
 
 ::: {.columns}
-::: {.column}
-#### Benefits
-
 ::: content-hidden
 List the main benefits and drawbacks with a short description.
 These should be of relevance for us but written in general form about the option,
 rather than how it impacts us specifically
 (the latter will be elaborated upon in the section "Consequences").
 :::
+
+::: {.column}
+#### Benefits
 
 - Item 1
 
@@ -68,7 +68,7 @@ REASONS."
 ::: content-hidden
 Elaborate on how the decision will impact us.
 This section often includes comments
-on how the drawbacks applies specifically to our projects and workflows,
+on how the drawbacks apply specifically to our projects and workflows,
 e.g. detailing how we could adapt to a new tool
 or explaining why a particular drawback is not a major concern for us.
 :::
