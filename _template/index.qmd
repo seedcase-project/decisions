@@ -13,15 +13,15 @@ Leave the content-hidden sections in the text for future reference.
 ## Context and problem statement
 
 ::: content-hidden
-State the context and some background on the issue, then write a
-statement in the form of a question for the problem.
+State the context and some background on the issue, then write the
+problem statement in the form of a question.
 :::
 
 ## Decision drivers
 
 ::: content-hidden
-List some reasons for why we need to make this decision and what things
-have arisen that impact work.
+List the main reasons for why we are making this decision, including any
+issues that have arisen and that directly impact our work.
 :::
 
 ## Considered options
@@ -34,6 +34,13 @@ and drawbacks for each option.
 ### Option 1
 
 ::: {.columns}
+::: content-hidden
+List the main benefits and drawbacks with a short description.
+These should be of relevance for us but written in general form about the option,
+rather than how it impacts us specifically
+(the latter will be elaborated upon in the section "Consequences").
+:::
+
 ::: {.column}
 #### Benefits
 
@@ -52,18 +59,22 @@ and drawbacks for each option.
 ## Decision outcome
 
 ::: content-hidden
-What decision was made, use the form "We decided on CHOICE because of
+Describe which decision was made. Use the form "We decided on CHOICE because of
 REASONS."
 :::
 
 ### Consequences
 
 ::: content-hidden
-List some potential consequences of this decision.
+Elaborate on how the decision will impact us.
+This section often includes comments
+on how the drawbacks apply specifically to our projects and workflows,
+e.g. detailing how we could adapt to a new tool
+or explaining why a particular drawback is not a major concern for us.
 :::
 
 ## Resources used for this post
 
 ::: content-hidden
-List the resources used to write this post
+List the resources used to write this post.
 :::
