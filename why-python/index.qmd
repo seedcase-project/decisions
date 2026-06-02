@@ -12,13 +12,15 @@ categories:
 ---
 
 ::: callout-warning
-As we developed software, gained experience, and learned more about what our
-needs are now and in the near future, as well as newer tools getting more
-mature, we realised that Python no longer fit our needs nor values *for building
-software* as well as it did before. This is our old decision post, see our
+As our experience with software engineering grew,
+and our needs within Seedcase evolved,
+we realised that Python no longer is the best for us
+when it comes to *building software*.
+We explain why in our
 current decision post on [why we switched to
-Rust](/why-rust-for-building-software/index.qmd). We still use Python for data
-processing, which we've updated in our [data processing decision
+Rust](/why-rust-for-building-software/index.qmd) for software development.
+We still use Python for data
+processing, which we've explained in our [data processing decision
 post](/why-python-for-data-processing/index.qmd).
 :::
 
