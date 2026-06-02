@@ -40,7 +40,7 @@ and drawbacks for each option.
 ::: content-hidden
 List the main benefits and drawbacks with a short description.
 These should be of relevance for us but written in general form about the option,
-rather than how it impacts us speciffically
+rather than how it impacts us specifically
 (the latter will be elaborated upon in the section "Consequences").
 :::
 
@@ -66,7 +66,7 @@ REASONS."
 ### Consequences
 
 ::: content-hidden
-Elaborate on how the decision will impact us. 
+Elaborate on how the decision will impact us.
 This section often includes comments on the drawbacks,
 e.g. detailing how we could adapt to a new tool
 or explaining why a particular drawback is not a major concern for us.
