@@ -19,27 +19,23 @@ the form of a question for the problem.
 
 Building and designing stable, secure, and reliable software is hard. Really
 hard. And the needs for software built now are different and more complex than
-they were in the past, and even just a few years ago. Especially with the rise
-of AI coding assistants and with it an increase in the amount of software being
-built that is of varying quality and importantly security. Supply chain attacks,
-less focus on software security and more on volume, and vulnerabilities and bugs
-are becoming more common. Combined with the fact that AI coding assistants can
-easily generate code, the importance of strictness and correctness in the
-program built and in having strong guardrails to enforce that the software is
-well-built are increasingly important.
+they were in the past, even just a few years ago. Especially with the rise
+of AI coding assistants, which has led to an increase in the amount of lower-quality software with inadequate security practices. Supply chain attacks,
+prioritizing volume over security, vulnerabilities, and bugs
+are all becoming more common. Combined with the fact that AI coding assistants can
+easily generate code, the importance of having strong guardrails to enforce software strictness and correctness is increasingly important.
 
 On top of that, we've refined our
 [values](https://design.seedcase-project.org/software/) for building software
-that includes explicitness, a consideration for sustainability (meaning using as
+to include explicitness, a consideration for sustainability (meaning using as
 little computing resources as possible), and valuing the code itself just as
-much as the product built with it. We also have more ideas for different
-software tooling we could build, most of which is mainly command-line based.
-This means we have a clearer idea for what we need and want. We originally
-decided on [Python for building software and processing
-data](/why-python/index.qmd), however as we gained experience and learned more
-about what we needed and will need for future products, we realised Python no
-longer has a good fit for most of our needs and our aims. This post updates our
-decision with regard to these changes and our current needs.
+much as the product built with it. As we have been working on the Seedcase ecosystem,
+we have also refined our needs and wants regarding which software we are going to build.
+We originally
+decided on [using Python for building software and processing
+data](/why-python/index.qmd), but it is no longer
+the best fit for our updated needs and values. This post updates our
+decision in regards to these changes.
 
 ## Decision drivers
 
@@ -84,7 +80,7 @@ the above options, nor do they have a good match with our values (e.g. not a
 common language in developer/researcher tooling nor as common in
 academic/research settings):
 
-- [Go](https://golang.org/): Designed primarily for building web applications.
+- [Go](https://golang.org/): Designed primarily for building applications that build on or interact with the web.
 - [C++](https://isocpp.org/): While powerful, it is much more complex and has a
   more fragmented tooling ecosystem.
 - [Java](https://www.java.com/): Rarely used in research settings and less
