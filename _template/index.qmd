@@ -67,7 +67,8 @@ REASONS."
 
 ::: content-hidden
 Elaborate on how the decision will impact us.
-This section often includes comments on the drawbacks,
+This section often includes comments
+on how the drawbacks applies specifically to our projects and workflows,
 e.g. detailing how we could adapt to a new tool
 or explaining why a particular drawback is not a major concern for us.
 :::
