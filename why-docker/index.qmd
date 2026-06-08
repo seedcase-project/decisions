@@ -12,8 +12,6 @@ categories:
   - dependencies
 ---
 
-<!-- TODO: Update this to match style of other posts -->
-
 ## Introduction
 
 When considering container technologies, Docker is by far the most well-known
