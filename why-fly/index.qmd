@@ -63,7 +63,7 @@ We want to decide on a cloud provider based on these features/metrics:
 We have considered five different cloud providers:
 [Azure](https://azure.microsoft.com/en-us), [Render](https://render.com/),
 [Digital Ocean](https://www.digitalocean.com/), [Vercel](https://vercel.com/)
-and [Fly.io](https://fly.io/) . Below you see a "decision matrix" based on the
+and [Fly.io](https://fly.io/). Below you see a "decision matrix" based on the
 different features.
 
   |                                                              | Azure           | Render                               | Digital Ocean            | Vercel                 | Fly.io              |

@@ -138,7 +138,7 @@ feat/issue-123-short-description
 
 ### Use forward slash as separator between the type prefix and description
 
-It's common practice to use a forward slash (`/` ) between the prefix and the
+It's common practice to use a forward slash (`/`) between the prefix and the
 description of a branch. Let's sum up the benefits and drawbacks of this
 practice:
 
@@ -235,8 +235,6 @@ decided to omit this to keep the naming scheme as simple as possible.
 
 - [Best practices for naming Git
   branches](https://graphite.com/guides/git-branch-naming-conventions)
-- [Naming conventions for Git Branches - a
-  Cheatsheet](https://medium.com/@abhay.pixolo/naming-conventions-for-git-branches-a-cheatsheet-8549feca2534)
 - [A Simplified Convention for Naming Branches and Commits in
   Git](https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4)
 - [Git Branching Naming Convention: Best Practices to

@@ -27,8 +27,8 @@ this automated delivery process.
 
 We used to use [Commitizen](https://github.com/commitizen-tools/commitizen) to
 check our commit messages, as described in our [previous decision
-post](why-lint-with-commitizen/index.qmd). However, as our projects evolved, and
-along with them our needs, Commitizen no longer was a good fit for us as we
+post](/why-lint-with-commitizen/index.qmd). However, as our projects evolved,
+and along with them our needs, Commitizen no longer was a good fit for us as we
 found issues and limitations to it that didn't work well for us. Specifically:
 
 - The Commitizen GitHub Action workflow didn't always correctly detect that a
