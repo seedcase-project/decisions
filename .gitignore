@@ -24,4 +24,5 @@ _book
 public
 site
 
-**/*.quarto_ipynb
+# Cache folders
+*_cache/
