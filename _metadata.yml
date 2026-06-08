@@ -1,6 +1,8 @@
 gh:
-  repo: decisions
   org: seedcase-project
+  repo: decisions
+
+tagline: "Archival records of decisions made about tools or processes we use in the Seedcase Project"
 
 links:
   github: "https://github.com/seedcase-project/decisions"
