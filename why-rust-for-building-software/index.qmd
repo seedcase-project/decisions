@@ -200,28 +200,27 @@ List some potential consequences of this decision.
 :::
 
 - Because of the smaller ecosystem, we may have to build more of our own tools
-  and libraries.
-- Rust is known to have a steep learning curve, which means we need to invest
-  time in learning it and will slow down our development speed. However, like
-  learning any new skill, once learned, development will speed up.
-- We might become annoyed with the slower compilation times and higher local
-  resource usage during development. But this is a tradeoff for the benefits for
-  strictness and safety. Plus, there are many tools and techniques to mitigate
-  this.
-- Because Rust isn't as common in research settings, we probably won't get as
-  many contributions and external collaborators. However, this might not be an
-  issue for us. For one, there's a strong trend for more Rust tools and
-  libraries being used in research settings because of its benefits, so this may
-  change in the future. For another, getting contributions is difficult for any
-  language, and even more so in research settings, so even from the start we
-  never expected many external contributions.
-- It might be harder for us to build most of our software in Rust, but write
-  code to process data in Python, which will require some context switching
-  between languages. However, this is also good practice for us to learn how to
-  work in multiple languages and to learn that we're capable of using the right
+  and libraries. While this could become laborious, we believe that it will be a valuable asset for individual team members to learn and develop their value as software engineers.
+- Getting potentially fewer external contributions and collaborators
+  is not a major concern since we generally expect this number to be
+  close to zero for a new tool written in any language,
+  particularly in a research setting like this.
+  Selecting the tools that help us build the best possible software for
+  a given set of tasks is more likely to attract contributors in the long run.
+  There's also a recent strong trend for more research-based tools and
+  libraries built in Rust,
+  so we expect the potential contributor and collaborator pool
+  to grow.
+- It might become difficult for us to build most software in Rust, while writing
+  code to process data in Python, as this will require context switching
+  between languages. However, this is also a chance for us to practice
+  working in multiple languages and to learn that we're capable of using the right
   tool for the right task, even if it isn't something we're familiar with or
-  expertise in.
-- There may be some functionality that we've developed in Python that we won't
-  be able to use in Rust. This isn't a major issue, as most of our software so
-  far has been built as command-line tools, rather than libraries with reusable
-  functionality.
+  have expertise in. Widening our expertise and learning about best practices 
+  in Rust could also bring about positive benefits for our Python coding habits.
+- There may be some functionality that we've already developed in Python that we 
+  would like to also use in a Rust-based tool. This shouldn't be a major issue 
+  as we've built most of our software as command-line tools, rather than as libraries with reusable
+  functionality. If library code needs to be shared and we don't want to
+  re-implement it in rust, we can use [PyO3](https://github.com/PyO3/pyo3) to
+  call one language from the other.
