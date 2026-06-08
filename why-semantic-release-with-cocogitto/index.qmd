@@ -1,0 +1,119 @@
+---
+title: "Why Cocogitto for semantic release"
+description: |
+  Continuous delivery through using semantic releases reduces manual effort,
+  time, and potential errors. This post describes why we use Cocogitto for
+  automated versioning and releasing of our software.
+date: "2026-05-26"
+categories:
+  - communicate
+  - organise
+---
+
+## Context and problem statement
+
+We originally used [Commitizen](/why-semantic-release-with-commitizen/index.qmd)
+for automating the versioning and releasing of our software, but as our needs
+and projects evolved, we encountered many limitations with it. For example:
+
+- Commitizen's GitHub Action workflow is quite complicated, making it difficult
+  to assess the security risk of and to debug. For example, the workflow
+  requires passing a custom, fine-grained GitHub secret token to a Docker
+  container for its workflow, even though it isn't actually needed for the
+  workflow (permissions can be handled just fine through the `actions/checkout`
+  workflow).
+- It sometimes creates releases that, based on Conventional Commit messages,
+  shouldn't have triggered a release. Debugging didn't lead to any explanation
+  of why this was happening.
+- It doesn't include a lot of the configuration customisations we need for our
+  diverse projects (e.g. websites, R packages, and Python packages) that we
+  build and maintain.
+- With increasing supply chain attacks on package registers like PyPI and npm,
+  we want to use tools that are more secure and that have better security
+  practices.
+
+The issues related to the workflow being complicated and the incorrect
+triggering of releases are major reasons for us to switch to something to handle
+our semantic release workflow.
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things have
+arisen that impact work.
+:::
+
+We already described a lot of available tooling in our [post on using Commitizen
+for semantic releases](/why-semantic-release-with-commitizen/index.qmd), so we
+won't cover those here (unless they change substantially).
+
+We need a tool that:
+
+- Has a simple GitHub Action workflow that's easy to review, or at the least has
+  a way that makes it easy to use in a workflow, e.g. as a CLI command run
+  through `run`.
+- Is built in a (more) secure language and is installable without depending on
+  another tool.
+- Allows the use of GitHub's built-in `secrets` system in its workflows.
+- Can be used as a CLI tool, so that if there are no good GitHub Action
+  workflows, it can still be used e.g. with `run` in the workflow.
+- Has good configuration customisation for different types of projects.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits and
+drawbacks for each option.
+:::
+
+[Conventional Commits](https://www.conventionalcommits.org/en/about/) keeps a
+good list of tools that make use of their standard, which we used to find tools
+to compare. However, since the previous post, there hasn't been any new tools
+and so there is really only one other option that fit our needs:
+
+- [Cocogitto](https://docs.cocogitto.io/)
+
+### Cocogitto
+
+[Cocogitto](https://docs.cocogitto.io/) is a Rust CLI tool
+
+::: columns
+::::: column
+#### Benefits
+
+- Has very good customisations, including pre- and post-bump hooks that can run
+  custom commands before and after the version is bumped.
+- The GitHub Action workflow is very simple and doesn't require passing any
+  secrets to it.
+- It's built in Rust, which is a more secure language than most other languages.
+:::::
+
+::::: column
+#### Drawbacks
+
+- Isn't frequently updated, though Rust packages don't require as much
+  maintenance as Python or JavaScript ones, so this might not be an issue.
+- Custom pre- and post-bump hooks mean we have to write custom commands
+  ourselves, which could be more work compared to using a tool that has more
+  built-in functionality.
+:::::
+:::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of REASONS."
+:::
+
+We didn't have any choice here, as there was really only one tool that fit our
+needs. But, Cocogitto is a well-developed tool that fits our needs.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+- It isn't as frequently updated compared to other active tools, but we don't
+  know yet if that will be a problem, as Rust packages don't tend to need as
+  much maintenance as other languages require.
