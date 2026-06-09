@@ -5,14 +5,23 @@ description: |
   is used across multiple domains and industries, it is likely to be familiar to
   a wider audience.
 date: "2023-03-22"
-date-modified: "2024-05-10"
+date-modified: "2026-06-01"
+previous: true
 categories:
   - develop
 ---
 
-::: content-hidden
-Use other decision posts as inspiration to writing these. Leave the
-content-hidden sections in the text for future reference.
+::: callout-warning
+As our experience with software engineering grew,
+and our needs within Seedcase evolved,
+we realised that Python no longer is the best for us
+when it comes to *building software*.
+We explain why in our
+current decision post on [why we switched to
+Rust](/why-rust-for-building-software/index.qmd) for software development.
+We still use Python for data
+processing, which we've explained in our [data processing decision
+post](/why-python-for-data-processing/index.qmd).
 :::
 
 ## Context and problem statement
