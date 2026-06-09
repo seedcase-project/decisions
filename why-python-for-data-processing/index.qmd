@@ -1,0 +1,228 @@
+---
+title: "Why Python for data processing"
+description: |
+  Our core work revolves around processing data in various ways. This decision post
+  explains why we use Python for that work and for building libraries that simplify
+  that work.
+date: "2026-06-01"
+categories:
+  - develop
+  - process
+  - script
+---
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write a statement in
+the form of a question for the problem.
+:::
+
+Our core work revolves around designing, building, and processing structured and
+tidied data from various uncleaned sources, so that it can be used for research
+analysis. An effective and powerful language can greatly simplify this type of
+work.
+
+We [previously decided](/why-python/index.qmd) to use Python for both data
+processing work as well as for developing all of our software tools, which meant
+we compared languages that could do both of those things rather than just one of
+them. However, our needs for building software tools have changed, especially as
+we've started to build more command-line and web-based tools. Because of this,
+we reconsidered Python for building software tools, and instead [switched to
+Rust](/why-rust-for-building-software/index.qmd). However, we still need a
+language suitable for processing data and with this more narrow focus, we can
+ask the question: *which programming language is best suited for data processing
+work, including building libraries to support that work?*.
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things have
+arisen that impact work.
+:::
+
+We need a language that:
+
+- Can be used for data processing directly and for building libraries supporting
+  data processing workflows that can be used across projects.
+- Has a strong ecosystem of packages for data processing as we don't need to
+  worry as much about minimizing the number of dependencies we use, unlike when
+  we build software tools.
+- Is widely used in the data science and data engineering community, both so
+  they can contribute to our projects but also so that they can more easily
+  review or re-use our work.
+- Has powerful and fast packages for data processing.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits and
+drawbacks for each option.
+:::
+
+Our [previous post](/why-python/index.qmd) was about what language to use for
+*all* purposes, not just data processing. Because of that, we compared a wider
+range of languages, even if they weren't very well suited for data processing.
+For example, we compared Java and C++ alongside R and Python. For this decision
+post, we are focusing firmly on languages designed for data processing as well
+as with decent capabilities for building packages (libraries) to simplify that
+data processing work. Based on our drivers and this focus, we are only comparing
+two languages:
+
+- [R](https://www.r-project.org/)
+- [Python](https://www.python.org/)
+
+There are other languages that match some of our drivers but not all of them:
+
+- [SQL](https://en.wikipedia.org/wiki/SQL) is a powerful language for data
+  processing. However, it is not a general-purpose programming language and
+  doesn't have the capabilities for building libraries to support data
+  processing work, so we are excluding it from consideration.
+- [Scala](https://www.scala-lang.org) is a commonly used language in data
+  engineering, but is nearly unknown in data science and the research community.
+- [Julia](https://julialang.org/) is a fairly new language that is designed for
+  data science and has powerful data processing capabilities. But it is not
+  widely used and it's mostly aimed at mathematical computation and statistical
+  analysis rather than data engineering.
+
+While we decided on using [Rust for building software
+tools](/why-rust-for-building-software/index.qmd), we are not considering it for
+data processing work because it isn't widely used in the data science and data
+engineering communities and it doesn't have a strong ecosystem of packages for
+data processing (aside from [Polars](https://www.pola.rs/)). It also has a much
+steeper learning curve compared to R and Python, has features that aren't that
+useful when processing data outside of a software development context (e.g.
+strict and enforced types and the borrow checker), and it doesn't have a
+[REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)
+functionality that makes data processing more interactive and easier to do.
+
+### R
+
+[R](https://www.r-project.org) is an open-source programming language and
+software environment for statistical computing and graphics supported by the R
+Foundation for Statistical Computing. The R language is widely used among
+statisticians and data analysts for developing statistical methods and doing
+data analysis.
+
+::: columns
+::::: column
+#### Benefits
+
+- Is one of the most commonly used open-source languages in data science and the
+  research community, aside from Python and SQL.
+- Has a massive, friendly, and supportive community.
+- Has a large number of packages, including many powerful data processing
+  packages.
+- Has great integration with many powerful data processing tools, such as
+  [Arrow](https://arrow.apache.org/), [DuckDB](https://duckdb.org/), and can
+  easily connect with databases via [DBI](https://dbi.r-dbi.org/).
+- Beginner friendly data analysis tools via the
+  [tidyverse](https://tidyverse.org/), which provides a consistent and
+  user-friendly interface to most data processing tasks (like the tools
+  mentioned above).
+- Has an effective and powerful package development system that makes it easy to
+  quickly build and share packages.
+- Has an extremely flexible programming environment, where there are few rules
+  on how things are done. It was designed in a way to do analysis interactively
+  in the R console, rather than to write scripts that are run from start to
+  finish. This means it is very easy to get started, write code that works, and
+  get stuff done quickly.
+:::::
+
+::::: column
+#### Drawbacks
+
+- Package dependency management isn't really built into the language, so pinning
+  specific versions of packages used is quite difficult and depends on external
+  tools like [renv](https://rstudio.github.io/renv/) (which itself has a number
+  of limitations).
+- Is not as commonly used within the data engineering community, likely because
+  it mainly came from statistics and analysis, rather than from data processing
+  and engineering.
+- It isn't as well-developed for building packages compared to other languages,
+  as it doesn't yet have continuous delivery tools for distributing packages,
+  nor are the checks that CRAN (the package registry) runs publicly available,
+  which makes it more difficult to build packages that pass the CRAN checks
+  without first uploading to them.
+- Its flexibility in the programming environment is also its weakness, as it can
+  lead to unexpected issues and behaviours if you don't know the language well
+  enough to know how to avoid those pitfalls. Because of this, writing code that
+  is robust, reliable, re-usable, and reproducible is a bit harder to achieve
+  compared to other languages.
+:::::
+:::
+
+### Python
+
+[Python](https://www.python.org/) is an interpreted, high-level, general-purpose
+programming language. Python's design philosophy emphasizes code readability,
+for example by using whitespace as part of its syntax. Its language uses an
+object-oriented approach and is often quoted as being ["the second-best language
+for everything"](https://sixfeetup.com/blog/4-reasons-to-choose-python).
+
+::: columns
+::::: column
+#### Benefits
+
+- It has a massive community with a large number of packages for many different
+  programming tasks, including data processing.
+- It is widely used in the data science, machine learning, and data engineering
+  communities.
+- Many tools have some bindings or connections into Python. For example, SQL
+  databases can be easily connected into Python with packages like
+  [SQLAlchemy](https://www.sqlalchemy.org/), and many data processing tools have
+  Python bindings, such as [Arrow](https://arrow.apache.org/),
+  [DuckDB](https://duckdb.org/), [Spark](https://spark.apache.org/), and
+  [Polars](https://www.pola.rs/).
+- It has packages for easily connecting to different sources, such as web APIs
+  and other programming languages.
+- It has a lot of programming features from different paradigms, which means it
+  is flexible in how it can be used and written.
+- Like R, it is dynamically typed, which means you don't need to worry about
+  types when writing code, so it can be easy to write something that (at least
+  seems to) work and get stuff done quickly.
+- Its package development features are quite good, especially when paired with
+  tools like [uv](https://docs.astral.sh/uv/), and distributing packages through
+  [PyPI](https://pypi.org/) can be done with a single command and integrated
+  into continuous delivery pipelines.
+- Because it is used in so many different industries and communities and has so
+  many packages, there is a robust ecosystem of tools to make it easier to build
+  stable and reliable packages (compared to R and similar languages).
+:::::
+
+::::: column
+#### Drawbacks
+
+- The documentation for different packages is of inconsistent quality, even
+  within the official Python documentation. This can make it difficult to
+  effectively use some functionality or packages.
+- Like R, Python's flexibility is also its weakness, as it doesn't have strong
+  guardrails when writing code. This means it can be harder to know if the code
+  you wrote is actually doing what you think it's doing, even if it runs and
+  outputs something.
+- While there are lots of packages to help with package development, it is still
+  a fragmented ecosystem and experience for building packages, even compared to R.
+- Its multi-paradigm nature is also a drawback, as it can lead to a lot of
+  different ways to do the same thing and it doesn't implement any one of those
+  paradigms very well. So the coding experience can feel a bit fragmented,
+  especially when trying to use different packages that use different paradigms.
+:::::
+:::
+
+## Decision outcome
+
+While both R and Python provide a lot of power and are similarly capable of
+doing both data processing work and building libraries/packages to support that
+work, we've decided to use Python. One of the two main reasons is that Python is
+more widely used in the data engineering community, so it will (over time) have
+a stronger ecosystem of tools for data processing. The other reason is that
+Python's package development experience, while not great, is better than R's
+primarily because of the tools available (e.g. uv) and distributing packages
+through PyPI is much easier than R's CRAN system (even if the CRAN system might
+ensure higher quality packages).
+
+### Consequences
+
+We don't foresee any major consequences to this decision, especially since we've
+already been using Python for the data processing work and haven't encountered
+any major issues with it in that area.
