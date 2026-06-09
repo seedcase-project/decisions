@@ -4,14 +4,19 @@ description: |
   A key functionality of Sprout is checking whether user-supplied data match the metadata that describe them.
   This post explains why we chose to use `pandera` for automating this process.
 date: "2024-11-08"
+previous: true
 categories:
   - develop
   - check
 ---
 
-::: content-hidden
-Use other decision posts as inspiration to writing these. Leave the
-content-hidden sections in the text for future reference.
+::: callout-important
+We initially decided on Pandera to check the data against the metadata, but
+after using it and identifying more of our needs, we simplified our workflow by
+saving data as Parquet files which encodes the data types together with the
+data. The data types in the Parquet files are then referenced when creating the
+metadata. schema. So data verification against the metadata is no longer needed
+as it is done during the data cleaning phase.
 :::
 
 ## Context and problem statement
