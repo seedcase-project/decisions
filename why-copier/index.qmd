@@ -82,17 +82,15 @@ alternative options, which we used to help us make our decision.
 
 ### Cookiecutter
 
-This is a [very
-popular](https://www.cookiecutter.io/article-post/cookiecutter-alternatives)
-tool for creating new Python projects from templates.
+This is a very popular tool for creating new Python projects from templates.
 
 ::: columns
 ::::: column
 #### Benefits
 
 - Very popular, well-established, older, and widely used.
-- [Large number](https://www.cookiecutter.io/templates) of templates and
-  extensions available.
+- Large number of templates and extensions available (e.g. searching
+  "cookiecutter" on GitHub).
 - Can be used for a wide range of project types, not just Python.
 :::::
 
@@ -160,7 +158,5 @@ List some potential consequences of this decision.
 List the resources used to write this post
 :::
 
-- [Cookiecutter
-  alternatives](https://www.cookiecutter.io/article-post/cookiecutter-alternatives)
 - [Comparing copier to other project
   generators](https://copier.readthedocs.io/en/stable/comparisons/)

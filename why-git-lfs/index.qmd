@@ -254,7 +254,6 @@ List the resources used to write this post
 - [Git LFS docs](https://github.com/git-lfs/git-lfs/tree/main/docs)
 - [`git-annex` docs](https://git-annex.branchable.com/walkthrough/)
 - [DVC docs](https://doc.dvc.org/start)
-- [Git LFS and
-  DVC](https://medium.com/@pablojusue/git-lfs-and-dvc-the-ultimate-guide-to-managing-large-artifacts-in-mlops-c1c926e6c5f4)
+- [Git LFS and DVC](https://stackoverflow.com/q/58541260)
 - [Large files with Git: LFS and git-annex](https://lwn.net/Articles/774125/)
 - [Git Annex vs. Git LFS](https://workingconcept.com/blog/git-annex-vs-git-lfs/)
