@@ -26,13 +26,13 @@ work.
 We [previously decided](/why-python/index.qmd) to use Python for both data
 processing work as well as for developing all of our software tools, which meant
 we compared languages that could do both of those things rather than just one of
-them. However, our needs for building software tools changed, especially as we
-shifted to building more command-line and web-based tools. Because of this, we
+them. However, our needs for building software tools have changed, especially as we've
+started to build more command-line and web-based tools. Because of this, we
 reconsidered Python for building software tools, and instead [switched to
-Rust](/why-rust-for-building-software/index.qmd). We still need a language
+Rust](/why-rust-for-building-software/index.qmd). However, we still need a language
 suitable for processing data and with this more narrow focus, we can ask the
 question: *which programming language is best suited for data processing work,
-including building supporting libraries?*.
+including building libraries to support that work?*.
 
 ## Decision drivers
 
@@ -44,7 +44,7 @@ arisen that impact work.
 We need a language that:
 
 - Can be used for data processing directly and for building libraries supporting
-  data processing workflows to be re-used in other projects.
+  data processing workflows that can be used across projects.
 - Has a strong ecosystem of packages for data processing as we don't need to
   worry as much about minimizing the number of dependencies we use, unlike when
   we build software tools.
@@ -92,7 +92,7 @@ engineering communities and it doesn't have a strong ecosystem of packages for
 data processing (aside from [Polars](https://www.pola.rs/)). It also has a much
 steeper learning curve compared to R and Python, has features that aren't that
 useful when processing data outside of a software development context (e.g.
-strict and enforced types, borrow checker), and doesn't have a
+strict and enforced types and the borrow checker), and it doesn't have a
 [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)
 functionality that makes data processing more interactive and easier to do.
 
@@ -136,7 +136,7 @@ data analysis.
   specific versions of packages used is quite difficult and depends on external
   tools like [renv](https://rstudio.github.io/renv/) (which itself has a number
   of limitations).
-- Is not as commonly used with the data engineering community and ecosystem,
+- Is not as commonly used within the data engineering community,
   likely because it mainly came from statistics and analysis, rather than from
   data processing and engineering.
 - It isn't as well-developed for building packages compared to other languages,
@@ -213,8 +213,8 @@ for everything"](https://sixfeetup.com/blog/4-reasons-to-choose-python).
 
 While both R and Python provide a lot of power and are similarly capable of
 doing both data processing work and building libraries/packages to support that
-work, we decided to use Python. One of the two main reasons is that Python is
-more widely used in the data engineering community, so will (over time) have a
+work, we've decided to use Python. One of the two main reasons is that Python is
+more widely used in the data engineering community, so it will (over time) have a
 stronger ecosystem of tools for data processing. The other reason is that
 Python's package development experience, while not great, is better than R's
 primarily because of the tools available (e.g. uv) and distributing packages
