@@ -1,0 +1,266 @@
+---
+title: "Why pytask for Python workflow management"
+description: |
+  Managing a data processing workflow, which is the steps to take from raw input
+  to final tidy output, is necessary for reproducibly generating data packages.
+  This post explains why we decided to use pytask for tracking the Python code
+  used to create our data packages.
+date: "2026-06-15"
+categories:
+  - workflow
+  - develop
+---
+
+## Context and problem statement
+
+When developing data packages, we need to run several
+[Python](/why-python-for-data-processing/index.qmd) functions in a specific
+order so that we go from raw input to the final data package. There are many
+ways of doing this, some very simple and manual, and others more complex and
+automated. This process of tracking how data moves and transforms from input to
+output is known within data engineering as "data lineage". While we technically
+achieve data lineage because we version control everything and only use code to
+process the data, we also want to achieve automated reproducibility. For that,
+we need a tool that can track the various initial raw inputs, the intermediate
+outputs and inputs, and the final outputs. So the question is:
+
+*Which tool should we use to formally track data lineage and automate the
+reproducible generation of our data packages?*
+
+## Decision drivers
+
+Aside from our general drivers as described in our [design
+principles](https://design.seedcase-project.org), such as having good
+documentation, being actively maintained, and open source, we also have other
+drivers:
+
+- Doesn't require a strict folder and file structure to work.
+- Is CLI-based or only requires using Python code. Ideally, it should be a
+  Python library that only requires adding specific decorators to functions or
+  tracks functions in some formal way that would form a graph (i.e. the output
+  of one goes into the input of another).
+- Fairly lightweight, meaning we want something that has what we need, but not
+  much more.
+- Ideally is agnostic to the computing environment, meaning it should work on a
+  local machine without needing to be deployed on a server or cloud platform.
+  This is important because we often develop data packages for health data in a
+  Linux server (for legal and privacy reasons).
+
+## Considered options
+
+We used this [list of pipeline
+tools](https://github.com/pditommaso/awesome-pipeline) as a starting point to
+finding and reviewing the available options.
+
+While the list is quite large, the vast majority of tools are not relevant to
+us. They are either focused heavily on cloud platforms (via a UI), no longer
+maintained (explicitly archived), very old or untouched for years, or they no
+longer exist (or at least the URL is dead). From the remaining tools, many have
+documentation that is poorly organised, difficult to read, and/or hard to assess
+whether it fit our needs or not. Of those that do have good documentation, many
+of those are built for needs that are much more complex and extensive compared
+to ours. For example, they included more advanced data lineage features,
+deployment, container-based workflows, and other advanced features that we do
+not need. After this initial quick review of the available options and excluding
+the tools that did not meet our needs and drivers, these were the tools that
+remained that could fit our needs:
+
+- [Apache Hamilton](https://hamilton.apache.org)
+- [PipeFunc](https://pipefunc.readthedocs.io/en/latest/)
+- [PyTask](https://pytask-dev.readthedocs.io/en/stable/)
+
+There are a few tools that are *almost* what we need, but don't quite fit our
+requirements. These are the tools we didn't consider:
+
+- Both [Prefect](https://www.prefect.io/) and [Dagster](https://dagster.io/) are
+  common and widely-used data orchestration/workflow tools. They are both very
+  feature-rich, but a lot of those features we don't need. They are both heavily
+  focused on orchestration, especially through the use of a UI. And they're both
+  built by companies that sell a cloud-based version of their tools. A lot of
+  their docs and examples are focused around using it via their platform and UI,
+  which makes it difficult to determine how we could apply it for our use-cases.
+  For example, it's extremely difficult to find how to "just run all the tasks"
+  on the command-line or as Python code. Most of the docs talk about opening up
+  the UI to interact with, visualize, and run the workflow.
+
+### Apache Hamilton
+
+[Apache Hamilton](https://hamilton.apache.org) a general framework for building
+data processing pipelines rather than a generic workflow management system (like
+the other two options). It's main focus is on tracking transformations to data
+itself, especially at the column level, rather than tracking tasks and their
+outputs.
+
+::: {.columns}
+::::: {.column}
+#### Benefits
+
+- Is the most popular of the three options, at least according to the number of
+  stars on GitHub.
+- Is hosted and supported by the Apache Software Foundation, which is a
+  well-known and reputable open source foundation that hosts many widely-used
+  and well-maintained open source projects. This means there is at least some
+  level of maintenance commitment and support for the project, more than the
+  other two options.
+- Has extensive support for many different types of integrations and tools, so
+  there's a strong likelihood that it could integrate well with what we use and
+  need.
+- Like pytask below, task dependencies are defined by naming the parameter of a
+  function for a downstream task with the same name as the function from the
+  upstream tasks. This makes it quite easy to scan function signatures and
+  identify what they depend on.
+:::::
+::::: {.column}
+#### Drawbacks
+
+- The documentation is a bit difficult to navigate. For example, the "Getting
+  Started" section is a bit short and starts off with explaining why to use it
+  and listing common questions about it and answers to them.
+- It primarily seems to operate on data columns, and transformations to those
+  columns, rather than whole data objects or on files. The final output of the
+  workflow requires listing the columns that are in the final output. This
+  organization may work well when column level tracking is important and when
+  there aren't that many columns in the end. But for our type of use-cases,
+  where datasets often have thousands of columns at the end, this would be quite
+  difficult to manage and develop. Though it does seem to also output whole data
+  frames, but it isn't clear from the docs what that means compared to the
+  column-level tracking.
+- Requires setting up a "builder" to explicitly list list the Python modules to
+  search in and the type of database backend used (e.g. Pandas). This adds some
+  extra work to develop and maintain, as the tasks need to be defined twice
+  (once as the function itself and once in the builder).
+- At the time of reviewing this, [Polars isn't well
+  supported](https://hamilton.apache.org/reference/result-builders/Polars/),
+  which is what we [decided on using](/why-polars-for-data-cleaning/index.qmd).
+- Task outputs are tracked in a cache folder, which appears to be in a SQL
+  database (it isn't clear from the docs). This makes it a bit harder to
+  manually review and inspect the task outputs.
+:::::
+:::
+
+### pytask
+
+[pytask](https://pytask-dev.readthedocs.io/en/stable/) is a Python-based,
+general-purpose workflow management system. It tracks generic "tasks", which
+tasks need to run first and what outputs from one task are needed as inputs for
+another. Built mainly from the desire for tracking data processing steps when
+doing data analysis.
+
+::: {.columns}
+::::: {.column}
+#### Benefits
+
+- Organises its documentation following the [diataxis
+  framework](/why-diataxis/index.qmd), which makes it much easier to navigate
+  and read. The starting tutorial is very well-written and organised.
+- Has a dedicated `pytask.lock` file for listing which tasks have been done and
+  which outputs are up-to-date, which makes it easier to inspect/read the status
+  of the workflow.
+- Has a command-line interface.
+- Requires organising Python code into a Python package, which is good as you
+  can follow basic Python packaging practices and use existing tooling for that.
+  While not required, their convention is to name files with `task_` at the
+  start to indicate that they contain tasks, similar to how pytest uses `test_`
+  for test files.
+- A task is defined as any Python function starting with `task_`, which mimics
+  how pytest defines tests (`test_`), which is a familiar convention for Python
+  users. Can also use the decorator `@pytask` for more control over task names
+  and other features.
+- Tasks can produce any output, including a file.
+- Outputs of a task are usually stored as a file in a special "build" folder
+  (default is `bld/`). This makes it easier to also mentally/conceptually track
+  outputs and their dependencies, as you can just look in the build folder (or
+  the `pytask.lock` file). But a "data catalog" (a dictionary of any type of
+  tasks and their outputs) can also be used to track outputs, especially for
+  tasks that don't produce files.
+- Has different, formal ways of tracking input and output for tasks, either with
+  parameter name (`produces`) or with type hints (using `Annotated`). Type hints
+  are generally a fantastic system to use, so incorporating them into a task
+  workflow is a great feature as type checkers can be used to check the
+  workflow.
+- Any function parameter where the name matches the name of a task will be
+  tracked as a dependency, meaning the output of that task will be the input to
+  the task with the parameter name. This is a very intuitive way of tracking
+  dependencies, as the function signature itself is used to track the workflow.
+  The input to that parameter must point to the build folder.
+- Can output a graph of the workflow as an image, to make it easier to visually
+  see and reason about the workflow.
+:::::
+::::: {.column}
+#### Drawbacks
+
+- Of the three, it seems it is the least widely used, at least based on the
+  number of stars on GitHub, which of course isn't an accurate measure of usage.
+  So there may be less people using it, less help and support, and less examples
+  and resources online.
+:::::
+:::
+
+### PipeFunc
+
+[PipeFunc](https://pipefunc.readthedocs.io/en/latest/), like pytask, is a
+Python-based workflow management system. It also tracks generic "tasks" and
+isn't built for a specific domain, though they do describe work doing scientific
+data processing and analysis.
+
+::: {.columns}
+::::: {.column}
+#### Benefits
+
+- Uses decorators (`@pipefunc`) to track tasks and list dependencies.
+- Has features for tracking CPU and memory usage of tasks.
+- Has some level of support for parallelizing tasks.
+:::::
+::::: {.column}
+#### Drawbacks
+
+- Documentation is not very extensive, a bit unclear, and not well organised (or
+  at least, difficult to understand how it is organised). They depend heavily on
+  linking to other projects using PipeFunc to use as examples of how to use it.
+  While examples are useful, they shouldn't be the main way to explain and
+  walk-through how to use the tool. Likewise, they have a "concepts" page that
+  is more of a "how-to" page rather than, semantically, a page that explains the
+  concepts/design.
+- The documentation was built from a Jupyter Notebook, which isn't the best
+  format for documentation as it is difficult to navigate and contains a lot of
+  differently styled text and formatting. For instance, there are a lot of
+  different colours, interactive elements, and call-out boxes, which can make
+  mentally parsing the content more difficult and tiring.
+- Listing tasks is done through a combination of using the decorators and
+  listing them in a `Pipeline()` function, which is a bit more work to keep
+  track of and maintain as there are *two* places to define tasks.
+- Dependent tasks are defined in both the decorator of the upstream task and in
+  the function signature of the downstream task. If the name of the parameter
+  changes in the downstream task, it needs to be updated in the upstream task's
+  decorator, which is a bit more work and less intuitive than just using the
+  function signature to track dependencies.
+- It isn't clear from the documentation where the outputs of the tasks are
+  stored and how they are cached/tracked.
+:::::
+:::
+
+## Decision outcome
+
+We decided on using pytask for managing the steps of how we process and generate
+our data packages. Apache Hamilton was a close second but it was too specific to
+data transformations rather than more generic tasks, e.g. when we process
+metadata or fetch from APIs.
+
+### Consequences
+
+- Because pytask is less widely used than the other options, there may be less
+  support and resources available online. Which means we may take longer to
+  figure out issues and learn how to use it.
+- It's general-purpose nature, while being a benefit right now, may be too
+  general for us later as we do more complex data processing or need specific
+  features. However, we don't foresee in the near future that we will encounter
+  those types of situations, so this isn't too concerning for us.
+
+## Resources used for this post
+
+- <https://github.com/pditommaso/awesome-pipeline>
+- <https://github.com/meirwah/awesome-workflow-engines>
+- <https://hamilton.apache.org/code-comparisons/>
+- <https://pipefunc.readthedocs.io/en/latest/faq/>
+- <https://pytask-dev.readthedocs.io/en/stable/>
+- <https://pytask-dev.readthedocs.io/en/stable/explanations/comparison_to_other_tools.html>
