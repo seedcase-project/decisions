@@ -3,8 +3,8 @@ title: "Why Rust for building software"
 description: |
   We want to build software, specifically for command-line and web applications,
   in a language that is sustainable (both in our time but also in resources),
-  that is secure and reliable, and that has good developer ergonomics. This post
-  describes why we decided to switch from Python to Rust for building software.
+  secure and reliable, and that has good developer ergonomics. This post
+  describes why we decided to switch from building software in Python to building in Rust.
 date: "2026-06-01"
 categories:
   - develop
@@ -19,11 +19,11 @@ the form of a question for the problem.
 
 Building and designing stable, secure, and reliable software is hard. Really
 hard. And the needs for software built now are different and more complex than
-they were in the past, even just a few years ago. Especially with the rise of AI
-coding assistants, which has led to an increase in the amount of lower-quality
+they were in the past, even just a few years ago. Especially the rise of AI
+coding assistants has led to an increase in the amount of lower-quality
 software with inadequate security practices. Supply chain attacks, prioritizing
 volume over security, vulnerabilities, and bugs are all becoming more common.
-Combined with the fact that AI coding assistants can easily generate code, the
+Combined with the fact that AI coding assistants can generate code faster than people can understand it, the
 importance of having strong guardrails to enforce software strictness and
 correctness is increasingly important.
 
@@ -32,7 +32,7 @@ On top of that, we've refined our
 include explicitness, a consideration for sustainability (meaning using as
 little computing resources as possible), and valuing the code itself just as
 much as the product built with it. As we have been working on the Seedcase
-ecosystem, we have also refined our needs and wants regarding which software we
+ecosystem, we have also refined our needs and wants regarding the software we
 are going to build. We originally decided on [using Python for building software
 and processing data](/why-python/index.qmd), but it is no longer the best fit
 for our updated needs and values. This post updates our decision in regards to
@@ -46,18 +46,17 @@ arisen that impact work.
 :::
 
 Many of the drivers are the same as in our previous decision, except we have
-additional ones:
+the following additional ones. We want a language that provides:
 
-- Better developer ergonomics and built-in development tooling, such as for
+- Great developer ergonomics and built-in development tooling, such as for
   building, testing, and distributing software.
-- More strict checks on the code, to prevent easily solvable bugs and security
+- Strict checks on the code, to prevent easily solvable bugs and security
   issues from the beginning.
-- Built-in and required types, to make the code more explicit and easier to
+- Built-in and required types to make the code more explicit and easier to
   understand.
-- Has support and an ecosystem for building command-line applications as well as
+- Support and an ecosystem for building command-line applications as well as
   (simple) web applications (e.g. for client-side/in-browser processing).
-- Better investment to learn and build skills in for a wider variety of products
-  that we may build in the future.
+- Skill development and learning that can be reused across a broad range of future products.
 
 ## Considered options
 
@@ -121,17 +120,16 @@ safety without needing a garbage collector.
   and distribute software, which makes the developer experience very nice and
   ergonomic. There is no need to decide on a specific tool for a specific task,
   as it is all built-in.
-- While not as common as many other languages, because it is so low level (but
-  with high-level ergonomics in the language design), it can create bindings for
+- It can create bindings for
   many other languages, including to Python and to R.
-- Recently, a lot of developer tooling in many languages including JavaScript
+- Recently, a lot of developer tooling in many languages have been built in Rust, including JavaScript
   (e.g. [Biome](https://biomejs.dev)), Python (e.g.
   [uv](https://docs.astral.sh/uv) or [Ruff](https://docs.astral.sh/ruff)), and R
   (e.g. [Air](https://posit-dev.github.io/air/) and
-  [Jarl](https://jarl.etiennebacher.com)), have been built in Rust.
+  [Jarl](https://jarl.etiennebacher.com)).
 - Rust is becoming more common in academic and research settings, and there are
   more and more libraries being built in Rust e.g. for data processing with
-  [Polars](https://www.pola.rs/). And because of the ability to create bindings
+  [Polars](https://www.pola.rs/). Because of the ability to create bindings
   for other languages, some research libraries are being built in Rust to allow
   for cross-language use.
 - The compiler and checker provides very good messages that teach you about the
@@ -142,7 +140,7 @@ safety without needing a garbage collector.
   skill, and knowledge.
 - Because it builds to native binaries and doesn't need a runtime interpreter,
   it is very fast and efficient. This means that it requires less computing and
-  storage resources, which is better for sustainability especially for software
+  storage resources, which is more sustainable, especially for software
   that is designed to be run often.
 - Improves developer experience because of the availability of built-in tools
   and to strictness in the compiler checks, which means as a team you don't have
@@ -222,5 +220,5 @@ List some potential consequences of this decision.
   would like to also use in a Rust-based tool. This shouldn't be a major issue
   as we've built most of our software as command-line tools, rather than as libraries with reusable
   functionality. If library code needs to be shared and we don't want to
-  re-implement it in rust, we can use [PyO3](https://github.com/PyO3/pyo3) to
+  re-implement it in Rust, we can use [PyO3](https://github.com/PyO3/pyo3) to
   call one language from the other.
