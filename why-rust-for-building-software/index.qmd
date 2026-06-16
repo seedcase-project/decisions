@@ -20,12 +20,12 @@ the form of a question for the problem.
 Building and designing stable, secure, and reliable software is hard. Really
 hard. And the needs for software built now are different and more complex than
 they were in the past, even just a few years ago. Especially the rise of AI
-coding assistants has led to an increase in the amount of lower-quality
-software with inadequate security practices. Supply chain attacks, prioritizing
-volume over security, vulnerabilities, and bugs are all becoming more common.
-Combined with the fact that AI coding assistants can generate code faster than people can understand it, the
-importance of having strong guardrails to enforce software strictness and
-correctness is increasingly important.
+coding assistants has led to an increase in the amount of lower-quality software
+with inadequate security practices. Supply chain attacks, prioritizing volume
+over security, vulnerabilities, and bugs are all becoming more common. Combined
+with the fact that AI coding assistants can generate code faster than people can
+understand it, the importance of having strong guardrails to enforce software
+strictness and correctness is increasingly important.
 
 On top of that, we've refined our
 [values](https://design.seedcase-project.org/software/) for building software to
@@ -45,18 +45,19 @@ List some reasons for why we need to make this decision and what things have
 arisen that impact work.
 :::
 
-Many of the drivers are the same as in our previous decision, except we have
-the following additional ones. We want a language that provides:
+Many of the drivers are the same as in our previous decision, except we have the
+following additional ones. We want a language that provides:
 
 - Great developer ergonomics and built-in development tooling, such as for
   building, testing, and distributing software.
-- Strict checks on the code, to prevent easily solvable bugs and security
-  issues from the beginning.
+- Strict checks on the code, to prevent easily solvable bugs and security issues
+  from the beginning.
 - Built-in and required types to make the code more explicit and easier to
   understand.
 - Support and an ecosystem for building command-line applications as well as
   (simple) web applications (e.g. for client-side/in-browser processing).
-- Skill development and learning that can be reused across a broad range of future products.
+- Skill development and learning that can be reused across a broad range of
+  future products.
 
 ## Considered options
 
@@ -120,18 +121,17 @@ safety without needing a garbage collector.
   and distribute software, which makes the developer experience very nice and
   ergonomic. There is no need to decide on a specific tool for a specific task,
   as it is all built-in.
-- It can create bindings for
-  many other languages, including to Python and to R.
-- Recently, a lot of developer tooling in many languages have been built in Rust, including JavaScript
-  (e.g. [Biome](https://biomejs.dev)), Python (e.g.
+- It can create bindings for many other languages, including to Python and to R.
+- Recently, a lot of developer tooling in many languages have been built in
+  Rust, including JavaScript (e.g. [Biome](https://biomejs.dev)), Python (e.g.
   [uv](https://docs.astral.sh/uv) or [Ruff](https://docs.astral.sh/ruff)), and R
   (e.g. [Air](https://posit-dev.github.io/air/) and
   [Jarl](https://jarl.etiennebacher.com)).
 - Rust is becoming more common in academic and research settings, and there are
   more and more libraries being built in Rust e.g. for data processing with
-  [Polars](https://www.pola.rs/). Because of the ability to create bindings
-  for other languages, some research libraries are being built in Rust to allow
-  for cross-language use.
+  [Polars](https://www.pola.rs/). Because of the ability to create bindings for
+  other languages, some research libraries are being built in Rust to allow for
+  cross-language use.
 - The compiler and checker provides very good messages that teach you about the
   issue as well as showing how to fix it.
 - Because of its ownership model, as well as very strict and modern design, it
@@ -140,8 +140,8 @@ safety without needing a garbage collector.
   skill, and knowledge.
 - Because it builds to native binaries and doesn't need a runtime interpreter,
   it is very fast and efficient. This means that it requires less computing and
-  storage resources, which is more sustainable, especially for software
-  that is designed to be run often.
+  storage resources, which is more sustainable, especially for software that is
+  designed to be run often.
 - Improves developer experience because of the availability of built-in tools
   and to strictness in the compiler checks, which means as a team you don't have
   to make as many decisions about tooling and how the code should be written.
@@ -198,27 +198,27 @@ List some potential consequences of this decision.
 :::
 
 - Because of the smaller ecosystem, we may have to build more of our own tools
-  and libraries. While this could become laborious, we believe that it will be a valuable asset for individual team members to learn and develop their value as software engineers.
-- Getting potentially fewer external contributions and collaborators
-  is not a major concern since we generally expect this number to be
-  close to zero for a new tool written in any language,
-  particularly in a research setting like this.
-  Selecting the tools that help us build the best possible software for
-  a given set of tasks is more likely to attract contributors in the long run.
-  There's also a recent strong trend for more research-based tools and
-  libraries built in Rust,
-  so we expect the potential contributor and collaborator pool
-  to grow.
+  and libraries. While this could become laborious, we believe that it will be a
+  valuable asset for individual team members to learn and develop their value as
+  software engineers.
+- Getting potentially fewer external contributions and collaborators is not a
+  major concern since we generally expect this number to be close to zero for a
+  new tool written in any language, particularly in a research setting like
+  this. Selecting the tools that help us build the best possible software for a
+  given set of tasks is more likely to attract contributors in the long run.
+  There's also a recent strong trend for more research-based tools and libraries
+  built in Rust, so we expect the potential contributor and collaborator pool to
+  grow.
 - It might become difficult for us to build most software in Rust, while writing
-  code to process data in Python, as this will require context switching
-  between languages. However, this is also a chance for us to practice
-  working in multiple languages and to learn that we're capable of using the right
-  tool for the right task, even if it isn't something we're familiar with or
-  have expertise in. Widening our expertise and learning about best practices
-  in Rust could also bring about positive benefits for our Python coding habits.
+  code to process data in Python, as this will require context switching between
+  languages. However, this is also a chance for us to practice working in
+  multiple languages and to learn that we're capable of using the right tool for
+  the right task, even if it isn't something we're familiar with or have
+  expertise in. Widening our expertise and learning about best practices in Rust
+  could also bring about positive benefits for our Python coding habits.
 - There may be some functionality that we've already developed in Python that we
   would like to also use in a Rust-based tool. This shouldn't be a major issue
-  as we've built most of our software as command-line tools, rather than as libraries with reusable
-  functionality. If library code needs to be shared and we don't want to
-  re-implement it in Rust, we can use [PyO3](https://github.com/PyO3/pyo3) to
-  call one language from the other.
+  as we've built most of our software as command-line tools, rather than as
+  libraries with reusable functionality. If library code needs to be shared and
+  we don't want to re-implement it in Rust, we can use
+  [PyO3](https://github.com/PyO3/pyo3) to call one language from the other.
