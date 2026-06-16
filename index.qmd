@@ -22,8 +22,8 @@ div.quarto-about-jolla {
 
 Decision records inspired by [Architectural Decision
 Records](https://adr.github.io/) and written in the
-[Diátaxis](https://diataxis.fr/) explanation format. They describe and
-explain our reasons for why we choose certain tools, technologies, or
-processes for our products and how we work.
+[Diátaxis](https://diataxis.fr/) explanation format. They describe and explain
+our reasons for why we choose certain tools, technologies, or processes for our
+products and how we work.
 
 ## Illustration by [Storyset](https://storyset.com/choice) {.appendix}

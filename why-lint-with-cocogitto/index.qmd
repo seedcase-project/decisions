@@ -1,0 +1,136 @@
+---
+title: "Why lint commits with Cocogitto"
+description: |
+  We use continuous delivery processes on our products based on Conventional
+  Commits. This lists why we use Cocogitto to check our commit messages during
+  continuous integration to ensure they follow the Conventional Commits
+  standard.
+date: "2026-05-26"
+categories:
+  - develop
+  - git
+  - standardise
+  - workflow
+---
+
+## Context and problem statement
+
+We use continuous delivery processes to make it easier on us to release things
+as soon as we make a meaningful and releasable change. This is because we use
+[Conventional Commits](/why-conventional-commits/index.qmd) to structure our
+commit messages and [SemVer](/why-semver/index.qmd) for our version numbering,
+which allows for continuous deliver by relying on these commit messages. Having
+automated delivery system in place means we save a lot of time on the release
+process. But we need to make sure that our commit messages are correctly
+structured to follow the Conventional Commits standard, in order to actually use
+this automated delivery process.
+
+We used to use [Commitizen](https://github.com/commitizen-tools/commitizen) to
+check our commit messages, as described in our [previous decision
+post](/why-lint-with-commitizen/index.qmd). However, as our projects evolved,
+and along with them our needs, Commitizen no longer was a good fit for us as we
+found issues and limitations to it that didn't work well for us. Specifically:
+
+- The Commitizen GitHub Action workflow didn't always correctly detect that a
+  commit message was "releasable" and more often than not would release some
+  change when it shouldn't have.
+- The changelog generation feature of Commitizen wasn't very customizable,
+  especially since we wanted to attached the changelog to the GitHub release and
+  it didn't work as well as we wanted.
+- Supply chain attacks have become more common, especially in the JavaScript and
+  Python (Commitizen is a Python package) ecosystem, as well as in GitHub
+  Actions. Commitizen's GitHub Action workflow is quite complicated, which makes
+  it hard to assess it's security level, and it uses Docker, which means a
+  GitHub token must be passed in so that it can be effectively used. This is a
+  security risk compared to using a `secret` within a GitHub workflow and
+  directly running a tool from the command line via `run`.
+
+So we needed to find another tool. Since the previous post, other tools have
+become better and more popular.
+
+## Decision drivers
+
+::: content-hidden
+List some reasons for why we need to make this decision and what things have
+arisen that impact work.
+:::
+
+We needed a tool:
+
+- Has a simple and easy to review GitHub Action.
+- Checks commit messages easily either through the GitHub Action or through a CLI.
+- Built in a more secure, but still general purpose, language (e.g. not in
+  JavaScript or Python).
+- Doesn't depend on having another tool to install it (e.g. has native
+  binaries).
+- Has a good documentation and is actively maintained.
+- Doesn't require passing a GitHub token outside of the GitHub's `secrets`
+  parameter system.
+
+## Considered options
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits and
+drawbacks for each option.
+:::
+
+Since we already assessed some tools in our [previous
+post](/why-lint-with-commitizen/index.qmd), we won't repeat those here (unless
+they had substantial updates since then). Instead, we'll focus on other tools
+that fit our requirements that we didn't assess before. Conventional Commits
+page [lists several tools](https://www.conventionalcommits.org/en/about/) that
+they've found, and of those only one fit our requirements:
+
+- [Cocogitto](https://docs.cocogitto.io)
+
+### Cocogitto
+
+::: columns
+::::: column
+#### Benefits
+
+- Built in Rust, which is a more secure language than JavaScript or Python.
+- Has a simple GitHub Action workflow that is easy to review and understand.
+- Compiled to native binaries, so can be installed without another tool (e.g.
+  npm or pip).
+- Can be directly used in the CLI, so can easily be used within a GitHub
+  workflow through `run`.
+- Doesn't require using a GitHub token for any of its functionalities.
+- Has great documentation.
+- Is fairly actively maintained.
+:::::
+
+::::: column
+#### Drawbacks
+
+- It isn't as frequently updated as Commitizen is, but Rust tools tend not to be
+  as frequently updated as JavaScript or Python tools, so this might not be a
+  bad thing.
+:::::
+:::
+
+## Decision outcome
+
+::: content-hidden
+What decision was made, use the form "We decided on CHOICE because of REASONS."
+:::
+
+We didn't really have any other options that fit our needs, so we had to choose
+Cocogitto. Thankfully, Cocogitto is still a great tool that fits our needs very
+well, so this isn't a bad thing that there weren't many options. We also use
+Cocogitto for [bumping our
+versions](/why-semantic-release-with-cocogitto/index.qmd), so it makes sense to
+use it for checking our commit messages as well.
+
+### Consequences
+
+::: content-hidden
+List some potential consequences of this decision.
+:::
+
+- The frequency of updates to Cocogitto is lower than Commitizen, but it's hard
+  to assess whether this is a bad thing or if there just aren't as many issues
+  that require fixing. So if it does become an issue, we'd have to find another
+  tool (again). Thankfully, it isn't too hard to switch tools as the release
+  process is only dependent on the commit messages following the Conventional
+  Commits standard.
