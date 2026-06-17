@@ -2,7 +2,7 @@
 title: "Why Python for data engineering"
 description: |
   Our core, value-driven work revolves around engineering data in various ways
-  and developing data into data packages.  This decision post explains why we
+  and developing data into data packages. This decision post explains why we
   use Python for building data packages and for developing libraries of common
   functionalities that simplify building data packages.
 date: "2026-06-01"
@@ -17,7 +17,7 @@ categories:
 Our core, [stream-aligned](https://teamtopologies.com/key-concepts) work is
 creating, building, and continually developing data packages. Our data
 engineering tasks revolve around designing, building, and processing data from
-various uncleaned sources into a final, structured and tidied data package. This
+various unclean sources into a final, structured and tidied data package. This
 data package can then be used for research analysis. Using an effective and
 powerful language can greatly simplify this type of work.
 
@@ -79,7 +79,7 @@ There are other languages that match some of our drivers but not all of them:
   engineering, but is nearly unknown in data science and the research community.
 - [Julia](https://julialang.org/) is a fairly new language that is mainly
   designed for data science, with powerful data engineering capabilities. But it
-  isn't very popular nor widely adopted. It's primary aim is on mathematical
+  isn't very popular or widely adopted. Its primary aim is mathematical
   computation and statistical analysis rather than data engineering tasks.
 
 While we decided on using [Rust for building software
@@ -95,14 +95,14 @@ reasons why we don't consider Rust:
   work (aside from [Polars](https://www.pola.rs/)).
 - Rust is a lower-level language with high-level ergonomics, with strict and
   enforced types and a memory ownership model. These features all require
-  substantially more and deeper knowledge on how computers operate compared to
+  substantially more and deeper knowledge of how computers operate compared to
   other languages like Python and R. For developing robust software, these are
   all good things. But for noncritical data engineering tasks that don't need
   high performance features, these extra features and restrictions make it
   difficult to write code to build up data packages quickly and effectively. It
   also doesn't have a
   [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop),
-  which makes data engineering tasks interactive and easier to do iterative
+  which makes data engineering tasks interactive and supports iterative
   feedback loops.
 
 ### R
@@ -147,14 +147,14 @@ data analysis.
 - Is not as commonly used within the data engineering community, likely because
   it mainly came from statistics and analysis, rather than from data
   engineering.
-- It isn't as well-designed for building packages compared to other languages,
-  though is fairly similar to Python in this case (similar but different, see
+- It isn't as well designed for building packages as some other languages,
+  though it is fairly similar to Python in this respect (similar but different, see
   Python's drawbacks). For example, it doesn't have the capability to integrate
   continuous delivery processes for distributing packages. Nor are the checks
   that CRAN (the package registry) uses publicly available, which makes it very
   difficult to build packages that pass the CRAN checks without first uploading
   the package to their system and having them run their checks.
-- Running local CRAN checks (which aren't the exact same as the official checks)
+- Running local CRAN checks (which aren't exactly the same as the official checks)
   is very slow, which also makes continuous integration checks slow.
 - Its flexibility in the programming environment is also its weakness, as it can
   lead to unexpected issues and behaviours if you don't know the language well
@@ -186,8 +186,8 @@ flexible language to do a wide variety of tasks in.
   programming tasks, including data engineering tasks.
 - It is widely used in the data science, machine learning, and data engineering
   communities.
-- Many tools have some bindings or connections into Python. For example, SQL
-  databases can be easily connected into Python with packages like
+- Many tools have some bindings or connections to Python. For example, SQL
+  databases can be easily connected to Python with packages like
   [SQLAlchemy](https://www.sqlalchemy.org/), and many data engineering tools
   have Python bindings, such as [Arrow](https://arrow.apache.org/),
   [DuckDB](https://duckdb.org/), [Spark](https://spark.apache.org/), and
@@ -198,7 +198,7 @@ flexible language to do a wide variety of tasks in.
   is flexible in how it can be used and written.
 - Like R, it is dynamically typed, which means you don't need to worry about
   types when writing code, so it can be easy to write something that (at least
-  seems to) work and get stuff done quickly.
+  seems to) works and get stuff done quickly.
 - Its package development features are quite good, especially when paired with
   tools like [uv](https://docs.astral.sh/uv/), and distributing packages through
   [PyPI](https://pypi.org/) can be done with a single command. It can also
@@ -241,7 +241,7 @@ a stronger ecosystem of tools for data engineering. The other reason is that
 Python's package development experience, while not great, is better than R's
 experience. This is primarily because of the tools now available, like uv, and
 because it is much easier to distribute packages through PyPI than through R's
-CRAN system (even if the CRAN system might ensure higher quality packages
+CRAN system (even if the CRAN system might ensure higher-quality packages
 overall).
 
 ### Consequences
