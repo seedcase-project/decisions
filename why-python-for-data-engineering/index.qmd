@@ -32,7 +32,7 @@ need a language suitable for data engineering and with this narrower focus, we
 can ask the question:
 
 *Which programming language is best suited for data engineering work, including
-for building libraries to support that work?*.
+to build libraries to support that work?*.
 
 ## Decision drivers
 
