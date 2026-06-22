@@ -98,8 +98,8 @@ doing a wider variety of tasks, including building software.
 
 ::: callout-note
 Many of these items were taken from the [previous
-decision](/why-python/index.qmd) post. More drawbacks have been added that we've
-experienced.
+decision](/why-python/index.qmd) post. Below, we've added more drawbacks that we've
+experienced when building software (libraries and CLIs) with Python.
 :::
 
 ::: columns
@@ -111,7 +111,7 @@ experienced.
 - Iterating and prototyping can be done much more quickly because of its
   interpreted nature, simple syntax, and dynamic typing (types are
   checked/assigned at runtime) compared to other languages.
-- There is a very active and massive community, with a wide range of extensive
+- It has is a very active and massive community with a wide range of extensive
   resources.
 - It's a popular language in data-intensive research and academic communities.
 - There is a massive ecosystem of libraries and tools for nearly any task. The
@@ -143,7 +143,7 @@ experienced.
   distributing software. This ends up leading to different groups building their
   own tools. For example, there are more than a dozen different code linter and
   formatters or up to a dozen different packaging and distribution tools. That
-  leads to "analysis paralysis" for just determining which tool to use for any
+  can lead to "analysis paralysis" just for determining which tool to use for any
   given task, and there are dozens of tasks that require a tool.
 - Error handling with exceptions are painful and difficult to work with. They
   aren't part of the function or method signature, other than in a docstring
@@ -219,7 +219,7 @@ safety without needing a garbage collector.
   it is very fast and efficient. This means that it requires less computing and
   storage resources, which is more sustainable, especially for software that is
   designed to be run often.
-- There is a better developer experience because of the availability of built-in
+- The developer experience is better because of the availability of built-in
   tools and the strictness of the compiler checker. This means that, as a team,
   you don't have to make as many decisions about tooling and how the code should
   be written.
