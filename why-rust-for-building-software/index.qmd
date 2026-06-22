@@ -98,8 +98,8 @@ doing a wider variety of tasks, including building software.
 
 ::: callout-note
 Many of these items were taken from the [previous
-decision](/why-python/index.qmd) post. Below, we've added more drawbacks that we've
-experienced when building software (libraries and CLIs) with Python.
+decision](/why-python/index.qmd) post. Below, we've added more drawbacks that
+we've experienced when building software (libraries and CLIs) with Python.
 :::
 
 ::: columns
@@ -143,8 +143,8 @@ experienced when building software (libraries and CLIs) with Python.
   distributing software. This ends up leading to different groups building their
   own tools. For example, there are more than a dozen different code linter and
   formatters or up to a dozen different packaging and distribution tools. That
-  can lead to "analysis paralysis" just for determining which tool to use for any
-  given task, and there are dozens of tasks that require a tool.
+  can lead to "analysis paralysis" just for determining which tool to use for
+  any given task, and there are dozens of tasks that require a tool.
 - Error handling with exceptions are painful and difficult to work with. They
   aren't part of the function or method signature, other than in a docstring
   (that is if there is even a docstring written), so it may not be clear which
