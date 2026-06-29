@@ -1,7 +1,7 @@
 ---
 title: "Why pytask for Python workflow management"
 description: |
-  Managing a data processing workflow, which is the steps to take from raw input
+  Managing a data processing workflow, which is the series of steps taken from raw input
   to final tidy output, is necessary for reproducibly generating data packages.
   This post explains why we decided to use pytask for tracking the Python code
   used to create our data packages.
@@ -43,7 +43,7 @@ drivers:
   much more.
 - Ideally is agnostic to the computing environment, meaning it should work on a
   local machine without needing to be deployed on a server or cloud platform.
-  This is important because we often develop data packages for health data in a
+  This is important because we often develop data packages for health data on a
   Linux server (for legal and privacy reasons).
 
 ## Considered options
@@ -56,10 +56,10 @@ While the list is quite large, the vast majority of tools are not relevant to
 us. They are either focused heavily on cloud platforms (via a UI), no longer
 maintained (explicitly archived), very old or untouched for years, or they no
 longer exist (or at least the URL is dead). From the remaining tools, many have
-documentation that is poorly organised, difficult to read, and/or hard to assess
-whether it fit our needs or not. Of those that do have good documentation, many
-of those are built for needs that are much more complex and extensive compared
-to ours. For example, they included more advanced data lineage features,
+documentation that is poorly organised, difficult to read, and/or makes it hard to assess
+whether they fit our needs. Of those that do have good documentation, many
+are built for needs that are much more complex and extensive compared
+to ours. For example, they include more advanced data lineage features,
 deployment, container-based workflows, and other advanced features that we do
 not need. After this initial quick review of the available options and excluding
 the tools that did not meet our needs and drivers, these were the tools that
@@ -78,7 +78,7 @@ requirements. These are the tools we didn't consider:
   focused on orchestration, especially through the use of a UI. And they're both
   built by companies that sell a cloud-based version of their tools. A lot of
   their docs and examples are focused around using it via their platform and UI,
-  which makes it difficult to determine how we could apply it for our use-cases.
+  which makes it difficult to determine how we could apply it to our use cases.
   For example, it's extremely difficult to find how to "just run all the tasks"
   on the command-line or as Python code. Most of the docs talk about opening up
   the UI to interact with, visualize, and run the workflow.
@@ -87,7 +87,7 @@ requirements. These are the tools we didn't consider:
 
 [Apache Hamilton](https://hamilton.apache.org) a general framework for building
 data processing pipelines rather than a generic workflow management system (like
-the other two options). It's main focus is on tracking transformations to data
+the other two options). Its main focus is on tracking transformations to data
 itself, especially at the column level, rather than tracking tasks and their
 outputs.
 
@@ -120,12 +120,12 @@ outputs.
   columns, rather than whole data objects or on files. The final output of the
   workflow requires listing the columns that are in the final output. This
   organization may work well when column level tracking is important and when
-  there aren't that many columns in the end. But for our type of use-cases,
+  there aren't that many columns in the end. But for our type of use cases,
   where datasets often have thousands of columns at the end, this would be quite
-  difficult to manage and develop. Though it does seem to also output whole data
+  difficult to manage and develop. It does seem to also output whole data
   frames, but it isn't clear from the docs what that means compared to the
   column-level tracking.
-- Requires setting up a "builder" to explicitly list list the Python modules to
+- Requires setting up a "builder" to explicitly list the Python modules to
   search in and the type of database backend used (e.g. Pandas). This adds some
   extra work to develop and maintain, as the tasks need to be defined twice
   (once as the function itself and once in the builder).
@@ -141,9 +141,9 @@ outputs.
 ### pytask
 
 [pytask](https://pytask-dev.readthedocs.io/en/stable/) is a Python-based,
-general-purpose workflow management system. It tracks generic "tasks", which
+general-purpose workflow management system. It tracks generic "tasks", including which
 tasks need to run first and what outputs from one task are needed as inputs for
-another. Built mainly from the desire for tracking data processing steps when
+another. It was built mainly from a desire to track data processing steps when
 doing data analysis.
 
 ::: {.columns}
@@ -173,14 +173,14 @@ doing data analysis.
   the `pytask.lock` file). But a "data catalog" (a dictionary of any type of
   tasks and their outputs) can also be used to track outputs, especially for
   tasks that don't produce files.
-- Has different, formal ways of tracking input and output for tasks, either with
+- Has several formal ways of tracking task inputs and outputs, either with a
   parameter name (`produces`) or with type hints (using `Annotated`). Type hints
   are generally a fantastic system to use, so incorporating them into a task
   workflow is a great feature as type checkers can be used to check the
   workflow.
-- Any function parameter where the name matches the name of a task will be
+- Any function parameter whose name matches the name of a task will be
   tracked as a dependency, meaning the output of that task will be the input to
-  the task with the parameter name. This is a very intuitive way of tracking
+  the task with the matching parameter. This is a very intuitive way of tracking
   dependencies, as the function signature itself is used to track the workflow.
   The input to that parameter must point to the build folder.
 - Can output a graph of the workflow as an image, to make it easier to visually
@@ -191,7 +191,7 @@ doing data analysis.
 
 - Of the three, it seems it is the least widely used, at least based on the
   number of stars on GitHub, which of course isn't an accurate measure of usage.
-  So there may be less people using it, less help and support, and less examples
+  So there may be fewer people using it, less help and support, and fewer examples
   and resources online.
 :::::
 :::
@@ -200,7 +200,7 @@ doing data analysis.
 
 [PipeFunc](https://pipefunc.readthedocs.io/en/latest/), like pytask, is a
 Python-based workflow management system. It also tracks generic "tasks" and
-isn't built for a specific domain, though they do describe work doing scientific
+isn't built for a specific domain, though its documentation does describe applications in scientific
 data processing and analysis.
 
 ::: {.columns}
@@ -216,11 +216,11 @@ data processing and analysis.
 
 - Documentation is not very extensive, a bit unclear, and not well organised (or
   at least, difficult to understand how it is organised). They depend heavily on
-  linking to other projects using PipeFunc to use as examples of how to use it.
+  linking to other projects using PipeFunc as examples of how to use it.
   While examples are useful, they shouldn't be the main way to explain and
-  walk-through how to use the tool. Likewise, they have a "concepts" page that
-  is more of a "how-to" page rather than, semantically, a page that explains the
-  concepts/design.
+  walk through how to use the tool. Likewise, they have a "concepts" page that
+  is more of a "how-to" page than a page that explains the
+  concepts/design semantically.
 - The documentation was built from a Jupyter Notebook, which isn't the best
   format for documentation as it is difficult to navigate and contains a lot of
   differently styled text and formatting. For instance, there are a lot of
@@ -242,16 +242,16 @@ data processing and analysis.
 ## Decision outcome
 
 We decided on using pytask for managing the steps of how we process and generate
-our data packages. Apache Hamilton was a close second but it was too specific to
-data transformations rather than more generic tasks, e.g. when we process
-metadata or fetch from APIs.
+our data packages. Apache Hamilton was a close second but it was geared more toward
+data transformations than generic tasks, such as processing
+metadata or fetching from APIs.
 
 ### Consequences
 
 - Because pytask is less widely used than the other options, there may be less
-  support and resources available online. Which means we may take longer to
+  support and resources available online. This means we may take longer to
   figure out issues and learn how to use it.
-- It's general-purpose nature, while being a benefit right now, may be too
+- Its general-purpose nature, while being a benefit right now, may be too
   general for us later as we do more complex data processing or need specific
   features. However, we don't foresee in the near future that we will encounter
   those types of situations, so this isn't too concerning for us.
