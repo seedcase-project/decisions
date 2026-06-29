@@ -1,6 +1,9 @@
 ---
 title: "Why Cyclopts for Python CLIs"
-description: "Python isn't natively designed to build command line interfaces (CLIs), so we need to choose a package to help us build them. In this post, we describe why we chose Cyclopts."
+description: >-
+  Python isn't natively designed to build command line interfaces (CLIs), so we
+  need to choose a package to help us build them. In this post, we describe why
+  we chose Cyclopts.
 date: "2026-01-26"
 categories:
   - python

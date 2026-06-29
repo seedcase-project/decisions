@@ -1,6 +1,8 @@
 ---
 title: "Why conventional commits (with optional emojis)"
-description: "Our reasons for using conventional commits (with optional emojis following the Gitmoji convention) across Seedcase repositories."
+description: >-
+  Our reasons for using conventional commits (with optional emojis following the
+  Gitmoji convention) across Seedcase repositories.
 date: "2024-05-14"
 categories:
   - git
