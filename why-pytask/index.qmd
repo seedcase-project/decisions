@@ -182,7 +182,6 @@ steps when doing data analysis.
   as a dependency, meaning the output of that task will be the input to the task
   with the matching parameter. This is a very intuitive way of tracking
   dependencies, as the function signature itself is used to track the workflow.
-  The input to that parameter must point to the build folder.
 - Can output a graph of the workflow as an image, to make it easier to visually
   see and reason about the workflow.
 :::::
