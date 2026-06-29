@@ -56,14 +56,14 @@ While the list is quite large, the vast majority of tools are not relevant to
 us. They are either focused heavily on cloud platforms (via a UI), no longer
 maintained (explicitly archived), very old or untouched for years, or they no
 longer exist (or at least the URL is dead). From the remaining tools, many have
-documentation that is poorly organised, difficult to read, and/or makes it hard to assess
-whether they fit our needs. Of those that do have good documentation, many
-are built for needs that are much more complex and extensive compared
-to ours. For example, they include more advanced data lineage features,
-deployment, container-based workflows, and other advanced features that we do
-not need. After this initial quick review of the available options and excluding
-the tools that did not meet our needs and drivers, these were the tools that
-remained that could fit our needs:
+documentation that is poorly organised, difficult to read, and/or makes it hard
+to assess whether they fit our needs. Of those that do have good documentation,
+many are built for needs that are much more complex and extensive compared to
+ours. For example, they include more advanced data lineage features, deployment,
+container-based workflows, and other advanced features that we do not need.
+After this initial quick review of the available options and excluding the tools
+that did not meet our needs and drivers, these were the tools that remained that
+could fit our needs:
 
 - [Apache Hamilton](https://hamilton.apache.org)
 - [PipeFunc](https://pipefunc.readthedocs.io/en/latest/)
@@ -141,10 +141,10 @@ outputs.
 ### pytask
 
 [pytask](https://pytask-dev.readthedocs.io/en/stable/) is a Python-based,
-general-purpose workflow management system. It tracks generic "tasks", including which
-tasks need to run first and what outputs from one task are needed as inputs for
-another. It was built mainly from a desire to track data processing steps when
-doing data analysis.
+general-purpose workflow management system. It tracks generic "tasks", including
+which tasks need to run first and what outputs from one task are needed as
+inputs for another. It was built mainly from a desire to track data processing
+steps when doing data analysis.
 
 ::: {.columns}
 ::::: {.column}
@@ -178,9 +178,9 @@ doing data analysis.
   are generally a fantastic system to use, so incorporating them into a task
   workflow is a great feature as type checkers can be used to check the
   workflow.
-- Any function parameter whose name matches the name of a task will be
-  tracked as a dependency, meaning the output of that task will be the input to
-  the task with the matching parameter. This is a very intuitive way of tracking
+- Any function parameter whose name matches the name of a task will be tracked
+  as a dependency, meaning the output of that task will be the input to the task
+  with the matching parameter. This is a very intuitive way of tracking
   dependencies, as the function signature itself is used to track the workflow.
   The input to that parameter must point to the build folder.
 - Can output a graph of the workflow as an image, to make it easier to visually
@@ -191,8 +191,8 @@ doing data analysis.
 
 - Of the three, it seems it is the least widely used, at least based on the
   number of stars on GitHub, which of course isn't an accurate measure of usage.
-  So there may be fewer people using it, less help and support, and fewer examples
-  and resources online.
+  So there may be fewer people using it, less help and support, and fewer
+  examples and resources online.
 :::::
 :::
 
@@ -200,8 +200,8 @@ doing data analysis.
 
 [PipeFunc](https://pipefunc.readthedocs.io/en/latest/), like pytask, is a
 Python-based workflow management system. It also tracks generic "tasks" and
-isn't built for a specific domain, though its documentation does describe applications in scientific
-data processing and analysis.
+isn't built for a specific domain, though its documentation does describe
+applications in scientific data processing and analysis.
 
 ::: {.columns}
 ::::: {.column}
@@ -216,11 +216,11 @@ data processing and analysis.
 
 - Documentation is not very extensive, a bit unclear, and not well organised (or
   at least, difficult to understand how it is organised). They depend heavily on
-  linking to other projects using PipeFunc as examples of how to use it.
-  While examples are useful, they shouldn't be the main way to explain and
-  walk through how to use the tool. Likewise, they have a "concepts" page that
-  is more of a "how-to" page than a page that explains the
-  concepts/design semantically.
+  linking to other projects using PipeFunc as examples of how to use it. While
+  examples are useful, they shouldn't be the main way to explain and walk
+  through how to use the tool. Likewise, they have a "concepts" page that is
+  more of a "how-to" page than a page that explains the concepts/design
+  semantically.
 - The documentation was built from a Jupyter Notebook, which isn't the best
   format for documentation as it is difficult to navigate and contains a lot of
   differently styled text and formatting. For instance, there are a lot of
@@ -242,9 +242,9 @@ data processing and analysis.
 ## Decision outcome
 
 We decided on using pytask for managing the steps of how we process and generate
-our data packages. Apache Hamilton was a close second but it was geared more toward
-data transformations than generic tasks, such as processing
-metadata or fetching from APIs.
+our data packages. Apache Hamilton was a close second but it was geared more
+toward data transformations than generic tasks, such as processing metadata or
+fetching from APIs.
 
 ### Consequences
 
