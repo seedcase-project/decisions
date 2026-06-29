@@ -1,0 +1,294 @@
+---
+title: "Why Rust for building software"
+description: |
+  We want to build software, specifically for command-line and web applications,
+  in a language that is sustainable (both in our time but also in computing
+  and storage resources), secure and reliable, and that has good developer
+  ergonomics. This post describes why we decided to switch from building
+  software in Python to building in Rust.
+date: "2026-06-01"
+categories:
+  - develop
+---
+
+## Context and problem statement
+
+Building and designing stable, secure, and reliable software is hard. Really
+hard. And the needs for software built now are different and more complex than
+they were in the past, even just a few years ago. Especially the rise of AI
+coding assistants has led to an increase in the amount of lower-quality software
+with inadequate security practices. Supply chain attacks, prioritizing velocity
+("adding features, faster") over security, vulnerabilities, and bugs are all
+becoming more widespread. Combined with the fact that AI coding assistants can
+generate code faster than people can understand it, the importance of having
+strong guardrails to enforce software strictness and correctness is increasingly
+important.
+
+On top of that, we've refined our
+[values](https://design.seedcase-project.org/software/) for building software to
+include explicitness, a consideration for sustainability (meaning using as
+little computing resources as possible), and valuing the code itself just as
+much as the product built with it. As we have been working on the Seedcase
+ecosystem, we have also refined our needs and wants regarding the software we
+are going to build. We originally decided on [using Python for building software
+and processing data](/why-python/index.qmd), but it is no longer the best fit
+for our updated needs and values. This post updates our decision in regards to
+these changes.
+
+## Decision drivers
+
+The original drivers in the [previous decision](/why-python/index.qmd) were no
+longer relevant as they focused more on data processing than on software
+development. With a clearer separation between software development and data
+engineering/processing, we have more specific needs for the software development
+side. Our drivers are that the tool/language should have:
+
+- Great developer ergonomics and built-in development tooling, such as for
+  building, testing, and distributing software.
+- Strict checks on the code, to prevent easily solvable bugs and security issues
+  from the beginning.
+- Built-in and required types to make the code more explicit and easier to
+  understand.
+- Support and an ecosystem for building command-line applications as well as
+  (simple) web applications (e.g. for client-side/in-browser processing).
+- Skill development and learning that can be reused across a broad range of
+  future products.
+
+## Considered options
+
+While Python no longer fits our needs (e.g. doesn't have built-in and enforced
+types, the developer ergonomics is fragmented, and isn't as easy to build web
+applications with), we include it here for completeness. We previously
+considered R, Java, and C++ in our [previous decision](/why-python/index.qmd),
+but we didn't include them in this post. That's because they didn't fit our
+needs before and they fit them even less than Python does (see the brief notes
+below on why).
+
+- [Python](https://www.python.org/)
+- [Rust](https://www.rust-lang.org/)
+
+We didn't consider the below languages because they don't fit our needs as well
+as the above options. They also don't match as well with our values (e.g. not a
+common language in developer/researcher tooling nor as common in
+academic/research settings):
+
+- [Go](https://golang.org/): Designed primarily for building applications that
+  build on or interact with the web.
+- [C++](https://isocpp.org/): While powerful, it is much more complex and has a
+  more fragmented tooling ecosystem.
+- [Java](https://www.java.com/): Rarely used in research settings and less
+  commonly in data engineering and data science tooling.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) or
+  [TypeScript](https://www.typescriptlang.org/): These are mainly used for web
+  development. They have a much more fragmented tooling ecosystem. Of the other
+  languages, they experience the most security issues and bugs (mostly with
+  JavaScript), in particular having had the most supply chain attacks against
+  the ecosystem. Both are not known for being secure nor fast languages.
+- [R](https://www.r-project.org/): Mainly used for data analysis and statistics.
+  It isn't designed nor suited for building more complex and diverse
+  applications.
+
+### Python
+
+[Python](https://www.python.org/) is a high-level, interpreted, general-purpose
+programming language. It is known for its readability and simplicity.
+Originally, it was designed to be used as a scripting language and "glue"
+between other tools and languages, but since then has evolved to be used for
+doing a wider variety of tasks, including building software.
+
+::: callout-note
+Many of these items were taken from the [previous
+decision](/why-python/index.qmd) post. Below, we've added more drawbacks that
+we've experienced when building software (libraries and CLIs) with Python.
+:::
+
+::: columns
+::::: column
+#### Benefits
+
+- It is a concise, easy-to-read, beginner-friendly syntax. It prioritizes
+  readability and simplicity over many other aspects of the language.
+- Iterating and prototyping can be done much more quickly because of its
+  interpreted nature, simple syntax, and dynamic typing (types are
+  checked/assigned at runtime) compared to other languages.
+- It has is a very active and massive community with a wide range of extensive
+  resources.
+- It's a popular language in data-intensive research and academic communities.
+- There is a massive ecosystem of libraries and tools for nearly any task. The
+  developer ecosystem has been getting better, especially with tools like
+  [uv](https://docs.astral.sh/uv) and [Ruff](https://docs.astral.sh/ruff).
+:::::
+
+::::: column
+#### Drawbacks
+
+- Its simple syntax and dynamic typing are also its biggest flaws. These both
+  make code less explicit and robust (e.g. no enforced type checks).
+- Is very slow compared to compiled languages, as it is interpreted by the
+  Python interpreter when the code is executed.
+- The dynamic typing, from a software development perspective, makes it
+  difficult to find and catch certain types of bugs and issues. Type-hints can
+  help but they are only labels and don't actually do anything aside from
+  annotating the code. This means some bugs are very difficult to identify until
+  it actually runs.
+- Dynamic type-checking at runtime can make it more difficult to catch certain
+  types of bugs early on.
+- Python's roots as a scripting language means that some of its core designs are
+  not designed for effectively and easily building secure and reliable software.
+  For example, there are several ways to build a package ("flat layout" vs
+  "`src/` layout") and modules are not truly isolated (e.g. circular imports are
+  possible and modules can modify the global state of other modules).
+- The developer ergonomics and ecosystem is very fragmented. The Python
+  Authority doesn't handle or develop specific tools for building, testing, and
+  distributing software. This ends up leading to different groups building their
+  own tools. For example, there are more than a dozen different code linter and
+  formatters or up to a dozen different packaging and distribution tools. That
+  can lead to "analysis paralysis" just for determining which tool to use for
+  any given task, and there are dozens of tasks that require a tool.
+- Error handling with exceptions are painful and difficult to work with. They
+  aren't part of the function or method signature, other than in a docstring
+  (that is if there is even a docstring written), so it may not be clear which
+  functions output an exception and which don't. It often requires a lot of
+  trial and error.
+- Building a native binary is not really possible, which is especially important
+  for command-line applications.
+- There is no easy built-in support and effective ergonomics for building
+  beautiful and effective command-line interfaces. Third-party libraries are
+  required that all have their own slightly different way of converting Python
+  code into a command-line interface.
+- Python drew strong inspirations and designs from object-oriented programming
+  (and [functional
+  programming](https://gvanrossum.github.io/python-history/origins-of-pythons-functional-features.html)).
+  It even states itself as an object-oriented language in its [official about
+  page](https://www.python.org/doc/essays/blurb/). But it doesn't do either of
+  them well. For example, there is no strong encapsulation typically found in
+  stricter object-oriented languages (see the mutability point below). Nor are
+  the functional programming features very well implemented or enforced (e.g. no
+  formal types, poor ergonomics around functionals/higher-order functions, and
+  immutability) and many typical functional programming features require
+  importing other libraries (e.g. itertools and functools).
+- The majority of values and objects are mutable by default, meaning any object
+  can modify any other object from anywhere. For example, a global variable can
+  be modified within a function. This can lead to a lot of issues and bugs.
+:::::
+:::
+
+### Rust
+
+Rust is a relatively newer language, having been [first publicly
+released](https://en.wikipedia.org/wiki/Rust_(programming_language)) in 2012. It
+is a "systems programming language", meaning it is designed to be low-level and
+close to the hardware. But it also has high-level ergonomics and safety features
+typically seen in higher-level languages. It is a statically typed language,
+which means that types are checked at compile time, mostly implements functional
+programming principles, and has a unique ownership model that ensures memory
+safety without needing a garbage collector.
+
+::: {.columns}
+::::: {.column}
+#### Benefits
+
+- It is consistently ranked as one of the [most loved programming
+  languages](https://survey.stackoverflow.co/2023/#section-admired-and-desired-programming-scripting-and-markup-languages)
+- It has strong and enforced type system, which removes whole classes of bugs
+  and security issues.
+- The memory ownership system entirely removes whole classes of memory leaks and
+  safety/security issues.
+- The built-in `cargo` tool contains basically everything needed to build, test,
+  and distribute software, which makes the developer experience very nice and
+  ergonomic. There is no need to decide on a specific tool for a specific task,
+  as it is all built-in.
+- It can create bindings for many other languages, including to Python and to R.
+- Recently, a lot of developer tooling in many languages have been built in
+  Rust, including JavaScript (e.g. [Biome](https://biomejs.dev)), Python (e.g.
+  [uv](https://docs.astral.sh/uv) or [Ruff](https://docs.astral.sh/ruff)), and R
+  (e.g. [Air](https://posit-dev.github.io/air/) and
+  [Jarl](https://jarl.etiennebacher.com)).
+- Rust is becoming more widely used in academic and research settings, and there
+  are more and more libraries being built in Rust e.g. for data processing with
+  [Polars](https://www.pola.rs/). Because of the ability to create bindings for
+  other languages, some research libraries are being built in Rust to allow for
+  cross-language use.
+- The compiler and checker provides detailed and informative messages that teach
+  you about the issue as well as showing how to fix it.
+- Because of its ownership model and strict and modern design requires thinking
+  more deeply about how code is built, how computers work, and how to write good
+  and safe code. This builds and deepens developer experience, skill, and
+  knowledge.
+- Because it builds to native binaries and doesn't need a runtime interpreter,
+  it is very fast and efficient. This means that it requires less computing and
+  storage resources, which is more sustainable, especially for software that is
+  designed to be run often.
+- The developer experience is better because of the availability of built-in
+  tools and the strictness of the compiler checker. This means that, as a team,
+  you don't have to make as many decisions about tooling and how the code should
+  be written.
+- Because the language enforces good practices and strong guardrails, the code
+  generated by AI assistants is (more) likely to be better quality compared to a
+  language that doesn't have those guardrails. This could mean less time spent
+  fixing and debugging code generated by AI assistants.
+- Because of the strict compiler checks, refactoring code is much easier and
+  safer as it ensures that any changes made don't break code in unexpected ways.
+- The distribution system with `cargo` stops certain types of supply chain
+  attacks commonly seen in e.g. npm and PyPI. For example, it locks dependencies
+  to specific versions of packages and once a package is published, it can not
+  be removed (it is immutable).
+:::::
+::::: {.column}
+#### Drawbacks
+
+- Because of its strictness and lower-level nature, prototyping can take longer
+  compared to other languages.
+- It still is a newer language, and while it is growing in popularity, it
+  doesn't have a large community or ecosystem, unlike some other languages. That
+  means there may be fewer libraries available for specific tasks.
+- Analysing Rust code during compilation checks can be slower than other
+  languages and can take up a lot of RAM when. For example, working in an IDE
+  with [`rust-analyzer`](https://rust-analyzer.github.io/) can be a problem for
+  larger codebases and for developers with less powerful computers and the
+  analyzer can use a lot of RAM and CPU.
+- Running checks on continuous integration workflows can be slower because of
+  the analyzer.
+- Rust isn't as common in academic and research settings, which means there will
+  be less potential for external contributions from these communities.
+:::::
+:::
+
+## Decision outcome
+
+There weren't that many options to choose from other than Rust. If Rust wasn't
+available, we'd have to manage with Python and its drawbacks until a language
+that fit our needs eventually came along. However, Rust does exist and fits a
+lot of our needs and values, as well has providing a lot of potential for taking
+on more complex and impactful projects in the future. Therefore, we decided to
+switch to Rust specifically for our command-line and web applications, while
+still using Python for data processing tasks and for building libraries that are
+meant to provide functionality to simplify those data processing tasks.
+
+### Consequences
+
+- Because of the smaller ecosystem, we may have to build more of our own tools
+  and libraries. While this could become laborious, we believe that it will be a
+  valuable asset for individual team members to learn and develop their value as
+  software engineers.
+- Getting potentially fewer external contributions and collaborators is not a
+  major concern since we generally expect this number to be close to zero for a
+  new tool written in any language, particularly in a research setting like
+  this. Selecting the tools that help us build the best possible software for a
+  given set of tasks is likely to (we hope) attract contributors in the long
+  run. There's also a recent strong trend of research-based tools and libraries
+  being built in Rust, so we expect the potential contributor and collaborator
+  pool to grow.
+- It might become difficult for us to build most software in Rust, while writing
+  code to process data in Python, as this will require context switching between
+  languages. However, this is also a chance for us to practice working in
+  multiple languages and to learn that we're capable of using the right tool for
+  the right task. Even if we aren't familiar with the language or have expertise
+  in it. Widening our expertise and learning about best practices in Rust could
+  also bring about positive benefits for our Python coding habits.
+- There may be some functionality that we've already developed in Python that we
+  would like to also use in a Rust-based tool. This shouldn't be a major issue
+  as we've built most of our software as command-line tools, rather than as
+  libraries with reusable functionality. If library code needs to be shared and
+  we don't want to re-implement it in Rust, we can use
+  [PyO3](https://github.com/PyO3/pyo3) to call one language from the other.
