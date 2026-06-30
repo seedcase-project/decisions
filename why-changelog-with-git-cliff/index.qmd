@@ -1,6 +1,9 @@
 ---
 title: "Why git-cliff for changelog generation"
-description: "Automatically generating a changelog can save a lot of administrative time, especially for a small group like ours. This post explains our reasons for using git-cliff to auto-generate changelogs."
+description: >-
+  Automatically generating a changelog can save a lot of administrative time,
+  especially for a small group like ours. This post explains our reasons for
+  using git-cliff to auto-generate changelogs.
 date: "2026-05-22"
 categories:
   - develop

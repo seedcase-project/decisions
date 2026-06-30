@@ -1,6 +1,8 @@
 ---
 title: "Why Commitizen for semantic release"
-description: "The reasons we use Commitizen for automated versioning and releasing of our software."
+description: >-
+  The reasons we use Commitizen for automated versioning and releasing of our
+  software.
 date: "2024-11-08"
 date-modified: "2026-05-26"
 previous: true

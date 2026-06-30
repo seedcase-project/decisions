@@ -1,6 +1,9 @@
 ---
 title: "Why GitHub Projects"
-description: "As a project grows, it becomes both more important and more difficult to keep track of where the project is at.  This can be helped by using visualisation and project management tools like GitHub Projects."
+description: >-
+  As a project grows, it becomes both more important and more difficult to keep
+  track of where the project is at.  This can be helped by using visualisation
+  and project management tools like GitHub Projects.
 date: "2023-11-23"
 categories:
   - document

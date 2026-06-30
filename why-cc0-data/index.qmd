@@ -1,6 +1,9 @@
 ---
 title: "Why CC0 for data"
-description: "Given that we work with and manage data, having a license for the data can be helpful. This post discusses why we recommend (and use) the CC0 license for data."
+description: >-
+  Given that we work with and manage data, having a license for the data can be
+  helpful. This post discusses why we recommend (and use) the CC0 license for
+  data.
 date: "2025-08-01"
 categories:
   - license
