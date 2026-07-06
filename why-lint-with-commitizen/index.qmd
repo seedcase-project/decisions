@@ -1,6 +1,8 @@
 ---
 title: "Why lint with commitizen"
-description: "Reasons to use commitizen to lint our commit messages to follow the Conventional Commits standard."
+description: >-
+  Reasons to use commitizen to lint our commit messages to follow the
+  Conventional Commits standard.
 date: "2024-10-25"
 date-modified: "2026-05-22"
 previous: true
