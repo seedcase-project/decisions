@@ -1,20 +1,23 @@
 ---
-title: "Why `mypy`"
+title: "Why Pyrefly"
 description: |
-  Static type checking helps to catch bugs earlier and contributes to the long-term maintainability and overall quality of Python codebases.
-  This post explains why we chose `mypy` as our static type checker over other alternatives.
+  Static type checking helps to catch bugs earlier and contributes to the
+  long-term maintainability and overall quality of Python codebases.  This post
+  explains why we chose Pyrefly as our static type checker over other
+  alternatives.
 date: "2025-12-18"
+date-modified: "2026-07-06"
 categories:
   - develop
   - check
 ---
 
-## Context and problem statement
-
-::: content-hidden
-State the context and some background on the issue, then write a statement in
-the form of a question for the problem.
+::: callout-note
+We initially decided to use `mypy`, but Pyrefly has recently made an official
+stable release, which is why we now switched to using that instead.
 :::
+
+## Context and problem statement
 
 We already use type hints extensively in all our Python codebases to document
 intent, improve readability, and support richer IDE feedback. However, without a
@@ -28,15 +31,10 @@ CI/CD pipelines, effectively preventing type errors from entering the codebase.
 Given that there are multiple static type checkers available for Python, the
 question then is:
 
-Which static type checking tool should we adopt to enforce our existing type
-hints consistently across development and CI?
+*Which static type checking tool should we adopt to enforce our existing type
+hints consistently across development and CI?*
 
 ## Decision drivers
-
-::: content-hidden
-List some reasons for why we need to make this decision and what things have
-arisen that impact work.
-:::
 
 The static type checker should:
 
@@ -51,17 +49,11 @@ The static type checker should:
 
 ## Considered options
 
-::: content-hidden
-List and describe some of the options, as well as some of the benefits and
-drawbacks for each option.
-:::
-
 The most popular static type checkers available for Python are:
 
 - [`mypy`](https://mypy-lang.org/)
 - [Pyright](https://github.com/microsoft/pyright)
-- [Pyre](https://pyre-check.org/) and its next iteration,
-  [Pyrefly](https://pyrefly.org/)
+- [Pyrefly](https://pyrefly.org/) (originally [Pyre](https://pyre-check.org/))
 - [`ty`](https://docs.astral.sh/ty/)
 
 ### Mypy
@@ -117,12 +109,11 @@ also run as a standalone CLI tool.
 :::::
 :::
 
-### Pyre and Pyrefly
+### Pyrefly
 
-[Pyre](https://pyre-check.org/) is a static type checker developed by
+[Pyrefly](https://pyrefly.org/) is a static type checker developed by
 Facebook/Meta. It focuses on speed and incremental checking, ideal for large
-codebases. [Pyrefly](https://pyrefly.org/) is Meta's next-generation type
-checker for Python, written in Rust.
+codebases.
 
 ::: columns
 ::::: column
@@ -133,6 +124,9 @@ checker for Python, written in Rust.
 - Can be integrated into CI pipelines.
 - Pyrefly aims to provide better IDE integration, richer type inference, and
   more responsive developer feedback compared to Pyre.
+- *Extremely fast*.
+- Is aggressive with type inference, which means more issues can be caught. This
+  is good for smaller or newer codebases.
 :::::
 
 ::::: column
@@ -140,9 +134,12 @@ checker for Python, written in Rust.
 
 - Less widely adopted than `mypy` or Pyright.
 - Pyrefly is relatively new and still evolving, making long-term stability and
-  tooling support harder to assess.
-- Both Pyre and Pyrefly were designed to address problems specific to Meta's
-  products and internal infrastructure.
+  tooling support harder to assess. In June 2026, they officially released a
+  stable version, so it is still very new.
+- Pyrefly was designed to address problems specific to Meta's products and
+  internal infrastructure.
+- It's aggressive type inference can be a drawback for larger codebases, as it
+  would require more effort at resolving those issues.
 :::::
 :::
 
@@ -170,41 +167,27 @@ written in Rust by the creators of `uv` and Ruff.
 #### Drawbacks
 
 - The newest project of all options considered.
-- Currently (December 2025) only in beta release, so may be more unstable than
-  mature type checkers.
+- Currently (July 2026) has no stable release.
+- Is more permissive compared to it's closest alternative, Pyrefly, which means
+  it may not catch as many issues (can be good or bad, depending on the size of
+  the project).
 :::::
 :::
 
 ## Decision outcome
 
-::: content-hidden
-What decision was made, use the form "We decided on CHOICE because of REASONS."
-:::
-
-We decided on `mypy` because it is the de-facto standard for Python type
-checking, has excellent documentation and community support, is easy to set up,
-and runs both as a CLI tool and via the VS Code extension with consistent
-output. Its drawback, slower performance on very large codebases, is less
-relevant for us because our repositories are small compared to giants like
-Facebook. Additionally, we continue to use VS Code's Pylance language server,
-which runs Pyright internally, complementing the feedback we get from `mypy`.
+We decided on Pyrefly as it recently made an official stable release, and
+compared to `mypy` is just so much faster. It has all the necessary features we
+need, and it's strictness aligns more closely with our values compared to the
+(unstable) `ty`.
 
 ### Consequences
 
-::: content-hidden
-List some potential consequences of this decision.
-:::
-
-- We should keep an eye on `mypy`'s performance, just in case it begins to
-  impact developer experience negatively.
-- Given our use of other tools by [Astral](https://docs.astral.sh), we have a
-  good case for switching to `ty` once it becomes stable.
+- Because it is still new, issues may still arise that could lead to breaking
+  changes in the future. But with the recent stable release, we expect this to
+  be less of a concern.
 
 ## Resources used for this post
-
-::: content-hidden
-List the resources used to write this post
-:::
 
 - [`mypy` docs](https://mypy-lang.org/)
 - [Pyright docs](https://github.com/microsoft/pyright)
@@ -213,3 +196,7 @@ List the resources used to write this post
 - [`ty` docs](https://docs.astral.sh/ty/)
 - [Introducing
   Pyrefly](https://engineering.fb.com/2025/05/15/developer-tools/introducing-pyrefly-a-new-type-checker-and-ide-experience-for-python/)
+- [Pyrefly Speed and Memory
+  Comparison](https://pyrefly.org/blog/speed-and-memory-comparison/)
+- [Pyrefly vs Mypy vs
+  Ty](https://www.danilchenko.dev/posts/pyrefly-vs-mypy-vs-ty/#three-releases-in-three-weeks)
