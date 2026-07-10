@@ -177,8 +177,8 @@ written in Rust by the creators of `uv` and Ruff.
 ## Decision outcome
 
 We decided on Pyrefly as it recently made an official stable release, and
-compared to `mypy`, it is just so much faster. It has all the necessary features we
-need, and it's strictness aligns more closely with our values compared to the
+compared to `mypy`, it is just so much faster. It has all the necessary features
+we need, and it's strictness aligns more closely with our values compared to the
 (unstable) `ty`.
 
 ### Consequences
