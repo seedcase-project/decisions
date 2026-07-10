@@ -2,7 +2,7 @@
 title: "Why Pyrefly"
 description: |
   Static type checking helps to catch bugs earlier and contributes to the
-  long-term maintainability and overall quality of Python codebases.  This post
+  long-term maintainability and overall quality of Python codebases. This post
   explains why we chose Pyrefly as our static type checker over other
   alternatives.
 date: "2025-12-18"
@@ -177,7 +177,7 @@ written in Rust by the creators of `uv` and Ruff.
 ## Decision outcome
 
 We decided on Pyrefly as it recently made an official stable release, and
-compared to `mypy` is just so much faster. It has all the necessary features we
+compared to `mypy`, it is just so much faster. It has all the necessary features we
 need, and it's strictness aligns more closely with our values compared to the
 (unstable) `ty`.
 
