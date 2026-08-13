@@ -15,9 +15,14 @@ list-todos:
   grep -R -n \
     --exclude="*.code-snippets" \
     --exclude-dir=.quarto \
-    --exclude=justfile \
+    --exclude-dir=template \
+    --exclude-dir=.git \
+    --exclude-dir=*_cache \
+    --exclude-dir=_temp \
     --exclude-dir=_site \
-    "TODO" *
+    --exclude=justfile \
+    --exclude=copier.yaml \
+    "TODO" .
 
 # Install the pre-commit hooks
 install-precommit:
@@ -38,9 +43,10 @@ check-urls:
   lychee . \
     --verbose \
     --extensions md,qmd \
-    --exclude-path "_badges.qmd" \
     --exclude "stackoverflow\.com" \
     --exclude "stackexchange\.com"
+    --exclude "github\.com" \
+    --exclude-path "_badges.qmd" \
 
 # Format Markdown files
 format-md:
@@ -62,7 +68,7 @@ build-website:
 
 # Preview the website with automatic reload on changes
 preview-website:
-  quarto preview
+  uvx --from quarto quarto preview
 
 # Check for and apply updates from the template
 update-from-template:
