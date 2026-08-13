@@ -54,6 +54,13 @@ pull request title to follow that format. That's because we squash merge when
 merging pull requests, so all other commits in the pull request will be squashed
 into one commit.
 
+To create a new decision post:
+
+1. Copy the `_template/` folder (including with its `index.qmd` file inside) and
+   paste then rename to `why-CHOICE/` (all lowercase).
+2. Open the new `index.qmd` file and follow the instructions in the file and
+   fill in the details.
+
 ## :file_folder: Explanation of files and folders
 
 This is a description of some of the files in this repository.
@@ -80,7 +87,7 @@ This is a description of some of the files in this repository.
     configuration file.
   - `rumdl.toml` and `panache.toml`: [rumdl](https://rumdl.dev) and
     [Panache](https://panache.bz) configuration file for formatting Markdown
-    files in the project.\
+    files in the project.
   - `cog.toml`: [Cocogitto](https://docs.cocogitto.io) configuration file for
     managing versions.
   - `cliff.toml`: [git-cliff](https://git-cliff.org) configuration file for
