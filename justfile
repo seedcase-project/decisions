@@ -43,6 +43,8 @@ check-urls:
   lychee . \
     --verbose \
     --extensions md,qmd \
+    --exclude "stackoverflow\.com" \
+    --exclude "stackexchange\.com" \
     --exclude "github\.com" \
     --exclude-path "_badges.qmd" \
 
