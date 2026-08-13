@@ -10,6 +10,7 @@ License](https://img.shields.io/github/license/seedcase-project/decisions.svg)](
 Release](https://img.shields.io/github/v/release/seedcase-project/decisions.svg)](https://github.com/seedcase-project/decisions/releases/latest)
 [![Build
 website](https://github.com/seedcase-project/decisions/actions/workflows/build-website.yml/badge.svg)](https://github.com/seedcase-project/decisions/actions/workflows/build-website.yml)
+[![Checks](https://github.com/seedcase-project/decisions/actions/workflows/checks.yml/badge.svg)](https://github.com/seedcase-project/decisions/actions/workflows/checks.yml)
 [![pre-commit.ci
 status](https://results.pre-commit.ci/badge/github/seedcase-project/decisions/main.svg)](https://results.pre-commit.ci/latest/github/seedcase-project/decisions/main)
 [![lifecycle](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
@@ -42,8 +43,8 @@ to abide by its terms.
 The following people have contributed to this project by submitting pull
 requests :tada:
 
-[@joelostblom](https://github.com/joelostblom),
 [@K-Beicher](https://github.com/K-Beicher),
+[@joelostblom](https://github.com/joelostblom),
 [@lwjohnst86](https://github.com/lwjohnst86),
 [@martonvago](https://github.com/martonvago),
 [@pchmia](https://github.com/pchmia),
