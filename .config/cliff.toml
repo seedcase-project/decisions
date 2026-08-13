@@ -82,6 +82,7 @@ body = """
   ### ❤️ New contributors
 {% endif %}
 {% for contributor in github.contributors | filter(attribute="is_first_time", value=true) %}
+  {% if contributor.username %}
   {% if contributor.username is containing("[bot]") %}
   - `@{{ contributor.username }}` started making automated contributions\
   {% else %}
@@ -89,6 +90,7 @@ body = """
     {% if contributor.pr_number %} in \
       [#{{ contributor.pr_number }}]({{ self::remote_url() }}/pull/{{ contributor.pr_number }})\
     {% endif %}
+  {% endif %}
   {% endif %}\
 {% endfor %}
 {% endif %}
