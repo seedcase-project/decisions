@@ -101,9 +101,8 @@ output = "CHANGELOG.md"
 
 [git]
 commit_preprocessors = [
-  # TODO: Replace USER and REPO with correct values
   # Replace pull request numbers with links to GitHub.
-  { pattern = '\((\w+\s)?#([0-9]+)\)', replace = "[#${2}](https://github.com/USER/REPO/pull/${2})" },
+  { pattern = '\((\w+\s)?#([0-9]+)\)', replace = "[#${2}](https://github.com/seedcase-project/decisions/pull/${2})" },
   # Check spelling of the commit message using https://github.com/crate-ci/typos.
   # If the spelling is incorrect, it will be fixed automatically.
   { pattern = '.*', replace_command = 'uvx typos --write-changes -' },
