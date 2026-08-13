@@ -34,7 +34,6 @@ check-spelling:
   uvx typos --config .config/typos.toml
 
 # Check that URLs work
-# Specific for this repository: excluding stackoverflow and stackexchange
 check-urls:
   lychee . \
     --verbose \
