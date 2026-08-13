@@ -38,7 +38,7 @@ check-urls:
   lychee . \
     --verbose \
     --extensions md,qmd \
-    --exclude-path "_badges.qmd"
+    --exclude-path "_badges.qmd" \
     # Specific for this repository. \
     --exclude "stackoverflow\.com" \
     --exclude "stackexchange\.com"
