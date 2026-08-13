@@ -39,6 +39,9 @@ check-urls:
     --verbose \
     --extensions md,qmd \
     --exclude-path "_badges.qmd"
+    # Specific for this repository. \
+    --exclude "stackoverflow\.com" \
+    --exclude "stackexchange\.com"
 
 # Format Markdown files
 format-md:
