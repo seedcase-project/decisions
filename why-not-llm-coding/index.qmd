@@ -1,0 +1,151 @@
+---
+title: "Why not using LLM coding assistants"
+description: |
+  You can't look anywhere without with reading about or seeing something
+  referring to AI, LLMs, coding assistants, and AI agents.
+date: "2026-08-19"
+categories:
+  - develop
+  - workflow
+---
+
+## Context and problem statement
+
+::: content-hidden
+State the context and some background on the issue, then write the problem
+statement in the form of a question.
+:::
+
+Everywhere you look (at least in the programming world) there are talks of AI
+and agents. It's difficult to **not** see it.
+
+*Should we try to incorporate LLM coding assistants and agents in our work (at
+least from an organizational/group perspective)?*
+
+## Decision drivers
+
+::: content-hidden
+List the main reasons for why we are making this decision, including any issues
+that have arisen and that directly impact our work.
+:::
+
+## Considered options
+
+This decision post is a bit different from the other posts as we aren't
+comparing one tool with another tool, but rather, whether we actually use them
+at all. So we've broken the "options" into categories based on the decision
+drivers. There are many things we could go into, but we'll decide on AI or not
+based on these groupings:
+
+- Development of expertise in the group members
+- Ownership and control
+- Productivity (bugs, features, maintenance)
+- Environmental impact
+
+::: content-hidden
+List and describe some of the options, as well as some of the benefits and
+drawbacks for each option.
+:::
+
+### Development of expertise in the group members
+
+::: {.columns}
+::::: {.column}
+#### Benefits
+
+- Item 1
+:::::
+::::: {.column}
+#### Drawbacks
+
+- Item 1
+:::::
+:::
+
+### Ownership and control
+
+::: {.columns}
+::::: content-hidden
+List the main benefits and drawbacks with a short description. These should be
+of relevance for us but written in general form about the option, rather than
+how it impacts us specifically (the latter will be elaborated upon in the
+section "Consequences").
+:::::
+
+::::: {.column}
+#### Benefits
+
+- Item 1
+:::::
+::::: {.column}
+#### Drawbacks
+
+- Item 1
+:::::
+:::
+
+### Productivity (bugs, features, maintenance)
+
+::: {.columns}
+::::: content-hidden
+List the main benefits and drawbacks with a short description. These should be
+of relevance for us but written in general form about the option, rather than
+how it impacts us specifically (the latter will be elaborated upon in the
+section "Consequences").
+:::::
+
+::::: {.column}
+#### Benefits
+
+- Item 1
+:::::
+::::: {.column}
+#### Drawbacks
+
+- Item 1
+:::::
+:::
+
+### Option 1
+
+::: {.columns}
+::::: content-hidden
+List the main benefits and drawbacks with a short description. These should be
+of relevance for us but written in general form about the option, rather than
+how it impacts us specifically (the latter will be elaborated upon in the
+section "Consequences").
+:::::
+
+::::: {.column}
+#### Benefits
+
+- Item 1
+:::::
+::::: {.column}
+#### Drawbacks
+
+- Item 1
+:::::
+:::
+
+## Decision outcome
+
+::: content-hidden
+Describe which decision was made. Use the form "We decided on CHOICE because of
+REASONS."
+:::
+
+### Consequences
+
+::: content-hidden
+Elaborate on how the decision will impact us. This section often includes
+comments on how the drawbacks apply specifically to our projects and workflows,
+e.g. detailing how we could adapt to a new tool or explaining why a particular
+drawback is not a major concern for us.
+:::
+
+## Resources used for this post
+
+::: content-hidden
+List the resources used to write this post.
+:::
