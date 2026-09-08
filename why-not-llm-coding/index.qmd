@@ -279,7 +279,6 @@ developers use and pay for has always been their choice and is up to them.
   Communities](https://arxiv.org/html/2603.26487v1)
 - [Open-Source Projects Ban AI Code Because Agents Won't Follow the
   Rules](https://www.generativelabs.com/insights/open-source-ai-contribution-rules)
-- [Is AI Profitable Yet?](https://isaiprofitable.com) :::
 - [Is AI Profitable Yet?](https://isaiprofitable.com)
 - [EcoLogits Calculator](https://calculator.ecologits.ai)
 - [AI's environmental costs threaten water, land and
