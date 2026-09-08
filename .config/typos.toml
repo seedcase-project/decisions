@@ -4,5 +4,7 @@ extend-exclude = [
   "*.css",
   ".quarto/*",
   "_site/*",
-  "*.svg"
+  "*.svg",
+  # Has commit hashes which falsely trigger typos.
+  "CHANGELOG.md",
 ]
