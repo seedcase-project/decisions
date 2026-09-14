@@ -19,6 +19,22 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.13.1](https://github.com/seedcase-project/decisions/compare/0.13.0..0.13.1) - 2026-09-14
+
+### 🐛 Fixes
+
+- Rename to `why-pyrefly`, forgotten about before
+  [#336](https://github.com/seedcase-project/decisions/pull/336) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([0311466](https://github.com/seedcase-project/decisions/commit/031146686f7efc91c2ac8961f292e61db3c3f196))
+
+### 👩‍💻 Miscellaneous
+
+- Don't use typos on CHANGELOG, too many false positives
+  [#337](https://github.com/seedcase-project/decisions/pull/337) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([1380d79](https://github.com/seedcase-project/decisions/commit/1380d798ebbe1bbb947c19c76bc3edadccc6f8aa))
+
 ## [0.13.0](https://github.com/seedcase-project/decisions/compare/0.12.0..0.13.0) - 2026-08-13
 
 ### ✨ Features
