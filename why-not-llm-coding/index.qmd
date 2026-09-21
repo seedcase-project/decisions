@@ -3,8 +3,8 @@ title: "Why not to use LLM coding assistants"
 description: |
   It's difficult to avoid not reading, hearing, or seeing something directly or
   indirectly referring to AI, LLMs, coding assistants, and AI agents. There is
-  now more information about it to decide on whether to use it or not. This post
-  describes why, at least at the organisation level, will not formally use LLM
+  now more information about it for us to decide on whether to use it or not. This post
+  describes why, at least at the organisation level, we will not use LLM
   coding assistants.
 date: "2026-08-31"
 categories:
@@ -16,19 +16,18 @@ categories:
 
 Everywhere you look (at least in the programming world) there are talks of AI
 and agents. It's difficult to **not** see it. Because it is so (relatively) new
-of a technology and tool, we decided to wait a bit with a formal decision as
-others use it and share their experiences about it and its usefulness. We also
+of a technology and tool, we decided to wait a bit before formally deciding whether to use it and see
+how others use it and hear their experiences about it and its usefulness. We also
 tested out some tools, like Claude Code and GitHub Copilot, to see how they
-worked. There is now enough information about it generally that we could write a
-decision post about it. So the question becomes:
+worked. So, the question becomes:
 
-*Should we try to incorporate LLM coding assistants and agents in our work, at
+*Should we use LLM coding assistants and agents in our work, at
 least the organizational/group level?*
 
 ## Decision drivers
 
 This post is a bit different from other posts that compare tools. In this case,
-it is between using it or not using it. So our decision drivers are a bit
+it is between using AI (LLMs, coding assistents, agents) or not using it. So, our decision drivers are a bit
 different. Our drivers here are broader and more focused on our [design
 philosophies](https://design.seedcase-project.org). Whether we use it depends on
 these drivers:
@@ -37,13 +36,13 @@ these drivers:
 - Enables members to better understand the codebase of software.
 - Effectively supports designing robust architectures.
 - Limited vendor lock-in, which is especially important in the current
-  geopolitical situations.
+  geopolitical situation.
 - Retains full ownership and control of the output, both in terms of being
   predictably consistent with outputs based on prompt inputs and in terms of
   legal intellectual property.
-- Has minimal environmental impact during used (and training).
+- Has minimal environmental impact during use (and training).
 - Has measurable positive impacts on business outcomes and productivity (e.g.
-  not lines of code added), such as fewer bugs, ease of maintenance, ease of
+  not lines of code added), such as faster development, fewer bugs, ease of maintenance, ease of
   refactoring, and solving real-world problems.
 - Has measurable positive impacts on developer experience and sense of
   well-being.
@@ -52,7 +51,7 @@ these drivers:
 
 ## Considered options
 
-Based on the drivers above, we've broken them into subcategories. There are many
+We've broken the decision drives above into subcategories. There are many
 things we could go into, but we'll decide on AI or not based on these groupings:
 
 - Development of expertise in the group members.
@@ -78,9 +77,9 @@ contributes to humans' professional development.
 
 - Depending on how the prompts are given, it can be possible to have the AI
   coding assistant help with explaining and learning about some programming
-  concepts and.
+  concepts
 - The nature of these assistants, especially agents, means you develop more
-  management skills, which is useful if that's a skill you want.
+  management skills, which can be useful.
 :::::
 ::::: {.column}
 #### Drawbacks
@@ -93,7 +92,7 @@ contributes to humans' professional development.
   engineering skills.
 - Learning and developing expertise in a domain requires substantial mental
   effort and time actually using the skills while being in the domain. Using
-  assistants takes that opportunity away either fully by completely outsourcing
+  assistants can remove that opportunity either fully by completely outsourcing
   the task or partially by moving the human further from the domain.
 :::::
 :::
@@ -119,15 +118,15 @@ Geopolitics dominate this category.
   example, US law is still fairly unregulated with how tech companies use
   personal data, and GDPR doesn't yet fully regulate how EU data is sent to the
   US.
-- The recently US government forced Anthropic (US AI tech company) to ban use of
-  its Fable model by non-US citizens, *including outside of the US*. That means
-  that the use of these tools could be removed and we couldn't do anything about
+- Recently, the US government forced Anthropic (US AI tech company) to ban use of
+  one of its models by non-US citizens, *including outside of the US*. This shows
+  that the use of these tools could be removed without us being able to do anything about
   it.
 - Code generated from AI has been trained on copyrighted material (there are
-  many legal cases ongoing for this). That means, any code that is generated
-  could be copyrighted and means any code we use from AI could go back and be
+  many legal cases ongoing for this). This means that any code that is generated by an AI tool trained on this material
+  could be copyrighted and that any code we use from AI could go back and be
   used elsewhere. This removes ownership and control over what happens to our
-  data, without us being aware of what is or isn't being taken.
+  code without us being aware of what is or isn't being used.
 :::::
 :::
 
@@ -142,7 +141,7 @@ productivity gain yet.
 
 - There is not yet any conclusive data on hard business outcomes when it comes
   to using these assistants. However, it is obvious that it can generate code
-  very easily.
+  fast and very easily.
 :::::
 ::::: {.column}
 #### Drawbacks
@@ -150,7 +149,7 @@ productivity gain yet.
 - Because of the nature of AI coding assistants and their training data,
   generated code often uses or follows "average" coding practices. It makes use
   of non-optimal architectural patterns (e.g. heavy use of for loops, deeply
-  nested loops and if conditions).
+  nested loops, and if conditions).
 - Based on Google, YouTube, or Reddit searches, while not systematic, it seems
   these assistants require a lot of "hand-holding" and critically reviewing the
   code as it often makes up code, uses more code than is needed, or introduces
@@ -174,7 +173,7 @@ productivity gain yet.
   review all the pull requests. This has lead to more cases of people being
   burnt out and losing the motivation and enjoyment from the work.
 - The fact that there is no clear evidence on any improvements in hard
-  productivity measures for a tool that has so much money invested in it is
+  productivity measures for a tool that has so much money invested is in
   itself a concern.
 :::::
 :::
@@ -195,11 +194,11 @@ Prices of using these tools are currently heavily subsidized by investor funds.
 - The cost of paying for assistants is currently heavily subsidized by the
   investor funds. And so far, none of the AI companies (aside from
   hardware/server companies) have made a profit, so the cost of using these
-  assistants will increase substantially in the future to pay off this
-  investment. For those with a small budget (us), this prices us out of
-  depending on it.
+  assistants will probably increase substantially in the future to pay off this
+  investment. For those with a small budget (like us), to start depending on it 
+  could be a big risk.
 - Depending on the subscription, the cost can fluctuate heavily by how much
-  "tokens" an AI assistant uses. With agents, these costs can fluctuate quite
+  tokens an AI assistant uses. With agents, these costs can fluctuate quite
   widely, from a few hundred USD a month to thousands, depending on the tasks.
 - Coding assistants and agents are probabilistic machines, which means you can't
   predict how many tokens a task will take. This makes it difficult to budget
@@ -210,8 +209,8 @@ Prices of using these tools are currently heavily subsidized by investor funds.
 
 ### Environmental impact
 
-This category is easily the most negative against LLMs of the categories. This
-in the context of climate change isn't something to take lightly. Unfortunately,
+This category is easily the most negative against LLMs of the categories. This,
+in the context of climate change, isn't something to take lightly. Unfortunately,
 a lot of the data on this has to be estimated from third-parties, as the AI
 companies don't publish these data.
 
