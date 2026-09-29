@@ -43,10 +43,10 @@ to abide by its terms.
 The following people have contributed to this project by submitting pull
 requests :tada:
 
-[@K-Beicher](https://github.com/K-Beicher),
+[@fruvago](https://github.com/fruvago),
 [@joelostblom](https://github.com/joelostblom),
+[@K-Beicher](https://github.com/K-Beicher),
 [@lwjohnst86](https://github.com/lwjohnst86),
-[@martonvago](https://github.com/martonvago),
 [@pchmia](https://github.com/pchmia),
 [@philter87](https://github.com/philter87),
 [@signekb](https://github.com/signekb)
