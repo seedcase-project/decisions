@@ -1,9 +1,9 @@
 ---
-title: "Why not to use LLM coding assistants"
+title: "Why to not use LLM coding assistants"
 description: |
-  It's difficult to avoid not reading, hearing, or seeing something directly or
+  It's difficult to avoid reading, hearing, or seeing something directly or
   indirectly referring to AI, LLMs, coding assistants, and AI agents. There is
-  now more information about it for us to decide on whether to use it or not. This post
+  enough information about it for us to decide formally whether we want to use it or not. This post
   describes why, at least at the organisation level, we will not use LLM
   coding assistants.
 date: "2026-08-31"
@@ -17,8 +17,8 @@ categories:
 Everywhere you look (at least in the programming world) there are talks of AI
 and agents. It's difficult to **not** see it. Because it is so (relatively) new
 of a technology and tool, we decided to wait a bit before formally deciding
-whether to use it and see how others use it and hear their experiences about it
-and its usefulness. We also tested out some tools, like Claude Code and GitHub
+whether to use it to see how others use it and hear about their experiences with it.
+We also tested out some tools, like Claude Code and GitHub
 Copilot, to see how they worked. So, the question becomes:
 
 *Should we use LLM coding assistants and agents in our work, at least the
@@ -30,23 +30,23 @@ This post is a bit different from other posts that compare tools. In this case,
 it is between using AI (LLMs, coding assistants, agents) or not using it. So,
 our decision drivers are a bit different. Our drivers here are broader and more
 focused on our [design philosophies](https://design.seedcase-project.org).
-Whether we use it depends on these drivers:
+Whether we use it depends on these drivers. For us to decide on using AI for coding, it must:
 
-- Must enhance and develop our expertise, skill, and knowledge.
-- Enables members to better understand the codebase of software.
-- Effectively supports designing robust architectures.
-- Limited vendor lock-in, which is especially important in the current
+- Enhance and develop our expertise, skill, and knowledge.
+- Enable members to better understand the codebase of software.
+- Effectively support designing robust architectures.
+- Provide limited vendor lock-in, which is especially important in the current
   geopolitical situation.
-- Retains full ownership and control of the output, both in terms of being
+- Retain full ownership and control of the output, both in terms of being
   predictably consistent with outputs based on prompt inputs and in terms of
   legal intellectual property.
-- Has minimal environmental impact during use (and training).
-- Has measurable positive impacts on business outcomes and productivity (e.g.
+- Have minimal environmental impact during use (and training).
+- Have measurable positive impacts on business outcomes and productivity (e.g.
   not lines of code added), such as faster development, fewer bugs, ease of
   maintenance, ease of refactoring, and solving real-world problems.
-- Has measurable positive impacts on developer experience and sense of
+- Have measurable positive impacts on developer experience and sense of
   well-being.
-- Is consistent and predictable in its financial cost, both in the short-term
+- Be consistent and predictable in its financial cost, both in the short-term
   and long-term.
 
 ## Considered options
