@@ -17,9 +17,9 @@ categories:
 Everywhere you look (at least in the programming world) there are talks of AI
 and agents. It's difficult to **not** see it. Because it is so (relatively) new
 of a technology and tool, we decided to wait a bit before formally deciding
-whether to use it to see how others use it and hear about their experiences with it.
-We also tested out some tools, like Claude Code and GitHub
-Copilot, to see how they worked. So, the question becomes:
+whether to use it to see how others use it and hear about their experiences with
+it. We also tested out some tools, like Claude Code and GitHub Copilot, to see
+how they worked. So, the question becomes:
 
 *Should we use LLM coding assistants and agents in our work, at least the
 organizational/group level?*
@@ -30,7 +30,8 @@ This post is a bit different from other posts that compare tools. In this case,
 it is between using AI (LLMs, coding assistants, agents) or not using it. So,
 our decision drivers are a bit different. Our drivers here are broader and more
 focused on our [design philosophies](https://design.seedcase-project.org).
-Whether we use it depends on these drivers. For us to decide on using AI for coding, it must:
+Whether we use it depends on these drivers. For us to decide on using AI for
+coding, it must:
 
 - Enhance and develop our expertise, skill, and knowledge.
 - Enable members to better understand the codebase of software.
